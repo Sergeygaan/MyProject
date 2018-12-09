@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "President", "President\President.csproj", "{7810E4A6-6DD9-49C1-A938-395F44116B81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Character", "President\Character.csproj", "{7810E4A6-6DD9-49C1-A938-395F44116B81}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{83B5B757-EDDC-4E40-97B4-0A18C570569D}"
 EndProject
