@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Main
+namespace ThePresident
 {
     public partial class ThePresident : Form
     {

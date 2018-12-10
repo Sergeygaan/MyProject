@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{83B5B757-EDDC-4E40-97B4-0A18C570569D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePresident", "Main\ThePresident.csproj", "{83B5B757-EDDC-4E40-97B4-0A18C570569D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "Event\Event.csproj", "{8C44D849-C96F-4A72-BA40-2D67727488F4}"
 EndProject

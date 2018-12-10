@@ -1,4 +1,4 @@
-﻿namespace Main
+﻿namespace ThePresident
 {
     partial class ThePresident
     {
