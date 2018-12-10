@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StartForm.cs">
+    <Compile Include="ThePresident.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm.Designer.cs">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <Compile Include="ThePresident.Designer.cs">
+      <DependentUpon>ThePresident.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,8 +62,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StartForm.resx">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <EmbeddedResource Include="ThePresident.resx">
+      <DependentUpon>ThePresident.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

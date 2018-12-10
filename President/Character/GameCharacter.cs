@@ -93,7 +93,7 @@ namespace CharacterNamespace
         /// </summary>
         public static int Mood
         {
-            get { return _money; }
+            get { return _mood; }
             set
             {
                 if (value != _mood)
@@ -338,6 +338,4 @@ namespace CharacterNamespace
 
         #endregion
     }
-
-
 }
