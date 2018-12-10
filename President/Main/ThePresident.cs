@@ -34,43 +34,50 @@ namespace Main
         //Получить значение денег
         private void GetValue_Money(object sender, PropertyChangedEventArgs even)
         {
-            int i = int.Parse(even.PropertyName);
+            labelMoney.Text = "Деньги: " + even.PropertyName + " $";
+            //int i = int.Parse(even.PropertyName);
         }
 
         //Получить значение еды
         private void GetValue_Food(object sender, PropertyChangedEventArgs even)
         {
-            int i = int.Parse(even.PropertyName);
+            labelFood.Text = "Еда: " + even.PropertyName + " %";
+            //int i = int.Parse(even.PropertyName);
         }
 
         //Получить значение настроения
         private void GetValue_Mood(object sender, PropertyChangedEventArgs even)
         {
-            int i = int.Parse(even.PropertyName);
+            labelMood.Text = "Здоровье: " + even.PropertyName + " %";
+            //int i = int.Parse(even.PropertyName);
         }
 
         //Получить значение здоровья
         private void GetValue_Health(object sender, PropertyChangedEventArgs even)
         {
-            int i = int.Parse(even.PropertyName);
+            labelHealth.Text = "Настроение: " + even.PropertyName + " %";
+            //int i = int.Parse(even.PropertyName);
         }
 
         //Получить значение физической силы
         private void GetValue_PhysicalDevelopment(object sender, PropertyChangedEventArgs even)
         {
-            int i = int.Parse(even.PropertyName);
+            labelPhysicalDevelopment.Text = "Физическая сила: " + even.PropertyName + " %";
+            //int i = int.Parse(even.PropertyName);
         }
 
         //Получить значение обаяния
         private void GetValue_Charm(object sender, PropertyChangedEventArgs even)
         {
-            int i = int.Parse(even.PropertyName);
+            labelCharm.Text = "Обаяние: " + even.PropertyName + " %";
+            //int i = int.Parse(even.PropertyName);
         }
 
         //Получить значение интеллекта
         private void GetValue_Intelligence(object sender, PropertyChangedEventArgs even)
         {
-            int i = int.Parse(even.PropertyName);
+            labelIntelligence.Text = "Интеллект: " + even.PropertyName + " %";
+            //int i = int.Parse(even.PropertyName);
         }
 
         #endregion
@@ -93,6 +100,19 @@ namespace Main
             eventGenerator.AddListParameterСhange("Intelligence", 70);
 
             eventGenerator.AddEventsStaticParameters("1", "1", 1);
+
+            eventGenerator.ClearValue();
+
+            eventGenerator.AddListParameterСhange("Money", -10);
+            eventGenerator.AddListParameterСhange("Food", -20);
+            eventGenerator.AddListParameterСhange("Mood", -30);
+            eventGenerator.AddListParameterСhange("Health", -40);
+
+            eventGenerator.AddListParameterСhange("PhysicalDevelopment", -50);
+            eventGenerator.AddListParameterСhange("Charm", -60);
+            eventGenerator.AddListParameterСhange("Intelligence", -70);
+
+            eventGenerator.AddEventsStaticParameters("2", "2", 2);
 
             eventGenerator.ClearValue();
 
@@ -161,11 +181,6 @@ namespace Main
         private void button1_Click(object sender, EventArgs e)
         {
             AddEvent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //GameCharacter.Money = 125;
         }
     }
 }
