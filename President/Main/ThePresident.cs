@@ -175,6 +175,8 @@ namespace ThePresident
             eventGenerator.Dispose();
             eventGenerator = null;
 
+            GC.Collect();
+
             //eventGenerator.AddEventsStaticParameters("")
         }
 

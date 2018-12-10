@@ -122,7 +122,7 @@ namespace Event
                 GameCharacter.Set(currentListParameterСhange.Item1, currentListParameterСhange.Item2);
             }
 
-            if (outcomeOptionsLocal.TextAfterEvent == "")
+            if (outcomeOptionsLocal.TextAfterEvent != "")
             {
                 MessageBox.Show(outcomeOptionsLocal.TextAfterEvent);
             }
