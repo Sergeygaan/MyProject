@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Event
+namespace Module_Event
 {
     public class EventGenerator : IDisposable
     {

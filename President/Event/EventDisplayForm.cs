@@ -1,10 +1,10 @@
-﻿using CharacterNamespace;
+﻿using Module_Character;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Event
+namespace Module_Event
 {
     public partial class EventDisplayForm : Form
     {

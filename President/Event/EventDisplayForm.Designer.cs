@@ -1,4 +1,4 @@
-﻿namespace Event
+﻿namespace Module_Event
 {
     partial class EventDisplayForm
     {

@@ -1,5 +1,5 @@
-﻿using CharacterNamespace;
-using Event;
+﻿using Module_Character;
+using Module_Event;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

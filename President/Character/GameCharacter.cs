@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CharacterNamespace
+namespace Module_Character
 {
     public static class GameCharacter
     {
