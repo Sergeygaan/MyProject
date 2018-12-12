@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Module_Work
 {
-    class Profession_Scientific
+    class Profession_Scientific : IProfession
     {
         /// <summary>
         /// Стаж работы в военной области
@@ -16,16 +16,16 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        public string ProfessionMilitary = "Медицинские";
+        private string _professionName = "Медицинские";
 
         /// <summary>
         /// Список всех профессий в данной области
         /// </summary>
-        public List<Basic_Work> List_ProfessionMilitary;
+        private List<Basic_Work> _list_Profession;
 
         public Profession_Scientific()
         {
-            List_ProfessionMilitary = new List<Basic_Work>
+            _list_Profession = new List<Basic_Work>
             {
                 new Basic_Work("Археолог", 1, 1, 8),
                 new Basic_Work("Архивариус", 1, 1, 8),
@@ -56,6 +56,16 @@ namespace Module_Work
                 new Basic_Work("Эколог", 1, 1, 8),
                 new Basic_Work("Этнограф", 1, 1, 8)
             };
+        }
+
+        public List<Basic_Work> ListProfession()
+        {
+            return _list_Profession;
+        }
+
+        public string ProfessionName()
+        {
+            return _professionName;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Module_Work
 {
-    class Profession_Sports
+    class Profession_Sports : IProfession
     {
         /// <summary>
         /// Стаж работы в данной
@@ -16,21 +16,31 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        public string ProfessionMilitary = "Спортивные";
+        private string _professionName = "Спортивные";
 
         /// <summary>
         /// Список всех профессий в данной области
         /// </summary>
-        public List<Basic_Work> List_Profession;
+        private List<Basic_Work> _list_Profession;
 
         public Profession_Sports()
         {
-            List_Profession = new List<Basic_Work>
+            _list_Profession = new List<Basic_Work>
             {
                 new Basic_Work("Спортивный инструктор", 1, 1, 8),
                 new Basic_Work("Спортивный тренер", 1, 1, 8),
                 new Basic_Work("Спортсмен", 1, 1, 8),
             };
+        }
+        
+        public List<Basic_Work> ListProfession()
+        {
+            return _list_Profession;
+        }
+
+        public string ProfessionName()
+        {
+            return _professionName;
         }
     }
 }

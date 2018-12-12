@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ListWorks\Basic_Work.cs" />
+    <Compile Include="ListWorks\IProfession.cs" />
     <Compile Include="ListWorks\Profession_Creative.cs" />
     <Compile Include="ListWorks\Profession_Economic.cs" />
     <Compile Include="ListWorks\Profession_Legal.cs" />

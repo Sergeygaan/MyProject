@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace Module_Work
 {
-    class Profession_Creative
+    class Profession_Creative : IProfession
     {
         /// <summary>
         /// Стаж работы в данной
         /// </summary>
-        public int WorkExperience = 0;
+        private int WorkExperience = 0;
 
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        public string ProfessionMilitary = "Творческие";
+        private string _professionName = "Творческие";
 
         /// <summary>
         /// Список всех профессий в данной области
         /// </summary>
-        public List<Basic_Work> List_Profession;
+        public List<Basic_Work> _list_Profession;
 
         public Profession_Creative()
         {
-            List_Profession = new List<Basic_Work>
+            _list_Profession = new List<Basic_Work>
             {
                 new Basic_Work("Актер", 1, 1, 8),
                 new Basic_Work("Аниматор", 1, 1, 8),
@@ -55,6 +55,16 @@ namespace Module_Work
                 new Basic_Work("Ювелир", 1, 1, 8),
 
             };
+        }
+
+        public List<Basic_Work> ListProfession()
+        {
+            return _list_Profession;
+        }
+
+        public string ProfessionName()
+        {
+            return _professionName;
         }
     }
 }

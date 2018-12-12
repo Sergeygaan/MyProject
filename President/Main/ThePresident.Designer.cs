@@ -36,6 +36,7 @@
             this.labelPhysicalDevelopment = new System.Windows.Forms.Label();
             this.labelCharm = new System.Windows.Forms.Label();
             this.labelIntelligence = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -111,11 +112,21 @@
             this.labelIntelligence.TabIndex = 7;
             this.labelIntelligence.Text = "Интеллект";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Работа";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // ThePresident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.labelIntelligence);
             this.Controls.Add(this.labelCharm);
             this.Controls.Add(this.labelPhysicalDevelopment);
@@ -141,6 +152,7 @@
         private System.Windows.Forms.Label labelPhysicalDevelopment;
         private System.Windows.Forms.Label labelCharm;
         private System.Windows.Forms.Label labelIntelligence;
+        private System.Windows.Forms.Button button2;
     }
 }
 
