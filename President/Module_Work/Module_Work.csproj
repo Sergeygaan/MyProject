@@ -43,6 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinalJob\FinalJob.cs" />
+    <Compile Include="FinalJob\ListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Find_Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Find_Job.Designer.cs">
+      <DependentUpon>Find_Job.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListWorks\Basic_Work.cs" />
     <Compile Include="ListWorks\IProfession.cs" />
     <Compile Include="ListWorks\Profession_Creative.cs" />
@@ -69,9 +79,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Find_Job.resx">
+      <DependentUpon>Find_Job.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module_Work_Form.resx">
       <DependentUpon>Module_Work_Form.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Character\Module_Character.csproj">
+      <Project>{d10eb179-e4ed-4511-9de8-c29c2581f796}</Project>
+      <Name>Module_Character</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

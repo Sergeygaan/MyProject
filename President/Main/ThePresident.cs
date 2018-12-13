@@ -1,5 +1,6 @@
 ﻿using Module_Character;
 using Module_Event;
+using Module_Work;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace ThePresident
 {
     public partial class ThePresident : Form
     {
+        private Module_Work_Form _module_Work_Form;
+
         public ThePresident()
         {
             InitializeComponent();
@@ -88,7 +91,7 @@ namespace ThePresident
 
             eventGenerator.AddEvents("Главный текст событий.\n 11111111111111", 16);
 
-            //eventGenerator.AddCheckParameter("Money", 10);
+            eventGenerator.AddCheckParameter("Money", 150);
 
             eventGenerator.AddListParameterСhange("Money", 10);
             eventGenerator.AddListParameterСhange("Food", 20);
@@ -183,6 +186,16 @@ namespace ThePresident
         private void button1_Click(object sender, EventArgs e)
         {
             AddEvent();
+        }
+
+        private void buttonModule_Work_Click(object sender, EventArgs e)
+        {
+            if(_module_Work_Form == null)
+            {
+                _module_Work_Form = new Module_Work_Form();
+            }
+
+            _module_Work_Form.ShowDialog();
         }
     }
 }

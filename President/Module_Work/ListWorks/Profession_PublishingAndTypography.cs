@@ -27,13 +27,13 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Верстальщик", 1, 1, 8),
-                new Basic_Work("Выпускающий редактор", 1, 1, 8),
-                new Basic_Work("Издатель", 1, 1, 8),
-                new Basic_Work("Корректор", 1, 1, 8),
-                new Basic_Work("Переплетчик", 1, 1, 8),
-                new Basic_Work("Печатник", 1, 1, 8),
-                new Basic_Work("Редактор", 1, 1, 8),
+                new Basic_Work("Верстальщик", 100, 50, 8),
+                new Basic_Work("Выпускающий редактор", 100, 50, 8),
+                new Basic_Work("Издатель", 100, 50, 8),
+                new Basic_Work("Корректор", 100, 50, 8),
+                new Basic_Work("Переплетчик", 100, 50, 8),
+                new Basic_Work("Печатник", 100, 50, 8),
+                new Basic_Work("Редактор", 100, 50, 8),
                 new Basic_Work("Фальцовщик", 1, 1, 8)
             };
         }

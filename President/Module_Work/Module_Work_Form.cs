@@ -12,6 +12,15 @@ namespace Module_Work
 {
     public partial class Module_Work_Form : Form
     {
+        private FinalJob _finalJob;
+
+        public delegate void MyDelegateWork(FinalJob finalJob);
+
+        public void MyWorkFunc(FinalJob finalJob)
+        {
+            _finalJob = finalJob;
+        }
+
         private List<IProfession> _professions;
 
         public Module_Work_Form()
@@ -21,7 +30,7 @@ namespace Module_Work
             CreateListWork();
         }
 
-        private void CreateListWork()
+        public void CreateListWork()
         {
             _professions = new List<IProfession>
             {
@@ -41,6 +50,13 @@ namespace Module_Work
                 new Profession_Technical(),
                 new Profession_Transport(),
             };
+        }
+
+        private void ButtonFindJob_Click(object sender, EventArgs e)
+        {
+            Find_Job find_Job = new Find_Job(_professions, new MyDelegateWork(MyWorkFunc));
+            find_Job.ShowDialog();
+
         }
     }
 }

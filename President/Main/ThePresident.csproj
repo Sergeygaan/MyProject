@@ -88,6 +88,10 @@
       <Project>{8c44d849-c96f-4a72-ba40-2d67727488f4}</Project>
       <Name>Module_Event</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Module_Work\Module_Work.csproj">
+      <Project>{774655CC-CDB2-4CDB-825A-9B7ACEAB8212}</Project>
+      <Name>Module_Work</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

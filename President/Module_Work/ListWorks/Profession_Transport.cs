@@ -27,17 +27,17 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Авиадиспетчер", 1, 1, 8),
-                new Basic_Work("Автогонщик", 1, 1, 8),
-                new Basic_Work("Бортинженер", 1, 1, 8),
-                new Basic_Work("Бортпроводник", 1, 1, 8),
-                new Basic_Work("Космонавт", 1, 1, 8),
-                new Basic_Work("Летчик", 1, 1, 8),
-                new Basic_Work("Логист", 1, 1, 8),
-                new Basic_Work("Лоцман", 1, 1, 8),
-                new Basic_Work("Машинист", 1, 1, 8),
-                new Basic_Work("Штурман", 1, 1, 8),
-                new Basic_Work("Экспедитор", 1, 1, 8),
+                new Basic_Work("Авиадиспетчер", 100, 50, 8),
+                new Basic_Work("Автогонщик", 100, 50, 8),
+                new Basic_Work("Бортинженер", 100, 50, 8),
+                new Basic_Work("Бортпроводник", 100, 50, 8),
+                new Basic_Work("Космонавт", 100, 50, 8),
+                new Basic_Work("Летчик", 100, 50, 8),
+                new Basic_Work("Логист", 100, 50, 8),
+                new Basic_Work("Лоцман", 100, 50, 8),
+                new Basic_Work("Машинист", 100, 50, 8),
+                new Basic_Work("Штурман", 100, 50, 8),
+                new Basic_Work("Экспедитор", 100, 50, 8),
             };
         }
 

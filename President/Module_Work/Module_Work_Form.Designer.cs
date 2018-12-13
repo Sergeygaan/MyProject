@@ -40,10 +40,11 @@
             this.buttonFindJob.TabIndex = 0;
             this.buttonFindJob.Text = "Найти работу";
             this.buttonFindJob.UseVisualStyleBackColor = true;
+            this.buttonFindJob.Click += new System.EventHandler(this.ButtonFindJob_Click);
             // 
             // buttonQuit
             // 
-            this.buttonQuit.Location = new System.Drawing.Point(12, 75);
+            this.buttonQuit.Location = new System.Drawing.Point(12, 51);
             this.buttonQuit.Name = "buttonQuit";
             this.buttonQuit.Size = new System.Drawing.Size(90, 23);
             this.buttonQuit.TabIndex = 1;
@@ -58,7 +59,8 @@
             this.Controls.Add(this.buttonQuit);
             this.Controls.Add(this.buttonFindJob);
             this.Name = "Module_Work_Form";
-            this.Text = "Module_Work_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Работа";
             this.ResumeLayout(false);
 
         }

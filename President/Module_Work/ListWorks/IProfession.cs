@@ -2,7 +2,7 @@
 
 namespace Module_Work
 {
-    interface IProfession
+   public interface IProfession
     {
         string ProfessionName();
 

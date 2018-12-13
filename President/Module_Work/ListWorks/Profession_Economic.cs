@@ -27,22 +27,22 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("PR-менеджер", 1, 1, 8),
-                new Basic_Work("Аудитор", 1, 1, 8),
-                new Basic_Work("Бренд-менеджер", 1, 1, 8),
-                new Basic_Work("Брокер", 1, 1, 8),
-                new Basic_Work("Бухгалтер", 1, 1, 8),
-                new Basic_Work("Инкассатор", 1, 1, 8),
-                new Basic_Work("Кризис-менеджер", 1, 1, 8),
-                new Basic_Work("Лоббист", 1, 1, 8),
-                new Basic_Work("Маркетолог", 1, 1, 8),
-                new Basic_Work("Менеджер", 1, 1, 8),
-                new Basic_Work("Мерчендайзер", 1, 1, 8),
-                new Basic_Work("Налоговый инспектор", 1, 1, 8),
-                new Basic_Work("Статистик", 1, 1, 8),
-                new Basic_Work("Супервайзер", 1, 1, 8),
-                new Basic_Work("Товаровед", 1, 1, 8),
-                new Basic_Work("Экономист", 1, 1, 8),
+                new Basic_Work("PR-менеджер", 100, 50, 8),
+                new Basic_Work("Аудитор", 100, 50, 8),
+                new Basic_Work("Бренд-менеджер", 100, 50, 8),
+                new Basic_Work("Брокер", 100, 50, 8),
+                new Basic_Work("Бухгалтер", 100, 50, 8),
+                new Basic_Work("Инкассатор", 100, 50, 8),
+                new Basic_Work("Кризис-менеджер", 100, 50, 8),
+                new Basic_Work("Лоббист", 100, 50, 8),
+                new Basic_Work("Маркетолог", 100, 50, 8),
+                new Basic_Work("Менеджер", 100, 50, 8),
+                new Basic_Work("Мерчендайзер", 100, 50, 8),
+                new Basic_Work("Налоговый инспектор", 100, 50, 8),
+                new Basic_Work("Статистик", 100, 50, 8),
+                new Basic_Work("Супервайзер", 100, 50, 8),
+                new Basic_Work("Товаровед", 100, 50, 8),
+                new Basic_Work("Экономист", 100, 50, 8),
             };
         }
 

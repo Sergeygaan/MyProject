@@ -46,6 +46,8 @@ namespace Module_Event
                 {
                     toolStripMenuItem.Enabled = false;
 
+                    toolStripMenuItem.ToolTipText = "Не прошла проверка параметра " + currentCheckParameter.Item1;
+
                     break;
                 }
             }

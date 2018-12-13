@@ -27,20 +27,20 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Адвокат", 1, 1, 8),
-                new Basic_Work("Делопроизводитель", 1, 1, 8),
-                new Basic_Work("Детектив", 1, 1, 8),
-                new Basic_Work("Дипломат", 1, 1, 8),
-                new Basic_Work("Нотариус", 1, 1, 8),
-                new Basic_Work("Полицейский", 1, 1, 8),
-                new Basic_Work("Правовед", 1, 1, 8),
-                new Basic_Work("Прокурор", 1, 1, 8),
-                new Basic_Work("Следователь", 1, 1, 8),
-                new Basic_Work("Судебный пристав", 1, 1, 8),
-                new Basic_Work("Судья", 1, 1, 8),
-                new Basic_Work("Тюремный надзиратель", 1, 1, 8),
-                new Basic_Work("Юрист", 1, 1, 8),
-                new Basic_Work("Судья", 1, 1, 8),
+                new Basic_Work("Адвокат", 100, 50, 8),
+                new Basic_Work("Делопроизводитель", 100, 50, 8),
+                new Basic_Work("Детектив", 100, 50, 8),
+                new Basic_Work("Дипломат", 100, 50, 8),
+                new Basic_Work("Нотариус", 100, 50, 8),
+                new Basic_Work("Полицейский", 100, 50, 8),
+                new Basic_Work("Правовед", 100, 50, 8),
+                new Basic_Work("Прокурор", 100, 50, 8),
+                new Basic_Work("Следователь", 100, 50, 8),
+                new Basic_Work("Судебный пристав", 100, 50, 8),
+                new Basic_Work("Судья", 100, 50, 8),
+                new Basic_Work("Тюремный надзиратель", 100, 50, 8),
+                new Basic_Work("Юрист", 100, 50, 8),
+                new Basic_Work("Судья", 100, 50, 8),
             };
         }
 

@@ -27,12 +27,12 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Военнослужащий", 1, 1, 8),
-                new Basic_Work("Конвоир", 1, 1, 8),
-                new Basic_Work("Пожарный", 1, 1, 8),
-                new Basic_Work("Разведчик", 1, 1, 8),
-                new Basic_Work("Спасатель", 1, 1, 8),
-                new Basic_Work("Телохранитель", 1, 1, 8),
+                new Basic_Work("Военнослужащий", 100, 50, 8),
+                new Basic_Work("Конвоир", 100, 50, 8),
+                new Basic_Work("Пожарный", 100, 50, 8),
+                new Basic_Work("Разведчик", 100, 50, 8),
+                new Basic_Work("Спасатель", 100, 50, 8),
+                new Basic_Work("Телохранитель", 100, 50, 8),
             };
         }
 

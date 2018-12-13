@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Module_Work
 {
-    public class Basic_Work
-    {
+    public class FinalJob
+    {       
         /// <summary>
         /// Название профессии
         /// </summary>
@@ -16,24 +16,30 @@ namespace Module_Work
         /// <summary>
         /// Зарплата
         /// </summary>
-        public int Salary;
+        public float Salary;
 
         /// <summary>
-        /// Требование к интеллекту
+        /// Требование к плану работы
         /// </summary>
-        public int IntelligenceRequirement;
+        public int PlanWork;
 
         /// <summary>
         /// Рабочее время
         /// </summary>
         public int WorkingTime;
 
-        public Basic_Work(string professionName, int salary, int intelligenceRequirement, int workingTime)
+        /// <summary>
+        /// Требования
+        /// </summary>
+        public int IntelligenceRequirement;
+
+        public FinalJob(string professionName, float salary, int planWork, int workingTime, int intelligenceRequirement)
         {
             ProfessionName = professionName;
             Salary = salary;
-            IntelligenceRequirement = intelligenceRequirement;
+            PlanWork = planWork;
             WorkingTime = workingTime;
+            IntelligenceRequirement = intelligenceRequirement;
         }
     }
 }

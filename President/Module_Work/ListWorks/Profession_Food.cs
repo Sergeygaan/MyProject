@@ -27,15 +27,15 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Булочник", 1, 1, 8),
-                new Basic_Work("Винодел", 1, 1, 8),
-                new Basic_Work("Дегустатор", 1, 1, 8),
-                new Basic_Work("Месильщик", 1, 1, 8),
-                new Basic_Work("Мясник", 1, 1, 8),
-                new Basic_Work("Пекарь", 1, 1, 8),
-                new Basic_Work("Повар", 1, 1, 8),
-                new Basic_Work("Повар-кондитер", 1, 1, 8),
-                new Basic_Work("Шеф-повар", 1, 1, 8)
+                new Basic_Work("Булочник", 100, 50, 8),
+                new Basic_Work("Винодел", 100, 50, 8),
+                new Basic_Work("Дегустатор", 100, 50, 8),
+                new Basic_Work("Месильщик", 100, 50, 8),
+                new Basic_Work("Мясник", 100, 50, 8),
+                new Basic_Work("Пекарь", 100, 50, 8),
+                new Basic_Work("Повар", 100, 50, 8),
+                new Basic_Work("Повар-кондитер", 100, 50, 8),
+                new Basic_Work("Шеф-повар", 100, 1, 8)
             };
         }
         

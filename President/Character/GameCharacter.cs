@@ -182,7 +182,7 @@ namespace Module_Character
 
         #region Charm
 
-        private static int _charm = 0;
+        private static int _charm = 50;
 
         public static void OnPropertyChangedCharm(PropertyChangedEventArgs e)
         {
@@ -216,7 +216,7 @@ namespace Module_Character
 
         #region Intelligence
 
-        private static int _intelligence = 0;
+        private static int _intelligence = 50;
 
         public static void OnPropertyChangedIntelligence(PropertyChangedEventArgs e)
         {
