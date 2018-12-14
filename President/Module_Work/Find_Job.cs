@@ -66,6 +66,8 @@ namespace Module_Work
             if (listBoxWork.SelectedIndex != -1)
             {
                 _myWork(_finalJobs[listBoxWork.SelectedIndex]);
+
+                Close();
             }
         }
 
@@ -99,15 +101,17 @@ namespace Module_Work
             int randomWorkPlan = rnd.Next(450, 600);
 
             int finalWorkingTime = basic_Work.WorkingTime + rnd.Next(-2, 4);
+            int startWorkingTime = rnd.Next(0, 23 - finalWorkingTime);
 
-            _finalJobs.Add(new FinalJob(basic_Work.ProfessionName, finalSalary, randomWorkPlan, finalWorkingTime, basic_Work.IntelligenceRequirement));
+            _finalJobs.Add(new FinalJob(basic_Work.ProfessionName, finalSalary, randomWorkPlan, finalWorkingTime, startWorkingTime, basic_Work.IntelligenceRequirement));
         }
 
         private void ShowWorkList()
         {
             foreach (var currentJobs in _finalJobs)
             {
-                listBoxWork.Items.Add("Название: " + currentJobs.ProfessionName + " Зарплата: " + currentJobs.Salary + " $ План: " + currentJobs.PlanWork + " % Рабочее время: " + currentJobs.WorkingTime);
+                string wortTime = " Рабочее время: " + currentJobs.StartWorkingTime + ":00 - " + (currentJobs.StartWorkingTime + currentJobs.WorkingTime) + ":00";
+                listBoxWork.Items.Add(currentJobs.ProfessionName + " - " + currentJobs.Salary + " $ План: " + currentJobs.Plan + " %" + wortTime);
 
                 if (currentJobs.IntelligenceRequirement > GameCharacter.Intelligence)
                 {

@@ -19,6 +19,11 @@ namespace Module_Work
         public void MyWorkFunc(FinalJob finalJob)
         {
             _finalJob = finalJob;
+
+            buttonQuit.Enabled = true;
+            buttonFindJob.Enabled = false;
+
+            CurrentWork();
         }
 
         private List<IProfession> _professions;
@@ -56,7 +61,51 @@ namespace Module_Work
         {
             Find_Job find_Job = new Find_Job(_professions, new MyDelegateWork(MyWorkFunc));
             find_Job.ShowDialog();
+        }
 
+        private void QuitWork_Click(object sender, EventArgs e)
+        {
+            if(_finalJob != null)
+            {
+                _finalJob = null;
+
+                buttonQuit.Enabled = false;
+                buttonFindJob.Enabled = true;
+
+                CurrentWork();
+            }
+        }
+
+        private void CurrentWork()
+        {
+            if (_finalJob != null)
+            {
+                labelProfessionName.Text = "Профессия: " + _finalJob.ProfessionName;
+                labelSalary.Text = "Оклад: " + _finalJob.Salary + " $";
+                labelWorkTime.Text = "Рабочее время: " + _finalJob.StartWorkingTime + ":00-" + (_finalJob.StartWorkingTime + _finalJob.WorkingTime) + ":00";
+
+                labelPlan.Text = "План: " + _finalJob.Plan + " %";
+                labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
+            }
+            else
+            {
+                labelProfessionName.Text = "Профессия: ";
+                labelSalary.Text = "Оклад: 0$";
+                labelWorkTime.Text = "Рабочее время: ";
+
+                labelPlan.Text = "План: 0%";
+                labelWorkPlan.Text = "Выполнение плана: 0%";
+            }
+
+
+        }
+
+        int _valueTableWork = 0;
+
+        private void trackBarQualityWork_ValueChanged(object sender, EventArgs e)
+        {
+            _valueTableWork = trackBarQualityWork.Value * 10;
+            labelTableWork.Text = _valueTableWork + " %";
         }
     }
 }

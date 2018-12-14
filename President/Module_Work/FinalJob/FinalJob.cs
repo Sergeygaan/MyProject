@@ -19,9 +19,14 @@ namespace Module_Work
         public float Salary;
 
         /// <summary>
-        /// Требование к плану работы
+        /// План на пол года
         /// </summary>
-        public int PlanWork;
+        public int Plan;
+
+        /// <summary>
+        /// Текущее выполнение плана
+        /// </summary>
+        public int WorkPlan;
 
         /// <summary>
         /// Рабочее время
@@ -29,16 +34,24 @@ namespace Module_Work
         public int WorkingTime;
 
         /// <summary>
+        /// Начало рабочего дня
+        /// </summary>
+        public int StartWorkingTime;
+
+        /// <summary>
         /// Требования
         /// </summary>
         public int IntelligenceRequirement;
 
-        public FinalJob(string professionName, float salary, int planWork, int workingTime, int intelligenceRequirement)
+        public FinalJob(string professionName, float salary, int plan, int workingTime, int startWorkingTime, int intelligenceRequirement)
         {
             ProfessionName = professionName;
             Salary = salary;
-            PlanWork = planWork;
+            Plan = plan;
+
             WorkingTime = workingTime;
+            StartWorkingTime = startWorkingTime;
+
             IntelligenceRequirement = intelligenceRequirement;
         }
     }
