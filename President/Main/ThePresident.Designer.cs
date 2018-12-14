@@ -136,6 +136,8 @@
             this.Controls.Add(this.labelFood);
             this.Controls.Add(this.labelMoney);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ThePresident";
             this.Text = "The President";
             this.ResumeLayout(false);

@@ -55,6 +55,7 @@
             this.ClientSize = new System.Drawing.Size(373, 126);
             this.ControlBox = false;
             this.Controls.Add(this.MainText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "EventDisplayForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

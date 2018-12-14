@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Character;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Module_Work
             _finalJob = finalJob;
 
             buttonQuit.Enabled = true;
+            buttonGoWork.Enabled = true;
             buttonFindJob.Enabled = false;
 
             CurrentWork();
@@ -70,6 +72,7 @@ namespace Module_Work
                 _finalJob = null;
 
                 buttonQuit.Enabled = false;
+                buttonGoWork.Enabled = false;
                 buttonFindJob.Enabled = true;
 
                 CurrentWork();
@@ -102,10 +105,32 @@ namespace Module_Work
 
         int _valueTableWork = 0;
 
+        /// <summary>
+        /// Масштабирование прокрутки
+        /// </summary>
         private void trackBarQualityWork_ValueChanged(object sender, EventArgs e)
         {
             _valueTableWork = trackBarQualityWork.Value * 10;
             labelTableWork.Text = _valueTableWork + " %";
+        }
+
+        /// <summary>
+        /// Получение зарплаты
+        /// </summary>
+        private void Payroll()
+        {
+            GameCharacter.Money += _finalJob.Salary;
+
+            _finalJob.WorkPlan += trackBarQualityWork.Value * 10;
+            labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
+        }
+
+        /// <summary>
+        /// Пойти на работу
+        /// </summary>
+        private void GoWork_Click(object sender, EventArgs e)
+        {
+            Payroll();
         }
     }
 }

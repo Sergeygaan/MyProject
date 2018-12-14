@@ -108,6 +108,9 @@
             this.Controls.Add(this.buttonNewspaper);
             this.Controls.Add(this.buttonOutside);
             this.Controls.Add(this.labelListWork);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Find_Job";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Найти работу";

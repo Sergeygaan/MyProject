@@ -16,7 +16,7 @@ namespace Module_Work
         /// <summary>
         /// Зарплата
         /// </summary>
-        public float Salary;
+        public int Salary;
 
         /// <summary>
         /// План на пол года
@@ -43,7 +43,7 @@ namespace Module_Work
         /// </summary>
         public int IntelligenceRequirement;
 
-        public FinalJob(string professionName, float salary, int plan, int workingTime, int startWorkingTime, int intelligenceRequirement)
+        public FinalJob(string professionName, int salary, int plan, int workingTime, int startWorkingTime, int intelligenceRequirement)
         {
             ProfessionName = professionName;
             Salary = salary;

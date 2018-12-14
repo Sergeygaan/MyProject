@@ -132,6 +132,8 @@ namespace Module_Work
 
         #region Подсказка List
 
+        int flagIndex = 0;
+
         private void listBoxWork_MouseMove(object sender, MouseEventArgs e)
         {
             int index = listBoxWork.IndexFromPoint(e.Location);
@@ -142,9 +144,11 @@ namespace Module_Work
                 {
                     if (currentIgnorWork.Item1 == index)
                     {
-                        if (toolTip.GetToolTip(listBoxWork) != currentIgnorWork.Item2)
+                        if ((toolTip.GetToolTip(listBoxWork) != currentIgnorWork.Item2) || (flagIndex != index))
                         {
                             toolTip.SetToolTip(listBoxWork, currentIgnorWork.Item2);
+
+                            flagIndex = index;
 
                             break;
                         }
