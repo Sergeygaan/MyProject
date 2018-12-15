@@ -63,7 +63,7 @@
             this.buttonNewspaper.Name = "buttonNewspaper";
             this.buttonNewspaper.Size = new System.Drawing.Size(86, 23);
             this.buttonNewspaper.TabIndex = 3;
-            this.buttonNewspaper.Text = "В газете";
+            this.buttonNewspaper.Text = "В газете - 5$";
             this.buttonNewspaper.UseVisualStyleBackColor = true;
             this.buttonNewspaper.Click += new System.EventHandler(this.Newspaper_Click);
             // 

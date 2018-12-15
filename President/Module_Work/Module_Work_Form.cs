@@ -129,7 +129,6 @@ namespace Module_Work
         private void Income_AddWork(int income)
         {
             GameCharacter.Income += income;
-
         }
 
         /// <summary>
@@ -137,8 +136,6 @@ namespace Module_Work
         /// </summary>
         private void GoWork_Click(object sender, EventArgs e)
         {
-            //Payroll();
-
             _finalJob.WorkPlan += trackBarQualityWork.Value * 10;
             labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
 

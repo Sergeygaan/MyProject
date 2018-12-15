@@ -109,12 +109,18 @@ namespace Module_UserControl
         {
             LinearGradientBrush brush = null;
             Rectangle rec = new Rectangle(0, 0, this.Width, this.Height);
+
             double scaleFactor = (((double)Value - (double)Minimum) / ((double)Maximum - (double)Minimum));
+
+            if (scaleFactor == 0)
+            {
+                scaleFactor = 0.01;
+            }
 
             if (ProgressBarRenderer.IsSupported)
                 ProgressBarRenderer.DrawHorizontalBar(e.Graphics, rec);
 
-            rec.Width = (int)((rec.Width * scaleFactor) - 4);
+            rec.Width = (int)(rec.Width * scaleFactor);
             rec.Height -= 4;
             brush = new LinearGradientBrush(rec, this.ForeColor, this.BackColor, LinearGradientMode.Vertical);
             e.Graphics.FillRectangle(brush, 2, 2, rec.Width, rec.Height);

@@ -36,6 +36,8 @@ namespace Module_Work
 
         private void Outside_Click(object sender, EventArgs e)
         {
+            ReducingNeeds_Job(1);
+
             ClearWorkList();
 
             RandomDrawingWorks(3);
@@ -45,11 +47,16 @@ namespace Module_Work
 
         private void Newspaper_Click(object sender, EventArgs e)
         {
-            ClearWorkList();
+            if (GameCharacter.Money >= 5)
+            {
+                GameCharacter.Set("Money", -5);
 
-            RandomDrawingWorks(6);
+                ClearWorkList();
 
-            ShowWorkList();
+                RandomDrawingWorks(6);
+
+                ShowWorkList();
+            }
         }
 
         private void Internet_Click(object sender, EventArgs e)
@@ -216,5 +223,15 @@ namespace Module_Work
         }
 
         #endregion
+
+
+        private void ReducingNeeds_Job(int fatigue)
+        {
+            int randomFood = rnd.Next(1, fatigue);
+            int randomMood = rnd.Next(1, fatigue);
+            int randomHealth = rnd.Next(1, fatigue);
+       
+            GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
+        }
     }
 }
