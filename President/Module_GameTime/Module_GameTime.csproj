@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A96FA10-4568-4AA8-A9F2-43B989EDB9E3}</ProjectGuid>
+    <ProjectGuid>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Module_UserControl</RootNamespace>
-    <AssemblyName>Module_UserControl</AssemblyName>
+    <RootNamespace>Module_GameTime</RootNamespace>
+    <AssemblyName>Module_GameTime</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,8 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,42 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character\Characte_Characteristics.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Character\Characte_Characteristics.Designer.cs">
-      <DependentUpon>Characte_Characteristics.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GameTime\GameTimer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameTime\GameTimer.Designer.cs">
-      <DependentUpon>GameTimer.cs</DependentUpon>
-    </Compile>
+    <Compile Include="GameTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Character\Characte_Characteristics.resx">
-      <DependentUpon>Characte_Characteristics.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GameTime\GameTimer.resx">
-      <DependentUpon>GameTimer.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Character\Module_Character.csproj">
-      <Project>{D10EB179-E4ED-4511-9DE8-C29C2581F796}</Project>
-      <Name>Module_Character</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Module_GameTime\Module_GameTime.csproj">
-      <Project>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</Project>
-      <Name>Module_GameTime</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Module_Work\Module_Work.csproj">
-      <Project>{774655CC-CDB2-4CDB-825A-9B7ACEAB8212}</Project>
-      <Name>Module_Work</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

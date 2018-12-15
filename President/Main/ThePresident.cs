@@ -1,5 +1,6 @@
 ﻿using Module_Character;
 using Module_Event;
+using Module_GameTime;
 using Module_Work;
 using System;
 using System.Collections.Generic;
@@ -134,6 +135,11 @@ namespace ThePresident
             }
 
             _module_Work_Form.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GameTime.AddTime(60);
         }
     }
 }

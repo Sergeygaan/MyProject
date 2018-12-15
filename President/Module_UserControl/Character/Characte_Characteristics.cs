@@ -28,6 +28,10 @@ namespace Module_UserControl
             GameCharacter.PropertyChangedPhysicalDevelopment += new PropertyChangedEventHandler(GetValue_PhysicalDevelopment);
             GameCharacter.PropertyChangedCharm += new PropertyChangedEventHandler(GetValue_Charm);
             GameCharacter.PropertyChangedIntelligence += new PropertyChangedEventHandler(GetValue_Intelligence);
+
+            toolTipFood.SetToolTip(progressBarFood, "Еда: " + progressBarFood.Value + " %");
+            toolTipMood.SetToolTip(progressBarMood, "Настроение: " + progressBarMood.Value + " %");
+            toolTipHealth.SetToolTip(progressBarHealth, "Здоровье: " + progressBarHealth.Value + " %");
         }
 
         #region Подписка на свойства

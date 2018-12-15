@@ -91,6 +91,10 @@
       <Project>{d10eb179-e4ed-4511-9de8-c29c2581f796}</Project>
       <Name>Module_Character</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Module_GameTime\Module_GameTime.csproj">
+      <Project>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</Project>
+      <Name>Module_GameTime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

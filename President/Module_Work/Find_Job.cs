@@ -1,4 +1,5 @@
 ﻿using Module_Character;
+using Module_GameTime;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,9 @@ namespace Module_Work
 
         private void Outside_Click(object sender, EventArgs e)
         {
-            ReducingNeeds_Job(1);
+            GameTime.RandomAddTime(1, 15);
+
+            ReducingNeeds_Job(4);
 
             ClearWorkList();
 
@@ -49,7 +52,11 @@ namespace Module_Work
         {
             if (GameCharacter.Money >= 5)
             {
+                GameTime.RandomAddTime(1, 3);
+
                 GameCharacter.Set("Money", -5);
+
+                ReducingNeeds_Job(2);
 
                 ClearWorkList();
 
@@ -78,6 +85,10 @@ namespace Module_Work
             }
         }
 
+        /// <summary>
+        /// Генерация рандомных профессий
+        /// </summary>
+        /// <param name="numberSteps">Количество профессий</param>
         private void RandomDrawingWorks(int numberSteps)
         {
             int indexRegion;
@@ -224,7 +235,10 @@ namespace Module_Work
 
         #endregion
 
-
+        /// <summary>
+        /// Уменьшает характеристики персонажа
+        /// </summary>
+        /// <param name="fatigue">Максимальное количество уменьшения</param>
         private void ReducingNeeds_Job(int fatigue)
         {
             int randomFood = rnd.Next(1, fatigue);
