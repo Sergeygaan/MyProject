@@ -103,7 +103,7 @@ namespace Module_Work
             int finalWorkingTime = basic_Work.WorkingTime + rnd.Next(-2, 4);
             int startWorkingTime = rnd.Next(0, 23 - finalWorkingTime);
 
-            _finalJobs.Add(new FinalJob(basic_Work.ProfessionName, finalSalary, randomWorkPlan, finalWorkingTime, startWorkingTime, basic_Work.IntelligenceRequirement));
+            _finalJobs.Add(new FinalJob(basic_Work.ProfessionName, finalSalary, randomWorkPlan, finalWorkingTime, startWorkingTime, basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
         }
 
         private void ShowWorkList()
@@ -113,10 +113,34 @@ namespace Module_Work
                 string wortTime = " Рабочее время: " + currentJobs.StartWorkingTime + ":00 - " + (currentJobs.StartWorkingTime + currentJobs.WorkingTime) + ":00";
                 listBoxWork.Items.Add(currentJobs.ProfessionName + " - " + currentJobs.Salary + " $ План: " + currentJobs.Plan + " %" + wortTime);
 
-                if (currentJobs.IntelligenceRequirement > GameCharacter.Intelligence)
+                bool flagCheck = true;
+                string textParam = "";
+
+                if (currentJobs.Req_Intelligence > GameCharacter.Intelligence)
+                {
+                    flagCheck = false;
+
+                    textParam += "Нехватает параметра \"Интеллект\". Необходимо " + currentJobs.Req_Intelligence + " у вас " + GameCharacter.Intelligence + "\n";
+                }
+
+                if (currentJobs.Req_Charm > GameCharacter.Charm)
+                {
+                    flagCheck = false;
+
+                    textParam += "Нехватает параметра \"Обаяние\". Необходимо " + currentJobs.Req_Charm + " у вас " + GameCharacter.Charm + "\n";
+                }
+
+                if (currentJobs.Req_PhysicalDevelopment > GameCharacter.PhysicalDevelopment)
+                {
+                    flagCheck = false;
+
+                    textParam += "Нехватает параметра \"Физическая сила\". Необходимо " + currentJobs.Req_PhysicalDevelopment + " у вас " + GameCharacter.PhysicalDevelopment + "\n";
+                }
+
+                if (!flagCheck)
                 {
                     listBoxWork.DisableItem(listBoxWork.Items.Count - 1);
-                    ListIgnoreWork.Add(new Tuple<int, string>(listBoxWork.Items.Count - 1, "Нехватает параметра интеллект. Необходимо " + currentJobs.IntelligenceRequirement + " у вас " + GameCharacter.Intelligence));
+                    ListIgnoreWork.Add(new Tuple<int, string>(listBoxWork.Items.Count - 1, textParam));
                 }
             }
         }
@@ -124,10 +148,24 @@ namespace Module_Work
         private void ClearWorkList()
         {
             _finalJobs.Clear();
+
+            EnableItem();
             listBoxWork.Items.Clear();
+
             ListIgnoreWork.Clear();
 
             GC.Collect();
+        }
+
+        /// <summary>
+        /// Снятие блокировки со списка
+        /// </summary>
+        private void EnableItem()
+        {
+            for (int index = 0; index < listBoxWork.Items.Count; index++)
+            {
+                listBoxWork.EnableItem(index);
+            }
         }
 
         #region Подсказка List

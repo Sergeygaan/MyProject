@@ -403,7 +403,11 @@ namespace Module_Character
 
                 case "PhysicalDevelopment":
 
-                    if (PhysicalDevelopment + valueParameter < 0)
+                    if (PhysicalDevelopment + valueParameter > 100)
+                    {
+                        PhysicalDevelopment = 100;
+                    }
+                    else if (PhysicalDevelopment + valueParameter < 0)
                     {
                         PhysicalDevelopment = 0;
                     }
@@ -416,7 +420,11 @@ namespace Module_Character
 
                 case "Charm":
 
-                    if (Charm + valueParameter < 0)
+                    if (Charm + valueParameter > 100)
+                    {
+                        Charm = 100;
+                    }
+                    else if (Charm + valueParameter < 0)
                     {
                         Charm = 0;
                     }
@@ -429,7 +437,11 @@ namespace Module_Character
 
                 case "Intelligence":
 
-                    if (Intelligence + valueParameter < 0)
+                    if (Intelligence + valueParameter > 100)
+                    {
+                        Intelligence = 100;
+                    }
+                    else if (Intelligence + valueParameter < 0)
                     {
                         Intelligence = 0;
                     }
@@ -484,6 +496,23 @@ namespace Module_Character
             }
 
             return -1;
+        }
+
+        #endregion
+
+        #region Уменьшение потребностей
+
+        /// <summary>
+        /// Уменьшение параметров персонажа
+        /// </summary>
+        /// <param name="reducingFood">Уменьшение параметра "Еда"</param>
+        /// <param name="reducingMood">Уменьшение параметра "Настроение"</param>
+        /// <param name="reducingHealth">Уменьшение параметра "Здоровье"</param>
+        public static void ReducingNeeds(int reducingFood, int reducingMood, int reducingHealth)
+        {
+            Set("Food", -reducingFood);
+            Set("Mood", -reducingMood);
+            Set("Health", -reducingHealth);
         }
 
         #endregion
