@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83B5B757-EDDC-4E40-97B4-0A18C570569D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>ThePresident</RootNamespace>
-    <AssemblyName>ThePresident</AssemblyName>
+    <ProjectGuid>{2A96FA10-4568-4AA8-A9F2-43B989EDB9E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Module_UserControl</RootNamespace>
+    <AssemblyName>Module_UserControl</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,63 +32,33 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ThePresident.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Characte_Characteristics.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ThePresident.Designer.cs">
-      <DependentUpon>ThePresident.cs</DependentUpon>
+    <Compile Include="Characte_Characteristics.Designer.cs">
+      <DependentUpon>Characte_Characteristics.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="ThePresident.resx">
-      <DependentUpon>ThePresident.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <EmbeddedResource Include="Characte_Characteristics.resx">
+      <DependentUpon>Characte_Characteristics.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Character\Module_Character.csproj">
       <Project>{D10EB179-E4ED-4511-9DE8-C29C2581F796}</Project>
       <Name>Module_Character</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Event\Module_Event.csproj">
-      <Project>{8c44d849-c96f-4a72-ba40-2d67727488f4}</Project>
-      <Name>Module_Event</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Module_UserControl\Module_UserControl.csproj">
-      <Project>{2A96FA10-4568-4AA8-A9F2-43B989EDB9E3}</Project>
-      <Name>Module_UserControl</Name>
     </ProjectReference>
     <ProjectReference Include="..\Module_Work\Module_Work.csproj">
       <Project>{774655CC-CDB2-4CDB-825A-9B7ACEAB8212}</Project>

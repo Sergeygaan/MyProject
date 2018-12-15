@@ -20,71 +20,9 @@ namespace ThePresident
         public ThePresident()
         {
             InitializeComponent();
-
-            //Подписка на свойства
-            GameCharacter.PropertyChangedMoney += new PropertyChangedEventHandler(GetValue_Money);
-            GameCharacter.PropertyChangedFood += new PropertyChangedEventHandler(GetValue_Food);
-            GameCharacter.PropertyChangedMood += new PropertyChangedEventHandler(GetValue_Mood);
-            GameCharacter.PropertyChangedHealth += new PropertyChangedEventHandler(GetValue_Health);
-
-            GameCharacter.PropertyChangedPhysicalDevelopment += new PropertyChangedEventHandler(GetValue_PhysicalDevelopment);
-            GameCharacter.PropertyChangedCharm += new PropertyChangedEventHandler(GetValue_Charm);
-            GameCharacter.PropertyChangedIntelligence += new PropertyChangedEventHandler(GetValue_Intelligence);
         }
 
-        #region Подписка на свойства
-
-        //Получить значение денег
-        private void GetValue_Money(object sender, PropertyChangedEventArgs even)
-        {
-            labelMoney.Text = "Деньги: " + even.PropertyName + " $";
-            //int i = int.Parse(even.PropertyName);
-        }
-
-        //Получить значение еды
-        private void GetValue_Food(object sender, PropertyChangedEventArgs even)
-        {
-            labelFood.Text = "Еда: " + even.PropertyName + " %";
-            //int i = int.Parse(even.PropertyName);
-        }
-
-        //Получить значение настроения
-        private void GetValue_Mood(object sender, PropertyChangedEventArgs even)
-        {
-            labelMood.Text = "Здоровье: " + even.PropertyName + " %";
-            //int i = int.Parse(even.PropertyName);
-        }
-
-        //Получить значение здоровья
-        private void GetValue_Health(object sender, PropertyChangedEventArgs even)
-        {
-            labelHealth.Text = "Настроение: " + even.PropertyName + " %";
-            //int i = int.Parse(even.PropertyName);
-        }
-
-        //Получить значение физической силы
-        private void GetValue_PhysicalDevelopment(object sender, PropertyChangedEventArgs even)
-        {
-            labelPhysicalDevelopment.Text = "Физическая сила: " + even.PropertyName + " %";
-            //int i = int.Parse(even.PropertyName);
-        }
-
-        //Получить значение обаяния
-        private void GetValue_Charm(object sender, PropertyChangedEventArgs even)
-        {
-            labelCharm.Text = "Обаяние: " + even.PropertyName + " %";
-            //int i = int.Parse(even.PropertyName);
-        }
-
-        //Получить значение интеллекта
-        private void GetValue_Intelligence(object sender, PropertyChangedEventArgs even)
-        {
-            labelIntelligence.Text = "Интеллект: " + even.PropertyName + " %";
-            //int i = int.Parse(even.PropertyName);
-        }
-
-        #endregion
-
+     
         private void AddEvent()
         {
             var eventGenerator = new EventGenerator();

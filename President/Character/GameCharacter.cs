@@ -264,19 +264,52 @@ namespace Module_Character
 
                 case "Food":
 
-                    Food += valueParameter;
+                    if (Food + valueParameter > 100)
+                    {
+                        Food = 100;
+                    }
+                    else if(Food + valueParameter < 0)
+                    {
+                        Food = 0;
+                    }
+                    else
+                    {
+                        Food += valueParameter;
+                    }
 
                     break;
 
                 case "Mood":
 
-                    Mood += valueParameter;
+                    if (Mood + valueParameter > 100)
+                    {
+                        Mood = 100;
+                    }
+                    else if (Food + valueParameter < 0)
+                    {
+                        Mood = 0;
+                    }
+                    else
+                    {
+                        Mood += valueParameter;
+                    }
 
                     break;
 
                 case "Health":
 
-                    Health += valueParameter;
+                    if (Health + valueParameter > 100)
+                    {
+                        Health = 100;
+                    }
+                    else if (Health + valueParameter < 0)
+                    {
+                        Health = 0;
+                    }
+                    else
+                    {
+                        Health += valueParameter;
+                    }
 
                     break;
 
