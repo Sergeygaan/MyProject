@@ -55,9 +55,9 @@
             // 
             // characte_Characteristics1
             // 
-            this.characte_Characteristics1.Location = new System.Drawing.Point(432, 12);
+            this.characte_Characteristics1.Location = new System.Drawing.Point(502, 12);
             this.characte_Characteristics1.Name = "characte_Characteristics1";
-            this.characte_Characteristics1.Size = new System.Drawing.Size(356, 259);
+            this.characte_Characteristics1.Size = new System.Drawing.Size(286, 241);
             this.characte_Characteristics1.TabIndex = 9;
             // 
             // ThePresident

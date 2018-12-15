@@ -13,6 +13,11 @@ namespace Module_Work
 {
     public partial class Module_Work_Form : Form
     {
+        /// <summary>
+        /// Генератор рандома
+        /// </summary>
+        private Random random = new Random();
+
         private FinalJob _finalJob;
 
         public delegate void MyDelegateWork(FinalJob finalJob);
@@ -96,7 +101,7 @@ namespace Module_Work
             }
             else
             {
-                labelProfessionName.Text = "Профессия: ";
+                labelProfessionName.Text = "Профессия: Безработный";
                 labelSalary.Text = "Оклад: 0$";
                 labelWorkTime.Text = "Рабочее время: ";
 
@@ -136,6 +141,19 @@ namespace Module_Work
 
             _finalJob.WorkPlan += trackBarQualityWork.Value * 10;
             labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
+
+            ReducingNeeds_Work();
+        }
+
+        private void ReducingNeeds_Work()
+        {
+            double qualityWork = (trackBarQualityWork.Value * 10 ) / 100.0;
+
+            int randomFood = (int)(random.Next(5, 20) * qualityWork);
+            int randomMood = (int)(random.Next(5, 20) * qualityWork);
+            int randomHealth = (int)(random.Next(5, 20) * qualityWork);
+
+            GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
         }
     }
 }

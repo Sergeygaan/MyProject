@@ -85,18 +85,18 @@
             this.labelWorkPlan.AutoSize = true;
             this.labelWorkPlan.Location = new System.Drawing.Point(6, 127);
             this.labelWorkPlan.Name = "labelWorkPlan";
-            this.labelWorkPlan.Size = new System.Drawing.Size(106, 13);
+            this.labelWorkPlan.Size = new System.Drawing.Size(123, 13);
             this.labelWorkPlan.TabIndex = 5;
-            this.labelWorkPlan.Text = "Выполнение плана:";
+            this.labelWorkPlan.Text = "Выполнение плана: 0%";
             // 
             // labelPlan
             // 
             this.labelPlan.AutoSize = true;
             this.labelPlan.Location = new System.Drawing.Point(6, 105);
             this.labelPlan.Name = "labelPlan";
-            this.labelPlan.Size = new System.Drawing.Size(36, 13);
+            this.labelPlan.Size = new System.Drawing.Size(53, 13);
             this.labelPlan.TabIndex = 4;
-            this.labelPlan.Text = "План:";
+            this.labelPlan.Text = "План: 0%";
             // 
             // labelLine
             // 
@@ -121,23 +121,24 @@
             this.labelSalary.AutoSize = true;
             this.labelSalary.Location = new System.Drawing.Point(6, 48);
             this.labelSalary.Name = "labelSalary";
-            this.labelSalary.Size = new System.Drawing.Size(42, 13);
+            this.labelSalary.Size = new System.Drawing.Size(57, 13);
             this.labelSalary.TabIndex = 1;
-            this.labelSalary.Text = "Оклад:";
+            this.labelSalary.Text = "Оклад: 0$";
             // 
             // labelProfessionName
             // 
             this.labelProfessionName.AutoSize = true;
             this.labelProfessionName.Location = new System.Drawing.Point(6, 29);
             this.labelProfessionName.Name = "labelProfessionName";
-            this.labelProfessionName.Size = new System.Drawing.Size(71, 13);
+            this.labelProfessionName.Size = new System.Drawing.Size(139, 13);
             this.labelProfessionName.TabIndex = 0;
-            this.labelProfessionName.Text = "Профессия: ";
+            this.labelProfessionName.Text = "Профессия: Безработный";
             // 
             // trackBarQualityWork
             // 
             this.trackBarQualityWork.LargeChange = 1;
             this.trackBarQualityWork.Location = new System.Drawing.Point(12, 166);
+            this.trackBarQualityWork.Minimum = 1;
             this.trackBarQualityWork.Name = "trackBarQualityWork";
             this.trackBarQualityWork.Size = new System.Drawing.Size(149, 45);
             this.trackBarQualityWork.TabIndex = 1;

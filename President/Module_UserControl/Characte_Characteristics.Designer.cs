@@ -61,7 +61,7 @@
             this.groupBoxCharacteristics.Controls.Add(this.groupBoxFinance);
             this.groupBoxCharacteristics.Location = new System.Drawing.Point(3, 3);
             this.groupBoxCharacteristics.Name = "groupBoxCharacteristics";
-            this.groupBoxCharacteristics.Size = new System.Drawing.Size(350, 250);
+            this.groupBoxCharacteristics.Size = new System.Drawing.Size(282, 238);
             this.groupBoxCharacteristics.TabIndex = 0;
             this.groupBoxCharacteristics.TabStop = false;
             this.groupBoxCharacteristics.Text = "Характеристики";
@@ -74,9 +74,9 @@
             this.groupBoxNeeds.Controls.Add(this.labelMood);
             this.groupBoxNeeds.Controls.Add(this.labelFood);
             this.groupBoxNeeds.Controls.Add(this.labelHealth);
-            this.groupBoxNeeds.Location = new System.Drawing.Point(7, 115);
+            this.groupBoxNeeds.Location = new System.Drawing.Point(7, 104);
             this.groupBoxNeeds.Name = "groupBoxNeeds";
-            this.groupBoxNeeds.Size = new System.Drawing.Size(337, 129);
+            this.groupBoxNeeds.Size = new System.Drawing.Size(267, 129);
             this.groupBoxNeeds.TabIndex = 18;
             this.groupBoxNeeds.TabStop = false;
             this.groupBoxNeeds.Text = "Потребности";
@@ -87,7 +87,7 @@
             this.progressBarMood.ForeColor = System.Drawing.Color.Green;
             this.progressBarMood.Location = new System.Drawing.Point(104, 60);
             this.progressBarMood.Name = "progressBarMood";
-            this.progressBarMood.Size = new System.Drawing.Size(227, 23);
+            this.progressBarMood.Size = new System.Drawing.Size(153, 23);
             this.progressBarMood.TabIndex = 19;
             this.progressBarMood.Value = 100;
             // 
@@ -97,7 +97,7 @@
             this.progressBarHealth.ForeColor = System.Drawing.Color.RoyalBlue;
             this.progressBarHealth.Location = new System.Drawing.Point(104, 95);
             this.progressBarHealth.Name = "progressBarHealth";
-            this.progressBarHealth.Size = new System.Drawing.Size(227, 23);
+            this.progressBarHealth.Size = new System.Drawing.Size(153, 23);
             this.progressBarHealth.TabIndex = 18;
             this.progressBarHealth.Value = 100;
             // 
@@ -107,7 +107,7 @@
             this.progressBarFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.progressBarFood.Location = new System.Drawing.Point(104, 28);
             this.progressBarFood.Name = "progressBarFood";
-            this.progressBarFood.Size = new System.Drawing.Size(227, 23);
+            this.progressBarFood.Size = new System.Drawing.Size(153, 23);
             this.progressBarFood.TabIndex = 1;
             this.progressBarFood.Value = 100;
             // 
@@ -151,7 +151,7 @@
             this.groupBoxQualities.Controls.Add(this.labelIntelligence);
             this.groupBoxQualities.Location = new System.Drawing.Point(175, 20);
             this.groupBoxQualities.Name = "groupBoxQualities";
-            this.groupBoxQualities.Size = new System.Drawing.Size(169, 88);
+            this.groupBoxQualities.Size = new System.Drawing.Size(99, 78);
             this.groupBoxQualities.TabIndex = 17;
             this.groupBoxQualities.TabStop = false;
             this.groupBoxQualities.Text = "Качества";
@@ -161,9 +161,9 @@
             this.labelPhysicalDevelopment.AutoSize = true;
             this.labelPhysicalDevelopment.Location = new System.Drawing.Point(6, 58);
             this.labelPhysicalDevelopment.Name = "labelPhysicalDevelopment";
-            this.labelPhysicalDevelopment.Size = new System.Drawing.Size(110, 13);
+            this.labelPhysicalDevelopment.Size = new System.Drawing.Size(44, 13);
             this.labelPhysicalDevelopment.TabIndex = 12;
-            this.labelPhysicalDevelopment.Text = "Физическая сила: 0";
+            this.labelPhysicalDevelopment.Text = "Сила: 0";
             // 
             // labelCharm
             // 
@@ -190,7 +190,7 @@
             this.groupBoxFinance.Controls.Add(this.labelMoney);
             this.groupBoxFinance.Location = new System.Drawing.Point(7, 20);
             this.groupBoxFinance.Name = "groupBoxFinance";
-            this.groupBoxFinance.Size = new System.Drawing.Size(162, 88);
+            this.groupBoxFinance.Size = new System.Drawing.Size(162, 78);
             this.groupBoxFinance.TabIndex = 16;
             this.groupBoxFinance.TabStop = false;
             this.groupBoxFinance.Text = "Финансы";
@@ -228,7 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxCharacteristics);
             this.Name = "Characte_Characteristics";
-            this.Size = new System.Drawing.Size(361, 260);
+            this.Size = new System.Drawing.Size(291, 247);
             this.groupBoxCharacteristics.ResumeLayout(false);
             this.groupBoxNeeds.ResumeLayout(false);
             this.groupBoxNeeds.PerformLayout();

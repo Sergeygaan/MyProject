@@ -80,7 +80,7 @@ namespace Module_UserControl
         //Получить значение физической силы
         private void GetValue_PhysicalDevelopment(object sender, PropertyChangedEventArgs even)
         {
-            labelPhysicalDevelopment.Text = "Физическая сила: " + even.PropertyName;
+            labelPhysicalDevelopment.Text = "Сила: " + even.PropertyName;
         }
 
         //Получить значение обаяния
