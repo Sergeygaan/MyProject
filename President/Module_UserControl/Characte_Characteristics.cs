@@ -4,26 +4,23 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Module_Character;
-using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 
 namespace Module_UserControl
 {
     public partial class Characte_Characteristics : UserControl
     {
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
-
         public Characte_Characteristics()
         {
             InitializeComponent();
 
             //Подписка на свойства
             GameCharacter.PropertyChangedMoney += new PropertyChangedEventHandler(GetValue_Money);
+            GameCharacter.PropertyChangedIncome += new PropertyChangedEventHandler(GetValue_Income);
+            GameCharacter.PropertyChangedTax += new PropertyChangedEventHandler(GetValue_Tax);
+
             GameCharacter.PropertyChangedFood += new PropertyChangedEventHandler(GetValue_Food);
             GameCharacter.PropertyChangedMood += new PropertyChangedEventHandler(GetValue_Mood);
             GameCharacter.PropertyChangedHealth += new PropertyChangedEventHandler(GetValue_Health);
@@ -39,6 +36,18 @@ namespace Module_UserControl
         private void GetValue_Money(object sender, PropertyChangedEventArgs even)
         {
             labelMoney.Text = "Деньги: " + even.PropertyName + " $";
+        }
+
+        //Получить значение дохода
+        private void GetValue_Income(object sender, PropertyChangedEventArgs even)
+        {
+            labelIncome.Text = "Доход: " + even.PropertyName + " $";
+        }
+
+        //Получить значение налога
+        private void GetValue_Tax(object sender, PropertyChangedEventArgs even)
+        {
+            labelTax.Text = "Налоги: " + even.PropertyName + " $";
         }
 
         //Получить значение еды
@@ -71,19 +80,19 @@ namespace Module_UserControl
         //Получить значение физической силы
         private void GetValue_PhysicalDevelopment(object sender, PropertyChangedEventArgs even)
         {
-            labelPhysicalDevelopment.Text = "Физическая сила: " + even.PropertyName + " %";
+            labelPhysicalDevelopment.Text = "Физическая сила: " + even.PropertyName;
         }
 
         //Получить значение обаяния
         private void GetValue_Charm(object sender, PropertyChangedEventArgs even)
         {
-            labelCharm.Text = "Обаяние: " + even.PropertyName + " %";
+            labelCharm.Text = "Обаяние: " + even.PropertyName;
         }
 
         //Получить значение интеллекта
         private void GetValue_Intelligence(object sender, PropertyChangedEventArgs even)
         {
-            labelIntelligence.Text = "Интеллект: " + even.PropertyName + " %";
+            labelIntelligence.Text = "Интеллект: " + even.PropertyName;
         }
 
         #endregion

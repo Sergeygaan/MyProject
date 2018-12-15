@@ -6,6 +6,8 @@ namespace Module_Character
     {
         #region Основные параметры
 
+        #region Финансы
+
         #region Money
 
         private static int _money = 100;
@@ -39,6 +41,78 @@ namespace Module_Character
         public static event PropertyChangedEventHandler PropertyChangedMoney;
 
         #endregion
+
+        #region Income
+
+        private static int _income = 0;
+
+        public static void OnPropertyChangedIncome(PropertyChangedEventArgs e)
+        {
+            PropertyChangedIncome?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedIncome(int propertyNameIncome)
+        {
+            OnPropertyChangedIncome(new PropertyChangedEventArgs(propertyNameIncome.ToString()));
+        }
+
+        /// <summary>
+        /// Переменная, хранящая значение дохода персонажа
+        /// </summary>
+        public static int Income
+        {
+            get { return _income; }
+            set
+            {
+                if (value != _income)
+                {
+                    _income = value;
+                    OnPropertyChangedIncome(_income);
+                }
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedIncome;
+
+        #endregion
+
+        #region Tax
+
+        private static int _tax = 0;
+
+        public static void OnPropertyChangedTax(PropertyChangedEventArgs e)
+        {
+            PropertyChangedTax?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedTax(int propertyNameTax)
+        {
+            OnPropertyChangedTax(new PropertyChangedEventArgs(propertyNameTax.ToString()));
+        }
+
+        /// <summary>
+        /// Переменная, хранящая значение налога персонажа
+        /// </summary>
+        public static int Tax
+        {
+            get { return _tax; }
+            set
+            {
+                if (value != _tax)
+                {
+                    _tax = value;
+                    OnPropertyChangedTax(_tax);
+                }
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedTax;
+
+        #endregion
+
+        #endregion
+
+        #region Потребности
 
         #region Food
 
@@ -144,11 +218,13 @@ namespace Module_Character
 
         #endregion
 
+        #endregion
+
         #region Вспомогательные параметры
 
         #region PhysicalDevelopment
 
-        private static int _physicalDevelopment = 100;
+        private static int _physicalDevelopment = 0;
 
         public static void OnPropertyChangedPhysicalDevelopment(PropertyChangedEventArgs e)
         {
@@ -182,7 +258,7 @@ namespace Module_Character
 
         #region Charm
 
-        private static int _charm = 50;
+        private static int _charm = 0;
 
         public static void OnPropertyChangedCharm(PropertyChangedEventArgs e)
         {
@@ -216,7 +292,7 @@ namespace Module_Character
 
         #region Intelligence
 
-        private static int _intelligence = 50;
+        private static int _intelligence = 0;
 
         public static void OnPropertyChangedIntelligence(PropertyChangedEventArgs e)
         {
@@ -259,6 +335,18 @@ namespace Module_Character
                 case "Money":
 
                     Money += valueParameter;
+
+                    break;
+
+                case "Income":
+
+                    Income += valueParameter;
+
+                    break;
+
+                case "Tax":
+
+                    Tax += valueParameter;
 
                     break;
 
@@ -315,19 +403,40 @@ namespace Module_Character
 
                 case "PhysicalDevelopment":
 
-                    PhysicalDevelopment += valueParameter;
+                    if (PhysicalDevelopment + valueParameter < 0)
+                    {
+                        PhysicalDevelopment = 0;
+                    }
+                    else
+                    {
+                        PhysicalDevelopment += valueParameter;
+                    }
 
                     break;
 
                 case "Charm":
 
-                    Charm += valueParameter;
+                    if (Charm + valueParameter < 0)
+                    {
+                        Charm = 0;
+                    }
+                    else
+                    {
+                        Charm += valueParameter;
+                    }
 
                     break;
 
                 case "Intelligence":
 
-                    Intelligence += valueParameter;
+                    if (Intelligence + valueParameter < 0)
+                    {
+                        Intelligence = 0;
+                    }
+                    else
+                    {
+                        Intelligence += valueParameter;
+                    }
 
                     break;
             }
@@ -340,6 +449,14 @@ namespace Module_Character
                 case "Money":
 
                     return Money;
+
+                case "Income":
+
+                    return Income;
+
+                case "Tax":
+
+                    return Tax;
 
                 case "Food":
 

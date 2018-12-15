@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.groupBoxCharacteristics = new System.Windows.Forms.GroupBox();
             this.groupBoxNeeds = new System.Windows.Forms.GroupBox();
+            this.progressBarMood = new Module_UserControl.ProgressBarEx();
+            this.progressBarHealth = new Module_UserControl.ProgressBarEx();
+            this.progressBarFood = new Module_UserControl.ProgressBarEx();
             this.labelMood = new System.Windows.Forms.Label();
             this.labelFood = new System.Windows.Forms.Label();
             this.labelHealth = new System.Windows.Forms.Label();
@@ -39,12 +42,9 @@
             this.labelCharm = new System.Windows.Forms.Label();
             this.labelIntelligence = new System.Windows.Forms.Label();
             this.groupBoxFinance = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTax = new System.Windows.Forms.Label();
             this.labelIncome = new System.Windows.Forms.Label();
             this.labelMoney = new System.Windows.Forms.Label();
-            this.progressBarMood = new Module_UserControl.ProgressBarEx();
-            this.progressBarHealth = new Module_UserControl.ProgressBarEx();
-            this.progressBarFood = new Module_UserControl.ProgressBarEx();
             this.toolTipFood = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipMood = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipHealth = new System.Windows.Forms.ToolTip(this.components);
@@ -80,6 +80,36 @@
             this.groupBoxNeeds.TabIndex = 18;
             this.groupBoxNeeds.TabStop = false;
             this.groupBoxNeeds.Text = "Потребности";
+            // 
+            // progressBarMood
+            // 
+            this.progressBarMood.BackColor = System.Drawing.Color.Green;
+            this.progressBarMood.ForeColor = System.Drawing.Color.Green;
+            this.progressBarMood.Location = new System.Drawing.Point(104, 60);
+            this.progressBarMood.Name = "progressBarMood";
+            this.progressBarMood.Size = new System.Drawing.Size(227, 23);
+            this.progressBarMood.TabIndex = 19;
+            this.progressBarMood.Value = 100;
+            // 
+            // progressBarHealth
+            // 
+            this.progressBarHealth.BackColor = System.Drawing.Color.RoyalBlue;
+            this.progressBarHealth.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.progressBarHealth.Location = new System.Drawing.Point(104, 95);
+            this.progressBarHealth.Name = "progressBarHealth";
+            this.progressBarHealth.Size = new System.Drawing.Size(227, 23);
+            this.progressBarHealth.TabIndex = 18;
+            this.progressBarHealth.Value = 100;
+            // 
+            // progressBarFood
+            // 
+            this.progressBarFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.progressBarFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.progressBarFood.Location = new System.Drawing.Point(104, 28);
+            this.progressBarFood.Name = "progressBarFood";
+            this.progressBarFood.Size = new System.Drawing.Size(227, 23);
+            this.progressBarFood.TabIndex = 1;
+            this.progressBarFood.Value = 100;
             // 
             // labelMood
             // 
@@ -131,31 +161,31 @@
             this.labelPhysicalDevelopment.AutoSize = true;
             this.labelPhysicalDevelopment.Location = new System.Drawing.Point(6, 58);
             this.labelPhysicalDevelopment.Name = "labelPhysicalDevelopment";
-            this.labelPhysicalDevelopment.Size = new System.Drawing.Size(98, 13);
+            this.labelPhysicalDevelopment.Size = new System.Drawing.Size(110, 13);
             this.labelPhysicalDevelopment.TabIndex = 12;
-            this.labelPhysicalDevelopment.Text = "Физическая сила";
+            this.labelPhysicalDevelopment.Text = "Физическая сила: 0";
             // 
             // labelCharm
             // 
             this.labelCharm.AutoSize = true;
             this.labelCharm.Location = new System.Drawing.Point(6, 38);
             this.labelCharm.Name = "labelCharm";
-            this.labelCharm.Size = new System.Drawing.Size(51, 13);
+            this.labelCharm.Size = new System.Drawing.Size(63, 13);
             this.labelCharm.TabIndex = 13;
-            this.labelCharm.Text = "Обаяние";
+            this.labelCharm.Text = "Обаяние: 0";
             // 
             // labelIntelligence
             // 
             this.labelIntelligence.AutoSize = true;
             this.labelIntelligence.Location = new System.Drawing.Point(6, 18);
             this.labelIntelligence.Name = "labelIntelligence";
-            this.labelIntelligence.Size = new System.Drawing.Size(61, 13);
+            this.labelIntelligence.Size = new System.Drawing.Size(73, 13);
             this.labelIntelligence.TabIndex = 14;
-            this.labelIntelligence.Text = "Интеллект";
+            this.labelIntelligence.Text = "Интеллект: 0";
             // 
             // groupBoxFinance
             // 
-            this.groupBoxFinance.Controls.Add(this.label1);
+            this.groupBoxFinance.Controls.Add(this.labelTax);
             this.groupBoxFinance.Controls.Add(this.labelIncome);
             this.groupBoxFinance.Controls.Add(this.labelMoney);
             this.groupBoxFinance.Location = new System.Drawing.Point(7, 20);
@@ -165,14 +195,14 @@
             this.groupBoxFinance.TabStop = false;
             this.groupBoxFinance.Text = "Финансы";
             // 
-            // label1
+            // labelTax
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Налоги: 0 $";
+            this.labelTax.AutoSize = true;
+            this.labelTax.Location = new System.Drawing.Point(6, 60);
+            this.labelTax.Name = "labelTax";
+            this.labelTax.Size = new System.Drawing.Size(65, 13);
+            this.labelTax.TabIndex = 10;
+            this.labelTax.Text = "Налоги: 0 $";
             // 
             // labelIncome
             // 
@@ -192,43 +222,13 @@
             this.labelMoney.TabIndex = 8;
             this.labelMoney.Text = "Деньги: 100 $";
             // 
-            // progressBarMood
-            // 
-            this.progressBarMood.BackColor = System.Drawing.Color.Green;
-            this.progressBarMood.ForeColor = System.Drawing.Color.Green;
-            this.progressBarMood.Location = new System.Drawing.Point(104, 60);
-            this.progressBarMood.Name = "progressBarMood";
-            this.progressBarMood.Size = new System.Drawing.Size(227, 23);
-            this.progressBarMood.TabIndex = 19;
-            this.progressBarMood.Value = 100;
-            // 
-            // progressBarHealth
-            // 
-            this.progressBarHealth.BackColor = System.Drawing.Color.RoyalBlue;
-            this.progressBarHealth.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.progressBarHealth.Location = new System.Drawing.Point(104, 95);
-            this.progressBarHealth.Name = "progressBarHealth";
-            this.progressBarHealth.Size = new System.Drawing.Size(227, 23);
-            this.progressBarHealth.TabIndex = 18;
-            this.progressBarHealth.Value = 100;
-            // 
-            // progressBarFood
-            // 
-            this.progressBarFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.progressBarFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.progressBarFood.Location = new System.Drawing.Point(104, 28);
-            this.progressBarFood.Name = "progressBarFood";
-            this.progressBarFood.Size = new System.Drawing.Size(227, 23);
-            this.progressBarFood.TabIndex = 1;
-            this.progressBarFood.Value = 100;
-            // 
             // Characte_Characteristics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxCharacteristics);
             this.Name = "Characte_Characteristics";
-            this.Size = new System.Drawing.Size(364, 263);
+            this.Size = new System.Drawing.Size(361, 260);
             this.groupBoxCharacteristics.ResumeLayout(false);
             this.groupBoxNeeds.ResumeLayout(false);
             this.groupBoxNeeds.PerformLayout();
@@ -252,7 +252,7 @@
         private System.Windows.Forms.Label labelMoney;
         private System.Windows.Forms.GroupBox groupBoxFinance;
         private System.Windows.Forms.Label labelIncome;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTax;
         private System.Windows.Forms.GroupBox groupBoxQualities;
         private System.Windows.Forms.GroupBox groupBoxNeeds;
         private ProgressBarEx progressBarFood;

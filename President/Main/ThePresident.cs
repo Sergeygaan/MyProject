@@ -29,7 +29,7 @@ namespace ThePresident
 
             eventGenerator.AddEvents("Главный текст событий.\n 11111111111111", 16);
 
-            eventGenerator.AddCheckParameter("Money", 150);
+            eventGenerator.AddCheckParameter("Income", 50);
 
             eventGenerator.AddListParameterСhange("Money", 10);
             eventGenerator.AddListParameterСhange("Food", 20);

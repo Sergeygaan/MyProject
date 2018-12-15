@@ -26,6 +26,8 @@ namespace Module_Work
             buttonFindJob.Enabled = false;
 
             CurrentWork();
+
+            Income_AddWork(_finalJob.Salary);
         }
 
         private List<IProfession> _professions;
@@ -69,6 +71,8 @@ namespace Module_Work
         {
             if(_finalJob != null)
             {
+                Income_AddWork(-_finalJob.Salary);
+
                 _finalJob = null;
 
                 buttonQuit.Enabled = false;
@@ -115,14 +119,12 @@ namespace Module_Work
         }
 
         /// <summary>
-        /// Получение зарплаты
+        /// Добавление дохода с работы
         /// </summary>
-        private void Payroll()
+        private void Income_AddWork(int income)
         {
-            GameCharacter.Money += _finalJob.Salary;
+            GameCharacter.Income += income;
 
-            _finalJob.WorkPlan += trackBarQualityWork.Value * 10;
-            labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
         }
 
         /// <summary>
@@ -130,7 +132,10 @@ namespace Module_Work
         /// </summary>
         private void GoWork_Click(object sender, EventArgs e)
         {
-            Payroll();
+            //Payroll();
+
+            _finalJob.WorkPlan += trackBarQualityWork.Value * 10;
+            labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
         }
     }
 }
