@@ -11,9 +11,13 @@ namespace Module_Event
         //Список всех событий
         private ObjectEvent _objectEvent;
 
+        private bool _actionSelectionFlag;
+
         public EventDisplayForm(ObjectEvent objectEvent)
         {
             InitializeComponent();
+
+            _actionSelectionFlag = false;
 
             TopMost = true;
             ShowInTaskbar = false;
@@ -119,6 +123,8 @@ namespace Module_Event
         //Метод по обработке события клик
         private void HandleMouseEventHandling(OutcomeOptions outcomeOptionsLocal)
         {
+            _actionSelectionFlag = true;
+
             foreach (var currentListParameterСhange in outcomeOptionsLocal.ListParameterСhange)
             {
                 GameCharacter.Set(currentListParameterСhange.Item1, currentListParameterСhange.Item2);
@@ -151,6 +157,16 @@ namespace Module_Event
             EventSelectionContextMenu.Dispose();
             Close();
             Dispose();
+        }
+
+        private void EventDisplayForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(!_actionSelectionFlag)
+            {
+                GameCharacter.Set("Food", -25);
+                GameCharacter.Set("Mood", -25);
+                GameCharacter.Set("Health", -25);
+            }
         }
     }
 }

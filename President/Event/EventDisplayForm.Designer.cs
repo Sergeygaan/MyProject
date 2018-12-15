@@ -60,6 +60,7 @@
             this.Name = "EventDisplayForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Событие";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EventDisplayForm_FormClosed);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EventDisplayForm_MouseDown);
             this.ResumeLayout(false);
 
