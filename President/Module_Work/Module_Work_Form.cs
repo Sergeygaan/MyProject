@@ -29,6 +29,29 @@ namespace Module_Work
             find_Job.ShowDialog();
         }
 
+        #region События происходящие при изменении списка действий в категории "Работа"
+
+        /// <summary>
+        /// Метод выполняется если было выполнено действие 
+        /// </summary>
+        /// <param name="index"></param>
+        private void ActionSkip_Work(int index)
+        {
+            int i = index;
+        }
+
+        private bool _actionСheck_Work = false;
+
+        /// <summary>
+        /// Проверка выполнения действия
+        /// </summary>
+        private bool ActionСheck_Work()
+        {
+            return _actionСheck_Work;
+        }
+
+        #endregion
+
         /// <summary>
         /// Устроиться на работу
         /// </summary>
@@ -45,7 +68,7 @@ namespace Module_Work
 
             Income_AddWork(_finalJob.Salary);
 
-            ToDoList.AddToDo("Работа", _finalJob.StartWorkingTime);
+            ToDoList.AddToDo("Работа", _finalJob.StartWorkingTime, new ToDoList.Delegate_ActionSkipMethod(ActionSkip_Work), new ToDoList.Delegate_ActionСheck(ActionСheck_Work));
         }
 
         /// <summary>

@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Module_GameTime.ToDoList;
 
 namespace Module_GameTime
 {
     public static class ToDoList
     {
+        public delegate void Delegate_ActionSkipMethod(int index);
+        public delegate bool Delegate_ActionСheck();
+
         private static List<ActionList> _toDoList;
 
         static ToDoList()
@@ -43,13 +44,13 @@ namespace Module_GameTime
         /// <param name="actionName"></param>
         /// <param name="startTime"></param>
         /// <param name="scatterMinutes"></param>
-        public static void AddToDo(string actionName, int startTime, int scatterMinutes = 30)
+        public static void AddToDo(string actionName, int startTime, Delegate_ActionSkipMethod delegate_ActionSkipMethod, Delegate_ActionСheck  delegate_ActionСheck, int scatterMinutes = 30)
         {
             int timeMinutes = startTime * 60;
 
             string formatTime = Forming_MinAndHour(timeMinutes, -scatterMinutes) + " - " + Forming_MinAndHour(timeMinutes, scatterMinutes);
 
-            _toDoList.Add(new ActionList(actionName, timeMinutes - 30, timeMinutes + 30, formatTime));
+            _toDoList.Add(new ActionList(actionName, timeMinutes - 30, timeMinutes + 30, formatTime, delegate_ActionSkipMethod, delegate_ActionСheck));
 
             ChangeToDoList = "true";
         }
@@ -64,6 +65,9 @@ namespace Module_GameTime
 
             if (obj != null)
             {
+                obj.Delegate_ActionSkipMethod = null;
+                obj.Delegate_ActionСheck = null;
+
                 int index = _toDoList.IndexOf(obj);
                 _toDoList.RemoveAt(index);
             }
@@ -139,6 +143,9 @@ namespace Module_GameTime
 
             foreach(var currentToDo in _toDoList)
             {
+                currentToDo.Delegate_ActionSkipMethod(1);
+
+                bool a = currentToDo.Delegate_ActionСheck();
 
                 //currentToDo.ActionActivity = false;
 
@@ -216,13 +223,26 @@ namespace Module_GameTime
         /// </summary>
         public bool ActionActivity = true;
 
-        public ActionList(string actionName, int startTime, int endTime, string formatTime)
+        /// <summary>
+        /// Метод выполняемый для определенного действия
+        /// </summary>
+        public Delegate_ActionSkipMethod Delegate_ActionSkipMethod;
+
+        /// <summary>
+        /// Метод служащий для проверки выполнения действия
+        /// </summary>
+        public Delegate_ActionСheck Delegate_ActionСheck;
+
+        public ActionList(string actionName, int startTime, int endTime, string formatTime, Delegate_ActionSkipMethod delegate_ActionSkipMethod, Delegate_ActionСheck delegate_ActionСheck)
         {
             ActionName = actionName;
 
             StartTime = startTime;
             EndTime = endTime;
             FormatTime = formatTime;
+
+            Delegate_ActionSkipMethod = delegate_ActionSkipMethod;
+            Delegate_ActionСheck = delegate_ActionСheck;
         }
     }
 }
