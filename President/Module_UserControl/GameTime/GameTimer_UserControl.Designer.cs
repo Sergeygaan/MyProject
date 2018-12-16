@@ -65,13 +65,13 @@
             this.groupBoxGameTimer.TabStop = false;
             this.groupBoxGameTimer.Text = "Игровое время";
             // 
-            // GameTimer
+            // GameTimer_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxGameTimer);
-            this.Name = "GameTimer";
-            this.Size = new System.Drawing.Size(107, 71);
+            this.Name = "GameTimer_UserControl";
+            this.Size = new System.Drawing.Size(107, 69);
             this.groupBoxGameTimer.ResumeLayout(false);
             this.groupBoxGameTimer.PerformLayout();
             this.ResumeLayout(false);

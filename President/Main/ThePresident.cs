@@ -18,9 +18,13 @@ namespace ThePresident
     {
         private Module_Work_Form _module_Work_Form;
 
+        private GameTimer _gameTimer;
+
         public ThePresident()
         {
             InitializeComponent();
+
+            _gameTimer = new GameTimer();
 
             //Создание статического класса список действий
             ToDoList.ReturnActionList();

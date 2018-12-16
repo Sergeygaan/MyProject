@@ -33,7 +33,7 @@ namespace Module_GameTime
 
             string formatTime = Forming_MinAndHour(timeMinutes, -scatterMinutes) + " - " + Forming_MinAndHour(timeMinutes, scatterMinutes);
 
-            _toDoList.Add(new ActionList(actionName, timeMinutes, formatTime));
+            _toDoList.Add(new ActionList(actionName, timeMinutes - 30, timeMinutes + 30, formatTime));
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Module_GameTime
         /// </summary>
         public static void SortToDo()
         {
-            _toDoList.Sort((x, y) => x.StartTime.CompareTo(y.StartTime));
+            _toDoList.Sort((x, y) => x.EndTime.CompareTo(y.EndTime));
         }
 
         public static List<ActionList> ReturnActionList()
@@ -115,8 +115,20 @@ namespace Module_GameTime
         /// </summary>
         private static void GetValue_Time(object sender, PropertyChangedEventArgs even)
         {
-            int var = int.Parse(even.PropertyName);
+            int checkTime = int.Parse(even.PropertyName);
 
+
+            foreach(var currentToDo in _toDoList)
+            {
+                if(currentToDo.EndTime > checkTime)
+                {
+
+                    int i = 0;
+
+                    // проверяем было ли совершено даннок дкйствие
+                    //Выполняем метод переданный делегатом
+                }
+            }
             //labelMinuteAndHour.Text = even.PropertyName;
 
             //GC.Collect();
@@ -125,16 +137,32 @@ namespace Module_GameTime
 
     public class ActionList
     {
+        /// <summary>
+        /// Название действия
+        /// </summary>
         public string ActionName;
 
+        /// <summary>
+        /// Время проверки выполнения действия
+        /// </summary>
         public int StartTime;
 
+        /// <summary>
+        /// Время проверки выполнения действия
+        /// </summary>
+        public int EndTime;
+
+        /// <summary>
+        /// Отформотированная строка со временем
+        /// </summary>
         public string FormatTime;
 
-        public ActionList(string actionName, int startTime, string formatTime)
+        public ActionList(string actionName, int startTime, int endTime, string formatTime)
         {
             ActionName = actionName;
+
             StartTime = startTime;
+            EndTime = endTime;
             FormatTime = formatTime;
         }
     }

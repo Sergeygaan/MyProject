@@ -23,6 +23,12 @@ namespace Module_Work
 
         public delegate void MyDelegateWork(FinalJob finalJob);
 
+        private void ButtonFindJob_Click(object sender, EventArgs e)
+        {
+            Find_Job find_Job = new Find_Job(_professions, new MyDelegateWork(MyWorkFunc));
+            find_Job.ShowDialog();
+        }
+
         /// <summary>
         /// Устроиться на работу
         /// </summary>
@@ -41,10 +47,8 @@ namespace Module_Work
 
             ToDoList.AddToDo("Работа", _finalJob.StartWorkingTime);
 
-            ToDoList.AddToDo("Работа", 4);
-            ToDoList.AddToDo("Работа", 3);
-            ToDoList.AddToDo("Работа", 2);
-            ToDoList.AddToDo("Работа", 1);
+ 
+            ToDoList.AddToDo("Работа", 23);
         }
 
         /// <summary>
@@ -101,12 +105,6 @@ namespace Module_Work
                 new Profession_Technical(),
                 new Profession_Transport(),
             };
-        }
-
-        private void ButtonFindJob_Click(object sender, EventArgs e)
-        {
-            Find_Job find_Job = new Find_Job(_professions, new MyDelegateWork(MyWorkFunc));
-            find_Job.ShowDialog();
         }
 
         private void CurrentWork()

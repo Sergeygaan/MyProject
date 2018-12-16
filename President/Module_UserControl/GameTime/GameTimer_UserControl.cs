@@ -27,14 +27,28 @@ namespace Module_UserControl
         /// </summary>
         private void GetValue_MinuteAndHour(object sender, PropertyChangedEventArgs even)
         {
-            labelMinuteAndHour.Text = even.PropertyName;
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => labelMinuteAndHour.Text = even.PropertyName));
+            }
+            else
+            {
+                labelMinuteAndHour.Text = even.PropertyName;
+            }
 
             GC.Collect();
         }
 
         private void GetValue_MonthAndYear(object sender, PropertyChangedEventArgs even)
         {
-            labelMouthAndYear.Text = even.PropertyName;
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => labelMouthAndYear.Text = even.PropertyName));
+            }
+            else
+            {
+                labelMouthAndYear.Text = even.PropertyName;
+            }
 
             GC.Collect();
         }

@@ -29,9 +29,18 @@ namespace Module_UserControl
             GameCharacter.PropertyChangedCharm += new PropertyChangedEventHandler(GetValue_Charm);
             GameCharacter.PropertyChangedIntelligence += new PropertyChangedEventHandler(GetValue_Intelligence);
 
-            toolTipFood.SetToolTip(progressBarFood, "Еда: " + progressBarFood.Value + " %");
-            toolTipMood.SetToolTip(progressBarMood, "Настроение: " + progressBarMood.Value + " %");
-            toolTipHealth.SetToolTip(progressBarHealth, "Здоровье: " + progressBarHealth.Value + " %");
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => toolTipFood.SetToolTip(progressBarFood, "Еда: " + progressBarFood.Value + " %")));
+                Invoke(new Action(() => toolTipMood.SetToolTip(progressBarMood, "Настроение: " + progressBarMood.Value + " %")));
+                Invoke(new Action(() => toolTipHealth.SetToolTip(progressBarHealth, "Здоровье: " + progressBarHealth.Value + " %")));
+            }
+            else
+            {
+                toolTipFood.SetToolTip(progressBarFood, "Еда: " + progressBarFood.Value + " %");
+                toolTipMood.SetToolTip(progressBarMood, "Настроение: " + progressBarMood.Value + " %");
+                toolTipHealth.SetToolTip(progressBarHealth, "Здоровье: " + progressBarHealth.Value + " %");
+            }
         }
 
         #region Подписка на свойства
@@ -57,28 +66,46 @@ namespace Module_UserControl
         //Получить значение еды
         private void GetValue_Food(object sender, PropertyChangedEventArgs even)
         {
-            progressBarFood.Value = int.Parse(even.PropertyName);
-
-            toolTipFood.SetToolTip(progressBarFood, "Еда: " + progressBarFood.Value + " %");
-            //labelFood.Text = "Еда: " + even.PropertyName + " %";
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => progressBarFood.Value = int.Parse(even.PropertyName)));
+                Invoke(new Action(() => toolTipFood.SetToolTip(progressBarFood, "Еда: " + progressBarFood.Value + " %")));
+            }
+            else
+            {
+                progressBarFood.Value = int.Parse(even.PropertyName);
+                toolTipFood.SetToolTip(progressBarFood, "Еда: " + progressBarFood.Value + " %");
+            }
         }
 
         //Получить значение настроения
         private void GetValue_Mood(object sender, PropertyChangedEventArgs even)
         {
-            progressBarMood.Value = int.Parse(even.PropertyName);
-
-            toolTipMood.SetToolTip(progressBarMood, "Настроение: " + progressBarMood.Value + " %");
-            //labelMood.Text = "Здоровье: " + even.PropertyName + " %";
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => progressBarMood.Value = int.Parse(even.PropertyName)));
+                Invoke(new Action(() => toolTipMood.SetToolTip(progressBarMood, "Настроение: " + progressBarMood.Value + " %")));
+            }
+            else
+            {
+                progressBarMood.Value = int.Parse(even.PropertyName);
+                toolTipMood.SetToolTip(progressBarMood, "Настроение: " + progressBarMood.Value + " %");
+            }
         }
 
         //Получить значение здоровья
         private void GetValue_Health(object sender, PropertyChangedEventArgs even)
         {
-            progressBarHealth.Value = int.Parse(even.PropertyName);
-
-            toolTipHealth.SetToolTip(progressBarHealth, "Здоровье: " + progressBarHealth.Value + " %");
-            //labelHealth.Text = "Настроение: " + even.PropertyName + " %";
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => progressBarHealth.Value = int.Parse(even.PropertyName)));
+                Invoke(new Action(() => toolTipHealth.SetToolTip(progressBarHealth, "Здоровье: " + progressBarHealth.Value + " %")));
+            }
+            else
+            {
+                progressBarHealth.Value = int.Parse(even.PropertyName);
+                toolTipHealth.SetToolTip(progressBarHealth, "Здоровье: " + progressBarHealth.Value + " %");
+            }
         }
 
         //Получить значение физической силы

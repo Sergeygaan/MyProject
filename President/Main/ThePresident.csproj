@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameTimer.cs" />
     <Compile Include="ThePresident.cs">
       <SubType>Form</SubType>
     </Compile>

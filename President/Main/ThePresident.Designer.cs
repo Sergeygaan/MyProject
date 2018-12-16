@@ -18,6 +18,8 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+
+            _gameTimer?.Dispose();
         }
 
         #region Код, автоматически созданный конструктором форм Windows

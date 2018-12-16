@@ -2,12 +2,6 @@
 using Module_GameTime;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Module_Work.Module_Work_Form;
 
@@ -37,7 +31,9 @@ namespace Module_Work
 
         private void Outside_Click(object sender, EventArgs e)
         {
-            GameTime.RandomAddTime(1, 15);
+            //GameTime.RandomAddTime(1, 15);
+
+            GameTime.AddTime(5);
 
             ReducingNeeds_Job(4);
 
@@ -241,9 +237,9 @@ namespace Module_Work
         /// <param name="fatigue">Максимальное количество уменьшения</param>
         private void ReducingNeeds_Job(int fatigue)
         {
-            int randomFood = rnd.Next(1, fatigue);
-            int randomMood = rnd.Next(1, fatigue);
-            int randomHealth = rnd.Next(1, fatigue);
+            int randomFood = rnd.Next(0, fatigue);
+            int randomMood = rnd.Next(0, fatigue);
+            int randomHealth = rnd.Next(0, fatigue);
        
             GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
         }

@@ -39,7 +39,7 @@ namespace Module_GameTime
 
         #region Минуты и часы
 
-        private static string _minutesAndHour = "00:00";
+        private static string _minutesAndHour;
 
         public static void OnPropertyChangedMinutesAndHour(PropertyChangedEventArgs e)
         {
@@ -171,9 +171,9 @@ namespace Module_GameTime
                 NewDay = "true";
             }
 
-            FormingTimeBar_MinAndHour();
-
             Time = localTime;
+
+            FormingTimeBar_MinAndHour();
         }
 
         private static void AddMonthAndYear()
@@ -204,8 +204,8 @@ namespace Module_GameTime
             string stringMin = "";
             string stringHour = "";
 
-            int min = _time % 60;
-            int hour = _time / 60;
+            int min = Time % 60;
+            int hour = Time / 60;
 
             if(min < 10)
             {
