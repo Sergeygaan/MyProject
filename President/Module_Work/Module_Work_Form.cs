@@ -1,4 +1,5 @@
 ﻿using Module_Character;
+using Module_GameTime;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,10 @@ namespace Module_Work
 
         public delegate void MyDelegateWork(FinalJob finalJob);
 
+        /// <summary>
+        /// Устроиться на работу
+        /// </summary>
+        /// <param name="finalJob">Работа</param>
         public void MyWorkFunc(FinalJob finalJob)
         {
             _finalJob = finalJob;
@@ -33,6 +38,38 @@ namespace Module_Work
             CurrentWork();
 
             Income_AddWork(_finalJob.Salary);
+
+            ToDoList.AddToDo("Работа", _finalJob.StartWorkingTime);
+
+            ToDoList.AddToDo("Работа", 4);
+            ToDoList.AddToDo("Работа", 3);
+            ToDoList.AddToDo("Работа", 2);
+            ToDoList.AddToDo("Работа", 1);
+        }
+
+        /// <summary>
+        /// Уволиться с работы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void QuitWork_Click(object sender, EventArgs e)
+        {
+            if (_finalJob != null)
+            {
+                ToDoList.SortToDo();
+
+                ToDoList.RemoveToDo("Работа");
+
+                Income_AddWork(-_finalJob.Salary);
+
+                _finalJob = null;
+
+                buttonQuit.Enabled = false;
+                buttonGoWork.Enabled = false;
+                buttonFindJob.Enabled = true;
+
+                CurrentWork();
+            }
         }
 
         private List<IProfession> _professions;
@@ -72,22 +109,6 @@ namespace Module_Work
             find_Job.ShowDialog();
         }
 
-        private void QuitWork_Click(object sender, EventArgs e)
-        {
-            if(_finalJob != null)
-            {
-                Income_AddWork(-_finalJob.Salary);
-
-                _finalJob = null;
-
-                buttonQuit.Enabled = false;
-                buttonGoWork.Enabled = false;
-                buttonFindJob.Enabled = true;
-
-                CurrentWork();
-            }
-        }
-
         private void CurrentWork()
         {
             if (_finalJob != null)
@@ -108,8 +129,6 @@ namespace Module_Work
                 labelPlan.Text = "План: 0%";
                 labelWorkPlan.Text = "Выполнение плана: 0%";
             }
-
-
         }
 
         int _valueTableWork = 0;
