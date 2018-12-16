@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,19 @@ namespace Module_GameTime
         static ToDoList()
         {
             _toDoList = new List<ActionList>();
+
+            //Подписка на изменение времени
+            GameTime.PropertyChangedTime += new PropertyChangedEventHandler(GetValue_Time);
         }
 
+        #region Работа со списком
+
+        /// <summary>
+        /// Добавление дела в список
+        /// </summary>
+        /// <param name="actionName"></param>
+        /// <param name="startTime"></param>
+        /// <param name="scatterMinutes"></param>
         public static void AddToDo(string actionName, int startTime, int scatterMinutes = 30)
         {
             int timeMinutes = startTime * 60;
@@ -24,6 +36,10 @@ namespace Module_GameTime
             _toDoList.Add(new ActionList(actionName, timeMinutes, formatTime));
         }
 
+        /// <summary>
+        /// Удаление из списка дела по имени
+        /// </summary>
+        /// <param name="actionName"></param>
         public static void RemoveToDo(string actionName)
         {
             var obj = (_toDoList.FirstOrDefault(o => o.ActionName == actionName));
@@ -35,9 +51,19 @@ namespace Module_GameTime
             }
         }
 
+        /// <summary>
+        /// Сортировка списка дел
+        /// </summary>
         public static void SortToDo()
         {
             _toDoList.Sort((x, y) => x.StartTime.CompareTo(y.StartTime));
+        }
+
+        public static List<ActionList> ReturnActionList()
+        {
+            SortToDo();
+
+            return _toDoList;
         }
 
         private static string Forming_MinAndHour(int minutes, int scatterMinutes)
@@ -80,9 +106,24 @@ namespace Module_GameTime
 
             return stringHour + ":" + stringMin;
         }
+
+        #endregion
+
+
+        /// <summary>
+        /// Получить значение минут и часов
+        /// </summary>
+        private static void GetValue_Time(object sender, PropertyChangedEventArgs even)
+        {
+            int var = int.Parse(even.PropertyName);
+
+            //labelMinuteAndHour.Text = even.PropertyName;
+
+            //GC.Collect();
+        }
     }
 
-    class ActionList
+    public class ActionList
     {
         public string ActionName;
 

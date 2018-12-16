@@ -21,6 +21,9 @@ namespace ThePresident
         public ThePresident()
         {
             InitializeComponent();
+
+            //Создание статического класса список действий
+            ToDoList.ReturnActionList();
         }
 
      
@@ -139,7 +142,7 @@ namespace ThePresident
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GameTime.AddTime(60);
+            GameTime.AddTime(1300);
         }
     }
 }

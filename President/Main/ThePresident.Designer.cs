@@ -32,7 +32,7 @@
             this.buttonModule_Work = new System.Windows.Forms.Button();
             this.characte_Characteristics = new Module_UserControl.Characte_Characteristics_UserControl();
             this.button2 = new System.Windows.Forms.Button();
-            this.toDoList = new Module_UserControl.ToDoList.ToDoList_UserControl();
+            this.toDoList = new Module_UserControl.ToDoList_UserControl();
             this.gameTimer_UserControl = new Module_UserControl.GameTimer_UserControl();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@
         private System.Windows.Forms.Button buttonModule_Work;
         private Module_UserControl.Characte_Characteristics_UserControl characte_Characteristics;
         private System.Windows.Forms.Button button2;
-        private Module_UserControl.ToDoList.ToDoList_UserControl toDoList;
+        private Module_UserControl.ToDoList_UserControl toDoList;
         private Module_UserControl.GameTimer_UserControl gameTimer_UserControl;
     }
 }

@@ -104,13 +104,42 @@ namespace Module_GameTime
 
         public static event PropertyChangedEventHandler PropertyChangedMonthAndYear;
 
-
         #endregion
+
+        #region Месяцы и года
+
+        private static int _time = 0;
+
+        public static void OnPropertyChangedTime(PropertyChangedEventArgs e)
+        {
+            PropertyChangedTime?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedTime(int propertyNameTime)
+        {
+            OnPropertyChangedTime(new PropertyChangedEventArgs(propertyNameTime.ToString()));
+        }
 
         /// <summary>
         /// Переменная хранящая игровое время
         /// </summary>
-        private static int _time = 0;
+        public static int Time
+        {
+            get { return _time; }
+            set
+            {
+                if (value != _time)
+                {
+                    _time = value;
+                    OnPropertyChangedTime(_time);
+                }
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedTime;
+
+        #endregion
+
 
         private static Random random = new Random();
 
@@ -130,16 +159,21 @@ namespace Module_GameTime
         /// <param name="addTime"></param>
         public static void AddTime(int addTime)
         {
-            _time += addTime;
+            int localTime = Time;
+            localTime += addTime;
 
-            if (_time >= 1440)
+            if (localTime >= 1440)
             {
-                _time -= 1440;
+                localTime -= 1440;
 
                 AddMonthAndYear();
+
+                NewDay = "true";
             }
 
             FormingTimeBar_MinAndHour();
+
+            Time = localTime;
         }
 
         private static void AddMonthAndYear()
@@ -194,6 +228,36 @@ namespace Module_GameTime
             MinutesAndHour = stringHour + ":" + stringMin;
         }
 
+        #region Новый день
+
+        private static string _newDay = "false";
+
+        public static void OnPropertyChangedNewDay(PropertyChangedEventArgs e)
+        {
+            PropertyChangedNewDay?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedNewDay(string propertyNameNewDay)
+        {
+            OnPropertyChangedNewDay(new PropertyChangedEventArgs(propertyNameNewDay));
+        }
+
+        /// <summary>
+        /// Переменная, хранящая значение игровых минут и часов
+        /// </summary>
+        public static string NewDay
+        {
+            get { return _newDay; }
+            set
+            {
+                _newDay = value;
+                OnPropertyChangedNewDay(_newDay);
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedNewDay;
+
+        #endregion
 
     }
 }

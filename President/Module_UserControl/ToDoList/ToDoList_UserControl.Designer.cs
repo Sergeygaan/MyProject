@@ -1,4 +1,4 @@
-﻿namespace Module_UserControl.ToDoList
+﻿namespace Module_UserControl
 {
     partial class ToDoList_UserControl
     {
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBoxToDoList = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new Netdev.Windows.Forms.ListBox();
+            this.listBoxActionList = new Netdev.Windows.Forms.ListBox();
             this.groupBoxToDoList.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxToDoList
             // 
-            this.groupBoxToDoList.Controls.Add(this.listBox1);
+            this.groupBoxToDoList.Controls.Add(this.listBoxActionList);
             this.groupBoxToDoList.Location = new System.Drawing.Point(3, 3);
             this.groupBoxToDoList.Name = "groupBoxToDoList";
             this.groupBoxToDoList.Size = new System.Drawing.Size(200, 100);
@@ -43,21 +43,21 @@
             this.groupBoxToDoList.TabStop = false;
             this.groupBoxToDoList.Text = "Список дел";
             // 
-            // listBox1
+            // listBoxActionList
             // 
-            this.listBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(7, 20);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(187, 69);
-            this.listBox1.TabIndex = 0;
+            this.listBoxActionList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.listBoxActionList.FormattingEnabled = true;
+            this.listBoxActionList.Location = new System.Drawing.Point(7, 20);
+            this.listBoxActionList.Name = "listBoxActionList";
+            this.listBoxActionList.Size = new System.Drawing.Size(187, 69);
+            this.listBoxActionList.TabIndex = 0;
             // 
-            // ToDoList
+            // ToDoList_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxToDoList);
-            this.Name = "ToDoList";
+            this.Name = "ToDoList_UserControl";
             this.Size = new System.Drawing.Size(213, 110);
             this.groupBoxToDoList.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -67,6 +67,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxToDoList;
-        private Netdev.Windows.Forms.ListBox listBox1;
+        private Netdev.Windows.Forms.ListBox listBoxActionList;
     }
 }
