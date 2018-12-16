@@ -1,6 +1,6 @@
 ﻿namespace Module_UserControl
 {
-    partial class GameTimer
+    partial class GameTimer_UserControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

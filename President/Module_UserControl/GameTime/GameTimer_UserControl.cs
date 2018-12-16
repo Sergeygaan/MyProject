@@ -12,9 +12,9 @@ using Module_Character;
 
 namespace Module_UserControl
 {
-    public partial class GameTimer : UserControl
+    public partial class GameTimer_UserControl : UserControl
     {
-        public GameTimer()
+        public GameTimer_UserControl()
         {
             InitializeComponent();
 

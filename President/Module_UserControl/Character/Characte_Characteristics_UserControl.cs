@@ -10,9 +10,9 @@ using System.Drawing.Drawing2D;
 
 namespace Module_UserControl
 {
-    public partial class Characte_Characteristics : UserControl
+    public partial class Characte_Characteristics_UserControl : UserControl
     {
-        public Characte_Characteristics()
+        public Characte_Characteristics_UserControl()
         {
             InitializeComponent();
 

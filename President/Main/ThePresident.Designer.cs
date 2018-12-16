@@ -30,9 +30,10 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.buttonModule_Work = new System.Windows.Forms.Button();
-            this.characte_Characteristics1 = new Module_UserControl.Characte_Characteristics();
+            this.characte_Characteristics = new Module_UserControl.Characte_Characteristics_UserControl();
             this.button2 = new System.Windows.Forms.Button();
-            this.gameTimer1 = new Module_UserControl.GameTimer();
+            this.toDoList = new Module_UserControl.ToDoList.ToDoList_UserControl();
+            this.gameTimer_UserControl = new Module_UserControl.GameTimer_UserControl();
             this.SuspendLayout();
             // 
             // button1
@@ -55,12 +56,12 @@
             this.buttonModule_Work.UseVisualStyleBackColor = true;
             this.buttonModule_Work.Click += new System.EventHandler(this.buttonModule_Work_Click);
             // 
-            // characte_Characteristics1
+            // characte_Characteristics
             // 
-            this.characte_Characteristics1.Location = new System.Drawing.Point(502, 12);
-            this.characte_Characteristics1.Name = "characte_Characteristics1";
-            this.characte_Characteristics1.Size = new System.Drawing.Size(286, 241);
-            this.characte_Characteristics1.TabIndex = 9;
+            this.characte_Characteristics.Location = new System.Drawing.Point(502, 12);
+            this.characte_Characteristics.Name = "characte_Characteristics";
+            this.characte_Characteristics.Size = new System.Drawing.Size(286, 241);
+            this.characte_Characteristics.TabIndex = 9;
             // 
             // button2
             // 
@@ -72,21 +73,29 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // gameTimer1
+            // toDoList
             // 
-            this.gameTimer1.Location = new System.Drawing.Point(12, 367);
-            this.gameTimer1.Name = "gameTimer1";
-            this.gameTimer1.Size = new System.Drawing.Size(107, 71);
-            this.gameTimer1.TabIndex = 11;
+            this.toDoList.Location = new System.Drawing.Point(125, 328);
+            this.toDoList.Name = "toDoList";
+            this.toDoList.Size = new System.Drawing.Size(213, 110);
+            this.toDoList.TabIndex = 12;
+            // 
+            // gameTimer_UserControl
+            // 
+            this.gameTimer_UserControl.Location = new System.Drawing.Point(12, 352);
+            this.gameTimer_UserControl.Name = "gameTimer_UserControl";
+            this.gameTimer_UserControl.Size = new System.Drawing.Size(107, 71);
+            this.gameTimer_UserControl.TabIndex = 13;
             // 
             // ThePresident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gameTimer1);
+            this.Controls.Add(this.gameTimer_UserControl);
+            this.Controls.Add(this.toDoList);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.characte_Characteristics1);
+            this.Controls.Add(this.characte_Characteristics);
             this.Controls.Add(this.buttonModule_Work);
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
@@ -101,9 +110,10 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonModule_Work;
-        private Module_UserControl.Characte_Characteristics characte_Characteristics1;
+        private Module_UserControl.Characte_Characteristics_UserControl characte_Characteristics;
         private System.Windows.Forms.Button button2;
-        private Module_UserControl.GameTimer gameTimer1;
+        private Module_UserControl.ToDoList.ToDoList_UserControl toDoList;
+        private Module_UserControl.GameTimer_UserControl gameTimer_UserControl;
     }
 }
 

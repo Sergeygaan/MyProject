@@ -1,6 +1,6 @@
 ﻿namespace Module_UserControl
 {
-    partial class Characte_Characteristics
+    partial class Characte_Characteristics_UserControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
