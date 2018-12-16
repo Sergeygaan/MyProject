@@ -149,7 +149,7 @@ namespace ThePresident
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GameTime.AddTime(1300);
+            GameTime.AddTime(60);
         }
     }
 }

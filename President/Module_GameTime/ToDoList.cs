@@ -143,25 +143,35 @@ namespace Module_GameTime
 
             foreach(var currentToDo in _toDoList)
             {
-                currentToDo.Delegate_ActionSkipMethod(1);
-
-                bool a = currentToDo.Delegate_ActionСheck();
-
-                //currentToDo.ActionActivity = false;
-
-                //ChangeToDoList = "true";
-                if (currentToDo.EndTime > checkTime)
+                if (currentToDo.ActionActivity)
                 {
+                    if ((currentToDo.StartTime > checkTime) && (currentToDo.Delegate_ActionСheck()))
+                    {
+                        currentToDo.Delegate_ActionSkipMethod(0);
 
-                    //int i = 0;
+                        currentToDo.ActionActivity = false;
+                        ChangeToDoList = "true";
+                    }
 
-                    // проверяем было ли совершено даннок дкйствие
-                    //Выполняем метод переданный делегатом
+                    //ChangeToDoList = "true";
+                    if ((currentToDo.EndTime < checkTime) && (!currentToDo.Delegate_ActionСheck()))
+                    {
+                        currentToDo.Delegate_ActionSkipMethod(1);
+
+                        currentToDo.ActionActivity = false;
+                        ChangeToDoList = "true";
+                    }
+
+                    //ChangeToDoList = "true";
+                    if ((currentToDo.EndTime < checkTime) && (currentToDo.Delegate_ActionСheck()))
+                    {
+                        currentToDo.Delegate_ActionSkipMethod(2);
+
+                        currentToDo.ActionActivity = false;
+                        ChangeToDoList = "true";
+                    }
                 }
             }
-            //labelMinuteAndHour.Text = even.PropertyName;
-
-            //GC.Collect();
         }
 
         #region Изменение списка
@@ -219,7 +229,7 @@ namespace Module_GameTime
         public string FormatTime;
 
         /// <summary>
-        /// Отформотированная строка со временем
+        /// Опроверка активности  события
         /// </summary>
         public bool ActionActivity = true;
 

@@ -38,8 +38,13 @@ namespace Module_Work
         private void ActionSkip_Work(int index)
         {
             int i = index;
+
+            _actionСheck_Work = false;
         }
 
+        /// <summary>
+        /// Переменная для проверки состояния работы
+        /// </summary>
         private bool _actionСheck_Work = false;
 
         /// <summary>
@@ -173,10 +178,15 @@ namespace Module_Work
         /// </summary>
         private void GoWork_Click(object sender, EventArgs e)
         {
+            _actionСheck_Work = true;
+
             _finalJob.WorkPlan += trackBarQualityWork.Value * 10;
             labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
 
             ReducingNeeds_Work();
+
+            int workTimeMinutes = _finalJob.WorkingTime * 60;
+            GameTime.AddTime(random.Next(workTimeMinutes - 20, workTimeMinutes + 20));
         }
 
         private void ReducingNeeds_Work()

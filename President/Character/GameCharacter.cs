@@ -138,7 +138,19 @@ namespace Module_Character
             {
                 if (value != _food)
                 {
-                    _food = value;
+                    if (value > 100)
+                    {
+                        _food = 100;
+                    }
+                    else if (value < 0)
+                    {
+                        _food = 0;
+                    }
+                    else
+                    {
+                        _food = value;
+                    }
+
                     OnPropertyChangedFood(_food);
                 }
             }
@@ -172,7 +184,19 @@ namespace Module_Character
             {
                 if (value != _mood)
                 {
-                    _mood = value;
+                    if (value > 100)
+                    {
+                        _mood = 100;
+                    }
+                    else if (value < 0)
+                    {
+                        _mood = 0;
+                    }
+                    else
+                    {
+                        _mood = value;
+                    }
+
                     OnPropertyChangedMood(_mood);
                 }
             }
@@ -206,7 +230,19 @@ namespace Module_Character
             {
                 if (value != _health)
                 {
-                    _health = value;
+                    if (value > 100)
+                    {
+                        _health = 100;
+                    }
+                    else if (value < 0)
+                    {
+                        _health = 0;
+                    }
+                    else
+                    {
+                        _health = value;
+                    }
+
                     OnPropertyChangedHealth(_health);
                 }
             }
@@ -246,7 +282,19 @@ namespace Module_Character
             {
                 if (value != _physicalDevelopment)
                 {
-                    _physicalDevelopment = value;
+                    if (value > 100)
+                    {
+                        _physicalDevelopment = 100;
+                    }
+                    else if (value < 0)
+                    {
+                        _physicalDevelopment = 0;
+                    }
+                    else
+                    {
+                        _physicalDevelopment = value;
+                    }
+
                     OnPropertyChangedPhysicalDevelopment(_physicalDevelopment);
                 }
             }
@@ -280,7 +328,19 @@ namespace Module_Character
             {
                 if (value != _charm)
                 {
-                    _charm = value;
+                    if (value > 100)
+                    {
+                        _charm = 100;
+                    }
+                    else if (value < 0)
+                    {
+                        _charm = 0;
+                    }
+                    else
+                    {
+                        _charm = value;
+                    }
+
                     OnPropertyChangedCharm(_charm);
                 }
             }
@@ -314,7 +374,19 @@ namespace Module_Character
             {
                 if (value != _intelligence)
                 {
-                    _intelligence = value;
+                    if (value > 100)
+                    {
+                        _intelligence = 100;
+                    }
+                    else if (value < 0)
+                    {
+                        _intelligence = 0;
+                    }
+                    else
+                    {
+                        _intelligence = value;
+                    }
+
                     OnPropertyChangedIntelligence(_intelligence);
                 }
             }
@@ -352,103 +424,37 @@ namespace Module_Character
 
                 case "Food":
 
-                    if (Food + valueParameter > 100)
-                    {
-                        Food = 100;
-                    }
-                    else if(Food + valueParameter < 0)
-                    {
-                        Food = 0;
-                    }
-                    else
-                    {
-                        Food += valueParameter;
-                    }
+                    Food += valueParameter;
 
                     break;
 
                 case "Mood":
 
-                    if (Mood + valueParameter > 100)
-                    {
-                        Mood = 100;
-                    }
-                    else if (Food + valueParameter < 0)
-                    {
-                        Mood = 0;
-                    }
-                    else
-                    {
-                        Mood += valueParameter;
-                    }
-
+                    Mood += valueParameter;
+                    
                     break;
 
                 case "Health":
 
-                    if (Health + valueParameter > 100)
-                    {
-                        Health = 100;
-                    }
-                    else if (Health + valueParameter < 0)
-                    {
-                        Health = 0;
-                    }
-                    else
-                    {
-                        Health += valueParameter;
-                    }
+                    Health += valueParameter;
 
                     break;
 
                 case "PhysicalDevelopment":
 
-                    if (PhysicalDevelopment + valueParameter > 100)
-                    {
-                        PhysicalDevelopment = 100;
-                    }
-                    else if (PhysicalDevelopment + valueParameter < 0)
-                    {
-                        PhysicalDevelopment = 0;
-                    }
-                    else
-                    {
-                        PhysicalDevelopment += valueParameter;
-                    }
+                    PhysicalDevelopment += valueParameter;
 
                     break;
 
                 case "Charm":
 
-                    if (Charm + valueParameter > 100)
-                    {
-                        Charm = 100;
-                    }
-                    else if (Charm + valueParameter < 0)
-                    {
-                        Charm = 0;
-                    }
-                    else
-                    {
-                        Charm += valueParameter;
-                    }
-
+                    Charm += valueParameter;
+ 
                     break;
 
                 case "Intelligence":
 
-                    if (Intelligence + valueParameter > 100)
-                    {
-                        Intelligence = 100;
-                    }
-                    else if (Intelligence + valueParameter < 0)
-                    {
-                        Intelligence = 0;
-                    }
-                    else
-                    {
-                        Intelligence += valueParameter;
-                    }
+                    Intelligence += valueParameter;
 
                     break;
             }
