@@ -46,9 +46,6 @@ namespace Module_Work
             Income_AddWork(_finalJob.Salary);
 
             ToDoList.AddToDo("Работа", _finalJob.StartWorkingTime);
-
- 
-            ToDoList.AddToDo("Работа", 23);
         }
 
         /// <summary>

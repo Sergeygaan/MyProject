@@ -17,7 +17,7 @@ namespace Module_UserControl
         {
             InitializeComponent();
 
-            //GameTime.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_NewDay);
+            ToDoList.PropertyChangedChangeToDoList += new PropertyChangedEventHandler(GetValue_NewDay);
         }
 
         /// <summary>
@@ -27,13 +27,18 @@ namespace Module_UserControl
         {
             //labelMinuteAndHour.Text = even.PropertyName;
 
+            listBoxActionList.Items.Clear();
+
             var ActionList = ToDoList.ReturnActionList();
 
             foreach (var currentAction in ActionList)
             {
-                string stroka = currentAction.ActionName + ": " + currentAction.FormatTime;
+                if (currentAction.ActionActivity)
+                {
+                    string stroka = currentAction.ActionName + ": " + currentAction.FormatTime;
 
-                listBoxActionList.Items.Add(stroka);
+                    listBoxActionList.Items.Add(stroka);
+                }
             }
 
             GC.Collect();

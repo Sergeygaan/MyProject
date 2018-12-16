@@ -106,7 +106,7 @@ namespace Module_GameTime
 
         #endregion
 
-        #region Месяцы и года
+        #region Время в минутах
 
         private static int _time = 0;
 
@@ -243,7 +243,7 @@ namespace Module_GameTime
         }
 
         /// <summary>
-        /// Переменная, хранящая значение игровых минут и часов
+        /// Переменная, которая отвечает за изменения дня. Подписываться на нее
         /// </summary>
         public static string NewDay
         {

@@ -17,9 +17,25 @@ namespace Module_GameTime
 
             //Подписка на изменение времени
             GameTime.PropertyChangedTime += new PropertyChangedEventHandler(GetValue_Time);
+            GameTime.PropertyChangedNewDay += new PropertyChangedEventHandler(EnduringAction_NewDay);
         }
 
         #region Работа со списком
+
+        /// <summary>
+        /// Обновление всех действий в начале нового дня
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
+        private static void EnduringAction_NewDay(object sender, PropertyChangedEventArgs even)
+        {
+            foreach (var currentToDo in _toDoList)
+            {
+                currentToDo.ActionActivity = true;
+            }
+
+            ChangeToDoList = "true";
+        }
 
         /// <summary>
         /// Добавление дела в список
@@ -34,6 +50,8 @@ namespace Module_GameTime
             string formatTime = Forming_MinAndHour(timeMinutes, -scatterMinutes) + " - " + Forming_MinAndHour(timeMinutes, scatterMinutes);
 
             _toDoList.Add(new ActionList(actionName, timeMinutes - 30, timeMinutes + 30, formatTime));
+
+            ChangeToDoList = "true";
         }
 
         /// <summary>
@@ -49,6 +67,8 @@ namespace Module_GameTime
                 int index = _toDoList.IndexOf(obj);
                 _toDoList.RemoveAt(index);
             }
+
+            ChangeToDoList = "true";
         }
 
         /// <summary>
@@ -117,13 +137,16 @@ namespace Module_GameTime
         {
             int checkTime = int.Parse(even.PropertyName);
 
-
             foreach(var currentToDo in _toDoList)
             {
-                if(currentToDo.EndTime > checkTime)
+
+                //currentToDo.ActionActivity = false;
+
+                //ChangeToDoList = "true";
+                if (currentToDo.EndTime > checkTime)
                 {
 
-                    int i = 0;
+                    //int i = 0;
 
                     // проверяем было ли совершено даннок дкйствие
                     //Выполняем метод переданный делегатом
@@ -133,6 +156,37 @@ namespace Module_GameTime
 
             //GC.Collect();
         }
+
+        #region Изменение списка
+
+        private static string _changeToDoList = "false";
+
+        public static void OnPropertyChangedChangeToDoList(PropertyChangedEventArgs e)
+        {
+            PropertyChangedChangeToDoList?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedChangeToDoList(string propertyNameChangeToDoList)
+        {
+            OnPropertyChangedChangeToDoList(new PropertyChangedEventArgs(propertyNameChangeToDoList));
+        }
+
+        /// <summary>
+        /// Переменная, которая отвечает за изменения дня. Подписываться на нее
+        /// </summary>
+        public static string ChangeToDoList
+        {
+            get { return _changeToDoList; }
+            set
+            {
+                _changeToDoList = value;
+                OnPropertyChangedChangeToDoList(_changeToDoList);
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedChangeToDoList;
+
+        #endregion
     }
 
     public class ActionList
@@ -156,6 +210,11 @@ namespace Module_GameTime
         /// Отформотированная строка со временем
         /// </summary>
         public string FormatTime;
+
+        /// <summary>
+        /// Отформотированная строка со временем
+        /// </summary>
+        public bool ActionActivity = true;
 
         public ActionList(string actionName, int startTime, int endTime, string formatTime)
         {

@@ -18,13 +18,16 @@ namespace ThePresident
     {
         private Module_Work_Form _module_Work_Form;
 
+        /// <summary>
+        /// Таймер игрового времени. Добавляет 1 сек игрового времени раз в 2500 сек настояжего времени
+        /// </summary>
         private GameTimer _gameTimer;
 
         public ThePresident()
         {
             InitializeComponent();
 
-            _gameTimer = new GameTimer();
+            //_gameTimer = new GameTimer();
 
             //Создание статического класса список действий
             ToDoList.ReturnActionList();
