@@ -1,4 +1,5 @@
 ﻿using Module_Character;
+using Module_Event;
 using Module_GameTime;
 using System;
 using System.Collections.Generic;
@@ -9,13 +10,26 @@ namespace Module_Work
 {
     public partial class Find_Job : Form
     {
+        /// <summary>
+        /// Список профессий
+        /// </summary>
         private List<IProfession> _professions;
+
+        /// <summary>
+        /// Список случайно сгенерированных работ
+        /// </summary>
         private List<FinalJob> _finalJobs;
 
+        /// <summary>
+        /// Список хранящий в себе текст если нехватает параметров для устройства на работу
+        /// </summary>
         private List<Tuple<int, string>> ListIgnoreWork;
 
         private Random rnd = new Random();
 
+        /// <summary>
+        /// Метод для устройства на работу
+        /// </summary>
         private MyDelegateWork _myWork;
 
         public Find_Job(List<IProfession> professions, MyDelegateWork myWork)
@@ -29,11 +43,14 @@ namespace Module_Work
             _myWork = myWork;
         }
 
+        /// <summary>
+        /// Искать работу на улице
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Outside_Click(object sender, EventArgs e)
         {
-            //GameTime.RandomAddTime(1, 15);
-
-            GameTime.AddTime(5);
+            GameTime.RandomAddTime(5, 15);
 
             ReducingNeeds_Job(4);
 
@@ -44,11 +61,16 @@ namespace Module_Work
             ShowWorkList();
         }
 
+        /// <summary>
+        /// Искать работу в газете
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Newspaper_Click(object sender, EventArgs e)
         {
             if (GameCharacter.Money >= 5)
             {
-                GameTime.RandomAddTime(1, 3);
+                GameTime.RandomAddTime(1, 5);
 
                 GameCharacter.Set("Money", -5);
 
@@ -60,8 +82,17 @@ namespace Module_Work
 
                 ShowWorkList();
             }
+            else
+            {
+                MessageBoxEx.Show("Недостаточно денег.");
+            }
         }
 
+        /// <summary>
+        /// Искать работу в интернете
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Internet_Click(object sender, EventArgs e)
         {
             ClearWorkList();
@@ -71,6 +102,11 @@ namespace Module_Work
             ShowWorkList();
         }
 
+        /// <summary>
+        /// Устроиться на работу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GetJob_Click(object sender, EventArgs e)
         {
             if (listBoxWork.SelectedIndex != -1)
@@ -78,6 +114,10 @@ namespace Module_Work
                 _myWork(_finalJobs[listBoxWork.SelectedIndex]);
 
                 Close();
+            }
+            else
+            {
+                MessageBoxEx.Show("Необходимо выбрать работу из списка.");
             }
         }
 
@@ -101,14 +141,17 @@ namespace Module_Work
 
                 basic_Work = _professions[indexRegion].ListProfession()[indexWork];
 
+                //получение названия индустрии
+                string industryName = _professions[indexRegion].ProfessionName();
+
                 if (basic_Work != null)
                 {
-                    SalaryDetermination(basic_Work);
+                    SalaryDetermination(basic_Work, industryName);
                 }
             }
         }
 
-        private void SalaryDetermination(Basic_Work basic_Work)
+        private void SalaryDetermination(Basic_Work basic_Work, string industryName)
         {
             int finalSalary = basic_Work.Salary + rnd.Next(-(int)(basic_Work.Salary * 0.25), (int)(basic_Work.Salary * 0.25));
 
@@ -117,9 +160,13 @@ namespace Module_Work
             int finalWorkingTime = basic_Work.WorkingTime + rnd.Next(-2, 4);
             int startWorkingTime = rnd.Next(0, 23 - finalWorkingTime);
 
-            _finalJobs.Add(new FinalJob(basic_Work.ProfessionName, finalSalary, randomWorkPlan, finalWorkingTime, startWorkingTime, basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
+            _finalJobs.Add(new FinalJob(industryName + " - " + basic_Work.ProfessionName, finalSalary, randomWorkPlan, 
+                                        finalWorkingTime, startWorkingTime, basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
         }
 
+        /// <summary>
+        /// Отображение списка работ
+        /// </summary>
         private void ShowWorkList()
         {
             foreach (var currentJobs in _finalJobs)
@@ -159,6 +206,9 @@ namespace Module_Work
             }
         }
 
+        /// <summary>
+        /// Очистить список работ
+        /// </summary>
         private void ClearWorkList()
         {
             _finalJobs.Clear();
@@ -186,6 +236,11 @@ namespace Module_Work
 
         int flagIndex = 0;
 
+        /// <summary>
+        /// Вывод сообщения о нехватке параметров
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listBoxWork_MouseMove(object sender, MouseEventArgs e)
         {
             int index = listBoxWork.IndexFromPoint(e.Location);

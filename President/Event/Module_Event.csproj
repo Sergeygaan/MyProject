@@ -44,6 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventGenerator.cs" />
+    <Compile Include="Redefined classes\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Redefined classes\AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Redefined classes\MessageBoxEx.cs" />
     <Compile Include="ObjectEvent.cs" />
     <Compile Include="EventDisplayForm.cs">
       <SubType>Form</SubType>
@@ -56,6 +63,9 @@
   <ItemGroup>
     <EmbeddedResource Include="EventDisplayForm.resx">
       <DependentUpon>EventDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Redefined classes\AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

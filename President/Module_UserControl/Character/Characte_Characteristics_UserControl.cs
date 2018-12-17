@@ -45,25 +45,41 @@ namespace Module_UserControl
 
         #region Подписка на свойства
 
-        //Получить значение денег
+        /// <summary>
+        /// Получить значение денег
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Money(object sender, PropertyChangedEventArgs even)
         {
-            labelMoney.Text = "Деньги: " + even.PropertyName + " $";
+            TextOutput(labelMoney, "Деньги: " + even.PropertyName + " $");
         }
 
-        //Получить значение дохода
+        /// <summary>
+        /// Получить значение дохода
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Income(object sender, PropertyChangedEventArgs even)
         {
-            labelIncome.Text = "Доход: " + even.PropertyName + " $";
+            TextOutput(labelIncome, "Доход: " + even.PropertyName + " $");
         }
 
-        //Получить значение налога
+        /// <summary>
+        /// Получить значение налога
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Tax(object sender, PropertyChangedEventArgs even)
         {
-            labelTax.Text = "Налоги: " + even.PropertyName + " $";
+            TextOutput(labelTax, "Налоги: " + even.PropertyName + " $");
         }
 
-        //Получить значение еды
+        /// <summary>
+        /// Получить значение еды
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Food(object sender, PropertyChangedEventArgs even)
         {
             if (InvokeRequired)
@@ -78,7 +94,11 @@ namespace Module_UserControl
             }
         }
 
-        //Получить значение настроения
+        /// <summary>
+        /// Получить значение настроения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Mood(object sender, PropertyChangedEventArgs even)
         {
             if (InvokeRequired)
@@ -93,7 +113,11 @@ namespace Module_UserControl
             }
         }
 
-        //Получить значение здоровья
+        /// <summary>
+        /// Получить значение здоровья
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Health(object sender, PropertyChangedEventArgs even)
         {
             if (InvokeRequired)
@@ -108,25 +132,54 @@ namespace Module_UserControl
             }
         }
 
-        //Получить значение физической силы
+        /// <summary>
+        /// Получить значение физической силы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_PhysicalDevelopment(object sender, PropertyChangedEventArgs even)
         {
-            labelPhysicalDevelopment.Text = "Сила: " + even.PropertyName;
+            TextOutput(labelPhysicalDevelopment, "Сила: " + even.PropertyName);
         }
 
-        //Получить значение обаяния
+        /// <summary>
+        /// Получить значение обаяния
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Charm(object sender, PropertyChangedEventArgs even)
         {
-            labelCharm.Text = "Обаяние: " + even.PropertyName;
+            TextOutput(labelCharm, "Обаяние: " + even.PropertyName);
         }
 
-        //Получить значение интеллекта
+        /// <summary>
+        /// Получить значение интеллекта
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_Intelligence(object sender, PropertyChangedEventArgs even)
         {
-            labelIntelligence.Text = "Интеллект: " + even.PropertyName;
+            TextOutput(labelIntelligence, "Интеллект: " + even.PropertyName);
         }
 
         #endregion
+
+        /// <summary>
+        /// Метод для вывода текста на форму из любого потока
+        /// </summary>
+        /// <param name="currentLabel">Имя label</param>
+        /// <param name="text">Текст для вывода</param>
+        private void TextOutput(Label currentLabel, string text)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => currentLabel.Text = text));
+            }
+            else
+            {
+                currentLabel.Text = text;
+            }
+        }
     }
 
     public class ProgressBarEx : ProgressBar

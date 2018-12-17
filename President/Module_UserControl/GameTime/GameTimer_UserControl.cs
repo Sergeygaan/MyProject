@@ -39,6 +39,11 @@ namespace Module_UserControl
             GC.Collect();
         }
 
+        /// <summary>
+        /// Получить значение месяца и года
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
         private void GetValue_MonthAndYear(object sender, PropertyChangedEventArgs even)
         {
             if (InvokeRequired)

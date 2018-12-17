@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Event;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,6 @@ namespace ThePresident
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ThePresident());
-
         }
     }
 }

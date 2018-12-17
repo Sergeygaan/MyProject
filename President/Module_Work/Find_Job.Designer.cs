@@ -93,7 +93,7 @@
             this.listBoxWork.FormattingEnabled = true;
             this.listBoxWork.Location = new System.Drawing.Point(16, 29);
             this.listBoxWork.Name = "listBoxWork";
-            this.listBoxWork.Size = new System.Drawing.Size(433, 121);
+            this.listBoxWork.Size = new System.Drawing.Size(585, 121);
             this.listBoxWork.TabIndex = 6;
             this.listBoxWork.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxWork_MouseMove);
             // 
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 297);
+            this.ClientSize = new System.Drawing.Size(613, 297);
             this.Controls.Add(this.listBoxWork);
             this.Controls.Add(this.buttonGetJob);
             this.Controls.Add(this.buttonInternet);

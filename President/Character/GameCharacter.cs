@@ -400,6 +400,11 @@ namespace Module_Character
 
         #region Get Set 
 
+        /// <summary>
+        /// Метод изменяет переданный параметр
+        /// </summary>
+        /// <param name="nameParameter">Имя параметра</param>
+        /// <param name="valueParameter">Значение на кторое необходимо изменить</param>
         public static void Set(string nameParameter, int valueParameter)
         {
             switch (nameParameter)
@@ -460,6 +465,11 @@ namespace Module_Character
             }
         }
 
+        /// <summary>
+        /// Метод возвращает значение выбранного параметра
+        /// </summary>
+        /// <param name="nameParameter">Имя параметра значение которого необходимо вернуть</param>
+        /// <returns></returns>
         public static int Get(string nameParameter)
         {
             switch (nameParameter)

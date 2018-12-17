@@ -2,14 +2,15 @@
 using Module_GameTime;
 using System;
 using System.Threading;
-using System.Windows.Forms;
 
 namespace ThePresident
 {
     class GameTimer : IDisposable
     {
+        public static int TimePassedGameSecond = 0; 
+
         private Thread _thread;
-        private int _timerSleep = 2500;
+        private int _timerSleep = 1000;
         private Random random = new Random();
 
         public GameTimer()
@@ -32,6 +33,8 @@ namespace ThePresident
                     {
                         //MessageBox.Show(error.Message);
                     }
+
+                    TimePassedGameSecond += _timerSleep;
 
                     Thread.Sleep(_timerSleep);
                 }

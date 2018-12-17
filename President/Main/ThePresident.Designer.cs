@@ -100,9 +100,11 @@
             this.Controls.Add(this.characte_Characteristics);
             this.Controls.Add(this.buttonModule_Work);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ThePresident";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The President";
             this.ResumeLayout(false);
 

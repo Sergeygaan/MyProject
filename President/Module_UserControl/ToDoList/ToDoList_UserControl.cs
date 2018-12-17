@@ -21,23 +21,35 @@ namespace Module_UserControl
         }
 
         /// <summary>
-        /// Получить значение минут и часов
+        /// Получить значение минут и часов и вывести их на таймер
         /// </summary>
         private void GetValue_NewDay(object sender, PropertyChangedEventArgs even)
         {
             //labelMinuteAndHour.Text = even.PropertyName;
 
-            listBoxActionList.Items.Clear();
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => listBoxActionList.Items.Clear()));
+            }
+            else
+            {
+                listBoxActionList.Items.Clear();
+            }
 
-            var ActionList = ToDoList.ReturnActionList();
-
-            foreach (var currentAction in ActionList)
+            foreach (var currentAction in ToDoList.ReturnActionList())
             {
                 if (currentAction.ActionActivity)
                 {
                     string stroka = currentAction.ActionName + ": " + currentAction.FormatTime;
 
-                    listBoxActionList.Items.Add(stroka);
+                    if (InvokeRequired)
+                    {
+                        Invoke(new Action(() => listBoxActionList.Items.Add(stroka)));
+                    }
+                    else
+                    {
+                        listBoxActionList.Items.Add(stroka);
+                    }
                 }
             }
 

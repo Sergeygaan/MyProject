@@ -9,6 +9,8 @@ namespace Module_GameTime
 {
     public static class GameTime
     {
+        private static Random random = new Random();
+
         /// <summary>
         /// Игровой год
         /// </summary>
@@ -17,7 +19,14 @@ namespace Module_GameTime
         private static int _currentMonth = 0;
         private static List<string> _monthList = new List<string>();
 
+        /// <summary>
+        /// Предыдущая метка времени
+        /// </summary>
+        private static int _previousTime = 0;
 
+        /// <summary>
+        /// Конструктор класса "Таймер"
+        /// </summary>
         static GameTime()
         {
             _monthList = new List<string>
@@ -141,8 +150,6 @@ namespace Module_GameTime
         #endregion
 
 
-        private static Random random = new Random();
-
         /// <summary>
         /// Добавить рандомное время потраченное на действие
         /// </summary>
@@ -156,11 +163,11 @@ namespace Module_GameTime
         /// <summary>
         /// Добавить фиксированное вермя потраченное на действие
         /// </summary>
-        /// <param name="addTime"></param>
-        public static void AddTime(int addTime)
+        /// <param name="time">Время которое необходимо дабовить</param>
+        public static void AddTime(int time)
         {
             int localTime = Time;
-            localTime += addTime;
+            localTime += time;
 
             if (localTime >= 1440)
             {
@@ -171,14 +178,29 @@ namespace Module_GameTime
                 NewDay = "true";
             }
 
+            _previousTime = Time;
             Time = localTime;
 
             FormingTimeBar_MinAndHour();
         }
 
+        /// <summary>
+        /// Метод откатывает время на прошлую метку времени
+        /// </summary>
+        public static int TakeAwayTime()
+        {
+            return _previousTime;
+        }
+
         private static void AddMonthAndYear()
         {
             _currentMonth += 1;
+
+            //Прошло пол года
+            if((_currentMonth == 5) || (_currentMonth == 11))
+            {
+                HalfYear = "true";
+            }
 
             if(_currentMonth >= 12)
             {
@@ -228,7 +250,7 @@ namespace Module_GameTime
             MinutesAndHour = stringHour + ":" + stringMin;
         }
 
-        #region Новый день
+        #region Событие новый день
 
         private static string _newDay = "false";
 
@@ -259,5 +281,35 @@ namespace Module_GameTime
 
         #endregion
 
+        #region Событие пол года
+
+        private static string _halfYear = "false";
+
+        public static void OnPropertyChangedHalfYear(PropertyChangedEventArgs e)
+        {
+            PropertyChangedHalfYear?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedHalfYear(string propertyNameHalfYear)
+        {
+            OnPropertyChangedHalfYear(new PropertyChangedEventArgs(propertyNameHalfYear));
+        }
+
+        /// <summary>
+        /// Переменная, которая отвечает за изменения дня. Подписываться на нее
+        /// </summary>
+        public static string HalfYear
+        {
+            get { return _halfYear; }
+            set
+            {
+                _halfYear = value;
+                OnPropertyChangedHalfYear(_halfYear);
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedHalfYear;
+
+        #endregion
     }
 }

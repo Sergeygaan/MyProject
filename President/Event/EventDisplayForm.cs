@@ -38,6 +38,11 @@ namespace Module_Event
             }
         }
 
+        /// <summary>
+        /// Добавление варианта ответа в контекстное меню
+        /// </summary>
+        /// <param name="outcomeOptions"></param>
+        /// <param name="index"></param>
         private void AddEvents(OutcomeOptions outcomeOptions, int index)
         {
             var toolStripMenuItem = new ToolStripMenuItem(outcomeOptions.NameOutcome);
@@ -59,6 +64,11 @@ namespace Module_Event
             EventHandlerClick(toolStripMenuItem, index);
         }
 
+        /// <summary>
+        /// Подписка на определенное событие
+        /// </summary>
+        /// <param name="toolStripMenuItem"></param>
+        /// <param name="index"></param>
         private void EventHandlerClick(ToolStripMenuItem toolStripMenuItem, int index)
         {
             switch(index)
@@ -120,7 +130,10 @@ namespace Module_Event
             HandleMouseEventHandling(_objectEvent._outcomeOptions[4]);
         }
 
-        //Метод по обработке события клик
+        /// <summary>
+        /// Метод по обработке события клик
+        /// </summary>
+        /// <param name="outcomeOptionsLocal">Выбранный объект события</param>
         private void HandleMouseEventHandling(OutcomeOptions outcomeOptionsLocal)
         {
             _actionSelectionFlag = true;
@@ -132,13 +145,17 @@ namespace Module_Event
 
             if (outcomeOptionsLocal.TextAfterEvent != "")
             {
-                MessageBox.Show(outcomeOptionsLocal.TextAfterEvent);
+                MessageBoxEx.Show(outcomeOptionsLocal.TextAfterEvent);
             }
 
             IDisposable();
         }
 
-        //Вызов контектсного меню
+        /// <summary>
+        /// Вызов контектсного меню
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EventDisplayForm_MouseDown(object sender, MouseEventArgs e)
         {
             switch (e.Button)
@@ -159,6 +176,11 @@ namespace Module_Event
             Dispose();
         }
 
+        /// <summary>
+        /// Если окно было закрыто, а событие небыло выбрано то отнимаем параметры
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EventDisplayForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if(!_actionSelectionFlag)

@@ -32,6 +32,12 @@ namespace Module_GameTime
         {
             foreach (var currentToDo in _toDoList)
             {
+                if (currentToDo.ActionActivity)
+                {
+                    //Невыполнил действии и наступил новый день
+                    CustomerAlert(currentToDo, 1);
+                }
+
                 currentToDo.ActionActivity = true;
             }
 
@@ -133,46 +139,61 @@ namespace Module_GameTime
 
         #endregion
 
+        #region Проверка выполнения действия к определенному времени
 
         /// <summary>
-        /// Получить значение минут и часов
+        /// Метод для проверки корректности выполнения действий игроком
         /// </summary>
         private static void GetValue_Time(object sender, PropertyChangedEventArgs even)
         {
-            int checkTime = int.Parse(even.PropertyName);
+            int checkTimeStart = GameTime.TakeAwayTime();
+            int checkTimeEnd = int.Parse(even.PropertyName);
 
-            foreach(var currentToDo in _toDoList)
+            foreach(ActionList currentToDo in _toDoList)
             {
                 if (currentToDo.ActionActivity)
                 {
-                    if ((currentToDo.StartTime > checkTime) && (currentToDo.Delegate_ActionСheck()))
+                    //Выполнил действие слишком рано
+                    if ((currentToDo.StartTime > checkTimeStart) && (currentToDo.Delegate_ActionСheck()))
                     {
-                        currentToDo.Delegate_ActionSkipMethod(0);
+                        CustomerAlert(currentToDo, 0);
 
-                        currentToDo.ActionActivity = false;
-                        ChangeToDoList = "true";
+                        break;
                     }
 
-                    //ChangeToDoList = "true";
-                    if ((currentToDo.EndTime < checkTime) && (!currentToDo.Delegate_ActionСheck()))
+                    //Невыполнил действие вообще к определенному времени
+                    if ((currentToDo.EndTime < checkTimeEnd) && (!currentToDo.Delegate_ActionСheck()))
                     {
-                        currentToDo.Delegate_ActionSkipMethod(1);
+                        CustomerAlert(currentToDo, 1);
 
-                        currentToDo.ActionActivity = false;
-                        ChangeToDoList = "true";
+                        break;
                     }
 
-                    //ChangeToDoList = "true";
-                    if ((currentToDo.EndTime < checkTime) && (currentToDo.Delegate_ActionСheck()))
+                    //Корректно выполнил действие
+                    if ((currentToDo.EndTime < checkTimeEnd) && (currentToDo.Delegate_ActionСheck()))
                     {
-                        currentToDo.Delegate_ActionSkipMethod(2);
+                        CustomerAlert(currentToDo, 2);
 
-                        currentToDo.ActionActivity = false;
-                        ChangeToDoList = "true";
+                        break;
                     }
                 }
             }
         }
+
+        /// <summary>
+        /// Оповещение клиента о событии
+        /// </summary>
+        /// <param name="currentToDo">Событие</param>
+        /// <param name="index">Параметр события</param>
+        private static void CustomerAlert(ActionList currentToDo, int index)
+        {
+            currentToDo.Delegate_ActionSkipMethod(index);
+
+            currentToDo.ActionActivity = false;
+            ChangeToDoList = "true";
+        }
+
+        #endregion
 
         #region Изменение списка
 
