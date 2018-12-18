@@ -96,11 +96,11 @@ namespace Module_Work
 
                 numberMonthsWorked += 1;
 
-                if (numberMonthsWorked >=6)
+                if (numberMonthsWorked == 5)
                 {
-                    GetValue_ImplementationPlan();
-
                     numberMonthsWorked = 0;
+
+                    GetValue_ImplementationPlan();
                 }
             }
         }
@@ -126,18 +126,35 @@ namespace Module_Work
             {
                 GameCharacter.Set("Money", _finalJob.Salary * 2);
 
-                _finalJob.WorkPlan = 0;
-                TextOutput(labelWorkPlan, "Выполнение плана: 0%");
 
-                MessageBoxEx.Show("Вы выполнили план. В качестве премии вам начислили " + (_finalJob.Salary * 2).ToString() + " $");
+                MessageBoxEx.Show("Вы выполнили план. В качестве премии вам начислили " + (_finalJob.Salary * 2).ToString() + " $", "Событие");
             }
             else
             {
-                MessageBoxEx.Show("Вы не выполнили план");
+                MessageBoxEx.Show("Вы не выполнили план", "Событие");
             }
+
+            _finalJob.WorkPlan = 0;
+            TextOutput(labelWorkPlan, "Выполнение плана: 0%");
         }
 
         #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         /// <summary>

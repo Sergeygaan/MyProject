@@ -10,7 +10,7 @@ namespace ThePresident
         public static int TimePassedGameSecond = 0; 
 
         private Thread _thread;
-        private int _timerSleep = 20;
+        private int _timerSleep = 50;
         private Random random = new Random();
 
         /// <summary>
@@ -30,9 +30,9 @@ namespace ThePresident
 
                         if (_reductionParameters >= 90)
                         {
-                            int randomFood = random.Next(1, 3);
-                            int randomMood = random.Next(1, 3);
-                            int randomHealth = random.Next(1, 3);
+                            int randomFood = random.Next(1, 2);
+                            int randomMood = random.Next(1, 2);
+                            int randomHealth = random.Next(1, 2);
 
                             GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
 

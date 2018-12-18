@@ -145,7 +145,7 @@ namespace Module_Event
 
             if (outcomeOptionsLocal.TextAfterEvent != "")
             {
-                MessageBoxEx.Show(outcomeOptionsLocal.TextAfterEvent);
+                MessageBoxEx.Show(outcomeOptionsLocal.TextAfterEvent, "Событие");
             }
 
             IDisposable();

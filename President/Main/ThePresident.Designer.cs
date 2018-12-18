@@ -91,6 +91,7 @@
             this.Controls.Add(this.characte_Characteristics);
             this.Controls.Add(this.buttonModule_Work);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

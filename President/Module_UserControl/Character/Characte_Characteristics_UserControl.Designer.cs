@@ -59,9 +59,9 @@
             this.groupBoxCharacteristics.Controls.Add(this.groupBoxNeeds);
             this.groupBoxCharacteristics.Controls.Add(this.groupBoxQualities);
             this.groupBoxCharacteristics.Controls.Add(this.groupBoxFinance);
-            this.groupBoxCharacteristics.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxCharacteristics.Location = new System.Drawing.Point(5, 3);
             this.groupBoxCharacteristics.Name = "groupBoxCharacteristics";
-            this.groupBoxCharacteristics.Size = new System.Drawing.Size(282, 238);
+            this.groupBoxCharacteristics.Size = new System.Drawing.Size(280, 237);
             this.groupBoxCharacteristics.TabIndex = 0;
             this.groupBoxCharacteristics.TabStop = false;
             this.groupBoxCharacteristics.Text = "Характеристики";
@@ -222,13 +222,14 @@
             this.labelMoney.TabIndex = 8;
             this.labelMoney.Text = "Деньги: 100 $";
             // 
-            // Characte_Characteristics
+            // Characte_Characteristics_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxCharacteristics);
-            this.Name = "Characte_Characteristics";
-            this.Size = new System.Drawing.Size(291, 247);
+            this.DoubleBuffered = true;
+            this.Name = "Characte_Characteristics_UserControl";
+            this.Size = new System.Drawing.Size(288, 242);
             this.groupBoxCharacteristics.ResumeLayout(false);
             this.groupBoxNeeds.ResumeLayout(false);
             this.groupBoxNeeds.PerformLayout();

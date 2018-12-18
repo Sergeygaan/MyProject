@@ -80,7 +80,7 @@ namespace Module_Work
             }
             else
             {
-                MessageBoxEx.Show("Недостаточно денег.");
+                MessageBoxEx.Show("Недостаточно денег.", "Событие");
             }
         }
 
@@ -113,7 +113,7 @@ namespace Module_Work
             }
             else
             {
-                MessageBoxEx.Show("Необходимо выбрать работу из списка.");
+                MessageBoxEx.Show("Необходимо выбрать работу из списка.", "Событие");
             }
         }
 
