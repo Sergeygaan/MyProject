@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 namespace Module_Work
 {
     public class FinalJob
-    {       
+    {
+        /// <summary>
+        /// Название индустрии
+        /// </summary>
+        public string IndustryName;
+
         /// <summary>
         /// Название профессии
         /// </summary>
@@ -27,16 +32,6 @@ namespace Module_Work
         /// Текущее выполнение плана
         /// </summary>
         public int WorkPlan;
-
-        /// <summary>
-        /// Рабочее время
-        /// </summary>
-        public int WorkingTime;
-
-        /// <summary>
-        /// Начало рабочего дня
-        /// </summary>
-        public int StartWorkingTime;
 
         /// <summary>
         /// Требование к интеллекту
@@ -64,14 +59,12 @@ namespace Module_Work
         /// <param name="req_Intelligence">Требованиия к интеллекту</param>
         /// <param name="req_Charm">Требованиия к обаянию</param>
         /// <param name="req_PhysicalDevelopment">Требованиия к физической силе</param>
-        public FinalJob(string professionName, int salary, int plan, int workingTime, int startWorkingTime, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
+        public FinalJob(string industryName, string professionName, int salary, int plan, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
         {
+            IndustryName = industryName;
             ProfessionName = professionName;
             Salary = salary;
             Plan = plan;
-
-            WorkingTime = workingTime;
-            StartWorkingTime = startWorkingTime;
 
             //Требования
             Req_Intelligence = req_Intelligence;

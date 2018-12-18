@@ -34,12 +34,10 @@
             this.labelWorkPlan = new System.Windows.Forms.Label();
             this.labelPlan = new System.Windows.Forms.Label();
             this.labelLine = new System.Windows.Forms.Label();
-            this.labelWorkTime = new System.Windows.Forms.Label();
             this.labelSalary = new System.Windows.Forms.Label();
             this.labelProfessionName = new System.Windows.Forms.Label();
             this.trackBarQualityWork = new System.Windows.Forms.TrackBar();
             this.labelTableWork = new System.Windows.Forms.Label();
-            this.buttonGoWork = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarQualityWork)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +68,6 @@
             this.groupBox1.Controls.Add(this.labelWorkPlan);
             this.groupBox1.Controls.Add(this.labelPlan);
             this.groupBox1.Controls.Add(this.labelLine);
-            this.groupBox1.Controls.Add(this.labelWorkTime);
             this.groupBox1.Controls.Add(this.labelSalary);
             this.groupBox1.Controls.Add(this.labelProfessionName);
             this.groupBox1.Location = new System.Drawing.Point(11, 12);
@@ -106,15 +103,6 @@
             this.labelLine.Size = new System.Drawing.Size(127, 13);
             this.labelLine.TabIndex = 3;
             this.labelLine.Text = "____________________";
-            // 
-            // labelWorkTime
-            // 
-            this.labelWorkTime.AutoSize = true;
-            this.labelWorkTime.Location = new System.Drawing.Point(6, 70);
-            this.labelWorkTime.Name = "labelWorkTime";
-            this.labelWorkTime.Size = new System.Drawing.Size(87, 13);
-            this.labelWorkTime.TabIndex = 2;
-            this.labelWorkTime.Text = "Рабочее время:";
             // 
             // labelSalary
             // 
@@ -155,23 +143,11 @@
             this.labelTableWork.TabIndex = 4;
             this.labelTableWork.Text = "50 %";
             // 
-            // buttonGoWork
-            // 
-            this.buttonGoWork.Enabled = false;
-            this.buttonGoWork.Location = new System.Drawing.Point(217, 139);
-            this.buttonGoWork.Name = "buttonGoWork";
-            this.buttonGoWork.Size = new System.Drawing.Size(104, 23);
-            this.buttonGoWork.TabIndex = 5;
-            this.buttonGoWork.Text = "Пойти на работу";
-            this.buttonGoWork.UseVisualStyleBackColor = true;
-            this.buttonGoWork.Click += new System.EventHandler(this.GoWork_Click);
-            // 
             // Module_Work_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 286);
-            this.Controls.Add(this.buttonGoWork);
             this.Controls.Add(this.labelTableWork);
             this.Controls.Add(this.trackBarQualityWork);
             this.Controls.Add(this.groupBox1);
@@ -198,12 +174,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelProfessionName;
         private System.Windows.Forms.Label labelSalary;
-        private System.Windows.Forms.Label labelWorkTime;
         private System.Windows.Forms.Label labelWorkPlan;
         private System.Windows.Forms.Label labelPlan;
         private System.Windows.Forms.Label labelLine;
         private System.Windows.Forms.TrackBar trackBarQualityWork;
         private System.Windows.Forms.Label labelTableWork;
-        private System.Windows.Forms.Button buttonGoWork;
     }
 }

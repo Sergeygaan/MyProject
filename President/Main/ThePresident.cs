@@ -29,9 +29,6 @@ namespace ThePresident
 
             _gameTimer = new GameTimer();
 
-            //Создание статического класса список действий
-            ToDoList.ReturnActionList();
-
             MessageBoxEx.OwnerMain = this;
         }
 

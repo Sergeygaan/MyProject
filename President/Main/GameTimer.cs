@@ -10,8 +10,13 @@ namespace ThePresident
         public static int TimePassedGameSecond = 0; 
 
         private Thread _thread;
-        private int _timerSleep = 1000;
+        private int _timerSleep = 20;
         private Random random = new Random();
+
+        /// <summary>
+        /// Уменьшение параметров
+        /// </summary>
+        private int _reductionParameters = 0;
 
         public GameTimer()
         {
@@ -23,16 +28,23 @@ namespace ThePresident
                     {
                         GameTime.AddTime(1);
 
-                        int randomFood = random.Next(0, 2);
-                        int randomMood = random.Next(0, 2);
-                        int randomHealth = random.Next(0, 2);
+                        if (_reductionParameters >= 90)
+                        {
+                            int randomFood = random.Next(1, 3);
+                            int randomMood = random.Next(1, 3);
+                            int randomHealth = random.Next(1, 3);
 
-                        GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
+                            GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
+
+                            _reductionParameters = 0;
+                        }
                     }
                     catch (Exception error)
                     {
                         //MessageBox.Show(error.Message);
                     }
+
+                    _reductionParameters += 1;
 
                     TimePassedGameSecond += _timerSleep;
 

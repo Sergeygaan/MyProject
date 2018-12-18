@@ -19,11 +19,6 @@ namespace Module_Work
         public int Salary;
 
         /// <summary>
-        /// Рабочее время
-        /// </summary>
-        public int WorkingTime;
-
-        /// <summary>
         /// Требование к интеллекту
         /// </summary>
         public int Req_Intelligence;
@@ -47,11 +42,10 @@ namespace Module_Work
         /// <param name="req_Intelligence">Требования к интеллекту</param>
         /// <param name="req_Charm">Требования к  обаянию</param>
         /// <param name="req_PhysicalDevelopment">Требования к физической силе</param>
-        public Basic_Work(string professionName, int salary, int workingTime, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
+        public Basic_Work(string professionName, int salary, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
         {
             ProfessionName = professionName;
             Salary = salary;
-            WorkingTime = workingTime;
 
             //Требования
             Req_Intelligence = req_Intelligence;

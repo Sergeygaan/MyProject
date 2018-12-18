@@ -27,22 +27,22 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("PR-менеджер", 100, 8, 0, 0, 0),
-                new Basic_Work("Аудитор", 100, 8, 0, 0, 0),
-                new Basic_Work("Бренд-менеджер", 100, 8, 0, 0, 0),
-                new Basic_Work("Брокер", 100, 8, 0, 0, 0),
-                new Basic_Work("Бухгалтер", 100, 8, 0, 0, 0),
-                new Basic_Work("Инкассатор", 100, 8, 0, 0, 0),
-                new Basic_Work("Кризис-менеджер", 100, 8, 0, 0, 0),
-                new Basic_Work("Лоббист", 100, 8, 0, 0, 0),
-                new Basic_Work("Маркетолог", 100, 8, 0, 0, 0),
-                new Basic_Work("Менеджер", 100, 8, 0, 0, 0),
-                new Basic_Work("Мерчендайзер", 100, 8, 0, 0, 0),
-                new Basic_Work("Налоговый инспектор", 100, 8, 0, 0, 0),
-                new Basic_Work("Статистик", 100, 8, 0, 0, 0),
-                new Basic_Work("Супервайзер", 100, 8, 0, 0, 0),
-                new Basic_Work("Товаровед", 100, 8, 0, 0, 0),
-                new Basic_Work("Экономист", 100, 8, 0, 0, 0),
+                new Basic_Work("PR-менеджер", 100, 0, 0, 0),
+                new Basic_Work("Аудитор", 100, 0, 0, 0),
+                new Basic_Work("Бренд-менеджер", 100, 0, 0, 0),
+                new Basic_Work("Брокер", 100, 0, 0, 0),
+                new Basic_Work("Бухгалтер", 100, 0, 0, 0),
+                new Basic_Work("Инкассатор", 100, 0, 0, 0),
+                new Basic_Work("Кризис-менеджер", 100, 0, 0, 0),
+                new Basic_Work("Лоббист", 100, 0, 0, 0),
+                new Basic_Work("Маркетолог", 100, 0, 0, 0),
+                new Basic_Work("Менеджер", 100, 0, 0, 0),
+                new Basic_Work("Мерчендайзер", 100, 0, 0, 0),
+                new Basic_Work("Налоговый инспектор", 100, 0, 0, 0),
+                new Basic_Work("Статистик", 100, 0, 0, 0),
+                new Basic_Work("Супервайзер", 100, 0, 0, 0),
+                new Basic_Work("Товаровед", 100, 0, 0, 0),
+                new Basic_Work("Экономист", 100, 0, 0, 0),
             };
         }
 

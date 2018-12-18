@@ -34,7 +34,6 @@
             this.buttonModule_Work = new System.Windows.Forms.Button();
             this.characte_Characteristics = new Module_UserControl.Characte_Characteristics_UserControl();
             this.button2 = new System.Windows.Forms.Button();
-            this.toDoList = new Module_UserControl.ToDoList_UserControl();
             this.gameTimer_UserControl = new Module_UserControl.GameTimer_UserControl();
             this.SuspendLayout();
             // 
@@ -75,13 +74,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // toDoList
-            // 
-            this.toDoList.Location = new System.Drawing.Point(125, 328);
-            this.toDoList.Name = "toDoList";
-            this.toDoList.Size = new System.Drawing.Size(213, 110);
-            this.toDoList.TabIndex = 12;
-            // 
             // gameTimer_UserControl
             // 
             this.gameTimer_UserControl.Location = new System.Drawing.Point(12, 352);
@@ -95,7 +87,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gameTimer_UserControl);
-            this.Controls.Add(this.toDoList);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.characte_Characteristics);
             this.Controls.Add(this.buttonModule_Work);
@@ -116,7 +107,6 @@
         private System.Windows.Forms.Button buttonModule_Work;
         private Module_UserControl.Characte_Characteristics_UserControl characte_Characteristics;
         private System.Windows.Forms.Button button2;
-        private Module_UserControl.ToDoList_UserControl toDoList;
         private Module_UserControl.GameTimer_UserControl gameTimer_UserControl;
     }
 }

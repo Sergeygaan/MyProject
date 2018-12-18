@@ -50,8 +50,6 @@ namespace Module_Work
         /// <param name="e"></param>
         private void Outside_Click(object sender, EventArgs e)
         {
-            GameTime.RandomAddTime(5, 15);
-
             ReducingNeeds_Job(4);
 
             ClearWorkList();
@@ -70,8 +68,6 @@ namespace Module_Work
         {
             if (GameCharacter.Money >= 5)
             {
-                GameTime.RandomAddTime(1, 5);
-
                 GameCharacter.Set("Money", -5);
 
                 ReducingNeeds_Job(2);
@@ -153,15 +149,12 @@ namespace Module_Work
 
         private void SalaryDetermination(Basic_Work basic_Work, string industryName)
         {
-            int finalSalary = basic_Work.Salary + rnd.Next(-(int)(basic_Work.Salary * 0.25), (int)(basic_Work.Salary * 0.25));
+            int finalSalary = basic_Work.Salary + rnd.Next(-(int)(basic_Work.Salary * 0.35), (int)(basic_Work.Salary * 0.35));
 
             int randomWorkPlan = rnd.Next(450, 600);
 
-            int finalWorkingTime = basic_Work.WorkingTime + rnd.Next(-2, 4);
-            int startWorkingTime = rnd.Next(0, 23 - finalWorkingTime);
-
-            _finalJobs.Add(new FinalJob(industryName + " - " + basic_Work.ProfessionName, finalSalary, randomWorkPlan, 
-                                        finalWorkingTime, startWorkingTime, basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
+            _finalJobs.Add(new FinalJob(industryName, basic_Work.ProfessionName, finalSalary, randomWorkPlan, 
+                                        basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
         }
 
         /// <summary>
@@ -171,8 +164,7 @@ namespace Module_Work
         {
             foreach (var currentJobs in _finalJobs)
             {
-                string wortTime = " Рабочее время: " + currentJobs.StartWorkingTime + ":00 - " + (currentJobs.StartWorkingTime + currentJobs.WorkingTime) + ":00";
-                listBoxWork.Items.Add(currentJobs.ProfessionName + " - " + currentJobs.Salary + " $ План: " + currentJobs.Plan + " %" + wortTime);
+                listBoxWork.Items.Add(currentJobs.IndustryName + " - " + currentJobs.ProfessionName + ": " + currentJobs.Salary + " $ План: " + currentJobs.Plan + " %");
 
                 bool flagCheck = true;
                 string textParam = "";
