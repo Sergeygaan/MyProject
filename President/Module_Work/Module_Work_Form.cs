@@ -123,16 +123,25 @@ namespace Module_Work
             {
                 GameCharacter.Set("Money", _finalJob.Salary * 2);
 
-
                 TopMostMessageBox.Show("Вы выполнили план. В качестве премии вам начислили " + (_finalJob.Salary * 2).ToString() + " $", "Событие");
             }
             else
             {
-                TopMostMessageBox.Show("Вы не выполнили план", "Событие");
-            }
+                _finalJob.WorkPlan = 0;
+                TextOutput(labelWorkPlan, "Выполнение плана: 0%");
 
-            _finalJob.WorkPlan = 0;
-            TextOutput(labelWorkPlan, "Выполнение плана: 0%");
+                var randomValue = random.Next(0, 4);
+
+                if (randomValue == 0)
+                {
+                    QuitWork_Click(new object(), new EventArgs());
+                    TopMostMessageBox.Show("Вы не выполнили план и поэтому вас уволили с работы", "Событие");
+                }
+                else
+                {
+                    TopMostMessageBox.Show("Вы не выполнили план", "Событие");
+                }
+            }
         }
 
         #endregion
@@ -145,8 +154,8 @@ namespace Module_Work
         {
             _finalJob = finalJob;
 
-            buttonQuit.Enabled = true;
-            buttonFindJob.Enabled = false;
+            EnableButtom(buttonQuit, true);
+            EnableButtom(buttonFindJob, false);
 
             CurrentWork();
 
@@ -166,8 +175,8 @@ namespace Module_Work
 
                 _finalJob = null;
 
-                buttonQuit.Enabled = false;
-                buttonFindJob.Enabled = true;
+                EnableButtom(buttonQuit, false);
+                EnableButtom(buttonFindJob, true);
 
                 CurrentWork();
 
@@ -204,6 +213,21 @@ namespace Module_Work
         }
 
         #region Выбор вызова потока
+
+        /// <summary>
+        /// Метод для блокирования кнопок из разных потоков
+        /// </summary>
+        private void EnableButtom(Button button, bool flag)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => button.Enabled = flag));
+            }
+            else
+            {
+                button.Enabled = flag;
+            }
+        }
 
         /// <summary>
         /// Метод для вывода текста на форму из любого потока
