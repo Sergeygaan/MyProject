@@ -72,7 +72,7 @@
             this.groupBox1.Controls.Add(this.labelProfessionName);
             this.groupBox1.Location = new System.Drawing.Point(11, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 148);
+            this.groupBox1.Size = new System.Drawing.Size(200, 121);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Текущая работа";
@@ -80,7 +80,7 @@
             // labelWorkPlan
             // 
             this.labelWorkPlan.AutoSize = true;
-            this.labelWorkPlan.Location = new System.Drawing.Point(6, 127);
+            this.labelWorkPlan.Location = new System.Drawing.Point(6, 100);
             this.labelWorkPlan.Name = "labelWorkPlan";
             this.labelWorkPlan.Size = new System.Drawing.Size(123, 13);
             this.labelWorkPlan.TabIndex = 5;
@@ -89,7 +89,7 @@
             // labelPlan
             // 
             this.labelPlan.AutoSize = true;
-            this.labelPlan.Location = new System.Drawing.Point(6, 105);
+            this.labelPlan.Location = new System.Drawing.Point(6, 83);
             this.labelPlan.Name = "labelPlan";
             this.labelPlan.Size = new System.Drawing.Size(53, 13);
             this.labelPlan.TabIndex = 4;
@@ -98,7 +98,7 @@
             // labelLine
             // 
             this.labelLine.AutoSize = true;
-            this.labelLine.Location = new System.Drawing.Point(6, 83);
+            this.labelLine.Location = new System.Drawing.Point(6, 61);
             this.labelLine.Name = "labelLine";
             this.labelLine.Size = new System.Drawing.Size(127, 13);
             this.labelLine.TabIndex = 3;
@@ -125,7 +125,7 @@
             // trackBarQualityWork
             // 
             this.trackBarQualityWork.LargeChange = 1;
-            this.trackBarQualityWork.Location = new System.Drawing.Point(12, 166);
+            this.trackBarQualityWork.Location = new System.Drawing.Point(7, 139);
             this.trackBarQualityWork.Minimum = 1;
             this.trackBarQualityWork.Name = "trackBarQualityWork";
             this.trackBarQualityWork.Size = new System.Drawing.Size(149, 45);
@@ -137,7 +137,7 @@
             // 
             this.labelTableWork.AutoSize = true;
             this.labelTableWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTableWork.Location = new System.Drawing.Point(162, 175);
+            this.labelTableWork.Location = new System.Drawing.Point(162, 145);
             this.labelTableWork.Name = "labelTableWork";
             this.labelTableWork.Size = new System.Drawing.Size(49, 20);
             this.labelTableWork.TabIndex = 4;
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 286);
+            this.ClientSize = new System.Drawing.Size(334, 182);
             this.Controls.Add(this.labelTableWork);
             this.Controls.Add(this.trackBarQualityWork);
             this.Controls.Add(this.groupBox1);

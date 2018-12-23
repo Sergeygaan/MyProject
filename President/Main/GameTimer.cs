@@ -30,7 +30,7 @@ namespace ThePresident
                     {
                         GameTime.AddTime(60);
 
-                        if (_reductionParameters >= 90)
+                        if (_reductionParameters >= 5)
                         {
                             int randomFood = random.Next(1, 2);
                             int randomMood = random.Next(1, 2);

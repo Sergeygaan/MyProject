@@ -27,7 +27,7 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("PR-менеджер", 100, 0, 0, 0),
+                new Basic_Work("HR-менеджер", 100, 0, 0, 0),
                 new Basic_Work("Аудитор", 100, 0, 0, 0),
                 new Basic_Work("Бренд-менеджер", 100, 0, 0, 0),
                 new Basic_Work("Брокер", 100, 0, 0, 0),
