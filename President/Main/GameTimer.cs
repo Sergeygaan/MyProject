@@ -1,7 +1,9 @@
 ﻿using Module_Character;
+using Module_Event;
 using Module_GameTime;
 using System;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace ThePresident
 {
@@ -10,7 +12,7 @@ namespace ThePresident
         public static int TimePassedGameSecond = 0; 
 
         private Thread _thread;
-        private int _timerSleep = 50;
+        private int _timerSleep = 100;
         private Random random = new Random();
 
         /// <summary>
@@ -26,7 +28,7 @@ namespace ThePresident
                 {
                     try
                     {
-                        GameTime.AddTime(1);
+                        GameTime.AddTime(60);
 
                         if (_reductionParameters >= 90)
                         {
@@ -41,7 +43,7 @@ namespace ThePresident
                     }
                     catch (Exception error)
                     {
-                        //MessageBox.Show(error.Message);
+                        MessageBox.Show(error.Message);
                     }
 
                     _reductionParameters += 1;

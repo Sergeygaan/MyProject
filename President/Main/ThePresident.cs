@@ -28,8 +28,6 @@ namespace ThePresident
             InitializeComponent();
 
             _gameTimer = new GameTimer();
-
-            MessageBoxEx.OwnerMain = this;
         }
 
      

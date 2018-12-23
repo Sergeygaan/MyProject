@@ -4,11 +4,6 @@ using Module_GameTime;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Module_Work
@@ -87,8 +82,10 @@ namespace Module_Work
         {
             if (_finalJob != null)
             {
-                _finalJob.WorkPlan += trackBarQualityWork.Value * 10;
-                labelWorkPlan.Text = "Выполнение плана: " + _finalJob.WorkPlan + " %";
+                Event_Work();
+
+                _finalJob.WorkPlan += TrackBar_Flow() * 10;
+                TextOutput(labelWorkPlan, "Выполнение плана: " + _finalJob.WorkPlan + " %");
 
                 ReducingNeeds_Work();
 
@@ -96,7 +93,7 @@ namespace Module_Work
 
                 numberMonthsWorked += 1;
 
-                if (numberMonthsWorked == 5)
+                if (numberMonthsWorked == 6)
                 {
                     numberMonthsWorked = 0;
 
@@ -127,11 +124,11 @@ namespace Module_Work
                 GameCharacter.Set("Money", _finalJob.Salary * 2);
 
 
-                MessageBoxEx.Show("Вы выполнили план. В качестве премии вам начислили " + (_finalJob.Salary * 2).ToString() + " $", "Событие");
+                TopMostMessageBox.Show("Вы выполнили план. В качестве премии вам начислили " + (_finalJob.Salary * 2).ToString() + " $", "Событие");
             }
             else
             {
-                MessageBoxEx.Show("Вы не выполнили план", "Событие");
+                TopMostMessageBox.Show("Вы не выполнили план", "Событие");
             }
 
             _finalJob.WorkPlan = 0;
@@ -139,23 +136,6 @@ namespace Module_Work
         }
 
         #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         /// <summary>
         /// Устроиться на работу
@@ -223,6 +203,8 @@ namespace Module_Work
             }
         }
 
+        #region Выбор вызова потока
+
         /// <summary>
         /// Метод для вывода текста на форму из любого потока
         /// </summary>
@@ -240,6 +222,24 @@ namespace Module_Work
             }
         }
 
+        private int TrackBar_Flow()
+        {
+            int value = 0;
+
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => value = trackBarQualityWork.Value));
+            }
+            else
+            {
+                value = trackBarQualityWork.Value;
+            }
+
+            return value;
+        }
+
+        #endregion
+
         /// <summary>
         /// Значение качества работы
         /// </summary>
@@ -250,7 +250,7 @@ namespace Module_Work
         /// </summary>
         private void trackBarQualityWork_ValueChanged(object sender, EventArgs e)
         {
-            _valueTableWork = trackBarQualityWork.Value * 10;
+            _valueTableWork = TrackBar_Flow() * 10;
             labelTableWork.Text = _valueTableWork + " %";
         }
 
@@ -267,13 +267,21 @@ namespace Module_Work
         /// </summary>
         private void ReducingNeeds_Work()
         {
-            double qualityWork = (trackBarQualityWork.Value * 10 ) / 100.0;
+            double qualityWork = (TrackBar_Flow() * 10 ) / 100.0;
 
             int randomFood = (int)(random.Next(10, 25) * qualityWork);
             int randomMood = (int)(random.Next(10, 25) * qualityWork);
             int randomHealth = (int)(random.Next(10, 25) * qualityWork);
 
             GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
+        }
+
+        /// <summary>
+        /// События происходящие на работе
+        /// </summary>
+        private void Event_Work()
+        {
+
         }
     }
 }
