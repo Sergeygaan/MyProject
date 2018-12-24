@@ -16,7 +16,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Издательство и типография";
+        private string _professionName = "Типография";
 
         /// <summary>
         /// Список всех профессий в данной области

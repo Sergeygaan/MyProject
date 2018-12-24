@@ -24,6 +24,11 @@ namespace Module_Work
         public int Salary;
 
         /// <summary>
+        /// Зарплата
+        /// </summary>
+        public int CoefficientSalary;
+
+        /// <summary>
         /// План на пол года
         /// </summary>
         public int Plan;
@@ -53,16 +58,18 @@ namespace Module_Work
         /// </summary>
         /// <param name="professionName">Название работы</param>
         /// <param name="salary">Оклад</param>
+        /// <param name="CoefficientSalary">Добавочная часть к окладу</param>
         /// <param name="plan">План</param>
         /// <param name="workingTime">Рабочий день</param>
         /// <param name="startWorkingTime">Начало работы</param>
         /// <param name="req_Intelligence">Требованиия к интеллекту</param>
         /// <param name="req_Charm">Требованиия к обаянию</param>
         /// <param name="req_PhysicalDevelopment">Требованиия к физической силе</param>
-        public FinalJob(string industryName, string professionName, int salary, int plan, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
+        public FinalJob(string industryName, string professionName, int salary, int coefficientSalary, int plan, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
         {
             IndustryName = industryName;
             ProfessionName = professionName;
+            CoefficientSalary = coefficientSalary;
             Salary = salary;
             Plan = plan;
 

@@ -35,8 +35,6 @@ namespace Module_UserControl
             {
                 labelMinuteAndHour.Text = even.PropertyName;
             }
-
-            GC.Collect();
         }
 
         /// <summary>

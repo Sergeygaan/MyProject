@@ -48,6 +48,12 @@
     <Compile Include="Character\Characte_Characteristics_UserControl.Designer.cs">
       <DependentUpon>Characte_Characteristics_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Character\Characte_Parameters_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Character\Characte_Parameters_UserControl.Designer.cs">
+      <DependentUpon>Characte_Parameters_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameTime\GameTimer_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -59,6 +65,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Character\Characte_Characteristics_UserControl.resx">
       <DependentUpon>Characte_Characteristics_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Character\Characte_Parameters_UserControl.resx">
+      <DependentUpon>Characte_Parameters_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameTime\GameTimer_UserControl.resx">
       <DependentUpon>GameTimer_UserControl.cs</DependentUpon>

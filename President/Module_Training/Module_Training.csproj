@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</ProjectGuid>
+    <ProjectGuid>{DB077FB0-7C2B-4360-9D6D-56138A19F9A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Module_GameTime</RootNamespace>
-    <AssemblyName>Module_GameTime</AssemblyName>
+    <RootNamespace>Module_Training</RootNamespace>
+    <AssemblyName>Module_Training</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,13 +43,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameTime.cs" />
+    <Compile Include="Education\CurrentStudy.cs" />
+    <Compile Include="Education\Education_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Education\Education_Form.Designer.cs">
+      <DependentUpon>Education_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Training_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Training_Form.Designer.cs">
+      <DependentUpon>Module_Training_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qualifications\Qualifications_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qualifications\Qualifications_Form.Designer.cs">
+      <DependentUpon>Qualifications_Form.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Education\Education_Form.resx">
+      <DependentUpon>Education_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Training_Form.resx">
+      <DependentUpon>Module_Training_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qualifications\Qualifications_Form.resx">
+      <DependentUpon>Qualifications_Form.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Character\Module_Character.csproj">
       <Project>{D10EB179-E4ED-4511-9DE8-C29C2581F796}</Project>
       <Name>Module_Character</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Event\Module_Event.csproj">
+      <Project>{8C44D849-C96F-4A72-BA40-2D67727488F4}</Project>
+      <Name>Module_Event</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Module_GameTime\Module_GameTime.csproj">
+      <Project>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</Project>
+      <Name>Module_GameTime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

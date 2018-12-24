@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Character;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -207,6 +208,8 @@ namespace Module_GameTime
                 _currentMonth = 0;
 
                 _year += 1;
+
+                GameCharacter.Set("Age", 1);
             }
 
             FormingTimeBar_MonthAndYear();

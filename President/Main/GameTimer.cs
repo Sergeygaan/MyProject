@@ -32,9 +32,11 @@ namespace ThePresident
 
                         if (_reductionParameters >= 5)
                         {
-                            int randomFood = random.Next(1, 2);
-                            int randomMood = random.Next(1, 2);
-                            int randomHealth = random.Next(1, 2);
+                            int maxNeeds = 2 + GameCharacter.NeedsStudy + GameCharacter.NeedsWork;
+
+                            int randomFood = random.Next(1, maxNeeds);
+                            int randomMood = random.Next(1, maxNeeds);
+                            int randomHealth = random.Next(1, maxNeeds);
 
                             GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
 

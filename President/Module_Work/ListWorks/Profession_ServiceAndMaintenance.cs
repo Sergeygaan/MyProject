@@ -16,7 +16,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Сервис и обслуживание";
+        private string _professionName = "Сервис";
 
         /// <summary>
         /// Список всех профессий в данной области

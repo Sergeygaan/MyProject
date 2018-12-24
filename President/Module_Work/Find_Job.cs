@@ -123,7 +123,7 @@ namespace Module_Work
         /// <param name="numberSteps">Количество профессий</param>
         private void RandomDrawingWorks(int numberSteps)
         {
-            int indexRegion;
+            int indexCategory;
             int indexWork;
             Basic_Work basic_Work;
 
@@ -131,29 +131,37 @@ namespace Module_Work
             {
                 basic_Work = null;
 
-                indexRegion = rnd.Next(0, _professions.Count);
+                indexCategory = rnd.Next(0, _professions.Count);
 
-                indexWork = rnd.Next(0, _professions[indexRegion].ListProfession().Count);
+                indexWork = rnd.Next(0, _professions[indexCategory].ListProfession().Count);
 
-                basic_Work = _professions[indexRegion].ListProfession()[indexWork];
+                basic_Work = _professions[indexCategory].ListProfession()[indexWork];
 
                 //получение названия индустрии
-                string industryName = _professions[indexRegion].ProfessionName();
+                string industryName = _professions[indexCategory].ProfessionName();
+
+                //Повышающие коэфицент для выбранной категории с учетом обучения
+                int coefficient = GameCharacter.ReturnQualifications(indexCategory);
 
                 if (basic_Work != null)
                 {
-                    SalaryDetermination(basic_Work, industryName);
+                    SalaryDetermination(basic_Work, industryName, coefficient);
+                    //coefficient
                 }
             }
         }
 
-        private void SalaryDetermination(Basic_Work basic_Work, string industryName)
+        private void SalaryDetermination(Basic_Work basic_Work, string industryName, int coefficient)
         {
             int finalSalary = basic_Work.Salary + rnd.Next(-(int)(basic_Work.Salary * 0.35), (int)(basic_Work.Salary * 0.35));
 
+            int coefficientSalary = (int)(finalSalary * coefficient / 100.0);
+
+            finalSalary += coefficientSalary;
+
             int randomWorkPlan = rnd.Next(450, 600);
 
-            _finalJobs.Add(new FinalJob(industryName, basic_Work.ProfessionName, finalSalary, randomWorkPlan, 
+            _finalJobs.Add(new FinalJob(industryName, basic_Work.ProfessionName, finalSalary, coefficientSalary, randomWorkPlan, 
                                         basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
         }
 
@@ -164,7 +172,8 @@ namespace Module_Work
         {
             foreach (var currentJobs in _finalJobs)
             {
-                listBoxWork.Items.Add(currentJobs.IndustryName + " - " + currentJobs.ProfessionName + ": " + currentJobs.Salary + " $ План: " + currentJobs.Plan + " %");
+                listBoxWork.Items.Add(currentJobs.IndustryName + " - " + currentJobs.ProfessionName + ": " + (currentJobs.Salary - currentJobs.CoefficientSalary) + 
+                                        " $ + " + currentJobs.CoefficientSalary + " " + "$ План: " + currentJobs.Plan + " %");
 
                 bool flagCheck = true;
                 string textParam = "";

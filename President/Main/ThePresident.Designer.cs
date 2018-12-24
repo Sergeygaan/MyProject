@@ -35,6 +35,8 @@
             this.characte_Characteristics = new Module_UserControl.Characte_Characteristics_UserControl();
             this.button2 = new System.Windows.Forms.Button();
             this.gameTimer_UserControl = new Module_UserControl.GameTimer_UserControl();
+            this.buttonTraining = new System.Windows.Forms.Button();
+            this.characte_Parameters_UserControl1 = new Module_UserControl.Characte_Parameters_UserControl();
             this.SuspendLayout();
             // 
             // button1
@@ -81,11 +83,30 @@
             this.gameTimer_UserControl.Size = new System.Drawing.Size(107, 71);
             this.gameTimer_UserControl.TabIndex = 13;
             // 
+            // buttonTraining
+            // 
+            this.buttonTraining.Location = new System.Drawing.Point(12, 51);
+            this.buttonTraining.Name = "buttonTraining";
+            this.buttonTraining.Size = new System.Drawing.Size(75, 23);
+            this.buttonTraining.TabIndex = 15;
+            this.buttonTraining.Text = "Обучение";
+            this.buttonTraining.UseVisualStyleBackColor = true;
+            this.buttonTraining.Click += new System.EventHandler(this.buttonTraining_Click);
+            // 
+            // characte_Parameters_UserControl1
+            // 
+            this.characte_Parameters_UserControl1.Location = new System.Drawing.Point(584, 275);
+            this.characte_Parameters_UserControl1.Name = "characte_Parameters_UserControl1";
+            this.characte_Parameters_UserControl1.Size = new System.Drawing.Size(204, 129);
+            this.characte_Parameters_UserControl1.TabIndex = 16;
+            // 
             // ThePresident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.characte_Parameters_UserControl1);
+            this.Controls.Add(this.buttonTraining);
             this.Controls.Add(this.gameTimer_UserControl);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.characte_Characteristics);
@@ -109,6 +130,8 @@
         private Module_UserControl.Characte_Characteristics_UserControl characte_Characteristics;
         private System.Windows.Forms.Button button2;
         private Module_UserControl.GameTimer_UserControl gameTimer_UserControl;
+        private System.Windows.Forms.Button buttonTraining;
+        private Module_UserControl.Characte_Parameters_UserControl characte_Parameters_UserControl1;
     }
 }
 

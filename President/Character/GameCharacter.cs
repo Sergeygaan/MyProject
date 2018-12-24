@@ -1,9 +1,29 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Module_Character
 {
     public static class GameCharacter
     {
+        static GameCharacter()
+        {
+            _qualificationsList.Add(0); //0 - Сельское хозяйство
+            _qualificationsList.Add(0); //1 - Творчество
+            _qualificationsList.Add(0); //2 - Экономические
+            _qualificationsList.Add(0); //3 - Еда
+            _qualificationsList.Add(0); //4 - Информационные
+            _qualificationsList.Add(0); //5 - Юридические
+            _qualificationsList.Add(0); //6 - Медицинские
+            _qualificationsList.Add(0); //7 - Военные
+            _qualificationsList.Add(0); //8 - Педагогические
+            _qualificationsList.Add(0); //9 - Типография
+            _qualificationsList.Add(0); //10 - Научные
+            _qualificationsList.Add(0); //11 - Сервис
+            _qualificationsList.Add(0); //12 - Спортивные
+            _qualificationsList.Add(0); //13 - Технические
+            _qualificationsList.Add(0); //14 - Транспортные
+        }
+
         #region Основные параметры
 
         #region Финансы
@@ -254,6 +274,41 @@ namespace Module_Character
 
         #endregion
 
+        #region Age
+
+        private static int _age = 18;
+
+        public static void OnPropertyChangedAge(PropertyChangedEventArgs e)
+        {
+            PropertyChangedAge?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedAge(int propertyNameAge)
+        {
+            OnPropertyChangedAge(new PropertyChangedEventArgs(propertyNameAge.ToString()));
+        }
+
+        /// <summary>
+        /// Переменная, хранящая значение возраста персонажа
+        /// </summary>
+        public static int Age
+        {
+            get { return _age; }
+            set
+            {
+                if (value != _age)
+                {
+                    _age = value;
+
+                    OnPropertyChangedAge(_age);
+                }
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedAge;
+
+        #endregion
+
         #endregion
 
         #region Вспомогательные параметры
@@ -409,6 +464,12 @@ namespace Module_Character
         {
             switch (nameParameter)
             {
+                case "Age":
+
+                    Age += valueParameter;
+
+                    break;
+
                 case "Money":
 
                     Money += valueParameter;
@@ -474,6 +535,10 @@ namespace Module_Character
         {
             switch (nameParameter)
             {
+                case "Age":
+
+                    return Age;
+
                 case "Money":
 
                     return Money;
@@ -519,6 +584,16 @@ namespace Module_Character
         #region Уменьшение потребностей
 
         /// <summary>
+        /// Уменьшение потребностей при работе
+        /// </summary>
+        public static int NeedsWork = 0;
+
+        /// <summary>
+        /// Уменьшение потребностей при учебе
+        /// </summary>
+        public static int NeedsStudy = 0;
+
+        /// <summary>
         /// Уменьшение параметров персонажа
         /// </summary>
         /// <param name="reducingFood">Уменьшение параметра "Еда"</param>
@@ -530,6 +605,68 @@ namespace Module_Character
             Set("Mood", -reducingMood);
             Set("Health", -reducingHealth);
         }
+
+        #endregion
+
+        #region Повышение квалификации
+
+        private static List<int> _qualificationsList = new List<int>();
+
+        /// <summary>
+        /// Добавить значение повышения квалификации к нужному полю
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="value"></param>
+        public static void AddQualifications(int index, int value)
+        {
+            _qualificationsList[index] += value;
+        }
+            
+        /// <summary>
+        /// Вернуть значение для текущей работы
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public static int ReturnQualifications(int index)
+        {
+           return _qualificationsList[index];
+        }
+
+        #endregion
+
+        #region Образование
+
+        private static string _study = "11 классов";
+
+        public static void OnPropertyChangedStudy(PropertyChangedEventArgs e)
+        {
+            PropertyChangedStudy?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedStudy(string propertyNameStudy)
+        {
+            OnPropertyChangedStudy(new PropertyChangedEventArgs(propertyNameStudy.ToString()));
+        }
+
+        /// <summary>
+        /// Переменная, хранящая текущее образование персонажа
+        /// </summary>
+        public static string Study
+        {
+            get { return _study; }
+            set
+            {
+                if (value != _study)
+                {
+                    _study = value;
+
+                    OnPropertyChangedStudy(_study);
+                }
+            }
+        }
+
+
+        public static event PropertyChangedEventHandler PropertyChangedStudy;
 
         #endregion
     }

@@ -93,6 +93,10 @@
       <Project>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</Project>
       <Name>Module_GameTime</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Module_Training\Module_Training.csproj">
+      <Project>{DB077FB0-7C2B-4360-9D6D-56138A19F9A6}</Project>
+      <Name>Module_Training</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Module_UserControl\Module_UserControl.csproj">
       <Project>{2A96FA10-4568-4AA8-A9F2-43B989EDB9E3}</Project>
       <Name>Module_UserControl</Name>

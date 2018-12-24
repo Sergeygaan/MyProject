@@ -1,6 +1,7 @@
 ﻿using Module_Character;
 using Module_Event;
 using Module_GameTime;
+using Module_Training;
 using Module_Work;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace ThePresident
     public partial class ThePresident : Form
     {
         private Module_Work_Form _module_Work_Form;
+
+        private Module_Training_Form _module_Training_Form;
 
         /// <summary>
         /// Таймер игрового времени. Добавляет 1 сек игрового времени раз в 2500 сек настояжего времени
@@ -142,6 +145,16 @@ namespace ThePresident
             }
 
             _module_Work_Form.ShowDialog();
+        }
+
+        private void buttonTraining_Click(object sender, EventArgs e)
+        {
+            if (_module_Training_Form == null)
+            {
+                _module_Training_Form = new Module_Training_Form();
+            }
+
+            _module_Training_Form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
