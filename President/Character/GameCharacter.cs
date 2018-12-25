@@ -136,7 +136,7 @@ namespace Module_Character
 
         #region Food
 
-        private static int _food = 100;
+        private static int _food = 1000;
 
         public static void OnPropertyChangedFood(PropertyChangedEventArgs e)
         {
@@ -158,9 +158,9 @@ namespace Module_Character
             {
                 if (value != _food)
                 {
-                    if (value > 100)
+                    if (value > 1000)
                     {
-                        _food = 100;
+                        _food = 1000;
                     }
                     else if (value < 0)
                     {
@@ -182,7 +182,7 @@ namespace Module_Character
 
         #region Mood
 
-        private static int _mood = 100;
+        private static int _mood = 1000;
 
         public static void OnPropertyChangedMood(PropertyChangedEventArgs e)
         {
@@ -204,9 +204,9 @@ namespace Module_Character
             {
                 if (value != _mood)
                 {
-                    if (value > 100)
+                    if (value > 1000)
                     {
-                        _mood = 100;
+                        _mood = 1000;
                     }
                     else if (value < 0)
                     {
@@ -228,7 +228,7 @@ namespace Module_Character
 
         #region Health
 
-        private static int _health = 100;
+        private static int _health = 1000;
 
         public static void OnPropertyChangedHealth(PropertyChangedEventArgs e)
         {
@@ -250,9 +250,9 @@ namespace Module_Character
             {
                 if (value != _health)
                 {
-                    if (value > 100)
+                    if (value > 1000)
                     {
-                        _health = 100;
+                        _health = 1000;
                     }
                     else if (value < 0)
                     {
@@ -407,6 +407,12 @@ namespace Module_Character
 
         #region Intelligence
 
+        /// <summary>
+        /// Ограничение интеллекта данного образования
+        /// </summary>
+        public static int Restrictions_Intelligence = 5;
+
+
         private static int _intelligence = 0;
 
         public static void OnPropertyChangedIntelligence(PropertyChangedEventArgs e)
@@ -429,9 +435,9 @@ namespace Module_Character
             {
                 if (value != _intelligence)
                 {
-                    if (value > 100)
+                    if (value > Restrictions_Intelligence)
                     {
-                        _intelligence = 100;
+                        _intelligence = Restrictions_Intelligence;
                     }
                     else if (value < 0)
                     {

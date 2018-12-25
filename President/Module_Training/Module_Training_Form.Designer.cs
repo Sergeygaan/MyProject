@@ -170,7 +170,7 @@
             this.MinimizeBox = false;
             this.Name = "Module_Training_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Module_Training_Form";
+            this.Text = "Обучение";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarQualityStudy)).EndInit();

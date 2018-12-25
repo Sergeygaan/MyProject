@@ -89,7 +89,7 @@ namespace Module_UserControl
         #endregion
 
         /// <summary>
-        /// Получить образование
+        /// Получить значение переменной "образование"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="even"></param>

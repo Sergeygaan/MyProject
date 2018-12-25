@@ -92,7 +92,12 @@ namespace Module_Training
         #region Конец месяца
 
         /// <summary>
-        /// Начисление зарплаты
+        /// Подсчет пройденных месяцев
+        /// </summary>
+        private int countMonth = 0;
+
+        /// <summary>
+        /// Событие происходящие в конце дня
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="even"></param>
@@ -100,6 +105,8 @@ namespace Module_Training
         {
             if (_currentStudy != null)
             {
+                countMonth += 1;
+
                 Event_Study();
 
                 _currentStudy.StudyPlan += TrackBar_Flow() * 10;
@@ -107,6 +114,13 @@ namespace Module_Training
 
                 _currentStudy.PeriodStudy -= 1;
                 TextOutput(labelMonthsLeft, "Месяцев осталось: " + _currentStudy.PeriodStudy + " мес.");
+
+                if(countMonth >= 1)
+                {
+                    countMonth = 0;
+
+                    GameCharacter.Set("Intelligence", 1);
+                }
 
                 if (_currentStudy.PeriodStudy == 0)
                 {
@@ -189,6 +203,8 @@ namespace Module_Training
             EnableButtom(buttonEducation, false);
 
             CurrentWork();
+
+            GameCharacter.Restrictions_Intelligence = _currentStudy.RestrictionsIntellect;
         }
 
         /// <summary>
@@ -204,7 +220,7 @@ namespace Module_Training
                 TextOutput(labelPlan, "План: " + _currentStudy.Plan + " %");
                 TextOutput(labelStudyPlan, "Выполнение плана: 0%");
 
-                GameCharacter.NeedsStudy = 2;
+                ChangeCharacteristics(true);
             }
             else
             {
@@ -214,7 +230,22 @@ namespace Module_Training
                 TextOutput(labelPlan, "План: 0%");
                 TextOutput(labelStudyPlan, "Выполнение плана: 0%");
 
+                ChangeCharacteristics(false);
+            }
+        }
+
+        /// <summary>
+        /// Изменение характеристик игрока
+        /// </summary>
+        private void ChangeCharacteristics(bool flag)
+        {
+            if(!flag)
+            {
                 GameCharacter.NeedsStudy = 0;
+            }
+            else
+            {
+                GameCharacter.NeedsStudy = (int)(15 * TrackBar_Flow() * 10 / 100.0);
             }
         }
 
@@ -250,6 +281,11 @@ namespace Module_Training
         {
             _valueTableWork = TrackBar_Flow() * 10;
             labelTableStudy.Text = _valueTableWork + " %";
+
+            if (_currentStudy != null)
+            {
+                ChangeCharacteristics(true);
+            }
         }
 
         /// <summary>

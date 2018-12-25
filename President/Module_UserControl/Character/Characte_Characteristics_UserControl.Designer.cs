@@ -86,30 +86,33 @@
             this.progressBarMood.BackColor = System.Drawing.Color.Green;
             this.progressBarMood.ForeColor = System.Drawing.Color.Green;
             this.progressBarMood.Location = new System.Drawing.Point(104, 60);
+            this.progressBarMood.Maximum = 1000;
             this.progressBarMood.Name = "progressBarMood";
             this.progressBarMood.Size = new System.Drawing.Size(153, 23);
             this.progressBarMood.TabIndex = 19;
-            this.progressBarMood.Value = 100;
+            this.progressBarMood.Value = 1000;
             // 
             // progressBarHealth
             // 
             this.progressBarHealth.BackColor = System.Drawing.Color.RoyalBlue;
             this.progressBarHealth.ForeColor = System.Drawing.Color.RoyalBlue;
             this.progressBarHealth.Location = new System.Drawing.Point(104, 95);
+            this.progressBarHealth.Maximum = 1000;
             this.progressBarHealth.Name = "progressBarHealth";
             this.progressBarHealth.Size = new System.Drawing.Size(153, 23);
             this.progressBarHealth.TabIndex = 18;
-            this.progressBarHealth.Value = 100;
+            this.progressBarHealth.Value = 1000;
             // 
             // progressBarFood
             // 
             this.progressBarFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.progressBarFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.progressBarFood.Location = new System.Drawing.Point(104, 28);
+            this.progressBarFood.Maximum = 1000;
             this.progressBarFood.Name = "progressBarFood";
             this.progressBarFood.Size = new System.Drawing.Size(153, 23);
             this.progressBarFood.TabIndex = 1;
-            this.progressBarFood.Value = 100;
+            this.progressBarFood.Value = 1000;
             // 
             // labelMood
             // 

@@ -156,6 +156,7 @@
             this.Name = "Education_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Образование";
+            this.Load += new System.EventHandler(this.Education_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -252,7 +252,7 @@ namespace Module_Work
                 TextOutput(labelPlan, "План: " + _currentJob.Plan + " %");
                 TextOutput(labelWorkPlan, "Выполнение плана: " + _currentJob.WorkPlan + " %");
 
-                GameCharacter.NeedsWork = 3;
+                ChangeCharacteristics(true);
             }
             else
             {
@@ -262,7 +262,23 @@ namespace Module_Work
                 TextOutput(labelPlan, "План: 0%");
                 TextOutput(labelWorkPlan, "Выполнение плана: 0%");
 
+                ChangeCharacteristics(false);
+            }
+        }
+
+        /// <summary>
+        /// Изменение характеристик игрока
+        /// </summary>
+        /// <param name="flag"></param>
+        private void ChangeCharacteristics(bool flag)
+        {
+            if (!flag)
+            {
                 GameCharacter.NeedsWork = 0;
+            }
+            else
+            {
+                GameCharacter.NeedsWork = (int)(25 * TrackBar_Flow() * 10 / 100.0);
             }
         }
 
@@ -278,6 +294,11 @@ namespace Module_Work
         {
             _valueTableWork = TrackBar_Flow() * 10;
             labelTableWork.Text = _valueTableWork + " %";
+
+            if (_currentJob != null)
+            {
+                ChangeCharacteristics(true);
+            }
         }
 
         /// <summary>
