@@ -44,22 +44,6 @@ namespace Module_Work
             }
         }
 
-        private int TrackBar_Flow()
-        {
-            int value = 0;
-
-            if (InvokeRequired)
-            {
-                Invoke(new Action(() => value = trackBarQualityWork.Value));
-            }
-            else
-            {
-                value = trackBarQualityWork.Value;
-            }
-
-            return value;
-        }
-
         #endregion
 
         /// <summary>
@@ -74,6 +58,8 @@ namespace Module_Work
 
             //Подписка на события "Новый день" для начисления зарплаты
             GameTime.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_Everyday);
+
+            Effort_Work.PropertyChangedValueChanged += new PropertyChangedEventHandler(ValueChanged);
 
             CreateListWork();
         }
@@ -136,7 +122,7 @@ namespace Module_Work
             {
                 Event_Work();
 
-                _currentJob.WorkPlan += TrackBar_Flow() * 10;
+                _currentJob.WorkPlan += Effort_Work.ReturnValue();
                 TextOutput(labelWorkPlan, "Выполнение плана: " + _currentJob.WorkPlan + " %");
 
                 GameCharacter.Set("Money", _currentJob.Salary);
@@ -278,7 +264,7 @@ namespace Module_Work
             }
             else
             {
-                GameCharacter.NeedsWork = (int)(25 * TrackBar_Flow() * 10 / 100.0);
+                GameCharacter.NeedsWork = (int)(25 * Effort_Work.ReturnValue() / 100.0);
             }
         }
 
@@ -290,11 +276,8 @@ namespace Module_Work
         /// <summary>
         /// Масштабирование прокрутки
         /// </summary>
-        private void trackBarQualityWork_ValueChanged(object sender, EventArgs e)
+        private void ValueChanged(object sender, PropertyChangedEventArgs even)
         {
-            _valueTableWork = TrackBar_Flow() * 10;
-            labelTableWork.Text = _valueTableWork + " %";
-
             if (_currentJob != null)
             {
                 ChangeCharacteristics(true);

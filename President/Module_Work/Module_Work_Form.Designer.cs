@@ -35,17 +35,15 @@
             this.labelPlan = new System.Windows.Forms.Label();
             this.labelSalary = new System.Windows.Forms.Label();
             this.labelProfessionName = new System.Windows.Forms.Label();
-            this.trackBarQualityWork = new System.Windows.Forms.TrackBar();
-            this.labelTableWork = new System.Windows.Forms.Label();
+            this.Effort_Work = new Module_UserControl.Effort_UserControl();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarQualityWork)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonFindJob
             // 
-            this.buttonFindJob.Location = new System.Drawing.Point(11, 160);
+            this.buttonFindJob.Location = new System.Drawing.Point(4, 177);
             this.buttonFindJob.Name = "buttonFindJob";
-            this.buttonFindJob.Size = new System.Drawing.Size(104, 23);
+            this.buttonFindJob.Size = new System.Drawing.Size(91, 23);
             this.buttonFindJob.TabIndex = 0;
             this.buttonFindJob.Text = "Найти работу";
             this.buttonFindJob.UseVisualStyleBackColor = true;
@@ -54,9 +52,9 @@
             // buttonQuit
             // 
             this.buttonQuit.Enabled = false;
-            this.buttonQuit.Location = new System.Drawing.Point(121, 160);
+            this.buttonQuit.Location = new System.Drawing.Point(113, 177);
             this.buttonQuit.Name = "buttonQuit";
-            this.buttonQuit.Size = new System.Drawing.Size(104, 23);
+            this.buttonQuit.Size = new System.Drawing.Size(91, 23);
             this.buttonQuit.TabIndex = 1;
             this.buttonQuit.Text = "Уволиться";
             this.buttonQuit.UseVisualStyleBackColor = true;
@@ -68,9 +66,9 @@
             this.groupBox1.Controls.Add(this.labelPlan);
             this.groupBox1.Controls.Add(this.labelSalary);
             this.groupBox1.Controls.Add(this.labelProfessionName);
-            this.groupBox1.Location = new System.Drawing.Point(11, 12);
+            this.groupBox1.Location = new System.Drawing.Point(4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(214, 91);
+            this.groupBox1.Size = new System.Drawing.Size(200, 90);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Текущая работа";
@@ -111,34 +109,20 @@
             this.labelProfessionName.TabIndex = 0;
             this.labelProfessionName.Text = "Профессия: Безработный";
             // 
-            // trackBarQualityWork
+            // Effort_Work
             // 
-            this.trackBarQualityWork.LargeChange = 1;
-            this.trackBarQualityWork.Location = new System.Drawing.Point(11, 109);
-            this.trackBarQualityWork.Minimum = 1;
-            this.trackBarQualityWork.Name = "trackBarQualityWork";
-            this.trackBarQualityWork.Size = new System.Drawing.Size(149, 45);
-            this.trackBarQualityWork.TabIndex = 1;
-            this.trackBarQualityWork.Value = 5;
-            this.trackBarQualityWork.ValueChanged += new System.EventHandler(this.trackBarQualityWork_ValueChanged);
-            // 
-            // labelTableWork
-            // 
-            this.labelTableWork.AutoSize = true;
-            this.labelTableWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTableWork.Location = new System.Drawing.Point(166, 118);
-            this.labelTableWork.Name = "labelTableWork";
-            this.labelTableWork.Size = new System.Drawing.Size(49, 20);
-            this.labelTableWork.TabIndex = 4;
-            this.labelTableWork.Text = "50 %";
+            this.Effort_Work.Location = new System.Drawing.Point(4, 94);
+            this.Effort_Work.Name = "Effort_Work";
+            this.Effort_Work.Size = new System.Drawing.Size(207, 77);
+            this.Effort_Work.TabIndex = 5;
+            this.Effort_Work.ValueChanged = "false";
             // 
             // Module_Work_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(237, 193);
-            this.Controls.Add(this.labelTableWork);
-            this.Controls.Add(this.trackBarQualityWork);
+            this.ClientSize = new System.Drawing.Size(212, 210);
+            this.Controls.Add(this.Effort_Work);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonQuit);
             this.Controls.Add(this.buttonFindJob);
@@ -150,9 +134,7 @@
             this.Text = "Работа";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarQualityWork)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -165,7 +147,6 @@
         private System.Windows.Forms.Label labelSalary;
         private System.Windows.Forms.Label labelWorkPlan;
         private System.Windows.Forms.Label labelPlan;
-        private System.Windows.Forms.TrackBar trackBarQualityWork;
-        private System.Windows.Forms.Label labelTableWork;
+        private Module_UserControl.Effort_UserControl Effort_Work;
     }
 }

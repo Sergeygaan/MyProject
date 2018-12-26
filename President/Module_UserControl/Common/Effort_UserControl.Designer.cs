@@ -52,7 +52,7 @@
             this.groupBoxEffort.Controls.Add(this.trackBarQuality);
             this.groupBoxEffort.Location = new System.Drawing.Point(3, 3);
             this.groupBoxEffort.Name = "groupBoxEffort";
-            this.groupBoxEffort.Size = new System.Drawing.Size(213, 70);
+            this.groupBoxEffort.Size = new System.Drawing.Size(199, 71);
             this.groupBoxEffort.TabIndex = 7;
             this.groupBoxEffort.TabStop = false;
             this.groupBoxEffort.Text = "Затраты усилий";
@@ -61,7 +61,7 @@
             // 
             this.labelTable.AutoSize = true;
             this.labelTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTable.Location = new System.Drawing.Point(158, 25);
+            this.labelTable.Location = new System.Drawing.Point(147, 28);
             this.labelTable.Name = "labelTable";
             this.labelTable.Size = new System.Drawing.Size(49, 20);
             this.labelTable.TabIndex = 7;
@@ -73,7 +73,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxEffort);
             this.Name = "Effort_UserControl";
-            this.Size = new System.Drawing.Size(218, 77);
+            this.Size = new System.Drawing.Size(207, 77);
             ((System.ComponentModel.ISupportInitialize)(this.trackBarQuality)).EndInit();
             this.groupBoxEffort.ResumeLayout(false);
             this.groupBoxEffort.PerformLayout();

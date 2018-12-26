@@ -33,16 +33,14 @@
             this.labelStudyPlan = new System.Windows.Forms.Label();
             this.labelPlan = new System.Windows.Forms.Label();
             this.labelNameStudy = new System.Windows.Forms.Label();
-            this.labelTableStudy = new System.Windows.Forms.Label();
-            this.trackBarQualityStudy = new System.Windows.Forms.TrackBar();
             this.buttonQualifications = new System.Windows.Forms.Button();
             this.buttonEducation = new System.Windows.Forms.Button();
             this.buttonDeduct = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonSelfDevelopment = new System.Windows.Forms.Button();
+            this.Effort_Study = new Module_UserControl.Effort_UserControl();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarQualityStudy)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -96,27 +94,6 @@
             this.labelNameStudy.TabIndex = 0;
             this.labelNameStudy.Text = "Образование: 11 классов";
             // 
-            // labelTableStudy
-            // 
-            this.labelTableStudy.AutoSize = true;
-            this.labelTableStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTableStudy.Location = new System.Drawing.Point(163, 123);
-            this.labelTableStudy.Name = "labelTableStudy";
-            this.labelTableStudy.Size = new System.Drawing.Size(49, 20);
-            this.labelTableStudy.TabIndex = 6;
-            this.labelTableStudy.Text = "50 %";
-            // 
-            // trackBarQualityStudy
-            // 
-            this.trackBarQualityStudy.LargeChange = 1;
-            this.trackBarQualityStudy.Location = new System.Drawing.Point(12, 120);
-            this.trackBarQualityStudy.Minimum = 1;
-            this.trackBarQualityStudy.Name = "trackBarQualityStudy";
-            this.trackBarQualityStudy.Size = new System.Drawing.Size(149, 45);
-            this.trackBarQualityStudy.TabIndex = 5;
-            this.trackBarQualityStudy.Value = 5;
-            this.trackBarQualityStudy.ValueChanged += new System.EventHandler(this.trackBarQualityStudy_ValueChanged);
-            // 
             // buttonQualifications
             // 
             this.buttonQualifications.Location = new System.Drawing.Point(6, 19);
@@ -163,7 +140,7 @@
             // 
             this.groupBox3.Controls.Add(this.buttonSelfDevelopment);
             this.groupBox3.Controls.Add(this.buttonQualifications);
-            this.groupBox3.Location = new System.Drawing.Point(218, 101);
+            this.groupBox3.Location = new System.Drawing.Point(218, 112);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(173, 79);
             this.groupBox3.TabIndex = 11;
@@ -180,15 +157,22 @@
             this.buttonSelfDevelopment.UseVisualStyleBackColor = true;
             this.buttonSelfDevelopment.Click += new System.EventHandler(this.buttonSelfDevelopment_Click);
             // 
+            // Effort_Study
+            // 
+            this.Effort_Study.Location = new System.Drawing.Point(3, 114);
+            this.Effort_Study.Name = "Effort_Study";
+            this.Effort_Study.Size = new System.Drawing.Size(209, 77);
+            this.Effort_Study.TabIndex = 12;
+            this.Effort_Study.ValueChanged = "false";
+            // 
             // Module_Training_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 187);
+            this.ClientSize = new System.Drawing.Size(399, 197);
+            this.Controls.Add(this.Effort_Study);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.labelTableStudy);
-            this.Controls.Add(this.trackBarQualityStudy);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -198,11 +182,9 @@
             this.Text = "Обучение";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarQualityStudy)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -212,8 +194,6 @@
         private System.Windows.Forms.Label labelStudyPlan;
         private System.Windows.Forms.Label labelPlan;
         private System.Windows.Forms.Label labelNameStudy;
-        private System.Windows.Forms.Label labelTableStudy;
-        private System.Windows.Forms.TrackBar trackBarQualityStudy;
         private System.Windows.Forms.Button buttonQualifications;
         private System.Windows.Forms.Button buttonEducation;
         private System.Windows.Forms.Label labelMonthsLeft;
@@ -221,5 +201,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buttonSelfDevelopment;
+        private Module_UserControl.Effort_UserControl Effort_Study;
     }
 }

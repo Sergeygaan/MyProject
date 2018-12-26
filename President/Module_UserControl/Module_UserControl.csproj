@@ -109,10 +109,6 @@
       <Project>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</Project>
       <Name>Module_GameTime</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Module_Work\Module_Work.csproj">
-      <Project>{774655CC-CDB2-4CDB-825A-9B7ACEAB8212}</Project>
-      <Name>Module_Work</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

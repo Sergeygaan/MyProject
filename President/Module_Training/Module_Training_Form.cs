@@ -49,22 +49,6 @@ namespace Module_Training
             }
         }
 
-        private int TrackBar_Flow()
-        {
-            int value = 0;
-
-            if (InvokeRequired)
-            {
-                Invoke(new Action(() => value = trackBarQualityStudy.Value));
-            }
-            else
-            {
-                value = trackBarQualityStudy.Value;
-            }
-
-            return value;
-        }
-
         #endregion
 
         /// <summary>
@@ -85,8 +69,10 @@ namespace Module_Training
         public Module_Training_Form()
         {
             InitializeComponent();
-
+    
             GameTime.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_Everyday);
+
+            Effort_Study.PropertyChangedValueChanged += new PropertyChangedEventHandler(ValueChanged);
         }
 
         #region Конец месяца
@@ -109,7 +95,7 @@ namespace Module_Training
 
                 Event_Study();
 
-                _currentStudy.StudyPlan += TrackBar_Flow() * 10;
+                _currentStudy.StudyPlan += Effort_Study.ReturnValue();
                 TextOutput(labelStudyPlan, "Выполнение плана: " + _currentStudy.StudyPlan + " %");
 
                 _currentStudy.PeriodStudy -= 1;
@@ -245,7 +231,7 @@ namespace Module_Training
             }
             else
             {
-                GameCharacter.NeedsStudy = (int)(15 * TrackBar_Flow() * 10 / 100.0);
+                GameCharacter.NeedsStudy = (int)(15 * Effort_Study.ReturnValue() / 100.0);
             }
         }
 
@@ -277,11 +263,8 @@ namespace Module_Training
         /// <summary>
         /// Масштабирование прокрутки
         /// </summary>
-        private void trackBarQualityStudy_ValueChanged(object sender, EventArgs e)
+        private void ValueChanged(object sender, PropertyChangedEventArgs even)
         {
-            _valueTableWork = TrackBar_Flow() * 10;
-            labelTableStudy.Text = _valueTableWork + " %";
-
             if (_currentStudy != null)
             {
                 ChangeCharacteristics(true);
