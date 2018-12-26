@@ -60,6 +60,12 @@
     <Compile Include="GameTime\GameTimer_UserControl.Designer.cs">
       <DependentUpon>GameTimer_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\Effort_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Effort_UserControl.Designer.cs">
+      <DependentUpon>Effort_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Character\Characte_Parameters_UserControl.resx">
       <DependentUpon>Characte_Parameters_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Effort_UserControl.resx">
+      <DependentUpon>Effort_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameTime\GameTimer_UserControl.resx">
       <DependentUpon>GameTimer_UserControl.cs</DependentUpon>

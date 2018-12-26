@@ -38,7 +38,7 @@ namespace Module_Work
                 new Basic_Work("Следователь", 100, 0, 0, 0),
                 new Basic_Work("Судебный пристав", 100, 0, 0, 0),
                 new Basic_Work("Судья", 100, 0, 0, 0),
-                new Basic_Work("Тюремный надзиратель", 100, 0, 0, 0),
+                new Basic_Work("Надзиратель", 100, 0, 0, 0),
                 new Basic_Work("Юрист", 100, 0, 0, 0),
                 new Basic_Work("Судья", 100, 0, 0, 0),
             };

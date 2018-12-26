@@ -28,7 +28,7 @@ namespace Module_Work
             _list_Profession = new List<Basic_Work>
             {
                 new Basic_Work("Агент по туризму", 100, 0, 0, 0),
-                new Basic_Work("Администратор ресторана", 100, 0, 0, 0),
+                new Basic_Work("Администратор", 100, 0, 0, 0),
                 new Basic_Work("Бармен", 100, 0, 0, 0),
                 new Basic_Work("Библиотекарь", 100, 0, 0, 0),
                 new Basic_Work("Визажист", 100, 0, 0, 0),
@@ -38,7 +38,7 @@ namespace Module_Work
                 new Basic_Work("Кладовщик", 100, 0, 0, 0),
                 new Basic_Work("Мастер маникюра", 100, 0, 0, 0),
                 new Basic_Work("Мусорщик", 100, 0, 0, 0),
-                new Basic_Work("Оператор call-центра", 100, 0, 0, 0),
+                new Basic_Work("Оператор", 100, 0, 0, 0),
                 new Basic_Work("Официант", 100, 0, 0, 0),
                 new Basic_Work("Парикмахер", 100, 0, 0, 0),
                 new Basic_Work("Портье", 100, 0, 0, 0),
@@ -47,8 +47,7 @@ namespace Module_Work
                 new Basic_Work("Страховой агент", 100, 0, 0, 0),
                 new Basic_Work("Флорист", 100, 0, 0, 0),
                 new Basic_Work("Экскурсовод", 100, 0, 0, 0),
-                new Basic_Work("Риелтор", 100, 0, 0, 0),
-                new Basic_Work("Страховой агент", 100, 0, 0, 0),
+                new Basic_Work("Риелтор", 100, 0, 0, 0)
             };
         }
 

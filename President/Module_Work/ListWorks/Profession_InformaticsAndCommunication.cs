@@ -29,7 +29,7 @@ namespace Module_Work
             {
                 new Basic_Work("HTML-верстальщик", 100, 0, 0, 0),
                 new Basic_Work("Web-интегратор", 100, 0, 0, 0),
-                new Basic_Work("Администратор базы данных", 100, 0, 0, 0),
+                new Basic_Work("Администратор", 100, 0, 0, 0),
                 new Basic_Work("Администратор сайта", 100, 0, 0, 0),
                 new Basic_Work("Блогер", 100, 0, 0, 0),
                 new Basic_Work("Веб-дизайнер", 100, 0, 0, 0),
@@ -37,7 +37,7 @@ namespace Module_Work
                 new Basic_Work("Контент-менеджер", 100, 0, 0, 0),
                 new Basic_Work("Копирайтер", 100, 0, 0, 0),
                 new Basic_Work("Радиоведущий", 100, 0, 0, 0),
-                new Basic_Work("Системный администратор", 100, 0, 0, 0),
+                new Basic_Work("Сис. администратор", 100, 0, 0, 0),
                 new Basic_Work("Спичрайтер", 100, 0, 0, 0),
                 new Basic_Work("Тележурналист", 100, 0, 0, 0),
                 new Basic_Work("Тестировщик", 100, 0, 0, 0),

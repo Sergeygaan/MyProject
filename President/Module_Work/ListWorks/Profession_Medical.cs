@@ -28,7 +28,7 @@ namespace Module_Work
             _list_Profession = new List<Basic_Work>
             {
                 new Basic_Work("Акушер", 100, 0, 0, 0),
-                new Basic_Work("Врач скорой помощи", 100, 0, 0, 0),
+                new Basic_Work("Врач", 100, 0, 0, 0),
                 new Basic_Work("Генетик", 100, 0, 0, 0),
                 new Basic_Work("Дерматолог", 100, 0, 0, 0),
                 new Basic_Work("Диетолог", 100, 0, 0, 0),

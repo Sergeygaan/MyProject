@@ -35,13 +35,15 @@
             this.buttonInternet = new System.Windows.Forms.Button();
             this.buttonGetJob = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxWork = new Netdev.Windows.Forms.ListBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelListWork
             // 
             this.labelListWork.AutoSize = true;
-            this.labelListWork.Location = new System.Drawing.Point(13, 13);
+            this.labelListWork.Location = new System.Drawing.Point(111, 12);
             this.labelListWork.Name = "labelListWork";
             this.labelListWork.Size = new System.Drawing.Size(79, 13);
             this.labelListWork.TabIndex = 1;
@@ -49,7 +51,7 @@
             // 
             // buttonOutside
             // 
-            this.buttonOutside.Location = new System.Drawing.Point(12, 163);
+            this.buttonOutside.Location = new System.Drawing.Point(7, 19);
             this.buttonOutside.Name = "buttonOutside";
             this.buttonOutside.Size = new System.Drawing.Size(86, 23);
             this.buttonOutside.TabIndex = 2;
@@ -59,7 +61,7 @@
             // 
             // buttonNewspaper
             // 
-            this.buttonNewspaper.Location = new System.Drawing.Point(12, 192);
+            this.buttonNewspaper.Location = new System.Drawing.Point(6, 48);
             this.buttonNewspaper.Name = "buttonNewspaper";
             this.buttonNewspaper.Size = new System.Drawing.Size(86, 23);
             this.buttonNewspaper.TabIndex = 3;
@@ -69,7 +71,7 @@
             // 
             // buttonInternet
             // 
-            this.buttonInternet.Location = new System.Drawing.Point(12, 221);
+            this.buttonInternet.Location = new System.Drawing.Point(6, 77);
             this.buttonInternet.Name = "buttonInternet";
             this.buttonInternet.Size = new System.Drawing.Size(86, 23);
             this.buttonInternet.TabIndex = 4;
@@ -79,7 +81,7 @@
             // 
             // buttonGetJob
             // 
-            this.buttonGetJob.Location = new System.Drawing.Point(114, 163);
+            this.buttonGetJob.Location = new System.Drawing.Point(16, 129);
             this.buttonGetJob.Name = "buttonGetJob";
             this.buttonGetJob.Size = new System.Drawing.Size(86, 23);
             this.buttonGetJob.TabIndex = 5;
@@ -87,13 +89,25 @@
             this.buttonGetJob.UseVisualStyleBackColor = true;
             this.buttonGetJob.Click += new System.EventHandler(this.GetJob_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonOutside);
+            this.groupBox1.Controls.Add(this.buttonNewspaper);
+            this.groupBox1.Controls.Add(this.buttonInternet);
+            this.groupBox1.Location = new System.Drawing.Point(9, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(99, 109);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Поиск работы";
+            // 
             // listBoxWork
             // 
             this.listBoxWork.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxWork.FormattingEnabled = true;
-            this.listBoxWork.Location = new System.Drawing.Point(16, 29);
+            this.listBoxWork.Location = new System.Drawing.Point(114, 31);
             this.listBoxWork.Name = "listBoxWork";
-            this.listBoxWork.Size = new System.Drawing.Size(585, 121);
+            this.listBoxWork.Size = new System.Drawing.Size(373, 121);
             this.listBoxWork.TabIndex = 6;
             this.listBoxWork.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxWork_MouseMove);
             // 
@@ -101,12 +115,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 297);
+            this.ClientSize = new System.Drawing.Size(493, 163);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBoxWork);
             this.Controls.Add(this.buttonGetJob);
-            this.Controls.Add(this.buttonInternet);
-            this.Controls.Add(this.buttonNewspaper);
-            this.Controls.Add(this.buttonOutside);
             this.Controls.Add(this.labelListWork);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -114,6 +126,7 @@
             this.Name = "Find_Job";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Найти работу";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Button buttonGetJob;
         private Netdev.Windows.Forms.ListBox listBoxWork;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

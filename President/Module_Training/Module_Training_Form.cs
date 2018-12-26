@@ -295,5 +295,10 @@ namespace Module_Training
         {
 
         }
+
+        private void buttonSelfDevelopment_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

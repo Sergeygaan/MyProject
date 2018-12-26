@@ -28,7 +28,7 @@ namespace Module_Work
             _list_Profession = new List<Basic_Work>
             {
                 new Basic_Work("Верстальщик", 100, 0, 0, 0),
-                new Basic_Work("Выпускающий редактор", 100, 0, 0, 0),
+                new Basic_Work("Глав. редактор", 100, 0, 0, 0),
                 new Basic_Work("Издатель", 100, 0, 0, 0),
                 new Basic_Work("Корректор", 100, 0, 0, 0),
                 new Basic_Work("Переплетчик", 100, 0, 0, 0),
