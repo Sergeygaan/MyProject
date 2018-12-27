@@ -72,6 +72,24 @@
     <Compile Include="Character\Characte_Parameters_UserControl.Designer.cs">
       <DependentUpon>Characte_Parameters_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Character\Parameters\Health_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Character\Parameters\Health_UserControl.Designer.cs">
+      <DependentUpon>Health_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Character\Parameters\Mood_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Character\Parameters\Mood_UserControl.Designer.cs">
+      <DependentUpon>Mood_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Character\Parameters\Food_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Character\Parameters\Food_UserControl.Designer.cs">
+      <DependentUpon>Food_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameTime\GameTimer_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +102,9 @@
     <Compile Include="Common\Effort_UserControl.Designer.cs">
       <DependentUpon>Effort_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProgressBarMain.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +113,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Character\Characte_Parameters_UserControl.resx">
       <DependentUpon>Characte_Parameters_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Character\Parameters\Health_UserControl.resx">
+      <DependentUpon>Health_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Character\Parameters\Mood_UserControl.resx">
+      <DependentUpon>Mood_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Character\Parameters\Food_UserControl.resx">
+      <DependentUpon>Food_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Effort_UserControl.resx">
       <DependentUpon>Effort_UserControl.cs</DependentUpon>

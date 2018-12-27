@@ -70,7 +70,7 @@ namespace Module_Training
         {
             InitializeComponent();
     
-            GameTime.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_Everyday);
+            Game_Time.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_Everyday);
 
             Effort_Study.PropertyChangedValueChanged += new PropertyChangedEventHandler(ValueChanged);
         }
@@ -220,6 +220,9 @@ namespace Module_Training
             }
         }
 
+        //Понежение характеристик
+        int needsStudy = 15;
+
         /// <summary>
         /// Изменение характеристик игрока
         /// </summary>
@@ -231,7 +234,7 @@ namespace Module_Training
             }
             else
             {
-                GameCharacter.NeedsStudy = (int)(15 * Effort_Study.ReturnValue() / 100.0);
+                GameCharacter.NeedsStudy = (int)(needsStudy * Effort_Study.ReturnValue() / 100.0);
             }
         }
 

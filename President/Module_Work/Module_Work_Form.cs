@@ -57,7 +57,7 @@ namespace Module_Work
             //GameTime.PropertyChangedHalfYear += new PropertyChangedEventHandler(GetValue_ImplementationPlan);
 
             //Подписка на события "Новый день" для начисления зарплаты
-            GameTime.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_Everyday);
+            Game_Time.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_Everyday);
 
             Effort_Work.PropertyChangedValueChanged += new PropertyChangedEventHandler(ValueChanged);
 
@@ -127,11 +127,11 @@ namespace Module_Work
 
                 GameCharacter.Set("Money", _currentJob.Salary);
 
-                numberMonthsWorked += 1;
+                _numberMonthsWorked += 1;
 
-                if (numberMonthsWorked == 6)
+                if (_numberMonthsWorked == 6)
                 {
-                    numberMonthsWorked = 0;
+                    _numberMonthsWorked = 0;
 
                     ImplementationPlan();
                 }
@@ -145,7 +145,7 @@ namespace Module_Work
         /// Нужно для начисления премии.
         /// Сбрасываетс при увольнении
         /// </summary>
-        private int numberMonthsWorked = 0;
+        private int _numberMonthsWorked = 0;
 
         #region События происходящие раз в пол года "Получение премии"
 
@@ -216,7 +216,7 @@ namespace Module_Work
 
                 CurrentWork();
 
-                numberMonthsWorked = 0;
+                _numberMonthsWorked = 0;
             }
         }
 
@@ -252,6 +252,9 @@ namespace Module_Work
             }
         }
 
+        //Понежение характеристик
+        int needsWork = 25;
+
         /// <summary>
         /// Изменение характеристик игрока
         /// </summary>
@@ -264,7 +267,7 @@ namespace Module_Work
             }
             else
             {
-                GameCharacter.NeedsWork = (int)(25 * Effort_Work.ReturnValue() / 100.0);
+                GameCharacter.NeedsWork = (int)(needsWork * Effort_Work.ReturnValue() / 100.0);
             }
         }
 

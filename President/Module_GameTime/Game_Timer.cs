@@ -1,5 +1,4 @@
 ﻿using Module_Character;
-using Module_Event;
 using Module_GameTime;
 using System;
 using System.Threading;
@@ -7,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ThePresident
 {
-    class GameTimer : IDisposable
+    public class Game_Timer : IDisposable
     {
         public static int TimePassedGameSecond = 0; 
 
@@ -20,7 +19,9 @@ namespace ThePresident
         /// </summary>
         private int _reductionParameters = 0;
 
-        public GameTimer()
+        private int _need = 20;
+
+        public Game_Timer()
         {
             _thread = new Thread(() =>
             {
@@ -28,11 +29,11 @@ namespace ThePresident
                 {
                     try
                     {
-                        GameTime.AddTime(60);
+                        Game_Time.AddTime(60);
 
                         if (_reductionParameters >= 3)
                         {
-                            int maxNeeds = 20 + GameCharacter.NeedsStudy + GameCharacter.NeedsWork;
+                            int maxNeeds = _need + GameCharacter.NeedsStudy + GameCharacter.NeedsWork;
 
                             int randomFood = random.Next(1, maxNeeds);
                             int randomMood = random.Next(1, maxNeeds);
@@ -82,7 +83,7 @@ namespace ThePresident
 
             if(_step_Intelligence >= _restrictions_Intelligence)
             {
-                _restrictions_Intelligence = random.Next(50, 90);
+                _restrictions_Intelligence = random.Next(60, 100);
 
                 _step_Intelligence = 0;
 
@@ -102,7 +103,7 @@ namespace ThePresident
 
             if (_step_Charm >= _restrictions_Charm)
             {
-                _restrictions_Charm = random.Next(50, 90);
+                _restrictions_Charm = random.Next(60, 100);
 
                 _step_Charm = 0;
 
@@ -122,7 +123,7 @@ namespace ThePresident
 
             if (_step_PhysicalDevelopment >= _restrictions_PhysicalDevelopment)
             {
-                _restrictions_PhysicalDevelopment = random.Next(50, 90);
+                _restrictions_PhysicalDevelopment = random.Next(60, 100);
 
                 _step_PhysicalDevelopment = 0;
 

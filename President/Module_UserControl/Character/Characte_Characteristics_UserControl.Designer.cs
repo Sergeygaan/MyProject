@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBoxCharacteristics = new System.Windows.Forms.GroupBox();
             this.groupBoxNeeds = new System.Windows.Forms.GroupBox();
-            this.progressBarMood = new Module_UserControl.ProgressBarEx();
-            this.progressBarHealth = new Module_UserControl.ProgressBarEx();
-            this.progressBarFood = new Module_UserControl.ProgressBarEx();
-            this.labelMood = new System.Windows.Forms.Label();
-            this.labelFood = new System.Windows.Forms.Label();
-            this.labelHealth = new System.Windows.Forms.Label();
             this.groupBoxQualities = new System.Windows.Forms.GroupBox();
             this.labelPhysicalDevelopment = new System.Windows.Forms.Label();
             this.labelCharm = new System.Windows.Forms.Label();
@@ -48,6 +42,9 @@
             this.toolTipFood = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipMood = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipHealth = new System.Windows.Forms.ToolTip(this.components);
+            this.health_UserControl1 = new Module_UserControl.Health_UserControl();
+            this.mood_UserControl1 = new Module_UserControl.Mood_UserControl();
+            this.food_UserControl1 = new Module_UserControl.Food_UserControl();
             this.groupBoxCharacteristics.SuspendLayout();
             this.groupBoxNeeds.SuspendLayout();
             this.groupBoxQualities.SuspendLayout();
@@ -61,98 +58,29 @@
             this.groupBoxCharacteristics.Controls.Add(this.groupBoxFinance);
             this.groupBoxCharacteristics.Location = new System.Drawing.Point(5, 3);
             this.groupBoxCharacteristics.Name = "groupBoxCharacteristics";
-            this.groupBoxCharacteristics.Size = new System.Drawing.Size(280, 237);
+            this.groupBoxCharacteristics.Size = new System.Drawing.Size(270, 286);
             this.groupBoxCharacteristics.TabIndex = 0;
             this.groupBoxCharacteristics.TabStop = false;
             this.groupBoxCharacteristics.Text = "Характеристики";
             // 
             // groupBoxNeeds
             // 
-            this.groupBoxNeeds.Controls.Add(this.progressBarMood);
-            this.groupBoxNeeds.Controls.Add(this.progressBarHealth);
-            this.groupBoxNeeds.Controls.Add(this.progressBarFood);
-            this.groupBoxNeeds.Controls.Add(this.labelMood);
-            this.groupBoxNeeds.Controls.Add(this.labelFood);
-            this.groupBoxNeeds.Controls.Add(this.labelHealth);
+            this.groupBoxNeeds.Controls.Add(this.health_UserControl1);
+            this.groupBoxNeeds.Controls.Add(this.mood_UserControl1);
+            this.groupBoxNeeds.Controls.Add(this.food_UserControl1);
             this.groupBoxNeeds.Location = new System.Drawing.Point(7, 104);
             this.groupBoxNeeds.Name = "groupBoxNeeds";
-            this.groupBoxNeeds.Size = new System.Drawing.Size(267, 129);
+            this.groupBoxNeeds.Size = new System.Drawing.Size(257, 173);
             this.groupBoxNeeds.TabIndex = 18;
             this.groupBoxNeeds.TabStop = false;
             this.groupBoxNeeds.Text = "Потребности";
-            // 
-            // progressBarMood
-            // 
-            this.progressBarMood.BackColor = System.Drawing.Color.Green;
-            this.progressBarMood.ForeColor = System.Drawing.Color.Green;
-            this.progressBarMood.Location = new System.Drawing.Point(104, 60);
-            this.progressBarMood.Maximum = 1000;
-            this.progressBarMood.Name = "progressBarMood";
-            this.progressBarMood.Size = new System.Drawing.Size(153, 23);
-            this.progressBarMood.TabIndex = 19;
-            this.progressBarMood.Value = 1000;
-            // 
-            // progressBarHealth
-            // 
-            this.progressBarHealth.BackColor = System.Drawing.Color.RoyalBlue;
-            this.progressBarHealth.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.progressBarHealth.Location = new System.Drawing.Point(104, 95);
-            this.progressBarHealth.Maximum = 1000;
-            this.progressBarHealth.Name = "progressBarHealth";
-            this.progressBarHealth.Size = new System.Drawing.Size(153, 23);
-            this.progressBarHealth.TabIndex = 18;
-            this.progressBarHealth.Value = 1000;
-            // 
-            // progressBarFood
-            // 
-            this.progressBarFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.progressBarFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.progressBarFood.Location = new System.Drawing.Point(104, 28);
-            this.progressBarFood.Maximum = 1000;
-            this.progressBarFood.Name = "progressBarFood";
-            this.progressBarFood.Size = new System.Drawing.Size(153, 23);
-            this.progressBarFood.TabIndex = 1;
-            this.progressBarFood.Value = 1000;
-            // 
-            // labelMood
-            // 
-            this.labelMood.AutoSize = true;
-            this.labelMood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMood.ForeColor = System.Drawing.Color.Green;
-            this.labelMood.Location = new System.Drawing.Point(6, 65);
-            this.labelMood.Name = "labelMood";
-            this.labelMood.Size = new System.Drawing.Size(88, 16);
-            this.labelMood.TabIndex = 10;
-            this.labelMood.Text = "Настроение";
-            // 
-            // labelFood
-            // 
-            this.labelFood.AutoSize = true;
-            this.labelFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFood.ForeColor = System.Drawing.Color.Red;
-            this.labelFood.Location = new System.Drawing.Point(6, 28);
-            this.labelFood.Name = "labelFood";
-            this.labelFood.Size = new System.Drawing.Size(40, 20);
-            this.labelFood.TabIndex = 9;
-            this.labelFood.Text = "Еда";
-            // 
-            // labelHealth
-            // 
-            this.labelHealth.AutoSize = true;
-            this.labelHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHealth.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelHealth.Location = new System.Drawing.Point(6, 98);
-            this.labelHealth.Name = "labelHealth";
-            this.labelHealth.Size = new System.Drawing.Size(72, 16);
-            this.labelHealth.TabIndex = 11;
-            this.labelHealth.Text = "Здоровье";
             // 
             // groupBoxQualities
             // 
             this.groupBoxQualities.Controls.Add(this.labelPhysicalDevelopment);
             this.groupBoxQualities.Controls.Add(this.labelCharm);
             this.groupBoxQualities.Controls.Add(this.labelIntelligence);
-            this.groupBoxQualities.Location = new System.Drawing.Point(175, 20);
+            this.groupBoxQualities.Location = new System.Drawing.Point(165, 20);
             this.groupBoxQualities.Name = "groupBoxQualities";
             this.groupBoxQualities.Size = new System.Drawing.Size(99, 78);
             this.groupBoxQualities.TabIndex = 17;
@@ -193,7 +121,7 @@
             this.groupBoxFinance.Controls.Add(this.labelMoney);
             this.groupBoxFinance.Location = new System.Drawing.Point(7, 20);
             this.groupBoxFinance.Name = "groupBoxFinance";
-            this.groupBoxFinance.Size = new System.Drawing.Size(162, 78);
+            this.groupBoxFinance.Size = new System.Drawing.Size(152, 78);
             this.groupBoxFinance.TabIndex = 16;
             this.groupBoxFinance.TabStop = false;
             this.groupBoxFinance.Text = "Финансы";
@@ -225,6 +153,27 @@
             this.labelMoney.TabIndex = 8;
             this.labelMoney.Text = "Деньги: 100 $";
             // 
+            // health_UserControl1
+            // 
+            this.health_UserControl1.Location = new System.Drawing.Point(6, 115);
+            this.health_UserControl1.Name = "health_UserControl1";
+            this.health_UserControl1.Size = new System.Drawing.Size(245, 55);
+            this.health_UserControl1.TabIndex = 19;
+            // 
+            // mood_UserControl1
+            // 
+            this.mood_UserControl1.Location = new System.Drawing.Point(6, 66);
+            this.mood_UserControl1.Name = "mood_UserControl1";
+            this.mood_UserControl1.Size = new System.Drawing.Size(243, 55);
+            this.mood_UserControl1.TabIndex = 19;
+            // 
+            // food_UserControl1
+            // 
+            this.food_UserControl1.Location = new System.Drawing.Point(6, 15);
+            this.food_UserControl1.Name = "food_UserControl1";
+            this.food_UserControl1.Size = new System.Drawing.Size(245, 55);
+            this.food_UserControl1.TabIndex = 0;
+            // 
             // Characte_Characteristics_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,10 +181,9 @@
             this.Controls.Add(this.groupBoxCharacteristics);
             this.DoubleBuffered = true;
             this.Name = "Characte_Characteristics_UserControl";
-            this.Size = new System.Drawing.Size(288, 242);
+            this.Size = new System.Drawing.Size(282, 289);
             this.groupBoxCharacteristics.ResumeLayout(false);
             this.groupBoxNeeds.ResumeLayout(false);
-            this.groupBoxNeeds.PerformLayout();
             this.groupBoxQualities.ResumeLayout(false);
             this.groupBoxQualities.PerformLayout();
             this.groupBoxFinance.ResumeLayout(false);
@@ -250,20 +198,17 @@
         private System.Windows.Forms.Label labelIntelligence;
         private System.Windows.Forms.Label labelCharm;
         private System.Windows.Forms.Label labelPhysicalDevelopment;
-        private System.Windows.Forms.Label labelHealth;
-        private System.Windows.Forms.Label labelMood;
-        private System.Windows.Forms.Label labelFood;
         private System.Windows.Forms.Label labelMoney;
         private System.Windows.Forms.GroupBox groupBoxFinance;
         private System.Windows.Forms.Label labelIncome;
         private System.Windows.Forms.Label labelTax;
         private System.Windows.Forms.GroupBox groupBoxQualities;
         private System.Windows.Forms.GroupBox groupBoxNeeds;
-        private ProgressBarEx progressBarFood;
-        private ProgressBarEx progressBarMood;
-        private ProgressBarEx progressBarHealth;
         private System.Windows.Forms.ToolTip toolTipFood;
         private System.Windows.Forms.ToolTip toolTipMood;
         private System.Windows.Forms.ToolTip toolTipHealth;
+        private Food_UserControl food_UserControl1;
+        private Mood_UserControl mood_UserControl1;
+        private Health_UserControl health_UserControl1;
     }
 }

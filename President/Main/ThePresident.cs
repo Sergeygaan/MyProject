@@ -1,6 +1,7 @@
 ﻿using Module_Character;
 using Module_Event;
 using Module_GameTime;
+using Module_Needs;
 using Module_Training;
 using Module_Work;
 using System;
@@ -17,20 +18,41 @@ namespace ThePresident
 {
     public partial class ThePresident : Form
     {
+        /// <summary>
+        /// Модуль "Работа"
+        /// </summary>
         private Module_Work_Form _module_Work_Form;
 
+        /// <summary>
+        /// Модуль "Обучение"
+        /// </summary>
         private Module_Training_Form _module_Training_Form;
+
+        /// <summary>
+        /// Модуль "Еда"
+        /// </summary>
+        private Module_Food_Form _module_Food_Form;
+
+        /// <summary>
+        /// Модуль "Настроение"
+        /// </summary>
+        private Module_Mood_Form _module_Mood_Form;
+
+        /// <summary>
+        /// Модуль "Здоровье"
+        /// </summary>
+        private Module_Health_Form _module_Health_Form;
 
         /// <summary>
         /// Таймер игрового времени. Добавляет 1 сек игрового времени раз в 2500 сек настояжего времени
         /// </summary>
-        private GameTimer _gameTimer;
+        private Game_Timer _gameTimer;
 
         public ThePresident()
         {
             InitializeComponent();
 
-            _gameTimer = new GameTimer();
+            _gameTimer = new Game_Timer();
         }
 
      
@@ -137,6 +159,11 @@ namespace ThePresident
             AddEvent();
         }
 
+        /// <summary>
+        /// Открыть модуль "Работа"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModule_Work_Click(object sender, EventArgs e)
         {
             if(_module_Work_Form == null)
@@ -147,6 +174,11 @@ namespace ThePresident
             _module_Work_Form.ShowDialog();
         }
 
+        /// <summary>
+        /// Открыть модуль "Обучение"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonTraining_Click(object sender, EventArgs e)
         {
             if (_module_Training_Form == null)
@@ -157,9 +189,54 @@ namespace ThePresident
             _module_Training_Form.ShowDialog();
         }
 
+        /// <summary>
+        /// Открыть форму "Еда"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonFood_Click(object sender, EventArgs e)
+        {
+            if (_module_Food_Form == null)
+            {
+                _module_Food_Form = new Module_Food_Form();
+            }
+
+            _module_Food_Form.ShowDialog();
+        }
+
+        /// <summary>
+        /// Открыть форму "Настроение"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonMood_Click(object sender, EventArgs e)
+        {
+            if (_module_Mood_Form == null)
+            {
+                _module_Mood_Form = new Module_Mood_Form();
+            }
+
+            _module_Mood_Form.ShowDialog();
+        }
+
+        /// <summary>
+        /// Открыть форму "Здоровье"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonHealth_Click(object sender, EventArgs e)
+        {
+            if (_module_Health_Form == null)
+            {
+                _module_Health_Form = new Module_Health_Form();
+            }
+
+            _module_Health_Form.ShowDialog();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            GameTime.AddTime(2100);
+            Game_Time.AddTime(2100);
         }
     }
 }

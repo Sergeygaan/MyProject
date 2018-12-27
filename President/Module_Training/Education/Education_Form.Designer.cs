@@ -44,9 +44,9 @@
             // 
             this.buttonCollege.Location = new System.Drawing.Point(13, 12);
             this.buttonCollege.Name = "buttonCollege";
-            this.buttonCollege.Size = new System.Drawing.Size(105, 23);
+            this.buttonCollege.Size = new System.Drawing.Size(127, 23);
             this.buttonCollege.TabIndex = 0;
-            this.buttonCollege.Text = "Техникум";
+            this.buttonCollege.Text = "Техникум - 250 $";
             this.buttonCollege.UseVisualStyleBackColor = true;
             this.buttonCollege.Click += new System.EventHandler(this.buttonCollege_Click);
             // 
@@ -54,9 +54,9 @@
             // 
             this.buttonBaccalaureate.Location = new System.Drawing.Point(12, 41);
             this.buttonBaccalaureate.Name = "buttonBaccalaureate";
-            this.buttonBaccalaureate.Size = new System.Drawing.Size(105, 23);
+            this.buttonBaccalaureate.Size = new System.Drawing.Size(128, 23);
             this.buttonBaccalaureate.TabIndex = 1;
-            this.buttonBaccalaureate.Text = "Бакалавриат";
+            this.buttonBaccalaureate.Text = "Бакалавриат - 500 $";
             this.buttonBaccalaureate.UseVisualStyleBackColor = true;
             this.buttonBaccalaureate.Click += new System.EventHandler(this.buttonBaccalaureate_Click);
             // 
@@ -64,9 +64,9 @@
             // 
             this.buttonMaster.Location = new System.Drawing.Point(12, 70);
             this.buttonMaster.Name = "buttonMaster";
-            this.buttonMaster.Size = new System.Drawing.Size(105, 23);
+            this.buttonMaster.Size = new System.Drawing.Size(128, 23);
             this.buttonMaster.TabIndex = 2;
-            this.buttonMaster.Text = "Магистратура";
+            this.buttonMaster.Text = "Магистратура - 750 $";
             this.buttonMaster.UseVisualStyleBackColor = true;
             this.buttonMaster.Click += new System.EventHandler(this.buttonMaster_Click);
             // 
@@ -74,9 +74,9 @@
             // 
             this.buttonGraduateSchool.Location = new System.Drawing.Point(12, 99);
             this.buttonGraduateSchool.Name = "buttonGraduateSchool";
-            this.buttonGraduateSchool.Size = new System.Drawing.Size(105, 23);
+            this.buttonGraduateSchool.Size = new System.Drawing.Size(128, 23);
             this.buttonGraduateSchool.TabIndex = 3;
-            this.buttonGraduateSchool.Text = "Аспирантура";
+            this.buttonGraduateSchool.Text = "Аспирантура - 1000 $";
             this.buttonGraduateSchool.UseVisualStyleBackColor = true;
             this.buttonGraduateSchool.Click += new System.EventHandler(this.buttonGraduateSchool_Click);
             // 
@@ -84,16 +84,16 @@
             // 
             this.buttonPhD.Location = new System.Drawing.Point(12, 128);
             this.buttonPhD.Name = "buttonPhD";
-            this.buttonPhD.Size = new System.Drawing.Size(105, 23);
+            this.buttonPhD.Size = new System.Drawing.Size(128, 23);
             this.buttonPhD.TabIndex = 4;
-            this.buttonPhD.Text = "Доктор наук";
+            this.buttonPhD.Text = "Доктор наук - 1250 $";
             this.buttonPhD.UseVisualStyleBackColor = true;
             this.buttonPhD.Click += new System.EventHandler(this.buttonPhD_Click);
             // 
             // labelCollege
             // 
             this.labelCollege.AutoSize = true;
-            this.labelCollege.Location = new System.Drawing.Point(124, 17);
+            this.labelCollege.Location = new System.Drawing.Point(146, 17);
             this.labelCollege.Name = "labelCollege";
             this.labelCollege.Size = new System.Drawing.Size(176, 13);
             this.labelCollege.TabIndex = 5;
@@ -102,7 +102,7 @@
             // labelBaccalaureate
             // 
             this.labelBaccalaureate.AutoSize = true;
-            this.labelBaccalaureate.Location = new System.Drawing.Point(123, 46);
+            this.labelBaccalaureate.Location = new System.Drawing.Point(146, 46);
             this.labelBaccalaureate.Name = "labelBaccalaureate";
             this.labelBaccalaureate.Size = new System.Drawing.Size(176, 13);
             this.labelBaccalaureate.TabIndex = 6;
@@ -111,7 +111,7 @@
             // labelPhD
             // 
             this.labelPhD.AutoSize = true;
-            this.labelPhD.Location = new System.Drawing.Point(124, 133);
+            this.labelPhD.Location = new System.Drawing.Point(146, 133);
             this.labelPhD.Name = "labelPhD";
             this.labelPhD.Size = new System.Drawing.Size(176, 13);
             this.labelPhD.TabIndex = 7;
@@ -120,7 +120,7 @@
             // labelGraduateSchool
             // 
             this.labelGraduateSchool.AutoSize = true;
-            this.labelGraduateSchool.Location = new System.Drawing.Point(124, 104);
+            this.labelGraduateSchool.Location = new System.Drawing.Point(146, 104);
             this.labelGraduateSchool.Name = "labelGraduateSchool";
             this.labelGraduateSchool.Size = new System.Drawing.Size(176, 13);
             this.labelGraduateSchool.TabIndex = 8;
@@ -129,7 +129,7 @@
             // labelMaster
             // 
             this.labelMaster.AutoSize = true;
-            this.labelMaster.Location = new System.Drawing.Point(124, 75);
+            this.labelMaster.Location = new System.Drawing.Point(146, 75);
             this.labelMaster.Name = "labelMaster";
             this.labelMaster.Size = new System.Drawing.Size(176, 13);
             this.labelMaster.TabIndex = 9;
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 161);
+            this.ClientSize = new System.Drawing.Size(334, 161);
             this.Controls.Add(this.labelMaster);
             this.Controls.Add(this.labelGraduateSchool);
             this.Controls.Add(this.labelPhD);

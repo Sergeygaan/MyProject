@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Module_GameTime
 {
-    public static class GameTime
+    public static class Game_Time
     {
         private static Random random = new Random();
 
@@ -28,7 +28,7 @@ namespace Module_GameTime
         /// <summary>
         /// Конструктор класса "Таймер"
         /// </summary>
-        static GameTime()
+        static Game_Time()
         {
             _monthList = new List<string>
             {

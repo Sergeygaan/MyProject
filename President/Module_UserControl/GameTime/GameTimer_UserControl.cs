@@ -18,8 +18,8 @@ namespace Module_UserControl
         {
             InitializeComponent();
 
-            GameTime.PropertyChangedMinutesAndHour += new PropertyChangedEventHandler(GetValue_MinuteAndHour);
-            GameTime.PropertyChangedMonthAndYear += new PropertyChangedEventHandler(GetValue_MonthAndYear);
+            Game_Time.PropertyChangedMinutesAndHour += new PropertyChangedEventHandler(GetValue_MinuteAndHour);
+            Game_Time.PropertyChangedMonthAndYear += new PropertyChangedEventHandler(GetValue_MonthAndYear);
         }
 
         /// <summary>

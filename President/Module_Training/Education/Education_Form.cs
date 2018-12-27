@@ -1,4 +1,5 @@
 ﻿using Module_Character;
+using Module_Event;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,37 +29,82 @@ namespace Module_Training
 
         private void buttonCollege_Click(object sender, EventArgs e)
         {
-            _myStudy(new CurrentStudy("Техникум", 36, 15, 1800));
+            if (GameCharacter.Money >= 250)
+            {
+                GameCharacter.Set("Money", -250);
 
-            Close();
+                _myStudy(new CurrentStudy("Техникум", 36, 15, 1800));
+
+                Close();
+            }
+            else
+            {
+                TopMostMessageBox.Show("Недостаточно денег.", "Событие");
+            }
         }
 
         private void buttonBaccalaureate_Click(object sender, EventArgs e)
         {
-            _myStudy(new CurrentStudy("Балакавриат", 48, 35, 2880));
+            if (GameCharacter.Money >= 500)
+            {
+                GameCharacter.Set("Money", -500);
 
-            Close();
+                _myStudy(new CurrentStudy("Балакавриат", 48, 35, 2880));
+
+                Close();
+            }
+            else
+            {
+                TopMostMessageBox.Show("Недостаточно денег.", "Событие");
+            }
         }
 
         private void buttonMaster_Click(object sender, EventArgs e)
         {
-            _myStudy(new CurrentStudy("Магистратура", 24, 60, 1680));
+            if (GameCharacter.Money >= 750)
+            {
+                GameCharacter.Set("Money", -750);
 
-            Close();
+                _myStudy(new CurrentStudy("Магистратура", 24, 60, 1680));
+
+                Close();
+            }
+            else
+            {
+                TopMostMessageBox.Show("Недостаточно денег.", "Событие");
+            }
         }
 
         private void buttonGraduateSchool_Click(object sender, EventArgs e)
         {
-            _myStudy(new CurrentStudy("Аспирантура", 48, 90, 3840));
+            if (GameCharacter.Money >= 1000)
+            {
+                GameCharacter.Set("Money", -1000);
 
-            Close();
+                _myStudy(new CurrentStudy("Аспирантура", 48, 90, 3840));
+
+                Close();
+            }
+            else
+            {
+                TopMostMessageBox.Show("Недостаточно денег.", "Событие");
+            }
         }
 
         private void buttonPhD_Click(object sender, EventArgs e)
         {
-            _myStudy(new CurrentStudy("Доктор наук", 60, 100, 5100));
+            if (GameCharacter.Money >= 1250)
+            {
+                GameCharacter.Set("Money", -1250);
 
-            Close();
+                _myStudy(new CurrentStudy("Доктор наук", 60, 100, 5100));
+
+                Close();
+            }
+            else
+            {
+                TopMostMessageBox.Show("Недостаточно денег.", "Событие");
+            }
         }
 
         private void LevelEducation(string level)

@@ -68,7 +68,7 @@
     <Compile Include="Redefined classes\AlertForm.Designer.cs">
       <DependentUpon>AlertForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Redefined classes\MessageBoxEx.cs" />
+    <Compile Include="Redefined classes\TopMostMessageBox.cs" />
     <Compile Include="ObjectEvent.cs" />
     <Compile Include="EventDisplayForm.cs">
       <SubType>Form</SubType>
