@@ -10,7 +10,7 @@ namespace Module_Character
             _qualificationsList.Add(0); //0 - Сельское хозяйство
             _qualificationsList.Add(0); //1 - Творчество
             _qualificationsList.Add(0); //2 - Экономические
-            _qualificationsList.Add(0); //3 - Еда
+            _qualificationsList.Add(0); //3 - Пищевые
             _qualificationsList.Add(0); //4 - Информационные
             _qualificationsList.Add(0); //5 - Юридические
             _qualificationsList.Add(0); //6 - Медицинские

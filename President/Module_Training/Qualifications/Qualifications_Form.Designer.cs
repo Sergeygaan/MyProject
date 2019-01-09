@@ -176,7 +176,7 @@
             this.buttonServiceAndMaintenance.Name = "buttonServiceAndMaintenance";
             this.buttonServiceAndMaintenance.Size = new System.Drawing.Size(190, 25);
             this.buttonServiceAndMaintenance.TabIndex = 11;
-            this.buttonServiceAndMaintenance.Text = "Сервис - 50 $";
+            this.buttonServiceAndMaintenance.Text = "Сервисные - 50 $";
             this.buttonServiceAndMaintenance.UseVisualStyleBackColor = true;
             this.buttonServiceAndMaintenance.Click += new System.EventHandler(this.buttonServiceAndMaintenance_Click);
             // 

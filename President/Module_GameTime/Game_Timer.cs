@@ -11,7 +11,7 @@ namespace ThePresident
         public static int TimePassedGameSecond = 0; 
 
         private Thread _thread;
-        private int _timerSleep = 500;
+        private int _timerSleep = 1000;
         private Random random = new Random();
 
         /// <summary>

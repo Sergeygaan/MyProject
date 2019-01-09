@@ -1,8 +1,10 @@
 ﻿using Module_Character;
 using Module_Event;
 using Module_GameTime;
+using Module_UserControl;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using static Module_Work.Module_Work_Form;
 
@@ -23,7 +25,7 @@ namespace Module_Work
         /// <summary>
         /// Список хранящий в себе текст если нехватает параметров для устройства на работу
         /// </summary>
-        private List<Tuple<int, string>> ListIgnoreWork;
+        private List<int> _listIgnoreWork;
 
         private Random rnd = new Random();
 
@@ -32,13 +34,18 @@ namespace Module_Work
         /// </summary>
         private MyDelegateWork _myWork;
 
+        /// <summary>
+        /// Переменная в которой содержится индекс выбранной професии
+        /// </summary>
+        private int _selectIndex = -1;
+
         public Find_Job(List<IProfession> professions, MyDelegateWork myWork)
         {
             InitializeComponent();
 
             _professions = professions;
             _finalJobs = new List<FinalJob>();
-            ListIgnoreWork = new List<Tuple<int, string>>();
+            _listIgnoreWork = new List<int>();
 
             _myWork = myWork;
         }
@@ -50,7 +57,7 @@ namespace Module_Work
         /// <param name="e"></param>
         private void Outside_Click(object sender, EventArgs e)
         {
-            ReducingNeeds_Job(4);
+            ReducingNeeds_Job(5);
 
             ClearWorkList();
 
@@ -105,9 +112,18 @@ namespace Module_Work
         /// <param name="e"></param>
         private void GetJob_Click(object sender, EventArgs e)
         {
-            if (listBoxWork.SelectedIndex != -1)
+            if (_selectIndex != -1)
             {
-                _myWork(_finalJobs[listBoxWork.SelectedIndex]);
+                //Проверка того что професии нет в списке игнорированных 
+                foreach (var currentIndex in _listIgnoreWork)
+                {
+                    if(currentIndex == _selectIndex)
+                    {
+                        return;
+                    }
+                }
+
+                _myWork(_finalJobs[_selectIndex]);
 
                 Close();
             }
@@ -146,22 +162,27 @@ namespace Module_Work
                 if (basic_Work != null)
                 {
                     SalaryDetermination(basic_Work, industryName, coefficient);
-                    //coefficient
                 }
             }
         }
 
         private void SalaryDetermination(Basic_Work basic_Work, string industryName, int coefficient)
         {
+            //Начальный оклад
             int finalSalary = basic_Work.Salary + rnd.Next(-(int)(basic_Work.Salary * 0.35), (int)(basic_Work.Salary * 0.35));
 
+            //Повышение квалификации
             int coefficientSalary = (int)(finalSalary * coefficient / 100.0);
 
+            //Восстребовательность
+            int demandSalary = (int)(finalSalary * Demand.ReturnQualifications(industryName) / 100.0);
+
             finalSalary += coefficientSalary;
+            finalSalary += demandSalary;
 
             int randomWorkPlan = rnd.Next(450, 600);
 
-            _finalJobs.Add(new FinalJob(industryName, basic_Work.ProfessionName, finalSalary, coefficientSalary, randomWorkPlan, 
+            _finalJobs.Add(new FinalJob(industryName, basic_Work.ProfessionName, finalSalary, coefficientSalary, demandSalary, randomWorkPlan, 
                                         basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
         }
 
@@ -172,8 +193,7 @@ namespace Module_Work
         {
             foreach (var currentJobs in _finalJobs)
             {
-                listBoxWork.Items.Add(currentJobs.IndustryName + " - " + currentJobs.ProfessionName + ": " + (currentJobs.Salary - currentJobs.CoefficientSalary) + 
-                                        " $ + " + currentJobs.CoefficientSalary + " " + "$ План: " + currentJobs.Plan + " %");
+                Application.DoEvents();
 
                 bool flagCheck = true;
                 string textParam = "";
@@ -199,11 +219,28 @@ namespace Module_Work
                     textParam += "Нехватает параметра \"Физическая сила\". Необходимо " + currentJobs.Req_PhysicalDevelopment + " у вас " + GameCharacter.PhysicalDevelopment + "\n";
                 }
 
+                ListViewItem item = new ListViewItem();
+                //Заполнение списка;
+                item.Text = currentJobs.IndustryName;
+                item.SubItems.Add(currentJobs.ProfessionName);
+                item.SubItems.Add((currentJobs.Salary - currentJobs.CoefficientSalary - currentJobs.DemandSalary).ToString() + " $");
+                item.SubItems.Add(currentJobs.CoefficientSalary.ToString() + " $");
+                item.SubItems.Add(currentJobs.DemandSalary.ToString() + " $");
+                item.SubItems.Add(currentJobs.Plan.ToString() + " %");
+
                 if (!flagCheck)
                 {
-                    listBoxWork.DisableItem(listBoxWork.Items.Count - 1);
-                    ListIgnoreWork.Add(new Tuple<int, string>(listBoxWork.Items.Count - 1, textParam));
+                    _listIgnoreWork.Add(listWork.Items.Count);
+
+                    item.ToolTipText = textParam;
+                    item.BackColor = Color.LightCoral;
                 }
+                else
+                {
+                    item.BackColor = Color.AliceBlue;
+                }
+
+                listWork.Items.Add(item);
             }
         }
 
@@ -214,78 +251,14 @@ namespace Module_Work
         {
             _finalJobs.Clear();
 
-            EnableItem();
-            listBoxWork.Items.Clear();
+            listWork.Items.Clear();
 
-            ListIgnoreWork.Clear();
+            _listIgnoreWork.Clear();
+
+            _selectIndex = -1;
 
             GC.Collect();
         }
-
-        /// <summary>
-        /// Снятие блокировки со списка
-        /// </summary>
-        private void EnableItem()
-        {
-            for (int index = 0; index < listBoxWork.Items.Count; index++)
-            {
-                listBoxWork.EnableItem(index);
-            }
-        }
-
-        #region Подсказка List
-
-        int flagIndex = 0;
-
-        /// <summary>
-        /// Вывод сообщения о нехватке параметров
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void listBoxWork_MouseMove(object sender, MouseEventArgs e)
-        {
-            int index = listBoxWork.IndexFromPoint(e.Location);
-
-            if (CheckIndex(index))
-            {
-                foreach (var currentIgnorWork in ListIgnoreWork)
-                {
-                    if (currentIgnorWork.Item1 == index)
-                    {
-                        if ((toolTip.GetToolTip(listBoxWork) != currentIgnorWork.Item2) || (flagIndex != index))
-                        {
-                            toolTip.SetToolTip(listBoxWork, currentIgnorWork.Item2);
-
-                            flagIndex = index;
-
-                            break;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                toolTip.SetToolTip(listBoxWork, string.Empty);
-            }
-        }
-
-        private bool CheckIndex(int index)
-        {
-            if (index != -1 && index < listBoxWork.Items.Count)
-            {
-                foreach (var currentIgnorWork in ListIgnoreWork)
-                {
-                    if (currentIgnorWork.Item1 == index)
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-        }
-
-        #endregion
 
         /// <summary>
         /// Уменьшает характеристики персонажа
@@ -298,6 +271,53 @@ namespace Module_Work
             int randomHealth = rnd.Next(0, fatigue);
        
             GameCharacter.ReducingNeeds(randomFood, randomMood, randomHealth);
+        }
+
+        #region ListView
+
+        /// <summary>
+        /// Метод для выбора элемента из списка
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listWork_MouseClick(object sender, MouseEventArgs e)
+        {
+            for (int itemIndex = 0; itemIndex < listWork.Items.Count; itemIndex++)
+            {
+                ListViewItem item = listWork.Items[itemIndex];
+                Rectangle itemRect = item.GetBounds(ItemBoundsPortion.Label);
+                if (itemRect.Contains(e.Location))
+                {
+                    _selectIndex = itemIndex;
+                    item.Checked = !item.Checked;
+                  
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Метод для блокировки изменения ширины столбца
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listWork_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = listWork.Columns[e.ColumnIndex].Width;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Открытия окна востребовательнось профессий
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonDemand_Click(object sender, EventArgs e)
+        {
+            DemandProfessions demandProfessionsForm = new DemandProfessions();
+            demandProfessionsForm.ShowDialog();
         }
     }
 }

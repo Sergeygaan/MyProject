@@ -39,6 +39,7 @@
             this.buttonFood = new System.Windows.Forms.Button();
             this.buttonMood = new System.Windows.Forms.Button();
             this.buttonHealth = new System.Windows.Forms.Button();
+            this.gameTimer_UserControl1 = new Module_UserControl.GameTimer_UserControl();
             this.SuspendLayout();
             // 
             // button1
@@ -125,11 +126,19 @@
             this.buttonHealth.UseVisualStyleBackColor = true;
             this.buttonHealth.Click += new System.EventHandler(this.buttonHealth_Click);
             // 
+            // gameTimer_UserControl1
+            // 
+            this.gameTimer_UserControl1.Location = new System.Drawing.Point(12, 369);
+            this.gameTimer_UserControl1.Name = "gameTimer_UserControl1";
+            this.gameTimer_UserControl1.Size = new System.Drawing.Size(107, 69);
+            this.gameTimer_UserControl1.TabIndex = 21;
+            // 
             // ThePresident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gameTimer_UserControl1);
             this.Controls.Add(this.buttonHealth);
             this.Controls.Add(this.buttonMood);
             this.Controls.Add(this.buttonFood);
@@ -164,6 +173,7 @@
         private System.Windows.Forms.Button buttonFood;
         private System.Windows.Forms.Button buttonMood;
         private System.Windows.Forms.Button buttonHealth;
+        private Module_UserControl.GameTimer_UserControl gameTimer_UserControl1;
     }
 }
 

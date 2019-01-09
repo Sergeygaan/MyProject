@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demand.cs" />
     <Compile Include="Game_Time.cs" />
     <Compile Include="Game_Timer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

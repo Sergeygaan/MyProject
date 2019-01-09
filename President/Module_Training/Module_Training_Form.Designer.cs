@@ -37,12 +37,9 @@
             this.buttonEducation = new System.Windows.Forms.Button();
             this.buttonDeduct = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonSelfDevelopment = new System.Windows.Forms.Button();
             this.Effort_Study = new Module_UserControl.Effort_UserControl();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -53,7 +50,7 @@
             this.groupBox1.Controls.Add(this.labelNameStudy);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 96);
+            this.groupBox1.Size = new System.Drawing.Size(191, 96);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Текущее образование";
@@ -96,7 +93,7 @@
             // 
             // buttonQualifications
             // 
-            this.buttonQualifications.Location = new System.Drawing.Point(6, 19);
+            this.buttonQualifications.Location = new System.Drawing.Point(218, 101);
             this.buttonQualifications.Name = "buttonQualifications";
             this.buttonQualifications.Size = new System.Drawing.Size(157, 23);
             this.buttonQualifications.TabIndex = 7;
@@ -129,39 +126,18 @@
             // 
             this.groupBox2.Controls.Add(this.buttonEducation);
             this.groupBox2.Controls.Add(this.buttonDeduct);
-            this.groupBox2.Location = new System.Drawing.Point(218, 12);
+            this.groupBox2.Location = new System.Drawing.Point(209, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(173, 83);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Учеба";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.buttonSelfDevelopment);
-            this.groupBox3.Controls.Add(this.buttonQualifications);
-            this.groupBox3.Location = new System.Drawing.Point(218, 112);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(173, 79);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Развитие";
-            // 
-            // buttonSelfDevelopment
-            // 
-            this.buttonSelfDevelopment.Location = new System.Drawing.Point(6, 48);
-            this.buttonSelfDevelopment.Name = "buttonSelfDevelopment";
-            this.buttonSelfDevelopment.Size = new System.Drawing.Size(157, 23);
-            this.buttonSelfDevelopment.TabIndex = 8;
-            this.buttonSelfDevelopment.Text = "Саморазвитие";
-            this.buttonSelfDevelopment.UseVisualStyleBackColor = true;
-            this.buttonSelfDevelopment.Click += new System.EventHandler(this.buttonSelfDevelopment_Click);
-            // 
             // Effort_Study
             // 
             this.Effort_Study.Location = new System.Drawing.Point(3, 114);
             this.Effort_Study.Name = "Effort_Study";
-            this.Effort_Study.Size = new System.Drawing.Size(209, 77);
+            this.Effort_Study.Size = new System.Drawing.Size(205, 77);
             this.Effort_Study.TabIndex = 12;
             this.Effort_Study.ValueChanged = "false";
             // 
@@ -169,9 +145,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 197);
+            this.ClientSize = new System.Drawing.Size(387, 198);
+            this.Controls.Add(this.buttonQualifications);
             this.Controls.Add(this.Effort_Study);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -183,7 +159,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,8 +174,6 @@
         private System.Windows.Forms.Label labelMonthsLeft;
         private System.Windows.Forms.Button buttonDeduct;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button buttonSelfDevelopment;
         private Module_UserControl.Effort_UserControl Effort_Study;
     }
 }

@@ -50,6 +50,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Module_GameTime">
+      <HintPath>..\Module_GameTime\bin\Debug\Module_GameTime.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -86,6 +89,14 @@
     <ProjectReference Include="..\Character\Module_Character.csproj">
       <Project>{d10eb179-e4ed-4511-9de8-c29c2581f796}</Project>
       <Name>Module_Character</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Event\Module_Event.csproj">
+      <Project>{8C44D849-C96F-4A72-BA40-2D67727488F4}</Project>
+      <Name>Module_Event</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Module_UserControl\Module_UserControl.csproj">
+      <Project>{2A96FA10-4568-4AA8-A9F2-43B989EDB9E3}</Project>
+      <Name>Module_UserControl</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

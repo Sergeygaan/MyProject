@@ -52,7 +52,11 @@ namespace ThePresident
         {
             InitializeComponent();
 
+            //Создание игрового таймера
             _gameTimer = new Game_Timer();
+
+            //Создание списка востребованности профессий
+            var demandProfessions = Demand.ReturnDemandProfessions();
         }
 
      
