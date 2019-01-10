@@ -62,9 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FinalJob\FinalJob.cs" />
-    <Compile Include="FinalJob\ListBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Find_Job.cs">
       <SubType>Form</SubType>
     </Compile>

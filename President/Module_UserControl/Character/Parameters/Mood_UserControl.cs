@@ -38,18 +38,17 @@ namespace Module_UserControl
         {
             InitializeComponent();
 
-            GameCharacter.PropertyChangedMood += new PropertyChangedEventHandler(GetValue_Food);
+            ToolTipFoodText(progressBar, toolTip, GameCharacter.Mood, "Настроение: " + GameCharacter.Mood + " %");
 
-            ToolTipFoodText(progressBar, toolTip, progressBar.Value, "Настроение: " + (progressBar.Value / 10.0) + " %");
-
+            GameCharacter.PropertyChangedMood += new PropertyChangedEventHandler(GetValue_Mood);
         }
 
         /// <summary>
-        /// Получить значение еды
+        /// Получить значение настроения
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="even"></param>
-        private void GetValue_Food(object sender, PropertyChangedEventArgs even)
+        private void GetValue_Mood(object sender, PropertyChangedEventArgs even)
         {
             ToolTipFoodText(progressBar, toolTip, int.Parse(even.PropertyName), "Настроение: " + (int.Parse(even.PropertyName) / 10.0) + " %");
         }

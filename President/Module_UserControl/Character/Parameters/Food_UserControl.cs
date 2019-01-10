@@ -38,10 +38,9 @@ namespace Module_UserControl
         {
             InitializeComponent();
 
+            ToolTipFoodText(progressBar, toolTip, GameCharacter.Food, "Еда: " + GameCharacter.Food + " %");
+
             GameCharacter.PropertyChangedFood += new PropertyChangedEventHandler(GetValue_Food);
-
-            ToolTipFoodText(progressBar, toolTip, progressBar.Value, "Еда: " + (progressBar.Value / 10.0) + " %");
-
         }
 
         /// <summary>

@@ -36,12 +36,13 @@
             this.labelSalary = new System.Windows.Forms.Label();
             this.labelProfessionName = new System.Windows.Forms.Label();
             this.Effort_Work = new Module_UserControl.Effort_UserControl();
+            this.labelCategoria = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonFindJob
             // 
-            this.buttonFindJob.Location = new System.Drawing.Point(4, 177);
+            this.buttonFindJob.Location = new System.Drawing.Point(4, 181);
             this.buttonFindJob.Name = "buttonFindJob";
             this.buttonFindJob.Size = new System.Drawing.Size(91, 23);
             this.buttonFindJob.TabIndex = 0;
@@ -52,7 +53,7 @@
             // buttonQuit
             // 
             this.buttonQuit.Enabled = false;
-            this.buttonQuit.Location = new System.Drawing.Point(113, 177);
+            this.buttonQuit.Location = new System.Drawing.Point(113, 181);
             this.buttonQuit.Name = "buttonQuit";
             this.buttonQuit.Size = new System.Drawing.Size(91, 23);
             this.buttonQuit.TabIndex = 1;
@@ -62,13 +63,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelCategoria);
             this.groupBox1.Controls.Add(this.labelWorkPlan);
             this.groupBox1.Controls.Add(this.labelPlan);
             this.groupBox1.Controls.Add(this.labelSalary);
             this.groupBox1.Controls.Add(this.labelProfessionName);
             this.groupBox1.Location = new System.Drawing.Point(4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 90);
+            this.groupBox1.Size = new System.Drawing.Size(200, 97);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Текущая работа";
@@ -76,7 +78,7 @@
             // labelWorkPlan
             // 
             this.labelWorkPlan.AutoSize = true;
-            this.labelWorkPlan.Location = new System.Drawing.Point(6, 73);
+            this.labelWorkPlan.Location = new System.Drawing.Point(8, 80);
             this.labelWorkPlan.Name = "labelWorkPlan";
             this.labelWorkPlan.Size = new System.Drawing.Size(123, 13);
             this.labelWorkPlan.TabIndex = 5;
@@ -85,7 +87,7 @@
             // labelPlan
             // 
             this.labelPlan.AutoSize = true;
-            this.labelPlan.Location = new System.Drawing.Point(6, 57);
+            this.labelPlan.Location = new System.Drawing.Point(8, 65);
             this.labelPlan.Name = "labelPlan";
             this.labelPlan.Size = new System.Drawing.Size(53, 13);
             this.labelPlan.TabIndex = 4;
@@ -94,7 +96,7 @@
             // labelSalary
             // 
             this.labelSalary.AutoSize = true;
-            this.labelSalary.Location = new System.Drawing.Point(6, 33);
+            this.labelSalary.Location = new System.Drawing.Point(8, 45);
             this.labelSalary.Name = "labelSalary";
             this.labelSalary.Size = new System.Drawing.Size(57, 13);
             this.labelSalary.TabIndex = 1;
@@ -103,7 +105,7 @@
             // labelProfessionName
             // 
             this.labelProfessionName.AutoSize = true;
-            this.labelProfessionName.Location = new System.Drawing.Point(6, 17);
+            this.labelProfessionName.Location = new System.Drawing.Point(8, 30);
             this.labelProfessionName.Name = "labelProfessionName";
             this.labelProfessionName.Size = new System.Drawing.Size(139, 13);
             this.labelProfessionName.TabIndex = 0;
@@ -111,17 +113,26 @@
             // 
             // Effort_Work
             // 
-            this.Effort_Work.Location = new System.Drawing.Point(4, 94);
+            this.Effort_Work.Location = new System.Drawing.Point(4, 101);
             this.Effort_Work.Name = "Effort_Work";
-            this.Effort_Work.Size = new System.Drawing.Size(207, 77);
+            this.Effort_Work.Size = new System.Drawing.Size(210, 77);
             this.Effort_Work.TabIndex = 5;
             this.Effort_Work.ValueChanged = "false";
+            // 
+            // labelCategoria
+            // 
+            this.labelCategoria.AutoSize = true;
+            this.labelCategoria.Location = new System.Drawing.Point(8, 15);
+            this.labelCategoria.Name = "labelCategoria";
+            this.labelCategoria.Size = new System.Drawing.Size(128, 13);
+            this.labelCategoria.TabIndex = 6;
+            this.labelCategoria.Text = "Категория: Отсутствует";
             // 
             // Module_Work_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 210);
+            this.ClientSize = new System.Drawing.Size(212, 212);
             this.Controls.Add(this.Effort_Work);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonQuit);
@@ -148,5 +159,6 @@
         private System.Windows.Forms.Label labelWorkPlan;
         private System.Windows.Forms.Label labelPlan;
         private Module_UserControl.Effort_UserControl Effort_Work;
+        private System.Windows.Forms.Label labelCategoria;
     }
 }

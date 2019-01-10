@@ -41,9 +41,9 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonDemand = new System.Windows.Forms.Button();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonDemand = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,16 +151,6 @@
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 90;
             // 
-            // buttonDemand
-            // 
-            this.buttonDemand.Location = new System.Drawing.Point(16, 127);
-            this.buttonDemand.Name = "buttonDemand";
-            this.buttonDemand.Size = new System.Drawing.Size(118, 23);
-            this.buttonDemand.TabIndex = 5;
-            this.buttonDemand.Text = "Востребованность";
-            this.buttonDemand.UseVisualStyleBackColor = true;
-            this.buttonDemand.Click += new System.EventHandler(this.buttonDemand_Click);
-            // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Востребованность";
@@ -171,6 +161,16 @@
             // 
             this.columnHeader6.Text = "План";
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonDemand
+            // 
+            this.buttonDemand.Location = new System.Drawing.Point(16, 127);
+            this.buttonDemand.Name = "buttonDemand";
+            this.buttonDemand.Size = new System.Drawing.Size(118, 23);
+            this.buttonDemand.TabIndex = 5;
+            this.buttonDemand.Text = "Востребованность";
+            this.buttonDemand.UseVisualStyleBackColor = true;
+            this.buttonDemand.Click += new System.EventHandler(this.buttonDemand_Click);
             // 
             // Find_Job
             // 

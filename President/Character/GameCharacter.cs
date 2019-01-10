@@ -626,6 +626,8 @@ namespace Module_Character
         public static void AddQualifications(int index, int value)
         {
             _qualificationsList[index] += value;
+
+            NewQualifications = "true";
         }
             
         /// <summary>
@@ -637,6 +639,37 @@ namespace Module_Character
         {
            return _qualificationsList[index];
         }
+
+        #region Перерасчет зарплаты из за повышения квалификации
+
+        private static string _newQualifications = "false";
+
+        public static void OnPropertyChangedNewQualifications(PropertyChangedEventArgs e)
+        {
+            PropertyChangedNewQualifications?.Invoke(null, e);
+        }
+
+        public static void OnPropertyChangedNewQualifications(string propertyNameNewQualifications)
+        {
+            OnPropertyChangedNewQualifications(new PropertyChangedEventArgs(propertyNameNewQualifications));
+        }
+
+        /// <summary>
+        /// Переменная, которая отвечает за изменения дня. Подписываться на нее
+        /// </summary>
+        public static string NewQualifications
+        {
+            get { return _newQualifications; }
+            set
+            {
+                _newQualifications = value;
+                OnPropertyChangedNewQualifications(_newQualifications);
+            }
+        }
+
+        public static event PropertyChangedEventHandler PropertyChangedNewQualifications;
+
+        #endregion
 
         #endregion
 

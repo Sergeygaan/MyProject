@@ -38,18 +38,17 @@ namespace Module_UserControl
         {
             InitializeComponent();
 
-            GameCharacter.PropertyChangedHealth += new PropertyChangedEventHandler(GetValue_Food);
+            ToolTipFoodText(progressBar, toolTip, GameCharacter.Health, "Здоровье: " + GameCharacter.Health + " %");
 
-            ToolTipFoodText(progressBar, toolTip, progressBar.Value, "Здоровье: " + (progressBar.Value / 10.0) + " %");
-
+            GameCharacter.PropertyChangedHealth += new PropertyChangedEventHandler(GetValue_Health);
         }
 
         /// <summary>
-        /// Получить значение еды
+        /// Получить значение здоровья
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="even"></param>
-        private void GetValue_Food(object sender, PropertyChangedEventArgs even)
+        private void GetValue_Health(object sender, PropertyChangedEventArgs even)
         {
             ToolTipFoodText(progressBar, toolTip, int.Parse(even.PropertyName), "Здоровье: " + (int.Parse(even.PropertyName) / 10.0) + " %");
         }

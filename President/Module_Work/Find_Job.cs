@@ -161,28 +161,30 @@ namespace Module_Work
 
                 if (basic_Work != null)
                 {
-                    SalaryDetermination(basic_Work, industryName, coefficient);
+                    SalaryDetermination(indexCategory, basic_Work, industryName, coefficient);
                 }
             }
         }
 
-        private void SalaryDetermination(Basic_Work basic_Work, string industryName, int coefficient)
+        private void SalaryDetermination(int indexCategory, Basic_Work basic_Work, string industryName, int coefficient)
         {
             //Начальный оклад
-            int finalSalary = basic_Work.Salary + rnd.Next(-(int)(basic_Work.Salary * 0.35), (int)(basic_Work.Salary * 0.35));
+            int salary_Start = basic_Work.Salary + rnd.Next(-(int)(basic_Work.Salary * 0.35), (int)(basic_Work.Salary * 0.35));
 
             //Повышение квалификации
-            int coefficientSalary = (int)(finalSalary * coefficient / 100.0);
+            int salary_Coefficient = (int)(salary_Start * coefficient / 100.0);
 
             //Восстребовательность
-            int demandSalary = (int)(finalSalary * Demand.ReturnQualifications(industryName) / 100.0);
+            int salary_Demand = (int)(salary_Start * Demand.ReturnQualifications(industryName) / 100.0);
 
-            finalSalary += coefficientSalary;
-            finalSalary += demandSalary;
+            //Расчет финальной зарплаты
+            int salary_End = salary_Start + salary_Coefficient + salary_Demand;
 
+            //Расчет плана
             int randomWorkPlan = rnd.Next(450, 600);
 
-            _finalJobs.Add(new FinalJob(industryName, basic_Work.ProfessionName, finalSalary, coefficientSalary, demandSalary, randomWorkPlan, 
+            //Создание класса текущей работы
+            _finalJobs.Add(new FinalJob(indexCategory, industryName, basic_Work.ProfessionName, salary_Start, salary_Coefficient, salary_Demand, salary_End, randomWorkPlan, 
                                         basic_Work.Req_Intelligence, basic_Work.Req_Charm, basic_Work.Req_PhysicalDevelopment));
         }
 
@@ -223,9 +225,9 @@ namespace Module_Work
                 //Заполнение списка;
                 item.Text = currentJobs.IndustryName;
                 item.SubItems.Add(currentJobs.ProfessionName);
-                item.SubItems.Add((currentJobs.Salary - currentJobs.CoefficientSalary - currentJobs.DemandSalary).ToString() + " $");
-                item.SubItems.Add(currentJobs.CoefficientSalary.ToString() + " $");
-                item.SubItems.Add(currentJobs.DemandSalary.ToString() + " $");
+                item.SubItems.Add(currentJobs.Salary_Start.ToString() + " $");
+                item.SubItems.Add(currentJobs.Salary_Coefficient.ToString() + " $");
+                item.SubItems.Add(currentJobs.Salary_Demand.ToString() + " $");
                 item.SubItems.Add(currentJobs.Plan.ToString() + " %");
 
                 if (!flagCheck)

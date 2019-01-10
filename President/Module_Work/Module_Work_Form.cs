@@ -53,8 +53,11 @@ namespace Module_Work
         {
             InitializeComponent();
 
-            //Подписка на событие раз в пол года
-            //GameTime.PropertyChangedHalfYear += new PropertyChangedEventHandler(GetValue_ImplementationPlan);
+            //Подписка на событие повышение квалификации
+            GameCharacter.PropertyChangedNewQualifications += new PropertyChangedEventHandler(NewQualifications);
+
+            //Подписка на событие повышение востребованность
+            Demand.PropertyChangedNewDemand += new PropertyChangedEventHandler(NewDemand);
 
             //Подписка на события "Новый день" для начисления зарплаты
             Game_Time.PropertyChangedNewDay += new PropertyChangedEventHandler(GetValue_Everyday);
@@ -125,7 +128,7 @@ namespace Module_Work
                 _currentJob.WorkPlan += Effort_Work.ReturnValue();
                 TextOutput(labelWorkPlan, "Выполнение плана: " + _currentJob.WorkPlan + " %");
 
-                GameCharacter.Set("Money", _currentJob.Salary);
+                GameCharacter.Set("Money", _currentJob.Salary_End);
 
                 _numberMonthsWorked += 1;
 
@@ -139,7 +142,57 @@ namespace Module_Work
         }
 
         #endregion
-        
+
+        #region Перерасчет зарплаты
+
+        /// <summary>
+        /// Перерасчет из за изменения квалификации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
+        private void NewQualifications(object sender, PropertyChangedEventArgs even)
+        {
+            if (_currentJob != null)
+            {
+                //Сохранение старой зарплаты
+                int Salary_Old = _currentJob.Salary_End;
+
+                //Повышение квалификации
+                int salary_Coefficient = (int)(_currentJob.Salary_Start * GameCharacter.ReturnQualifications(_currentJob.IndexCategory) / 100.0);
+
+                _currentJob.Salary_End = _currentJob.Salary_Start + salary_Coefficient + _currentJob.Salary_Demand;
+
+                CurrentWork();
+
+                Income_AddWork(_currentJob.Salary_End - Salary_Old);
+            }
+        }
+
+        /// <summary>
+        /// Перерасчет из за изменения востребованности
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
+        private void NewDemand(object sender, PropertyChangedEventArgs even)
+        {
+            if (_currentJob != null)
+            {
+                //Сохранение старой зарплаты
+                int Salary_Old = _currentJob.Salary_End;
+
+                //Востребованность
+                int salary_Demand = (int)(_currentJob.Salary_Start * Demand.ReturnQualifications(_currentJob.IndustryName) / 100.0);
+
+                _currentJob.Salary_End = _currentJob.Salary_Start + _currentJob.Salary_Coefficient + salary_Demand;
+
+                CurrentWork();
+
+                Income_AddWork(_currentJob.Salary_End - Salary_Old);
+            }
+        }
+
+        #endregion
+
         /// <summary>
         /// Количество отработанных месяцев. 
         /// Нужно для начисления премии.
@@ -157,9 +210,9 @@ namespace Module_Work
         {
             if (_currentJob.Plan <= _currentJob.WorkPlan)
             {
-                GameCharacter.Set("Money", _currentJob.Salary * 2);
+                GameCharacter.Set("Money", _currentJob.Salary_End * 2);
 
-                TopMostMessageBox.Show("Вы выполнили план. В качестве премии вам начислили " + (_currentJob.Salary * 2).ToString() + " $", "Событие");
+                TopMostMessageBox.Show("Вы выполнили план. В качестве премии вам начислили " + (_currentJob.Salary_End * 2).ToString() + " $", "Событие");
             }
             else
             {
@@ -195,7 +248,7 @@ namespace Module_Work
 
             CurrentWork();
 
-            Income_AddWork(_currentJob.Salary);
+            Income_AddWork(_currentJob.Salary_End);
         }
 
         /// <summary>
@@ -207,7 +260,7 @@ namespace Module_Work
         {
             if (_currentJob != null)
             {
-                Income_AddWork(-_currentJob.Salary);
+                Income_AddWork(-_currentJob.Salary_End);
 
                 _currentJob = null;
 
@@ -232,8 +285,9 @@ namespace Module_Work
         {
             if (_currentJob != null)
             {
+                TextOutput(labelCategoria, "Категория: " + _currentJob.IndustryName);
                 TextOutput(labelProfessionName, "Профессия: " + _currentJob.ProfessionName);
-                TextOutput(labelSalary, "Оклад: " + _currentJob.Salary + " $");
+                TextOutput(labelSalary, "Оклад: " + _currentJob.Salary_End + " $");
               
                 TextOutput(labelPlan, "План: " + _currentJob.Plan + " %");
                 TextOutput(labelWorkPlan, "Выполнение плана: " + _currentJob.WorkPlan + " %");
@@ -242,6 +296,7 @@ namespace Module_Work
             }
             else
             {
+                TextOutput(labelCategoria, "Категория: Отсутствует");
                 TextOutput(labelProfessionName, "Профессия: Безработный");
                 TextOutput(labelSalary, "Оклад: 0$");
                

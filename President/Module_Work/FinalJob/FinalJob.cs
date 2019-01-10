@@ -9,6 +9,11 @@ namespace Module_Work
     public class FinalJob
     {
         /// <summary>
+        /// Индекс категории
+        /// </summary>
+        public int IndexCategory = -1;
+
+        /// <summary>
         /// Название индустрии
         /// </summary>
         public string IndustryName;
@@ -19,19 +24,24 @@ namespace Module_Work
         public string ProfessionName;
 
         /// <summary>
-        /// Зарплата
+        /// Начальный базовый оклад
         /// </summary>
-        public int Salary;
+        public int Salary_Start;
+
+        /// <summary>
+        /// Финальный оклад
+        /// </summary>
+        public int Salary_End;
 
         /// <summary>
         /// Повышение квалификации
         /// </summary>
-        public int CoefficientSalary;
+        public int Salary_Coefficient;
 
         /// <summary>
         /// Востребованность
         /// </summary>
-        public int DemandSalary;
+        public int Salary_Demand;
 
         /// <summary>
         /// План на пол года
@@ -70,14 +80,16 @@ namespace Module_Work
         /// <param name="req_Intelligence">Требованиия к интеллекту</param>
         /// <param name="req_Charm">Требованиия к обаянию</param>
         /// <param name="req_PhysicalDevelopment">Требованиия к физической силе</param>
-        public FinalJob(string industryName, string professionName, int salary, int coefficientSalary, int demandSalary, int plan, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
+        public FinalJob(int indexCategory,string industryName, string professionName, int salaryStart, int coefficientSalary, int demandSalary, int salaryEnd, int plan, int req_Intelligence, int req_Charm, int req_PhysicalDevelopment)
         {
+            IndexCategory = indexCategory;
             IndustryName = industryName;
             ProfessionName = professionName;
 
-            Salary = salary;
-            CoefficientSalary = coefficientSalary;
-            DemandSalary = demandSalary;
+            Salary_Start = salaryStart;
+            Salary_End = salaryEnd;
+            Salary_Coefficient = coefficientSalary;
+            Salary_Demand = demandSalary;
 
             Plan = plan;
 
