@@ -44,6 +44,11 @@ namespace ThePresident
         private Module_Health_Form _module_Health_Form;
 
         /// <summary>
+        /// Модуль "Саморазвитие"
+        /// </summary>
+        private Module_SelfDevelopment_Form _module_SelfDevelopment_Form;
+
+        /// <summary>
         /// Таймер игрового времени. Добавляет 1 сек игрового времени раз в 2500 сек настояжего времени
         /// </summary>
         private Game_Timer _gameTimer;
@@ -191,6 +196,21 @@ namespace ThePresident
             }
 
             _module_Training_Form.ShowDialog();
+        }
+
+        /// <summary>
+        /// Саморазвитие
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSelfDevelopment_Click(object sender, EventArgs e)
+        {
+            if (_module_SelfDevelopment_Form == null)
+            {
+                _module_SelfDevelopment_Form = new Module_SelfDevelopment_Form();
+            }
+
+            _module_SelfDevelopment_Form.ShowDialog();
         }
 
         /// <summary>

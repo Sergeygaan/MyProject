@@ -30,7 +30,7 @@ namespace Module_Character
 
         #region Money
 
-        private static int _money = 100;
+        private static int _money = 1000;
 
         public static void OnPropertyChangedMoney(PropertyChangedEventArgs e)
         {

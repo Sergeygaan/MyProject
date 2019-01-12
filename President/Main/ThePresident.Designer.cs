@@ -40,6 +40,7 @@
             this.buttonMood = new System.Windows.Forms.Button();
             this.buttonHealth = new System.Windows.Forms.Button();
             this.gameTimer_UserControl1 = new Module_UserControl.GameTimer_UserControl();
+            this.buttonSelfDevelopment = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -56,7 +57,7 @@
             // 
             this.buttonModule_Work.Location = new System.Drawing.Point(12, 12);
             this.buttonModule_Work.Name = "buttonModule_Work";
-            this.buttonModule_Work.Size = new System.Drawing.Size(87, 23);
+            this.buttonModule_Work.Size = new System.Drawing.Size(107, 23);
             this.buttonModule_Work.TabIndex = 8;
             this.buttonModule_Work.Text = "Работа";
             this.buttonModule_Work.UseVisualStyleBackColor = true;
@@ -76,7 +77,7 @@
             // 
             this.buttonTraining.Location = new System.Drawing.Point(12, 41);
             this.buttonTraining.Name = "buttonTraining";
-            this.buttonTraining.Size = new System.Drawing.Size(87, 23);
+            this.buttonTraining.Size = new System.Drawing.Size(107, 23);
             this.buttonTraining.TabIndex = 15;
             this.buttonTraining.Text = "Обучение";
             this.buttonTraining.UseVisualStyleBackColor = true;
@@ -98,9 +99,9 @@
             // 
             // buttonFood
             // 
-            this.buttonFood.Location = new System.Drawing.Point(12, 70);
+            this.buttonFood.Location = new System.Drawing.Point(12, 99);
             this.buttonFood.Name = "buttonFood";
-            this.buttonFood.Size = new System.Drawing.Size(87, 23);
+            this.buttonFood.Size = new System.Drawing.Size(107, 23);
             this.buttonFood.TabIndex = 18;
             this.buttonFood.Text = "Еда";
             this.buttonFood.UseVisualStyleBackColor = true;
@@ -108,9 +109,9 @@
             // 
             // buttonMood
             // 
-            this.buttonMood.Location = new System.Drawing.Point(12, 99);
+            this.buttonMood.Location = new System.Drawing.Point(12, 128);
             this.buttonMood.Name = "buttonMood";
-            this.buttonMood.Size = new System.Drawing.Size(87, 23);
+            this.buttonMood.Size = new System.Drawing.Size(107, 23);
             this.buttonMood.TabIndex = 19;
             this.buttonMood.Text = "Настроение";
             this.buttonMood.UseVisualStyleBackColor = true;
@@ -118,9 +119,9 @@
             // 
             // buttonHealth
             // 
-            this.buttonHealth.Location = new System.Drawing.Point(12, 128);
+            this.buttonHealth.Location = new System.Drawing.Point(12, 157);
             this.buttonHealth.Name = "buttonHealth";
-            this.buttonHealth.Size = new System.Drawing.Size(87, 23);
+            this.buttonHealth.Size = new System.Drawing.Size(107, 23);
             this.buttonHealth.TabIndex = 20;
             this.buttonHealth.Text = "Здоровье";
             this.buttonHealth.UseVisualStyleBackColor = true;
@@ -133,11 +134,22 @@
             this.gameTimer_UserControl1.Size = new System.Drawing.Size(107, 69);
             this.gameTimer_UserControl1.TabIndex = 21;
             // 
+            // buttonSelfDevelopment
+            // 
+            this.buttonSelfDevelopment.Location = new System.Drawing.Point(12, 70);
+            this.buttonSelfDevelopment.Name = "buttonSelfDevelopment";
+            this.buttonSelfDevelopment.Size = new System.Drawing.Size(107, 23);
+            this.buttonSelfDevelopment.TabIndex = 22;
+            this.buttonSelfDevelopment.Text = "Саморазвитие";
+            this.buttonSelfDevelopment.UseVisualStyleBackColor = true;
+            this.buttonSelfDevelopment.Click += new System.EventHandler(this.buttonSelfDevelopment_Click);
+            // 
             // ThePresident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSelfDevelopment);
             this.Controls.Add(this.gameTimer_UserControl1);
             this.Controls.Add(this.buttonHealth);
             this.Controls.Add(this.buttonMood);
@@ -174,6 +186,7 @@
         private System.Windows.Forms.Button buttonMood;
         private System.Windows.Forms.Button buttonHealth;
         private Module_UserControl.GameTimer_UserControl gameTimer_UserControl1;
+        private System.Windows.Forms.Button buttonSelfDevelopment;
     }
 }
 

@@ -83,7 +83,7 @@ namespace ThePresident
 
             if(_step_Intelligence >= _restrictions_Intelligence)
             {
-                _restrictions_Intelligence = random.Next(60, 100);
+                _restrictions_Intelligence = random.Next(10, 30);
 
                 _step_Intelligence = 0;
 
@@ -103,7 +103,7 @@ namespace ThePresident
 
             if (_step_Charm >= _restrictions_Charm)
             {
-                _restrictions_Charm = random.Next(60, 100);
+                _restrictions_Charm = random.Next(10, 30);
 
                 _step_Charm = 0;
 
@@ -123,7 +123,7 @@ namespace ThePresident
 
             if (_step_PhysicalDevelopment >= _restrictions_PhysicalDevelopment)
             {
-                _restrictions_PhysicalDevelopment = random.Next(60, 100);
+                _restrictions_PhysicalDevelopment = random.Next(10, 30);
 
                 _step_PhysicalDevelopment = 0;
 

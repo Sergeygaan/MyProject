@@ -57,7 +57,7 @@ namespace Module_Work
         /// <param name="e"></param>
         private void Outside_Click(object sender, EventArgs e)
         {
-            ReducingNeeds_Job(5);
+            ReducingNeeds_Job(30);
 
             ClearWorkList();
 
@@ -77,7 +77,7 @@ namespace Module_Work
             {
                 GameCharacter.Set("Money", -5);
 
-                ReducingNeeds_Job(2);
+                ReducingNeeds_Job(15);
 
                 ClearWorkList();
 
