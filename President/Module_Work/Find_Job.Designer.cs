@@ -126,7 +126,7 @@
             this.listWork.UseCompatibleStateImageBehavior = false;
             this.listWork.View = System.Windows.Forms.View.Details;
             this.listWork.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listWork_ColumnWidthChanging);
-            this.listWork.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listWork_MouseClick);
+            this.listWork.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listWork_MouseUp);
             // 
             // columnHeader1
             // 

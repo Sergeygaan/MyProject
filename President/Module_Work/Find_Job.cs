@@ -282,7 +282,7 @@ namespace Module_Work
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void listWork_MouseClick(object sender, MouseEventArgs e)
+        private void listWork_MouseUp(object sender, MouseEventArgs e)
         {
             for (int itemIndex = 0; itemIndex < listWork.Items.Count; itemIndex++)
             {
@@ -291,8 +291,7 @@ namespace Module_Work
                 if (itemRect.Contains(e.Location))
                 {
                     _selectIndex = itemIndex;
-                    item.Checked = !item.Checked;
-                  
+
                     break;
                 }
             }
