@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Название области
         /// </summary>
-        private string _professionName = "Сельское хозяйство";
+        private string _professionName = Lang.Agriculture;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,13 +28,13 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Агроном", 200, 25, 0, 0),
-                new Basic_Work("Ветеринар", 330, 45, 0, 0),
-                new Basic_Work("Животновод", 150, 0, 0, 0),
-                new Basic_Work("Охотник", 400, 0, 0, 65),
-                new Basic_Work("Садовник", 160, 0, 0, 0),
-                new Basic_Work("Тракторист", 200, 0, 0, 15),
-                new Basic_Work("Фермер", 210, 0, 0, 35),
+                new Basic_Work(Lang.Agronomist, 200, 25, 0, 0),
+                new Basic_Work(Lang.Veterinarian, 330, 45, 0, 0),
+                new Basic_Work(Lang.Breeder, 150, 0, 0, 0),
+                new Basic_Work(Lang.Hunter, 400, 0, 0, 65),
+                new Basic_Work(Lang.Gardener, 160, 0, 0, 0),
+                new Basic_Work(Lang.TractorDriver, 200, 0, 0, 25),
+                new Basic_Work(Lang.Farmer, 210, 0, 0, 35),
             };
         }
 

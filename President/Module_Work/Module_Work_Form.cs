@@ -44,8 +44,38 @@ namespace Module_Work
             }
         }
 
-        #endregion
+        /// <summary>
+        /// Метод подсказки для оклада
+        /// </summary>
+        private void ToolTipAdvice(string text)
+        {
+            if (_currentJob != null)
+            {
+                toolTipAdvice = new ToolTip();
 
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() => toolTipAdvice.SetToolTip(labelSalary, text)));
+                }
+                else
+                {
+                    toolTipAdvice.SetToolTip(labelSalary, text);
+                }
+            }
+            else
+            {
+                toolTipAdvice.Dispose();
+                toolTipAdvice = null;
+            }
+        }
+
+        #endregion
+        
+        /// <summary>
+        /// Подсказка для оклада 
+        /// </summary>
+        ToolTip toolTipAdvice;
+        
         /// <summary>
         /// Конструктор класса
         /// </summary>
@@ -287,8 +317,10 @@ namespace Module_Work
             {
                 TextOutput(labelCategoria, "Категория: " + _currentJob.IndustryName);
                 TextOutput(labelProfessionName, "Профессия: " + _currentJob.ProfessionName);
+
                 TextOutput(labelSalary, "Оклад: " + _currentJob.Salary_End + " $");
-              
+                ToolTipAdvice(_currentJob.Salary_Start + "$ + " + _currentJob.Salary_Coefficient + "$ + " + _currentJob.Salary_Demand + "$");
+
                 TextOutput(labelPlan, "План: " + _currentJob.Plan + " %");
                 TextOutput(labelWorkPlan, "Выполнение плана: " + _currentJob.WorkPlan + " %");
 
@@ -298,8 +330,10 @@ namespace Module_Work
             {
                 TextOutput(labelCategoria, "Категория: Отсутствует");
                 TextOutput(labelProfessionName, "Профессия: Безработный");
+
                 TextOutput(labelSalary, "Оклад: 0$");
-               
+                ToolTipAdvice("");
+
                 TextOutput(labelPlan, "План: 0%");
                 TextOutput(labelWorkPlan, "Выполнение плана: 0%");
 

@@ -68,6 +68,11 @@
     <Compile Include="Find_Job.Designer.cs">
       <DependentUpon>Find_Job.cs</DependentUpon>
     </Compile>
+    <Compile Include="Language\Lang.Designer.cs">
+      <DependentUpon>Lang.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="ListWorks\Basic_Work.cs" />
     <Compile Include="ListWorks\IProfession.cs" />
     <Compile Include="ListWorks\Profession_Creative.cs" />
@@ -97,6 +102,10 @@
     <EmbeddedResource Include="Find_Job.resx">
       <DependentUpon>Find_Job.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Language\Lang.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Lang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module_Work_Form.resx">
       <DependentUpon>Module_Work_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,5 +128,6 @@
       <Name>Module_UserControl</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

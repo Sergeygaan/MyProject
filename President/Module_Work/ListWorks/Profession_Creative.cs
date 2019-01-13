@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Творческие";
+        private string _professionName = Lang.Creative;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -36,7 +37,7 @@ namespace Module_Work
                 new Basic_Work("Дирижер", 140, 0, 10, 0),
                 new Basic_Work("Звукорежиссер", 170, 5, 10, 0),
                 new Basic_Work("Иллюстратор", 300, 25, 0, 0),
-                new Basic_Work("Каскадер", 600, 0, 0, 55),
+                new Basic_Work("Каскадер", 600, 0, 10, 55),
                 new Basic_Work("Киномеханик", 130, 0, 0, 0),
                 new Basic_Work("Кинооператор", 510, 40, 20, 0),
                 new Basic_Work("Критик", 100, 0, 0, 0),
