@@ -158,9 +158,9 @@ namespace Module_Work
                 int Salary_Old = _currentJob.Salary_End;
 
                 //Повышение квалификации
-                int salary_Coefficient = (int)(_currentJob.Salary_Start * GameCharacter.ReturnQualifications(_currentJob.IndexCategory) / 100.0);
+                _currentJob.Salary_Coefficient = (int)(_currentJob.Salary_Start * GameCharacter.ReturnQualifications(_currentJob.IndexCategory) / 100.0);
 
-                _currentJob.Salary_End = _currentJob.Salary_Start + salary_Coefficient + _currentJob.Salary_Demand;
+                _currentJob.Salary_End = _currentJob.Salary_Start + _currentJob.Salary_Coefficient + _currentJob.Salary_Demand;
 
                 CurrentWork();
 
@@ -181,9 +181,9 @@ namespace Module_Work
                 int Salary_Old = _currentJob.Salary_End;
 
                 //Востребованность
-                int salary_Demand = (int)(_currentJob.Salary_Start * Demand.ReturnQualifications(_currentJob.IndustryName) / 100.0);
+                _currentJob.Salary_Demand = (int)(_currentJob.Salary_Start * Demand.ReturnQualifications(_currentJob.IndustryName) / 100.0);
 
-                _currentJob.Salary_End = _currentJob.Salary_Start + _currentJob.Salary_Coefficient + salary_Demand;
+                _currentJob.Salary_End = _currentJob.Salary_Start + _currentJob.Salary_Coefficient + _currentJob.Salary_Demand;
 
                 CurrentWork();
 
