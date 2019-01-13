@@ -50,7 +50,7 @@
             this.groupBox1.Controls.Add(this.labelNameStudy);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(191, 96);
+            this.groupBox1.Size = new System.Drawing.Size(204, 96);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Текущее образование";
@@ -93,7 +93,7 @@
             // 
             // buttonQualifications
             // 
-            this.buttonQualifications.Location = new System.Drawing.Point(218, 101);
+            this.buttonQualifications.Location = new System.Drawing.Point(228, 101);
             this.buttonQualifications.Name = "buttonQualifications";
             this.buttonQualifications.Size = new System.Drawing.Size(157, 23);
             this.buttonQualifications.TabIndex = 7;
@@ -126,7 +126,7 @@
             // 
             this.groupBox2.Controls.Add(this.buttonEducation);
             this.groupBox2.Controls.Add(this.buttonDeduct);
-            this.groupBox2.Location = new System.Drawing.Point(209, 12);
+            this.groupBox2.Location = new System.Drawing.Point(222, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(173, 83);
             this.groupBox2.TabIndex = 10;
@@ -137,7 +137,7 @@
             // 
             this.Effort_Study.Location = new System.Drawing.Point(3, 114);
             this.Effort_Study.Name = "Effort_Study";
-            this.Effort_Study.Size = new System.Drawing.Size(205, 77);
+            this.Effort_Study.Size = new System.Drawing.Size(220, 77);
             this.Effort_Study.TabIndex = 12;
             this.Effort_Study.ValueChanged = "false";
             // 
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 198);
+            this.ClientSize = new System.Drawing.Size(403, 198);
             this.Controls.Add(this.buttonQualifications);
             this.Controls.Add(this.Effort_Study);
             this.Controls.Add(this.groupBox2);

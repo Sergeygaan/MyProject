@@ -31,12 +31,12 @@
             this.buttonFindJob = new System.Windows.Forms.Button();
             this.buttonQuit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelCategoria = new System.Windows.Forms.Label();
             this.labelWorkPlan = new System.Windows.Forms.Label();
             this.labelPlan = new System.Windows.Forms.Label();
             this.labelSalary = new System.Windows.Forms.Label();
             this.labelProfessionName = new System.Windows.Forms.Label();
             this.Effort_Work = new Module_UserControl.Effort_UserControl();
-            this.labelCategoria = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             // buttonQuit
             // 
             this.buttonQuit.Enabled = false;
-            this.buttonQuit.Location = new System.Drawing.Point(113, 181);
+            this.buttonQuit.Location = new System.Drawing.Point(127, 181);
             this.buttonQuit.Name = "buttonQuit";
             this.buttonQuit.Size = new System.Drawing.Size(91, 23);
             this.buttonQuit.TabIndex = 1;
@@ -70,10 +70,19 @@
             this.groupBox1.Controls.Add(this.labelProfessionName);
             this.groupBox1.Location = new System.Drawing.Point(4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 97);
+            this.groupBox1.Size = new System.Drawing.Size(214, 97);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Текущая работа";
+            // 
+            // labelCategoria
+            // 
+            this.labelCategoria.AutoSize = true;
+            this.labelCategoria.Location = new System.Drawing.Point(8, 15);
+            this.labelCategoria.Name = "labelCategoria";
+            this.labelCategoria.Size = new System.Drawing.Size(128, 13);
+            this.labelCategoria.TabIndex = 6;
+            this.labelCategoria.Text = "Категория: Отсутствует";
             // 
             // labelWorkPlan
             // 
@@ -115,24 +124,15 @@
             // 
             this.Effort_Work.Location = new System.Drawing.Point(4, 101);
             this.Effort_Work.Name = "Effort_Work";
-            this.Effort_Work.Size = new System.Drawing.Size(210, 77);
+            this.Effort_Work.Size = new System.Drawing.Size(216, 77);
             this.Effort_Work.TabIndex = 5;
             this.Effort_Work.ValueChanged = "false";
-            // 
-            // labelCategoria
-            // 
-            this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Location = new System.Drawing.Point(8, 15);
-            this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(128, 13);
-            this.labelCategoria.TabIndex = 6;
-            this.labelCategoria.Text = "Категория: Отсутствует";
             // 
             // Module_Work_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 212);
+            this.ClientSize = new System.Drawing.Size(225, 212);
             this.Controls.Add(this.Effort_Work);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonQuit);

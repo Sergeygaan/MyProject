@@ -361,11 +361,6 @@ namespace Module_Work
         }
 
         /// <summary>
-        /// Значение качества работы
-        /// </summary>
-        int _valueTableWork = 0;
-
-        /// <summary>
         /// Масштабирование прокрутки
         /// </summary>
         private void ValueChanged(object sender, PropertyChangedEventArgs even)

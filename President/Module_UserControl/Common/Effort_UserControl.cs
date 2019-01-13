@@ -51,7 +51,7 @@ namespace Module_UserControl
         /// <param name="e"></param>
         private void trackBarQualityStudy_ValueChanged(object sender, EventArgs e)
         {
-            _valueTableWork = TrackBar_Flow() * 10;
+            _valueTableWork = TrackBar_Flow() * 5;
             labelTable.Text = _valueTableWork + " %";
 
             ValueChanged = "true";
