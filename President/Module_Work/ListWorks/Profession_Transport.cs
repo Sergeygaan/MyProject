@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Транспортные";
+        private string _professionName = Lang.Transport;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,17 +28,16 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Авиадиспетчер", 100, 0, 0, 0),
-                new Basic_Work("Автогонщик", 100, 0, 0, 0),
-                new Basic_Work("Бортинженер", 100, 0, 0, 0),
-                new Basic_Work("Бортпроводник", 100, 0, 0, 0),
-                new Basic_Work("Космонавт", 100, 0, 0, 0),
-                new Basic_Work("Летчик", 100, 0, 0, 0),
-                new Basic_Work("Логист", 100, 0, 0, 0),
-                new Basic_Work("Лоцман", 100, 0, 0, 0),
-                new Basic_Work("Машинист", 100, 0, 0, 0),
-                new Basic_Work("Штурман", 100, 0, 0, 0),
-                new Basic_Work("Экспедитор", 100, 0, 0, 0),
+                new Basic_Work(Lang.AirTrafficController, 100, 0, 0, 0),
+                new Basic_Work(Lang.RaceDriver, 100, 0, 0, 0),
+                new Basic_Work(Lang.FlightEngineer, 100, 0, 0, 0),
+                new Basic_Work(Lang.FlightAttendant, 100, 0, 0, 0),
+                new Basic_Work(Lang.Cosmonaut, 100, 0, 0, 0),
+                new Basic_Work(Lang.Pilot, 100, 0, 0, 0),
+                new Basic_Work(Lang.Logist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Machinist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Navigator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Forwarder, 100, 0, 0, 0),
             };
         }
 

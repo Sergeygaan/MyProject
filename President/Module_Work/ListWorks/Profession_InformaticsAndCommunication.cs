@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Информационные";
+        private string _professionName = Lang.Informational;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,20 +28,20 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("HTML-верстальщик", 100, 0, 0, 0),
-                new Basic_Work("Web-интегратор", 100, 0, 0, 0),
-                new Basic_Work("Администратор", 100, 0, 0, 0),
-                new Basic_Work("Администратор сайта", 100, 0, 0, 0),
-                new Basic_Work("Блогер", 100, 0, 0, 0),
-                new Basic_Work("Веб-дизайнер", 100, 0, 0, 0),
-                new Basic_Work("Диктор", 100, 0, 0, 0),
-                new Basic_Work("Контент-менеджер", 100, 0, 0, 0),
-                new Basic_Work("Копирайтер", 100, 0, 0, 0),
-                new Basic_Work("Радиоведущий", 100, 0, 0, 0),
-                new Basic_Work("Сис. администратор", 100, 0, 0, 0),
-                new Basic_Work("Спичрайтер", 100, 0, 0, 0),
-                new Basic_Work("Тележурналист", 100, 0, 0, 0),
-                new Basic_Work("Тестировщик", 100, 0, 0, 0),
+                new Basic_Work(Lang.HTMLCoder, 100, 0, 0, 0),
+                new Basic_Work(Lang.WebIntegrator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Administrator, 100, 0, 0, 0),
+                new Basic_Work(Lang.SiteAdministrator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Blogger, 100, 0, 0, 0),
+                new Basic_Work(Lang.WebDesigner, 100, 0, 0, 0),
+                new Basic_Work(Lang.Speaker, 100, 0, 0, 0),
+                new Basic_Work(Lang.ContentManager, 100, 0, 0, 0),
+                new Basic_Work(Lang.Copywriter, 100, 0, 0, 0),
+                new Basic_Work(Lang.RadioHost, 100, 0, 0, 0),
+                new Basic_Work(Lang.SisAdministrator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Speechwriter, 100, 0, 0, 0),
+                new Basic_Work(Lang.TVReporter, 100, 0, 0, 0),
+                new Basic_Work(Lang.Tester, 100, 0, 0, 0),
             };
         }
 

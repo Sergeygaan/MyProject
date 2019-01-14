@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Медицинские";
+        private string _professionName = Lang.Medical;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,25 +28,25 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Акушер", 100, 0, 0, 0),
-                new Basic_Work("Врач", 100, 0, 0, 0),
-                new Basic_Work("Генетик", 100, 0, 0, 0),
-                new Basic_Work("Дерматолог", 100, 0, 0, 0),
-                new Basic_Work("Диетолог", 100, 0, 0, 0),
-                new Basic_Work("Иммунолог", 100, 0, 0, 0),
-                new Basic_Work("Кардиолог", 100, 0, 0, 0),
-                new Basic_Work("Кардиохирург", 100, 0, 0, 0),
-                new Basic_Work("Косметолог", 100, 0, 0, 0),
-                new Basic_Work("Логопед", 100, 0, 0, 0),
-                new Basic_Work("Массажист", 100, 0, 0, 0),
-                new Basic_Work("Невропатолог", 100, 0, 0, 0),
-                new Basic_Work("Офтальмолог", 100, 0, 0, 0),
-                new Basic_Work("Педиатр",100, 0, 0, 0),       
-                new Basic_Work("Психолог", 100, 0, 0, 0),
-                new Basic_Work("Стоматолог", 100, 0, 0, 0),
-                new Basic_Work("Терапевт", 100, 0, 0, 0),
-                new Basic_Work("Фармацевт", 100, 0, 0, 0),
-                new Basic_Work("Фельдшер",100, 0, 0, 0),
+                new Basic_Work(Lang.Obstetrician, 100, 0, 0, 0),
+                new Basic_Work(Lang.Doctor, 100, 0, 0, 0),
+                new Basic_Work(Lang.Geneticist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Dermatologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Nutritionist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Immunologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Cardiologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.HeartSurgeon, 100, 0, 0, 0),
+                new Basic_Work(Lang.Beautician, 100, 0, 0, 0),
+                new Basic_Work(Lang.SpeechTherapist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Masseur, 100, 0, 0, 0),
+                new Basic_Work(Lang.Neurologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Ophthalmologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Pediatrician,100, 0, 0, 0),       
+                new Basic_Work(Lang.Psychologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Dentist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Therapist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Pharmacist, 100, 0, 0, 0),
+                new Basic_Work(Lang.MedicalAssistant,100, 0, 0, 0),
             };
         }
 

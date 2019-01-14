@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Типография";
+        private string _professionName = Lang.Typography;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,14 +28,14 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Верстальщик", 100, 0, 0, 0),
-                new Basic_Work("Глав. редактор", 100, 0, 0, 0),
-                new Basic_Work("Издатель", 100, 0, 0, 0),
-                new Basic_Work("Корректор", 100, 0, 0, 0),
-                new Basic_Work("Переплетчик", 100, 0, 0, 0),
-                new Basic_Work("Печатник", 100, 0, 0, 0),
-                new Basic_Work("Редактор", 100, 0, 0, 0),
-                new Basic_Work("Фальцовщик", 100, 0, 0, 0),
+                new Basic_Work(Lang.Coder, 100, 0, 0, 0),
+                new Basic_Work(Lang.ChiefEditor, 100, 0, 0, 0),
+                new Basic_Work(Lang.Publisher, 100, 0, 0, 0),
+                new Basic_Work(Lang.Corrector, 100, 0, 0, 0),
+                new Basic_Work(Lang.Bookbinder, 100, 0, 0, 0),
+                new Basic_Work(Lang.Printer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Editor, 100, 0, 0, 0),
+                new Basic_Work(Lang.Folder, 100, 0, 0, 0),
             };
         }
         

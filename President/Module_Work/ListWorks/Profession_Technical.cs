@@ -1,8 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Module_Work
 {
@@ -16,7 +13,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Технические";
+        private string _professionName = Lang.Technical;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,28 +24,27 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Автомеханик", 100, 0, 0, 0),
-                new Basic_Work("Водолаз", 100, 0, 0, 0),
-                new Basic_Work("Геодезист", 100, 0, 0, 0),
-                new Basic_Work("Звукооператор", 100, 0, 0, 0),
-                new Basic_Work("Каменщик", 100, 0, 0, 0),
-                new Basic_Work("Картограф", 100, 0, 0, 0),
-                new Basic_Work("Крановщик", 100, 0, 0, 0),
-                new Basic_Work("Краснодеревщик", 100, 0, 0, 0),
-                new Basic_Work("Кровельщик", 100, 0, 0, 0),
-                new Basic_Work("Литейщик", 100, 0, 0, 0),
-                new Basic_Work("Маляр", 100, 0, 0, 0),
-                new Basic_Work("Маркшейдер", 100, 0, 0, 0),
-                new Basic_Work("Металлург", 100, 0, 0, 0),
-                new Basic_Work("Облицовщик", 100, 0, 0, 0),
-                new Basic_Work("Отделочник", 100, 0, 0, 0),
-                new Basic_Work("Плотник", 100, 0, 0, 0),
-                new Basic_Work("Прораб", 100, 0, 0, 0),
-                new Basic_Work("Слесарь", 100, 0, 0, 0),
-                new Basic_Work("Строитель", 100, 0, 0, 0),
-                new Basic_Work("Технолог", 100, 0, 0, 0),
-                new Basic_Work("Прораб", 100, 0, 0, 0),
-                new Basic_Work("Часовщик", 100, 0, 0, 0),
+                new Basic_Work(Lang.Mechanic, 100, 0, 0, 0),
+                new Basic_Work(Lang.Diver, 100, 0, 0, 0),
+                new Basic_Work(Lang.Surveyor, 100, 0, 0, 0),
+                new Basic_Work(Lang.SoundEngineer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Mason, 100, 0, 0, 0),
+                new Basic_Work(Lang.Cartographer, 100, 0, 0, 0),
+                new Basic_Work(Lang.CraneOperator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Cabinetmaker, 100, 0, 0, 0),
+                new Basic_Work(Lang.Roofer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Caster, 100, 0, 0, 0),
+                new Basic_Work(Lang.Painter, 100, 0, 0, 0),
+                new Basic_Work(Lang.MineSurveyor, 100, 0, 0, 0),
+                new Basic_Work(Lang.Metallurgist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Facing, 100, 0, 0, 0),
+                new Basic_Work(Lang.Finisher, 100, 0, 0, 0),
+                new Basic_Work(Lang.Carpenter, 100, 0, 0, 0),
+                new Basic_Work(Lang.Foreman, 100, 0, 0, 0),
+                new Basic_Work(Lang.Locksmith, 100, 0, 0, 0),
+                new Basic_Work(Lang.Builder, 100, 0, 0, 0),
+                new Basic_Work(Lang.Technologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Watchmaker, 100, 0, 0, 0),
             };
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Юридические";
+        private string _professionName = Lang.Legal;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,20 +28,18 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Адвокат", 100, 0, 0, 0),
-                new Basic_Work("Делопроизводитель", 100, 0, 0, 0),
-                new Basic_Work("Детектив", 100, 0, 0, 0),
-                new Basic_Work("Дипломат", 100, 0, 0, 0),
-                new Basic_Work("Нотариус", 100, 0, 0, 0),
-                new Basic_Work("Полицейский", 100, 0, 0, 0),
-                new Basic_Work("Правовед", 100, 0, 0, 0),
-                new Basic_Work("Прокурор", 100, 0, 0, 0),
-                new Basic_Work("Следователь", 100, 0, 0, 0),
-                new Basic_Work("Судебный пристав", 100, 0, 0, 0),
-                new Basic_Work("Судья", 100, 0, 0, 0),
-                new Basic_Work("Надзиратель", 100, 0, 0, 0),
-                new Basic_Work("Юрист", 100, 0, 0, 0),
-                new Basic_Work("Судья", 100, 0, 0, 0),
+                new Basic_Work(Lang.Lawyer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Clerk, 100, 0, 0, 0),
+                new Basic_Work(Lang.Detective, 100, 0, 0, 0),
+                new Basic_Work(Lang.Diplomat, 100, 0, 0, 0),
+                new Basic_Work(Lang.Notary, 100, 0, 0, 0),
+                new Basic_Work(Lang.Policeman, 100, 0, 0, 0),
+                new Basic_Work(Lang.Jurist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Prosecutor, 100, 0, 0, 0),
+                new Basic_Work(Lang.Investigator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Bailiff, 100, 0, 0, 0),
+                new Basic_Work(Lang.Judge, 100, 0, 0, 0),
+                new Basic_Work(Lang.Warden, 100, 0, 0, 0)
             };
         }
 

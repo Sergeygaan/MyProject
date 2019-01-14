@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Пищевые";
+        private string _professionName = Lang.Food;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,15 +28,14 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Булочник", 100, 0, 0, 0),
-                new Basic_Work("Винодел", 100, 0, 0, 0),
-                new Basic_Work("Дегустатор", 100, 0, 0, 0),
-                new Basic_Work("Месильщик", 100, 0, 0, 0),
-                new Basic_Work("Мясник", 100, 0, 0, 0),
-                new Basic_Work("Пекарь", 100, 0, 0, 0),
-                new Basic_Work("Повар", 100, 0, 0, 0),
-                new Basic_Work("Повар-кондитер", 100, 0, 0, 0),
-                new Basic_Work("Шеф-повар", 100, 0, 0, 0),
+                new Basic_Work(Lang.Winemaker, 100, 0, 0, 0),
+                new Basic_Work(Lang.Taster, 100, 0, 0, 0),
+                new Basic_Work(Lang.Messenger, 100, 0, 0, 0),
+                new Basic_Work(Lang.Butcher, 100, 0, 0, 0),
+                new Basic_Work(Lang.Baker, 100, 0, 0, 0),
+                new Basic_Work(Lang.Cook, 100, 0, 0, 0),
+                new Basic_Work(Lang.PastryChef, 100, 0, 0, 0),
+                new Basic_Work(Lang.Chef, 100, 0, 0, 0),
             };
         }
         

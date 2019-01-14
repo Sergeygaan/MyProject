@@ -219,4 +219,556 @@
   <data name="Writer" xml:space="preserve">
     <value>Писатель</value>
   </data>
+  <data name="Accountant" xml:space="preserve">
+    <value>Бухгалтер</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Администратор</value>
+  </data>
+  <data name="Auditor" xml:space="preserve">
+    <value>Аудитор</value>
+  </data>
+  <data name="Bailiff" xml:space="preserve">
+    <value>Судебный пристав</value>
+  </data>
+  <data name="Baker" xml:space="preserve">
+    <value>Пекарь</value>
+  </data>
+  <data name="Beautician" xml:space="preserve">
+    <value>Косметолог</value>
+  </data>
+  <data name="Blogger" xml:space="preserve">
+    <value>Блогер</value>
+  </data>
+  <data name="BrandManager" xml:space="preserve">
+    <value>Бренд-менеджер</value>
+  </data>
+  <data name="Broker" xml:space="preserve">
+    <value>Брокер</value>
+  </data>
+  <data name="Butcher" xml:space="preserve">
+    <value>Мясник</value>
+  </data>
+  <data name="Cardiologist" xml:space="preserve">
+    <value>Кардиолог</value>
+  </data>
+  <data name="Chef" xml:space="preserve">
+    <value>Шеф-повар</value>
+  </data>
+  <data name="Clerk" xml:space="preserve">
+    <value>Делопроизводитель</value>
+  </data>
+  <data name="Collector" xml:space="preserve">
+    <value>Инкассатор</value>
+  </data>
+  <data name="ContentManager" xml:space="preserve">
+    <value>Контент-менеджер</value>
+  </data>
+  <data name="Cook" xml:space="preserve">
+    <value>Повар</value>
+  </data>
+  <data name="Copywriter" xml:space="preserve">
+    <value>Копирайтер</value>
+  </data>
+  <data name="CrisisManager" xml:space="preserve">
+    <value>Кризис-менеджер</value>
+  </data>
+  <data name="Dentist" xml:space="preserve">
+    <value>Стоматолог</value>
+  </data>
+  <data name="Dermatologist" xml:space="preserve">
+    <value>Дерматолог</value>
+  </data>
+  <data name="Detective" xml:space="preserve">
+    <value>Детектив</value>
+  </data>
+  <data name="Diplomat" xml:space="preserve">
+    <value>Дипломат</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>Врач</value>
+  </data>
+  <data name="Economic" xml:space="preserve">
+    <value>Экономические</value>
+  </data>
+  <data name="Economist" xml:space="preserve">
+    <value>Экономист</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>Пищевые</value>
+  </data>
+  <data name="Geneticist" xml:space="preserve">
+    <value>Генетик</value>
+  </data>
+  <data name="HeartSurgeon" xml:space="preserve">
+    <value>Кардиохирург</value>
+  </data>
+  <data name="HRManager" xml:space="preserve">
+    <value>HR-менеджер</value>
+  </data>
+  <data name="HTMLCoder" xml:space="preserve">
+    <value>HTML-верстальщик</value>
+  </data>
+  <data name="Immunologist" xml:space="preserve">
+    <value>Иммунолог</value>
+  </data>
+  <data name="Informational" xml:space="preserve">
+    <value>Информационные</value>
+  </data>
+  <data name="Investigator" xml:space="preserve">
+    <value>Следователь</value>
+  </data>
+  <data name="Judge" xml:space="preserve">
+    <value>Судья</value>
+  </data>
+  <data name="Jurist" xml:space="preserve">
+    <value>Правовед</value>
+  </data>
+  <data name="Lawyer" xml:space="preserve">
+    <value>Адвокат</value>
+  </data>
+  <data name="Legal" xml:space="preserve">
+    <value>Юридические</value>
+  </data>
+  <data name="Lobbyist" xml:space="preserve">
+    <value>Лоббист</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Менеджер</value>
+  </data>
+  <data name="Marketer" xml:space="preserve">
+    <value>Маркетолог</value>
+  </data>
+  <data name="Masseur" xml:space="preserve">
+    <value>Массажист</value>
+  </data>
+  <data name="Medical" xml:space="preserve">
+    <value>Медицинские</value>
+  </data>
+  <data name="MedicalAssistant" xml:space="preserve">
+    <value>Фельдшер</value>
+  </data>
+  <data name="Merchandiser" xml:space="preserve">
+    <value>Мерчендайзер</value>
+  </data>
+  <data name="MerchandiseSpecialist" xml:space="preserve">
+    <value>Товаровед</value>
+  </data>
+  <data name="Messenger" xml:space="preserve">
+    <value>Месильщик</value>
+  </data>
+  <data name="Neurologist" xml:space="preserve">
+    <value>Невропатолог</value>
+  </data>
+  <data name="Notary" xml:space="preserve">
+    <value>Нотариус</value>
+  </data>
+  <data name="Nutritionist" xml:space="preserve">
+    <value>Диетолог</value>
+  </data>
+  <data name="Obstetrician" xml:space="preserve">
+    <value>Акушер</value>
+  </data>
+  <data name="Ophthalmologist" xml:space="preserve">
+    <value>Офтальмолог</value>
+  </data>
+  <data name="PastryChef" xml:space="preserve">
+    <value>Повар-кондитер</value>
+  </data>
+  <data name="Pediatrician" xml:space="preserve">
+    <value>Педиатр</value>
+  </data>
+  <data name="Pharmacist" xml:space="preserve">
+    <value>Фармацевт</value>
+  </data>
+  <data name="Policeman" xml:space="preserve">
+    <value>Полицейский</value>
+  </data>
+  <data name="Prosecutor" xml:space="preserve">
+    <value>Прокурор</value>
+  </data>
+  <data name="Psychologist" xml:space="preserve">
+    <value>Психолог</value>
+  </data>
+  <data name="RadioHost" xml:space="preserve">
+    <value>Радиоведущий</value>
+  </data>
+  <data name="SisAdministrator" xml:space="preserve">
+    <value>Сис. администратор</value>
+  </data>
+  <data name="SiteAdministrator" xml:space="preserve">
+    <value>Администратор сайта</value>
+  </data>
+  <data name="Speaker" xml:space="preserve">
+    <value>Диктор</value>
+  </data>
+  <data name="SpeechTherapist" xml:space="preserve">
+    <value>Логопед</value>
+  </data>
+  <data name="Speechwriter" xml:space="preserve">
+    <value>Спичрайтер</value>
+  </data>
+  <data name="Statistician" xml:space="preserve">
+    <value>Статистик</value>
+  </data>
+  <data name="Supervisor" xml:space="preserve">
+    <value>Супервайзер</value>
+  </data>
+  <data name="Taster" xml:space="preserve">
+    <value>Дегустатор</value>
+  </data>
+  <data name="TaxInspector" xml:space="preserve">
+    <value>Налоговый инспектор</value>
+  </data>
+  <data name="Tester" xml:space="preserve">
+    <value>Тестировщик</value>
+  </data>
+  <data name="Therapist" xml:space="preserve">
+    <value>Терапевт</value>
+  </data>
+  <data name="TVReporter" xml:space="preserve">
+    <value>Тележурналист</value>
+  </data>
+  <data name="Warden" xml:space="preserve">
+    <value>Надзиратель</value>
+  </data>
+  <data name="WebDesigner" xml:space="preserve">
+    <value>Веб-дизайнер</value>
+  </data>
+  <data name="WebIntegrator" xml:space="preserve">
+    <value>Web-интегратор</value>
+  </data>
+  <data name="Winemaker" xml:space="preserve">
+    <value>Винодел</value>
+  </data>
+  <data name="Bodyguard" xml:space="preserve">
+    <value>Телохранитель</value>
+  </data>
+  <data name="Choreographer" xml:space="preserve">
+    <value>Хореограф</value>
+  </data>
+  <data name="Cynologist" xml:space="preserve">
+    <value>Кинолог</value>
+  </data>
+  <data name="Dean" xml:space="preserve">
+    <value>Декан</value>
+  </data>
+  <data name="Defectologist" xml:space="preserve">
+    <value>Дефектолог</value>
+  </data>
+  <data name="Educator" xml:space="preserve">
+    <value>Воспитатель</value>
+  </data>
+  <data name="Fireman" xml:space="preserve">
+    <value>Пожарный</value>
+  </data>
+  <data name="Guard" xml:space="preserve">
+    <value>Конвоир</value>
+  </data>
+  <data name="Military" xml:space="preserve">
+    <value>Военные</value>
+  </data>
+  <data name="Pedagogical" xml:space="preserve">
+    <value>Педагогические</value>
+  </data>
+  <data name="Rector" xml:space="preserve">
+    <value>Ректор</value>
+  </data>
+  <data name="Rescuer" xml:space="preserve">
+    <value>Спасатель</value>
+  </data>
+  <data name="Scout" xml:space="preserve">
+    <value>Разведчик</value>
+  </data>
+  <data name="Serviceman" xml:space="preserve">
+    <value>Военнослужащий</value>
+  </data>
+  <data name="Teacher" xml:space="preserve">
+    <value>Преподаватель</value>
+  </data>
+  <data name="TeacherDeaf" xml:space="preserve">
+    <value>Сурдопедагог</value>
+  </data>
+  <data name="Archaeologist" xml:space="preserve">
+    <value>Археолог</value>
+  </data>
+  <data name="Archivist" xml:space="preserve">
+    <value>Архивариус</value>
+  </data>
+  <data name="ArtCritic" xml:space="preserve">
+    <value>Искусствовед</value>
+  </data>
+  <data name="Astronomer" xml:space="preserve">
+    <value>Астроном</value>
+  </data>
+  <data name="Bartender" xml:space="preserve">
+    <value>Бармен</value>
+  </data>
+  <data name="Bibliographer" xml:space="preserve">
+    <value>Библиограф</value>
+  </data>
+  <data name="Biochemist" xml:space="preserve">
+    <value>Биохимик</value>
+  </data>
+  <data name="Bioengineer" xml:space="preserve">
+    <value>Биоинженер</value>
+  </data>
+  <data name="Biologist" xml:space="preserve">
+    <value>Биолог</value>
+  </data>
+  <data name="Bookbinder" xml:space="preserve">
+    <value>Переплетчик</value>
+  </data>
+  <data name="ChiefEditor" xml:space="preserve">
+    <value>Глав. редактор</value>
+  </data>
+  <data name="Coder" xml:space="preserve">
+    <value>Верстальщик</value>
+  </data>
+  <data name="Constructor" xml:space="preserve">
+    <value>Конструктор</value>
+  </data>
+  <data name="Corrector" xml:space="preserve">
+    <value>Корректор</value>
+  </data>
+  <data name="CulturalScientist" xml:space="preserve">
+    <value>Культуролог</value>
+  </data>
+  <data name="Ecologist" xml:space="preserve">
+    <value>Эколог</value>
+  </data>
+  <data name="Editor" xml:space="preserve">
+    <value>Редактор</value>
+  </data>
+  <data name="Egyptologist" xml:space="preserve">
+    <value>Египтолог</value>
+  </data>
+  <data name="Ethnographer" xml:space="preserve">
+    <value>Этнограф</value>
+  </data>
+  <data name="Florist" xml:space="preserve">
+    <value>Флорист</value>
+  </data>
+  <data name="Folder" xml:space="preserve">
+    <value>Фальцовщик</value>
+  </data>
+  <data name="GarbageMan" xml:space="preserve">
+    <value>Мусорщик</value>
+  </data>
+  <data name="Geologist" xml:space="preserve">
+    <value>Геолог</value>
+  </data>
+  <data name="Guide" xml:space="preserve">
+    <value>Экскурсовод</value>
+  </data>
+  <data name="GuideTranslator" xml:space="preserve">
+    <value>Гид-переводчик</value>
+  </data>
+  <data name="Hairdresser" xml:space="preserve">
+    <value>Парикмахер</value>
+  </data>
+  <data name="Historian" xml:space="preserve">
+    <value>Историк</value>
+  </data>
+  <data name="Ichthyologist" xml:space="preserve">
+    <value>Ихтиолог</value>
+  </data>
+  <data name="InsuranceAgent" xml:space="preserve">
+    <value>Страховой агент</value>
+  </data>
+  <data name="Janitor" xml:space="preserve">
+    <value>Дворник</value>
+  </data>
+  <data name="Librarian" xml:space="preserve">
+    <value>Библиотекарь</value>
+  </data>
+  <data name="Linguist" xml:space="preserve">
+    <value>Лингвист</value>
+  </data>
+  <data name="Loader" xml:space="preserve">
+    <value>Грузчик</value>
+  </data>
+  <data name="Manicurist" xml:space="preserve">
+    <value>Мастер маникюра</value>
+  </data>
+  <data name="Mathematician" xml:space="preserve">
+    <value>Математик</value>
+  </data>
+  <data name="Meteorologist" xml:space="preserve">
+    <value>Метеоролог</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Оператор</value>
+  </data>
+  <data name="Orientalist" xml:space="preserve">
+    <value>Востоковед</value>
+  </data>
+  <data name="Ornithologist" xml:space="preserve">
+    <value>Орнитолог</value>
+  </data>
+  <data name="Paleontologist" xml:space="preserve">
+    <value>Палеонтолог</value>
+  </data>
+  <data name="Philosopher" xml:space="preserve">
+    <value>Философ</value>
+  </data>
+  <data name="PoliticalScientist" xml:space="preserve">
+    <value>Политолог</value>
+  </data>
+  <data name="Postman" xml:space="preserve">
+    <value>Почтальон</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Печатник</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>Издатель</value>
+  </data>
+  <data name="Realtor" xml:space="preserve">
+    <value>Риелтор</value>
+  </data>
+  <data name="Receptionist" xml:space="preserve">
+    <value>Портье</value>
+  </data>
+  <data name="Religious" xml:space="preserve">
+    <value>Религиовед</value>
+  </data>
+  <data name="Scientific" xml:space="preserve">
+    <value>Научные</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Сервисные</value>
+  </data>
+  <data name="Sociologist" xml:space="preserve">
+    <value>Социолог</value>
+  </data>
+  <data name="SoilScientist" xml:space="preserve">
+    <value>Почвовед</value>
+  </data>
+  <data name="Storekeeper" xml:space="preserve">
+    <value>Кладовщик</value>
+  </data>
+  <data name="TravelAgent" xml:space="preserve">
+    <value>Агент по туризму</value>
+  </data>
+  <data name="Typography" xml:space="preserve">
+    <value>Типография</value>
+  </data>
+  <data name="Visagiste" xml:space="preserve">
+    <value>Визажист</value>
+  </data>
+  <data name="Waiter" xml:space="preserve">
+    <value>Официант</value>
+  </data>
+  <data name="Sport" xml:space="preserve">
+    <value>Спортивные</value>
+  </data>
+  <data name="SportsInstructor" xml:space="preserve">
+    <value>Спортивный инструктор</value>
+  </data>
+  <data name="Athlete" xml:space="preserve">
+    <value>Спортсмен</value>
+  </data>
+  <data name="Diver" xml:space="preserve">
+    <value>Водолаз</value>
+  </data>
+  <data name="Mechanic" xml:space="preserve">
+    <value>Автомеханик</value>
+  </data>
+  <data name="SportsCoach" xml:space="preserve">
+    <value>Спортивный тренер</value>
+  </data>
+  <data name="Technical" xml:space="preserve">
+    <value>Технические</value>
+  </data>
+  <data name="AirTrafficController" xml:space="preserve">
+    <value>Авиадиспетчер</value>
+  </data>
+  <data name="Builder" xml:space="preserve">
+    <value>Строитель</value>
+  </data>
+  <data name="Cabinetmaker" xml:space="preserve">
+    <value>Краснодеревщик</value>
+  </data>
+  <data name="Carpenter" xml:space="preserve">
+    <value>Плотник</value>
+  </data>
+  <data name="Cartographer" xml:space="preserve">
+    <value>Картограф</value>
+  </data>
+  <data name="Caster" xml:space="preserve">
+    <value>Литейщик</value>
+  </data>
+  <data name="Cosmonaut" xml:space="preserve">
+    <value>Космонавт</value>
+  </data>
+  <data name="CraneOperator" xml:space="preserve">
+    <value>Крановщик</value>
+  </data>
+  <data name="Facing" xml:space="preserve">
+    <value>Облицовщик</value>
+  </data>
+  <data name="Finisher" xml:space="preserve">
+    <value>Отделочник</value>
+  </data>
+  <data name="FlightAttendant" xml:space="preserve">
+    <value>Бортпроводник</value>
+  </data>
+  <data name="FlightEngineer" xml:space="preserve">
+    <value>Бортинженер</value>
+  </data>
+  <data name="Foreman" xml:space="preserve">
+    <value>Прораб</value>
+  </data>
+  <data name="Forwarder" xml:space="preserve">
+    <value>Экспедитор</value>
+  </data>
+  <data name="Locksmith" xml:space="preserve">
+    <value>Слесарь</value>
+  </data>
+  <data name="Logist" xml:space="preserve">
+    <value>Логист</value>
+  </data>
+  <data name="Machinist" xml:space="preserve">
+    <value>Машинист</value>
+  </data>
+  <data name="Mason" xml:space="preserve">
+    <value>Каменщик</value>
+  </data>
+  <data name="Metallurgist" xml:space="preserve">
+    <value>Металлург</value>
+  </data>
+  <data name="MineSurveyor" xml:space="preserve">
+    <value>Маркшейдер</value>
+  </data>
+  <data name="Navigator" xml:space="preserve">
+    <value>Штурман</value>
+  </data>
+  <data name="Painter" xml:space="preserve">
+    <value>Маляр</value>
+  </data>
+  <data name="Pilot" xml:space="preserve">
+    <value>Летчик</value>
+  </data>
+  <data name="RaceDriver" xml:space="preserve">
+    <value>Автогонщик</value>
+  </data>
+  <data name="Roofer" xml:space="preserve">
+    <value>Кровельщик</value>
+  </data>
+  <data name="SoundEngineer" xml:space="preserve">
+    <value>Звукооператор</value>
+  </data>
+  <data name="Surveyor" xml:space="preserve">
+    <value>Геодезист</value>
+  </data>
+  <data name="Technologist" xml:space="preserve">
+    <value>Технолог</value>
+  </data>
+  <data name="Transport" xml:space="preserve">
+    <value>Транспортные</value>
+  </data>
+  <data name="Watchmaker" xml:space="preserve">
+    <value>Часовщик</value>
+  </data>
 </root>

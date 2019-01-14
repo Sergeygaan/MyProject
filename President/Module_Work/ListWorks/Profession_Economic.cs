@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Экономические";
+        private string _professionName = Lang.Economic;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,22 +28,22 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("HR-менеджер", 100, 0, 0, 0),
-                new Basic_Work("Аудитор", 100, 0, 0, 0),
-                new Basic_Work("Бренд-менеджер", 100, 0, 0, 0),
-                new Basic_Work("Брокер", 100, 0, 0, 0),
-                new Basic_Work("Бухгалтер", 100, 0, 0, 0),
-                new Basic_Work("Инкассатор", 100, 0, 0, 0),
-                new Basic_Work("Кризис-менеджер", 100, 0, 0, 0),
-                new Basic_Work("Лоббист", 100, 0, 0, 0),
-                new Basic_Work("Маркетолог", 100, 0, 0, 0),
-                new Basic_Work("Менеджер", 100, 0, 0, 0),
-                new Basic_Work("Мерчендайзер", 100, 0, 0, 0),
-                new Basic_Work("Налоговый инспектор", 100, 0, 0, 0),
-                new Basic_Work("Статистик", 100, 0, 0, 0),
-                new Basic_Work("Супервайзер", 100, 0, 0, 0),
-                new Basic_Work("Товаровед", 100, 0, 0, 0),
-                new Basic_Work("Экономист", 100, 0, 0, 0),
+                new Basic_Work(Lang.HRManager, 100, 0, 0, 0),
+                new Basic_Work(Lang.Auditor, 100, 0, 0, 0),
+                new Basic_Work(Lang.BrandManager, 100, 0, 0, 0),
+                new Basic_Work(Lang.Broker, 100, 0, 0, 0),
+                new Basic_Work(Lang.Accountant, 100, 0, 0, 0),
+                new Basic_Work(Lang.Collector, 100, 0, 0, 0),
+                new Basic_Work(Lang.CrisisManager, 100, 0, 0, 0),
+                new Basic_Work(Lang.Lobbyist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Marketer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Manager, 100, 0, 0, 0),
+                new Basic_Work(Lang.Merchandiser, 100, 0, 0, 0),
+                new Basic_Work(Lang.TaxInspector, 100, 0, 0, 0),
+                new Basic_Work(Lang.Statistician, 100, 0, 0, 0),
+                new Basic_Work(Lang.Supervisor, 100, 0, 0, 0),
+                new Basic_Work(Lang.MerchandiseSpecialist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Economist, 100, 0, 0, 0),
             };
         }
 

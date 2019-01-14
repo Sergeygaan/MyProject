@@ -61,11 +61,29 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Бухгалтер.
+        /// </summary>
+        internal static string Accountant {
+            get {
+                return ResourceManager.GetString("Accountant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Актер.
         /// </summary>
         internal static string Actor {
             get {
                 return ResourceManager.GetString("Actor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Администратор.
+        /// </summary>
+        internal static string Administrator {
+            get {
+                return ResourceManager.GetString("Administrator", resourceCulture);
             }
         }
         
@@ -88,11 +106,29 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Авиадиспетчер.
+        /// </summary>
+        internal static string AirTrafficController {
+            get {
+                return ResourceManager.GetString("AirTrafficController", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Аниматор.
         /// </summary>
         internal static string Animator {
             get {
                 return ResourceManager.GetString("Animator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Археолог.
+        /// </summary>
+        internal static string Archaeologist {
+            get {
+                return ResourceManager.GetString("Archaeologist", resourceCulture);
             }
         }
         
@@ -106,11 +142,164 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Архивариус.
+        /// </summary>
+        internal static string Archivist {
+            get {
+                return ResourceManager.GetString("Archivist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Искусствовед.
+        /// </summary>
+        internal static string ArtCritic {
+            get {
+                return ResourceManager.GetString("ArtCritic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Астроном.
+        /// </summary>
+        internal static string Astronomer {
+            get {
+                return ResourceManager.GetString("Astronomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Спортсмен.
+        /// </summary>
+        internal static string Athlete {
+            get {
+                return ResourceManager.GetString("Athlete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Аудитор.
+        /// </summary>
+        internal static string Auditor {
+            get {
+                return ResourceManager.GetString("Auditor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Судебный пристав.
+        /// </summary>
+        internal static string Bailiff {
+            get {
+                return ResourceManager.GetString("Bailiff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пекарь.
+        /// </summary>
+        internal static string Baker {
+            get {
+                return ResourceManager.GetString("Baker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Бармен.
+        /// </summary>
+        internal static string Bartender {
+            get {
+                return ResourceManager.GetString("Bartender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Косметолог.
+        /// </summary>
+        internal static string Beautician {
+            get {
+                return ResourceManager.GetString("Beautician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Библиограф.
+        /// </summary>
+        internal static string Bibliographer {
+            get {
+                return ResourceManager.GetString("Bibliographer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Биохимик.
+        /// </summary>
+        internal static string Biochemist {
+            get {
+                return ResourceManager.GetString("Biochemist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Биоинженер.
+        /// </summary>
+        internal static string Bioengineer {
+            get {
+                return ResourceManager.GetString("Bioengineer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Биолог.
+        /// </summary>
+        internal static string Biologist {
+            get {
+                return ResourceManager.GetString("Biologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Блогер.
+        /// </summary>
+        internal static string Blogger {
+            get {
+                return ResourceManager.GetString("Blogger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Телохранитель.
+        /// </summary>
+        internal static string Bodyguard {
+            get {
+                return ResourceManager.GetString("Bodyguard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Переплетчик.
+        /// </summary>
+        internal static string Bookbinder {
+            get {
+                return ResourceManager.GetString("Bookbinder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Бренд-дизайнер.
         /// </summary>
         internal static string BrandDesigner {
             get {
                 return ResourceManager.GetString("BrandDesigner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Бренд-менеджер.
+        /// </summary>
+        internal static string BrandManager {
+            get {
+                return ResourceManager.GetString("BrandManager", resourceCulture);
             }
         }
         
@@ -124,11 +313,137 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Брокер.
+        /// </summary>
+        internal static string Broker {
+            get {
+                return ResourceManager.GetString("Broker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Строитель.
+        /// </summary>
+        internal static string Builder {
+            get {
+                return ResourceManager.GetString("Builder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Мясник.
+        /// </summary>
+        internal static string Butcher {
+            get {
+                return ResourceManager.GetString("Butcher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Краснодеревщик.
+        /// </summary>
+        internal static string Cabinetmaker {
+            get {
+                return ResourceManager.GetString("Cabinetmaker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Кинооператор.
         /// </summary>
         internal static string Cameraman {
             get {
                 return ResourceManager.GetString("Cameraman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кардиолог.
+        /// </summary>
+        internal static string Cardiologist {
+            get {
+                return ResourceManager.GetString("Cardiologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Плотник.
+        /// </summary>
+        internal static string Carpenter {
+            get {
+                return ResourceManager.GetString("Carpenter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Картограф.
+        /// </summary>
+        internal static string Cartographer {
+            get {
+                return ResourceManager.GetString("Cartographer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Литейщик.
+        /// </summary>
+        internal static string Caster {
+            get {
+                return ResourceManager.GetString("Caster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Шеф-повар.
+        /// </summary>
+        internal static string Chef {
+            get {
+                return ResourceManager.GetString("Chef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Глав. редактор.
+        /// </summary>
+        internal static string ChiefEditor {
+            get {
+                return ResourceManager.GetString("ChiefEditor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Хореограф.
+        /// </summary>
+        internal static string Choreographer {
+            get {
+                return ResourceManager.GetString("Choreographer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Делопроизводитель.
+        /// </summary>
+        internal static string Clerk {
+            get {
+                return ResourceManager.GetString("Clerk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Верстальщик.
+        /// </summary>
+        internal static string Coder {
+            get {
+                return ResourceManager.GetString("Coder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Инкассатор.
+        /// </summary>
+        internal static string Collector {
+            get {
+                return ResourceManager.GetString("Collector", resourceCulture);
             }
         }
         
@@ -142,11 +457,83 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Конструктор.
+        /// </summary>
+        internal static string Constructor {
+            get {
+                return ResourceManager.GetString("Constructor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Контент-менеджер.
+        /// </summary>
+        internal static string ContentManager {
+            get {
+                return ResourceManager.GetString("ContentManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Повар.
+        /// </summary>
+        internal static string Cook {
+            get {
+                return ResourceManager.GetString("Cook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Копирайтер.
+        /// </summary>
+        internal static string Copywriter {
+            get {
+                return ResourceManager.GetString("Copywriter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Корректор.
+        /// </summary>
+        internal static string Corrector {
+            get {
+                return ResourceManager.GetString("Corrector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Космонавт.
+        /// </summary>
+        internal static string Cosmonaut {
+            get {
+                return ResourceManager.GetString("Cosmonaut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Крановщик.
+        /// </summary>
+        internal static string CraneOperator {
+            get {
+                return ResourceManager.GetString("CraneOperator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Творческие.
         /// </summary>
         internal static string Creative {
             get {
                 return ResourceManager.GetString("Creative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кризис-менеджер.
+        /// </summary>
+        internal static string CrisisManager {
+            get {
+                return ResourceManager.GetString("CrisisManager", resourceCulture);
             }
         }
         
@@ -160,6 +547,60 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Культуролог.
+        /// </summary>
+        internal static string CulturalScientist {
+            get {
+                return ResourceManager.GetString("CulturalScientist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кинолог.
+        /// </summary>
+        internal static string Cynologist {
+            get {
+                return ResourceManager.GetString("Cynologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Декан.
+        /// </summary>
+        internal static string Dean {
+            get {
+                return ResourceManager.GetString("Dean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дефектолог.
+        /// </summary>
+        internal static string Defectologist {
+            get {
+                return ResourceManager.GetString("Defectologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Стоматолог.
+        /// </summary>
+        internal static string Dentist {
+            get {
+                return ResourceManager.GetString("Dentist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дерматолог.
+        /// </summary>
+        internal static string Dermatologist {
+            get {
+                return ResourceManager.GetString("Dermatologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Дизайнер.
         /// </summary>
         internal static string Designer {
@@ -169,11 +610,119 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Детектив.
+        /// </summary>
+        internal static string Detective {
+            get {
+                return ResourceManager.GetString("Detective", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дипломат.
+        /// </summary>
+        internal static string Diplomat {
+            get {
+                return ResourceManager.GetString("Diplomat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Водолаз.
+        /// </summary>
+        internal static string Diver {
+            get {
+                return ResourceManager.GetString("Diver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Диджей.
         /// </summary>
         internal static string DJ {
             get {
                 return ResourceManager.GetString("DJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Врач.
+        /// </summary>
+        internal static string Doctor {
+            get {
+                return ResourceManager.GetString("Doctor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Эколог.
+        /// </summary>
+        internal static string Ecologist {
+            get {
+                return ResourceManager.GetString("Ecologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Экономические.
+        /// </summary>
+        internal static string Economic {
+            get {
+                return ResourceManager.GetString("Economic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Экономист.
+        /// </summary>
+        internal static string Economist {
+            get {
+                return ResourceManager.GetString("Economist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Редактор.
+        /// </summary>
+        internal static string Editor {
+            get {
+                return ResourceManager.GetString("Editor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Воспитатель.
+        /// </summary>
+        internal static string Educator {
+            get {
+                return ResourceManager.GetString("Educator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Египтолог.
+        /// </summary>
+        internal static string Egyptologist {
+            get {
+                return ResourceManager.GetString("Egyptologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Этнограф.
+        /// </summary>
+        internal static string Ethnographer {
+            get {
+                return ResourceManager.GetString("Ethnographer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Облицовщик.
+        /// </summary>
+        internal static string Facing {
+            get {
+                return ResourceManager.GetString("Facing", resourceCulture);
             }
         }
         
@@ -205,11 +754,191 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Отделочник.
+        /// </summary>
+        internal static string Finisher {
+            get {
+                return ResourceManager.GetString("Finisher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пожарный.
+        /// </summary>
+        internal static string Fireman {
+            get {
+                return ResourceManager.GetString("Fireman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Бортпроводник.
+        /// </summary>
+        internal static string FlightAttendant {
+            get {
+                return ResourceManager.GetString("FlightAttendant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Бортинженер.
+        /// </summary>
+        internal static string FlightEngineer {
+            get {
+                return ResourceManager.GetString("FlightEngineer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Флорист.
+        /// </summary>
+        internal static string Florist {
+            get {
+                return ResourceManager.GetString("Florist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Фальцовщик.
+        /// </summary>
+        internal static string Folder {
+            get {
+                return ResourceManager.GetString("Folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пищевые.
+        /// </summary>
+        internal static string Food {
+            get {
+                return ResourceManager.GetString("Food", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Прораб.
+        /// </summary>
+        internal static string Foreman {
+            get {
+                return ResourceManager.GetString("Foreman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Экспедитор.
+        /// </summary>
+        internal static string Forwarder {
+            get {
+                return ResourceManager.GetString("Forwarder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Мусорщик.
+        /// </summary>
+        internal static string GarbageMan {
+            get {
+                return ResourceManager.GetString("GarbageMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Садовник.
         /// </summary>
         internal static string Gardener {
             get {
                 return ResourceManager.GetString("Gardener", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Генетик.
+        /// </summary>
+        internal static string Geneticist {
+            get {
+                return ResourceManager.GetString("Geneticist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Геолог.
+        /// </summary>
+        internal static string Geologist {
+            get {
+                return ResourceManager.GetString("Geologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Конвоир.
+        /// </summary>
+        internal static string Guard {
+            get {
+                return ResourceManager.GetString("Guard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Экскурсовод.
+        /// </summary>
+        internal static string Guide {
+            get {
+                return ResourceManager.GetString("Guide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Гид-переводчик.
+        /// </summary>
+        internal static string GuideTranslator {
+            get {
+                return ResourceManager.GetString("GuideTranslator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Парикмахер.
+        /// </summary>
+        internal static string Hairdresser {
+            get {
+                return ResourceManager.GetString("Hairdresser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кардиохирург.
+        /// </summary>
+        internal static string HeartSurgeon {
+            get {
+                return ResourceManager.GetString("HeartSurgeon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Историк.
+        /// </summary>
+        internal static string Historian {
+            get {
+                return ResourceManager.GetString("Historian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на HR-менеджер.
+        /// </summary>
+        internal static string HRManager {
+            get {
+                return ResourceManager.GetString("HRManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на HTML-верстальщик.
+        /// </summary>
+        internal static string HTMLCoder {
+            get {
+                return ResourceManager.GetString("HTMLCoder", resourceCulture);
             }
         }
         
@@ -223,11 +952,65 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Ихтиолог.
+        /// </summary>
+        internal static string Ichthyologist {
+            get {
+                return ResourceManager.GetString("Ichthyologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Иллюстратор.
         /// </summary>
         internal static string Illustrator {
             get {
                 return ResourceManager.GetString("Illustrator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Иммунолог.
+        /// </summary>
+        internal static string Immunologist {
+            get {
+                return ResourceManager.GetString("Immunologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Информационные.
+        /// </summary>
+        internal static string Informational {
+            get {
+                return ResourceManager.GetString("Informational", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Страховой агент.
+        /// </summary>
+        internal static string InsuranceAgent {
+            get {
+                return ResourceManager.GetString("InsuranceAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Следователь.
+        /// </summary>
+        internal static string Investigator {
+            get {
+                return ResourceManager.GetString("Investigator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дворник.
+        /// </summary>
+        internal static string Janitor {
+            get {
+                return ResourceManager.GetString("Janitor", resourceCulture);
             }
         }
         
@@ -241,6 +1024,249 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Судья.
+        /// </summary>
+        internal static string Judge {
+            get {
+                return ResourceManager.GetString("Judge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Правовед.
+        /// </summary>
+        internal static string Jurist {
+            get {
+                return ResourceManager.GetString("Jurist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Адвокат.
+        /// </summary>
+        internal static string Lawyer {
+            get {
+                return ResourceManager.GetString("Lawyer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Юридические.
+        /// </summary>
+        internal static string Legal {
+            get {
+                return ResourceManager.GetString("Legal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Библиотекарь.
+        /// </summary>
+        internal static string Librarian {
+            get {
+                return ResourceManager.GetString("Librarian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Лингвист.
+        /// </summary>
+        internal static string Linguist {
+            get {
+                return ResourceManager.GetString("Linguist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Грузчик.
+        /// </summary>
+        internal static string Loader {
+            get {
+                return ResourceManager.GetString("Loader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Лоббист.
+        /// </summary>
+        internal static string Lobbyist {
+            get {
+                return ResourceManager.GetString("Lobbyist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Слесарь.
+        /// </summary>
+        internal static string Locksmith {
+            get {
+                return ResourceManager.GetString("Locksmith", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Логист.
+        /// </summary>
+        internal static string Logist {
+            get {
+                return ResourceManager.GetString("Logist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Машинист.
+        /// </summary>
+        internal static string Machinist {
+            get {
+                return ResourceManager.GetString("Machinist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Менеджер.
+        /// </summary>
+        internal static string Manager {
+            get {
+                return ResourceManager.GetString("Manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Мастер маникюра.
+        /// </summary>
+        internal static string Manicurist {
+            get {
+                return ResourceManager.GetString("Manicurist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Маркетолог.
+        /// </summary>
+        internal static string Marketer {
+            get {
+                return ResourceManager.GetString("Marketer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Каменщик.
+        /// </summary>
+        internal static string Mason {
+            get {
+                return ResourceManager.GetString("Mason", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Массажист.
+        /// </summary>
+        internal static string Masseur {
+            get {
+                return ResourceManager.GetString("Masseur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Математик.
+        /// </summary>
+        internal static string Mathematician {
+            get {
+                return ResourceManager.GetString("Mathematician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Автомеханик.
+        /// </summary>
+        internal static string Mechanic {
+            get {
+                return ResourceManager.GetString("Mechanic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Медицинские.
+        /// </summary>
+        internal static string Medical {
+            get {
+                return ResourceManager.GetString("Medical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Фельдшер.
+        /// </summary>
+        internal static string MedicalAssistant {
+            get {
+                return ResourceManager.GetString("MedicalAssistant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Мерчендайзер.
+        /// </summary>
+        internal static string Merchandiser {
+            get {
+                return ResourceManager.GetString("Merchandiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Товаровед.
+        /// </summary>
+        internal static string MerchandiseSpecialist {
+            get {
+                return ResourceManager.GetString("MerchandiseSpecialist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Месильщик.
+        /// </summary>
+        internal static string Messenger {
+            get {
+                return ResourceManager.GetString("Messenger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Металлург.
+        /// </summary>
+        internal static string Metallurgist {
+            get {
+                return ResourceManager.GetString("Metallurgist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Метеоролог.
+        /// </summary>
+        internal static string Meteorologist {
+            get {
+                return ResourceManager.GetString("Meteorologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Военные.
+        /// </summary>
+        internal static string Military {
+            get {
+                return ResourceManager.GetString("Military", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Маркшейдер.
+        /// </summary>
+        internal static string MineSurveyor {
+            get {
+                return ResourceManager.GetString("MineSurveyor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Мультипликатор.
         /// </summary>
         internal static string Multiplier {
@@ -250,11 +1276,200 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Штурман.
+        /// </summary>
+        internal static string Navigator {
+            get {
+                return ResourceManager.GetString("Navigator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Невропатолог.
+        /// </summary>
+        internal static string Neurologist {
+            get {
+                return ResourceManager.GetString("Neurologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Нотариус.
+        /// </summary>
+        internal static string Notary {
+            get {
+                return ResourceManager.GetString("Notary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Диетолог.
+        /// </summary>
+        internal static string Nutritionist {
+            get {
+                return ResourceManager.GetString("Nutritionist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Акушер.
+        /// </summary>
+        internal static string Obstetrician {
+            get {
+                return ResourceManager.GetString("Obstetrician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Оператор.
+        /// </summary>
+        internal static string Operator {
+            get {
+                return ResourceManager.GetString("Operator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Офтальмолог.
+        /// </summary>
+        internal static string Ophthalmologist {
+            get {
+                return ResourceManager.GetString("Ophthalmologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Востоковед.
+        /// </summary>
+        internal static string Orientalist {
+            get {
+                return ResourceManager.GetString("Orientalist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Орнитолог.
+        /// </summary>
+        internal static string Ornithologist {
+            get {
+                return ResourceManager.GetString("Ornithologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Маляр.
+        /// </summary>
+        internal static string Painter {
+            get {
+                return ResourceManager.GetString("Painter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Палеонтолог.
+        /// </summary>
+        internal static string Paleontologist {
+            get {
+                return ResourceManager.GetString("Paleontologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Повар-кондитер.
+        /// </summary>
+        internal static string PastryChef {
+            get {
+                return ResourceManager.GetString("PastryChef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Педагогические.
+        /// </summary>
+        internal static string Pedagogical {
+            get {
+                return ResourceManager.GetString("Pedagogical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Педиатр.
+        /// </summary>
+        internal static string Pediatrician {
+            get {
+                return ResourceManager.GetString("Pediatrician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Фармацевт.
+        /// </summary>
+        internal static string Pharmacist {
+            get {
+                return ResourceManager.GetString("Pharmacist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Философ.
+        /// </summary>
+        internal static string Philosopher {
+            get {
+                return ResourceManager.GetString("Philosopher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Фотограф.
         /// </summary>
         internal static string Photographer {
             get {
                 return ResourceManager.GetString("Photographer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Летчик.
+        /// </summary>
+        internal static string Pilot {
+            get {
+                return ResourceManager.GetString("Pilot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Полицейский.
+        /// </summary>
+        internal static string Policeman {
+            get {
+                return ResourceManager.GetString("Policeman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Политолог.
+        /// </summary>
+        internal static string PoliticalScientist {
+            get {
+                return ResourceManager.GetString("PoliticalScientist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Почтальон.
+        /// </summary>
+        internal static string Postman {
+            get {
+                return ResourceManager.GetString("Postman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Печатник.
+        /// </summary>
+        internal static string Printer {
+            get {
+                return ResourceManager.GetString("Printer", resourceCulture);
             }
         }
         
@@ -277,11 +1492,128 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Прокурор.
+        /// </summary>
+        internal static string Prosecutor {
+            get {
+                return ResourceManager.GetString("Prosecutor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Психолог.
+        /// </summary>
+        internal static string Psychologist {
+            get {
+                return ResourceManager.GetString("Psychologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Издатель.
+        /// </summary>
+        internal static string Publisher {
+            get {
+                return ResourceManager.GetString("Publisher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Автогонщик.
+        /// </summary>
+        internal static string RaceDriver {
+            get {
+                return ResourceManager.GetString("RaceDriver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Радиоведущий.
+        /// </summary>
+        internal static string RadioHost {
+            get {
+                return ResourceManager.GetString("RadioHost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Риелтор.
+        /// </summary>
+        internal static string Realtor {
+            get {
+                return ResourceManager.GetString("Realtor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Портье.
+        /// </summary>
+        internal static string Receptionist {
+            get {
+                return ResourceManager.GetString("Receptionist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ректор.
+        /// </summary>
+        internal static string Rector {
+            get {
+                return ResourceManager.GetString("Rector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Религиовед.
+        /// </summary>
+        internal static string Religious {
+            get {
+                return ResourceManager.GetString("Religious", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Спасатель.
+        /// </summary>
+        internal static string Rescuer {
+            get {
+                return ResourceManager.GetString("Rescuer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Реставратор.
         /// </summary>
         internal static string Restorer {
             get {
                 return ResourceManager.GetString("Restorer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кровельщик.
+        /// </summary>
+        internal static string Roofer {
+            get {
+                return ResourceManager.GetString("Roofer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Научные.
+        /// </summary>
+        internal static string Scientific {
+            get {
+                return ResourceManager.GetString("Scientific", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Разведчик.
+        /// </summary>
+        internal static string Scout {
+            get {
+                return ResourceManager.GetString("Scout", resourceCulture);
             }
         }
         
@@ -295,11 +1627,146 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Сервисные.
+        /// </summary>
+        internal static string Service {
+            get {
+                return ResourceManager.GetString("Service", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Военнослужащий.
+        /// </summary>
+        internal static string Serviceman {
+            get {
+                return ResourceManager.GetString("Serviceman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сис. администратор.
+        /// </summary>
+        internal static string SisAdministrator {
+            get {
+                return ResourceManager.GetString("SisAdministrator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Администратор сайта.
+        /// </summary>
+        internal static string SiteAdministrator {
+            get {
+                return ResourceManager.GetString("SiteAdministrator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Социолог.
+        /// </summary>
+        internal static string Sociologist {
+            get {
+                return ResourceManager.GetString("Sociologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Почвовед.
+        /// </summary>
+        internal static string SoilScientist {
+            get {
+                return ResourceManager.GetString("SoilScientist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Звукооператор.
+        /// </summary>
+        internal static string SoundEngineer {
+            get {
+                return ResourceManager.GetString("SoundEngineer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Звукорежиссер.
         /// </summary>
         internal static string SoundProducer {
             get {
                 return ResourceManager.GetString("SoundProducer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Диктор.
+        /// </summary>
+        internal static string Speaker {
+            get {
+                return ResourceManager.GetString("Speaker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Логопед.
+        /// </summary>
+        internal static string SpeechTherapist {
+            get {
+                return ResourceManager.GetString("SpeechTherapist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Спичрайтер.
+        /// </summary>
+        internal static string Speechwriter {
+            get {
+                return ResourceManager.GetString("Speechwriter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Спортивные.
+        /// </summary>
+        internal static string Sport {
+            get {
+                return ResourceManager.GetString("Sport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Спортивный тренер.
+        /// </summary>
+        internal static string SportsCoach {
+            get {
+                return ResourceManager.GetString("SportsCoach", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Спортивный инструктор.
+        /// </summary>
+        internal static string SportsInstructor {
+            get {
+                return ResourceManager.GetString("SportsInstructor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Статистик.
+        /// </summary>
+        internal static string Statistician {
+            get {
+                return ResourceManager.GetString("Statistician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кладовщик.
+        /// </summary>
+        internal static string Storekeeper {
+            get {
+                return ResourceManager.GetString("Storekeeper", resourceCulture);
             }
         }
         
@@ -322,11 +1789,101 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Супервайзер.
+        /// </summary>
+        internal static string Supervisor {
+            get {
+                return ResourceManager.GetString("Supervisor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Геодезист.
+        /// </summary>
+        internal static string Surveyor {
+            get {
+                return ResourceManager.GetString("Surveyor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дегустатор.
+        /// </summary>
+        internal static string Taster {
+            get {
+                return ResourceManager.GetString("Taster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Татуировщик.
         /// </summary>
         internal static string TattooArtist {
             get {
                 return ResourceManager.GetString("TattooArtist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Налоговый инспектор.
+        /// </summary>
+        internal static string TaxInspector {
+            get {
+                return ResourceManager.GetString("TaxInspector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Преподаватель.
+        /// </summary>
+        internal static string Teacher {
+            get {
+                return ResourceManager.GetString("Teacher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сурдопедагог.
+        /// </summary>
+        internal static string TeacherDeaf {
+            get {
+                return ResourceManager.GetString("TeacherDeaf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Технические.
+        /// </summary>
+        internal static string Technical {
+            get {
+                return ResourceManager.GetString("Technical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Технолог.
+        /// </summary>
+        internal static string Technologist {
+            get {
+                return ResourceManager.GetString("Technologist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Тестировщик.
+        /// </summary>
+        internal static string Tester {
+            get {
+                return ResourceManager.GetString("Tester", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Терапевт.
+        /// </summary>
+        internal static string Therapist {
+            get {
+                return ResourceManager.GetString("Therapist", resourceCulture);
             }
         }
         
@@ -349,11 +1906,110 @@ namespace Module_Work.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Транспортные.
+        /// </summary>
+        internal static string Transport {
+            get {
+                return ResourceManager.GetString("Transport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Агент по туризму.
+        /// </summary>
+        internal static string TravelAgent {
+            get {
+                return ResourceManager.GetString("TravelAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Тележурналист.
+        /// </summary>
+        internal static string TVReporter {
+            get {
+                return ResourceManager.GetString("TVReporter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Типография.
+        /// </summary>
+        internal static string Typography {
+            get {
+                return ResourceManager.GetString("Typography", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ветеринар.
         /// </summary>
         internal static string Veterinarian {
             get {
                 return ResourceManager.GetString("Veterinarian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Визажист.
+        /// </summary>
+        internal static string Visagiste {
+            get {
+                return ResourceManager.GetString("Visagiste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Официант.
+        /// </summary>
+        internal static string Waiter {
+            get {
+                return ResourceManager.GetString("Waiter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Надзиратель.
+        /// </summary>
+        internal static string Warden {
+            get {
+                return ResourceManager.GetString("Warden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Часовщик.
+        /// </summary>
+        internal static string Watchmaker {
+            get {
+                return ResourceManager.GetString("Watchmaker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Веб-дизайнер.
+        /// </summary>
+        internal static string WebDesigner {
+            get {
+                return ResourceManager.GetString("WebDesigner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Web-интегратор.
+        /// </summary>
+        internal static string WebIntegrator {
+            get {
+                return ResourceManager.GetString("WebIntegrator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Винодел.
+        /// </summary>
+        internal static string Winemaker {
+            get {
+                return ResourceManager.GetString("Winemaker", resourceCulture);
             }
         }
         

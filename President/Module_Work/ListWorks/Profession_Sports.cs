@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Спортивные";
+        private string _professionName = Lang.Sport;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,9 +28,9 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Спортивный инструктор", 100, 0, 0, 0),
-                new Basic_Work("Спортивный тренер", 100, 0, 0, 0),
-                new Basic_Work("Спортсмен", 100, 0, 0, 0),
+                new Basic_Work(Lang.SportsInstructor, 100, 0, 0, 0),
+                new Basic_Work(Lang.SportsCoach, 100, 0, 0, 0),
+                new Basic_Work(Lang.Athlete, 100, 0, 0, 0),
             };
         }
         

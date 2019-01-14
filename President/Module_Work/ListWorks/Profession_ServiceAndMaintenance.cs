@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Сервисные";
+        private string _professionName = Lang.Service;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,27 +28,26 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Агент по туризму", 100, 0, 0, 0),
-                new Basic_Work("Администратор", 100, 0, 0, 0),
-                new Basic_Work("Бармен", 100, 0, 0, 0),
-                new Basic_Work("Библиотекарь", 100, 0, 0, 0),
-                new Basic_Work("Визажист", 100, 0, 0, 0),
-                new Basic_Work("Гид-переводчик", 100, 0, 0, 0),
-                new Basic_Work("Грузчик", 100, 0, 0, 0),
-                new Basic_Work("Дворник", 100, 0, 0, 0),
-                new Basic_Work("Кладовщик", 100, 0, 0, 0),
-                new Basic_Work("Мастер маникюра", 100, 0, 0, 0),
-                new Basic_Work("Мусорщик", 100, 0, 0, 0),
-                new Basic_Work("Оператор", 100, 0, 0, 0),
-                new Basic_Work("Официант", 100, 0, 0, 0),
-                new Basic_Work("Парикмахер", 100, 0, 0, 0),
-                new Basic_Work("Портье", 100, 0, 0, 0),
-                new Basic_Work("Почтальон", 100, 0, 0, 0),
-                new Basic_Work("Риелтор", 100, 0, 0, 0),
-                new Basic_Work("Страховой агент", 100, 0, 0, 0),
-                new Basic_Work("Флорист", 100, 0, 0, 0),
-                new Basic_Work("Экскурсовод", 100, 0, 0, 0),
-                new Basic_Work("Риелтор", 100, 0, 0, 0)
+                new Basic_Work(Lang.TravelAgent, 100, 0, 0, 0),
+                new Basic_Work(Lang.Bartender, 100, 0, 0, 0),
+                new Basic_Work(Lang.Librarian, 100, 0, 0, 0),
+                new Basic_Work(Lang.Visagiste, 100, 0, 0, 0),
+                new Basic_Work(Lang.GuideTranslator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Janitor, 100, 0, 0, 0),
+                new Basic_Work(Lang.Janitor, 100, 0, 0, 0),
+                new Basic_Work(Lang.Storekeeper, 100, 0, 0, 0),
+                new Basic_Work(Lang.Manicurist, 100, 0, 0, 0),
+                new Basic_Work(Lang.GarbageMan, 100, 0, 0, 0),
+                new Basic_Work(Lang.Operator, 100, 0, 0, 0),
+                new Basic_Work(Lang.Waiter, 100, 0, 0, 0),
+                new Basic_Work(Lang.Hairdresser, 100, 0, 0, 0),
+                new Basic_Work(Lang.Receptionist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Postman, 100, 0, 0, 0),
+                new Basic_Work(Lang.Realtor, 100, 0, 0, 0),
+                new Basic_Work(Lang.InsuranceAgent, 100, 0, 0, 0),
+                new Basic_Work(Lang.Florist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Guide, 100, 0, 0, 0),
+                new Basic_Work(Lang.Realtor, 100, 0, 0, 0)
             };
         }
 

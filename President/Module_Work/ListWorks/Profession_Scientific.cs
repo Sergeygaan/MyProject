@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Module_Work.Language;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Module_Work
         /// <summary>
         /// Стаж работы в военной области
         /// </summary>
-        private string _professionName = "Научные";
+        private string _professionName = Lang.Scientific;
 
         /// <summary>
         /// Список всех профессий в данной области
@@ -27,34 +28,33 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work("Археолог", 100, 0, 0, 0),
-                new Basic_Work("Архивариус", 100, 0, 0, 0),
-                new Basic_Work("Астроном", 100, 0, 0, 0),
-                new Basic_Work("Библиограф", 100, 0, 0, 0),
-                new Basic_Work("Биоинженер", 100, 0, 0, 0),
-                new Basic_Work("Биолог", 100, 0, 0, 0),
-                new Basic_Work("Биохимик", 100, 0, 0, 0),
-                new Basic_Work("Востоковед", 100, 0, 0, 0),
-                new Basic_Work("Геолог", 100, 0, 0, 0),
-                new Basic_Work("Логопед", 100, 0, 0, 0),
-                new Basic_Work("Египтолог", 100, 0, 0, 0),
-                new Basic_Work("Искусствовед", 100, 0, 0, 0),
-                new Basic_Work("Историк", 100, 0, 0, 0),
-                new Basic_Work("Ихтиолог", 100, 0, 0, 0),
-                new Basic_Work("Конструктор", 100, 0, 0, 0),
-                new Basic_Work("Культуролог", 100, 0, 0, 0),
-                new Basic_Work("Математик", 100, 0, 0, 0),
-                new Basic_Work("Метеоролог", 100, 0, 0, 0),
-                new Basic_Work("Орнитолог", 100, 0, 0, 0),
-                new Basic_Work("Лингвист", 100, 0, 0, 0),
-                new Basic_Work("Палеонтолог", 100, 0, 0, 0),
-                new Basic_Work("Политолог", 100, 0, 0, 0),
-                new Basic_Work("Почвовед", 100, 0, 0, 0),
-                new Basic_Work("Религиовед", 100, 0, 0, 0),
-                new Basic_Work("Социолог", 100, 0, 0, 0),
-                new Basic_Work("Философ", 100, 0, 0, 0),
-                new Basic_Work("Эколог", 100, 0, 0, 0),
-                new Basic_Work("Этнограф", 100, 0, 0, 0),
+                new Basic_Work(Lang.Archaeologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Archivist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Astronomer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Bibliographer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Bioengineer, 100, 0, 0, 0),
+                new Basic_Work(Lang.Biologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Biochemist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Orientalist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Geologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Egyptologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.ArtCritic, 100, 0, 0, 0),
+                new Basic_Work(Lang.Historian, 100, 0, 0, 0),
+                new Basic_Work(Lang.Ichthyologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Constructor, 100, 0, 0, 0),
+                new Basic_Work(Lang.CulturalScientist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Mathematician, 100, 0, 0, 0),
+                new Basic_Work(Lang.Meteorologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Ornithologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Linguist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Paleontologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.PoliticalScientist, 100, 0, 0, 0),
+                new Basic_Work(Lang.SoilScientist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Religious, 100, 0, 0, 0),
+                new Basic_Work(Lang.Sociologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Philosopher, 100, 0, 0, 0),
+                new Basic_Work(Lang.Ecologist, 100, 0, 0, 0),
+                new Basic_Work(Lang.Ethnographer, 100, 0, 0, 0),
             };
         }
 
