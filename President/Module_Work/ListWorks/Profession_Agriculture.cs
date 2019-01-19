@@ -28,13 +28,13 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.Agronomist, 200, 25, 0, 0),
-                new Basic_Work(Lang.Veterinarian, 330, 45, 0, 0),
+                new Basic_Work(Lang.Agronomist, 300, 20, 0, 25),
+                new Basic_Work(Lang.Veterinarian, 330, 35, 0, 0),
                 new Basic_Work(Lang.Breeder, 150, 0, 0, 0),
-                new Basic_Work(Lang.Hunter, 400, 0, 0, 65),
-                new Basic_Work(Lang.Gardener, 160, 0, 0, 0),
-                new Basic_Work(Lang.TractorDriver, 200, 0, 0, 25),
-                new Basic_Work(Lang.Farmer, 210, 0, 0, 35),
+                new Basic_Work(Lang.Hunter, 400, 0, 0, 75),
+                new Basic_Work(Lang.Gardener, 160, 0, 0, 5),
+                new Basic_Work(Lang.TractorDriver, 200, 0, 0, 23),
+                new Basic_Work(Lang.Farmer, 210, 0, 0, 38),
             };
         }
 

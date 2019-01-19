@@ -28,12 +28,12 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.Serviceman, 100, 0, 0, 0),
-                new Basic_Work(Lang.Guard, 100, 0, 0, 0),
-                new Basic_Work(Lang.Fireman, 100, 0, 0, 0),
-                new Basic_Work(Lang.Scout, 100, 0, 0, 0),
-                new Basic_Work(Lang.Rescuer, 100, 0, 0, 0),
-                new Basic_Work(Lang.Bodyguard, 100, 0, 0, 0),
+                new Basic_Work(Lang.Serviceman, 250, 10, 0, 55),
+                new Basic_Work(Lang.Guard, 230, 0, 5, 45),
+                new Basic_Work(Lang.Fireman, 350, 0, 0, 55),
+                new Basic_Work(Lang.Scout, 800, 15, 50, 70),
+                new Basic_Work(Lang.Rescuer, 400, 0, 20, 60),
+                new Basic_Work(Lang.Bodyguard, 800, 0, 25, 80),
             };
         }
 

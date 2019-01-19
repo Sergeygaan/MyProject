@@ -28,18 +28,18 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.Lawyer, 100, 0, 0, 0),
-                new Basic_Work(Lang.Clerk, 100, 0, 0, 0),
-                new Basic_Work(Lang.Detective, 100, 0, 0, 0),
-                new Basic_Work(Lang.Diplomat, 100, 0, 0, 0),
-                new Basic_Work(Lang.Notary, 100, 0, 0, 0),
-                new Basic_Work(Lang.Policeman, 100, 0, 0, 0),
-                new Basic_Work(Lang.Jurist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Prosecutor, 100, 0, 0, 0),
-                new Basic_Work(Lang.Investigator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Bailiff, 100, 0, 0, 0),
-                new Basic_Work(Lang.Judge, 100, 0, 0, 0),
-                new Basic_Work(Lang.Warden, 100, 0, 0, 0)
+                new Basic_Work(Lang.Lawyer, 250, 35, 20, 0),
+                new Basic_Work(Lang.Clerk, 380, 40, 0, 0),
+                new Basic_Work(Lang.Detective, 550, 60, 10, 20),
+                new Basic_Work(Lang.Diplomat, 900, 90, 50, 0),
+                new Basic_Work(Lang.Notary, 250, 35, 10, 0),
+                new Basic_Work(Lang.Policeman, 450, 35, 0, 65),
+                new Basic_Work(Lang.Jurist, 170, 5, 10, 0),
+                new Basic_Work(Lang.Prosecutor, 700, 60, 60, 0),
+                new Basic_Work(Lang.Investigator, 450, 50, 10, 0),
+                new Basic_Work(Lang.Bailiff, 105, 0, 0, 0),
+                new Basic_Work(Lang.Judge, 1000, 95, 0, 0),
+                new Basic_Work(Lang.Warden, 220, 0, 0, 35)
             };
         }
 

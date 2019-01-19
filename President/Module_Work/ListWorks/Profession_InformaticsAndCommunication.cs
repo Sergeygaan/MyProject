@@ -28,20 +28,20 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.HTMLCoder, 100, 0, 0, 0),
-                new Basic_Work(Lang.WebIntegrator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Administrator, 100, 0, 0, 0),
-                new Basic_Work(Lang.SiteAdministrator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Blogger, 100, 0, 0, 0),
-                new Basic_Work(Lang.WebDesigner, 100, 0, 0, 0),
-                new Basic_Work(Lang.Speaker, 100, 0, 0, 0),
-                new Basic_Work(Lang.ContentManager, 100, 0, 0, 0),
-                new Basic_Work(Lang.Copywriter, 100, 0, 0, 0),
-                new Basic_Work(Lang.RadioHost, 100, 0, 0, 0),
-                new Basic_Work(Lang.SisAdministrator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Speechwriter, 100, 0, 0, 0),
-                new Basic_Work(Lang.TVReporter, 100, 0, 0, 0),
-                new Basic_Work(Lang.Tester, 100, 0, 0, 0),
+                new Basic_Work(Lang.HTMLCoder, 250, 15, 0, 0),
+                new Basic_Work(Lang.WebIntegrator, 400, 35, 10, 0),
+                new Basic_Work(Lang.Administrator, 300, 20, 45, 0),
+                new Basic_Work(Lang.SiteAdministrator, 110, 5, 0, 0),
+                new Basic_Work(Lang.Blogger, 750, 25, 85, 0),
+                new Basic_Work(Lang.WebDesigner, 615, 50, 20, 0),
+                new Basic_Work(Lang.Speaker, 725, 40, 80, 0),
+                new Basic_Work(Lang.ContentManager, 320, 25, 15, 0),
+                new Basic_Work(Lang.Copywriter, 325, 45, 10, 0),
+                new Basic_Work(Lang.RadioHost, 300, 30, 55, 0),
+                new Basic_Work(Lang.SisAdministrator, 350, 30, 5, 10),
+                new Basic_Work(Lang.Speechwriter, 280, 20, 25, 0),
+                new Basic_Work(Lang.TVReporter, 300, 20, 45, 0),
+                new Basic_Work(Lang.Tester, 350, 40, 0, 0),
             };
         }
 

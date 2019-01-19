@@ -28,22 +28,22 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.HRManager, 100, 0, 0, 0),
-                new Basic_Work(Lang.Auditor, 100, 0, 0, 0),
-                new Basic_Work(Lang.BrandManager, 100, 0, 0, 0),
-                new Basic_Work(Lang.Broker, 100, 0, 0, 0),
-                new Basic_Work(Lang.Accountant, 100, 0, 0, 0),
-                new Basic_Work(Lang.Collector, 100, 0, 0, 0),
-                new Basic_Work(Lang.CrisisManager, 100, 0, 0, 0),
-                new Basic_Work(Lang.Lobbyist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Marketer, 100, 0, 0, 0),
-                new Basic_Work(Lang.Manager, 100, 0, 0, 0),
-                new Basic_Work(Lang.Merchandiser, 100, 0, 0, 0),
-                new Basic_Work(Lang.TaxInspector, 100, 0, 0, 0),
-                new Basic_Work(Lang.Statistician, 100, 0, 0, 0),
-                new Basic_Work(Lang.Supervisor, 100, 0, 0, 0),
-                new Basic_Work(Lang.MerchandiseSpecialist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Economist, 100, 0, 0, 0),
+                new Basic_Work(Lang.HRManager, 310, 25, 55, 0),
+                new Basic_Work(Lang.Auditor, 580, 60, 40, 10),
+                new Basic_Work(Lang.BrandManager, 500, 50, 60, 0),
+                new Basic_Work(Lang.Broker, 390, 60, 0, 0),
+                new Basic_Work(Lang.Accountant, 300, 30, 0, 0),
+                new Basic_Work(Lang.Collector, 150, 0, 0, 5),
+                new Basic_Work(Lang.CrisisManager, 810, 70, 40, 0),
+                new Basic_Work(Lang.Lobbyist, 400, 15, 45, 5),
+                new Basic_Work(Lang.Marketer, 610, 65, 0, 0),
+                new Basic_Work(Lang.Manager, 215, 5, 20, 0),
+                new Basic_Work(Lang.Merchandiser, 250, 0, 0, 5),
+                new Basic_Work(Lang.TaxInspector, 180, 3, 5, 5),
+                new Basic_Work(Lang.Statistician, 170, 0, 0, 0),
+                new Basic_Work(Lang.Supervisor, 290, 25, 0, 0),
+                new Basic_Work(Lang.MerchandiseSpecialist, 330, 35, 0, 0),
+                new Basic_Work(Lang.Economist, 530, 55, 15, 0),
             };
         }
 
