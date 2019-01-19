@@ -230,6 +230,8 @@ namespace Module_Needs
             ReducingNeeds(50);
 
             Button(false);
+
+            Close();
         }
 
         /// <summary>

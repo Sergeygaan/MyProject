@@ -64,6 +64,7 @@ namespace Module_Work
             }
             else
             {
+                toolTipAdvice.RemoveAll();
                 toolTipAdvice.Dispose();
                 toolTipAdvice = null;
             }
