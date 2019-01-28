@@ -28,14 +28,14 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.Coder, 100, 0, 0, 0),
-                new Basic_Work(Lang.ChiefEditor, 100, 0, 0, 0),
-                new Basic_Work(Lang.Publisher, 100, 0, 0, 0),
-                new Basic_Work(Lang.Corrector, 100, 0, 0, 0),
-                new Basic_Work(Lang.Bookbinder, 100, 0, 0, 0),
-                new Basic_Work(Lang.Printer, 100, 0, 0, 0),
-                new Basic_Work(Lang.Editor, 100, 0, 0, 0),
-                new Basic_Work(Lang.Folder, 100, 0, 0, 0),
+                new Basic_Work(Lang.Coder, 380, 40, 0, 0),
+                new Basic_Work(Lang.ChiefEditor, 650, 55, 25, 0),
+                new Basic_Work(Lang.Publisher, 900, 55, 45, 0),
+                new Basic_Work(Lang.Corrector, 285, 15, 15, 0),
+                new Basic_Work(Lang.Bookbinder, 150, 0, 0, 0),
+                new Basic_Work(Lang.Printer, 180, 0, 0, 0),
+                new Basic_Work(Lang.Editor, 450, 40, 35, 0),
+                new Basic_Work(Lang.Folder, 400, 55, 0, 0)
             };
         }
         

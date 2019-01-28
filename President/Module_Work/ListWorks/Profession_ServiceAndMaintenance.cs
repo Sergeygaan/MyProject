@@ -28,26 +28,24 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.TravelAgent, 100, 0, 0, 0),
-                new Basic_Work(Lang.Bartender, 100, 0, 0, 0),
-                new Basic_Work(Lang.Librarian, 100, 0, 0, 0),
-                new Basic_Work(Lang.Visagiste, 100, 0, 0, 0),
-                new Basic_Work(Lang.GuideTranslator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Janitor, 100, 0, 0, 0),
-                new Basic_Work(Lang.Janitor, 100, 0, 0, 0),
-                new Basic_Work(Lang.Storekeeper, 100, 0, 0, 0),
-                new Basic_Work(Lang.Manicurist, 100, 0, 0, 0),
-                new Basic_Work(Lang.GarbageMan, 100, 0, 0, 0),
-                new Basic_Work(Lang.Operator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Waiter, 100, 0, 0, 0),
-                new Basic_Work(Lang.Hairdresser, 100, 0, 0, 0),
-                new Basic_Work(Lang.Receptionist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Postman, 100, 0, 0, 0),
-                new Basic_Work(Lang.Realtor, 100, 0, 0, 0),
-                new Basic_Work(Lang.InsuranceAgent, 100, 0, 0, 0),
-                new Basic_Work(Lang.Florist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Guide, 100, 0, 0, 0),
-                new Basic_Work(Lang.Realtor, 100, 0, 0, 0)
+                new Basic_Work(Lang.TravelAgent, 300, 5, 25, 0),
+                new Basic_Work(Lang.Bartender, 200, 0, 20, 0),
+                new Basic_Work(Lang.Librarian, 150, 5, 0, 0),
+                new Basic_Work(Lang.Visagiste, 250, 0, 30, 0),
+                new Basic_Work(Lang.GuideTranslator, 280, 10, 20, 0),
+                new Basic_Work(Lang.Janitor, 150, 0, 0, 0),
+                new Basic_Work(Lang.Storekeeper, 150, 0, 0, 0),
+                new Basic_Work(Lang.Manicurist, 140, 0, 0, 0),
+                new Basic_Work(Lang.GarbageMan, 150, 0, 0, 0),
+                new Basic_Work(Lang.Operator, 200, 0, 0, 0),
+                new Basic_Work(Lang.Waiter, 130, 0, 0, 0),
+                new Basic_Work(Lang.Hairdresser, 150, 0, 0, 0),
+                new Basic_Work(Lang.Receptionist, 180, 0, 10, 0),
+                new Basic_Work(Lang.Postman, 150, 0, 0, 0),
+                new Basic_Work(Lang.Realtor, 250, 0, 20, 0),
+                new Basic_Work(Lang.InsuranceAgent, 350, 0, 25, 0),
+                new Basic_Work(Lang.Florist, 150, 0, 0, 0),
+                new Basic_Work(Lang.Guide, 150, 0, 0, 0)
             };
         }
 

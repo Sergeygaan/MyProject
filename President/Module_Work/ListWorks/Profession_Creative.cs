@@ -50,8 +50,8 @@ namespace Module_Work
                 new Basic_Work(Lang.Stylist, 350, 0, 60, 0),
                 new Basic_Work(Lang.Screenwriter, 250, 35, 25, 0),
                 new Basic_Work(Lang.TattooArtist, 150, 0, 0, 0),
-                new Basic_Work(Lang.Photographer, 90, 0, 0, 0),
-                new Basic_Work(Lang.FashionModel, 120, 0, 15, 0),
+                new Basic_Work(Lang.Photographer, 150, 0, 0, 0),
+                new Basic_Work(Lang.FashionModel, 150, 0, 15, 0),
                 new Basic_Work(Lang.Jeweler, 340, 15, 35, 10),
             };
         }

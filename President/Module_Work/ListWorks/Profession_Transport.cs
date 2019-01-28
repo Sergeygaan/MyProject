@@ -28,16 +28,16 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.AirTrafficController, 100, 0, 0, 0),
-                new Basic_Work(Lang.RaceDriver, 100, 0, 0, 0),
-                new Basic_Work(Lang.FlightEngineer, 100, 0, 0, 0),
-                new Basic_Work(Lang.FlightAttendant, 100, 0, 0, 0),
-                new Basic_Work(Lang.Cosmonaut, 100, 0, 0, 0),
-                new Basic_Work(Lang.Pilot, 100, 0, 0, 0),
-                new Basic_Work(Lang.Logist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Machinist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Navigator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Forwarder, 100, 0, 0, 0),
+                new Basic_Work(Lang.AirTrafficController, 650, 70, 0, 0),
+                new Basic_Work(Lang.RaceDriver, 500, 0, 45, 55),
+                new Basic_Work(Lang.FlightEngineer, 450, 45, 0, 0),
+                new Basic_Work(Lang.FlightAttendant, 350, 0, 45, 0),
+                new Basic_Work(Lang.Cosmonaut, 600, 70, 0, 0),
+                new Basic_Work(Lang.Pilot, 800, 80, 0, 45),
+                new Basic_Work(Lang.Logist, 450, 55, 35, 0),
+                new Basic_Work(Lang.Machinist, 550, 35, 0, 65),
+                new Basic_Work(Lang.Navigator, 570, 45, 0, 55),
+                new Basic_Work(Lang.Forwarder, 390, 40, 20, 0),
             };
         }
 

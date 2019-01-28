@@ -28,9 +28,9 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.SportsInstructor, 100, 0, 0, 0),
-                new Basic_Work(Lang.SportsCoach, 100, 0, 0, 0),
-                new Basic_Work(Lang.Athlete, 100, 0, 0, 0),
+                new Basic_Work(Lang.SportsInstructor, 600, 0, 0, 60),
+                new Basic_Work(Lang.SportsCoach, 400, 0, 0, 40),
+                new Basic_Work(Lang.Athlete, 200, 0, 0, 20),
             };
         }
         

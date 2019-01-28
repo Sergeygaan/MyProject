@@ -28,14 +28,14 @@ namespace Module_Work
         {
             _list_Profession = new List<Basic_Work>
             {
-                new Basic_Work(Lang.Educator, 100, 0, 0, 0),
-                new Basic_Work(Lang.Defectologist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Cynologist, 100, 0, 0, 0),
-                new Basic_Work(Lang.Teacher, 100, 0, 0, 0),
-                new Basic_Work(Lang.Rector, 100, 0, 0, 0),
-                new Basic_Work(Lang.Dean, 100, 0, 0, 0),
-                new Basic_Work(Lang.TeacherDeaf, 100, 0, 0, 0),
-                new Basic_Work(Lang.Choreographer,100, 0, 0, 0),
+                new Basic_Work(Lang.Educator, 180, 5, 5, 0),
+                new Basic_Work(Lang.Defectologist, 225, 15, 0, 0),
+                new Basic_Work(Lang.Cynologist, 400, 25, 0, 0),
+                new Basic_Work(Lang.Teacher, 270, 35, 0, 0),
+                new Basic_Work(Lang.Rector, 700, 75, 10, 0),
+                new Basic_Work(Lang.Dean, 500, 55, 0, 0),
+                new Basic_Work(Lang.TeacherDeaf, 375, 35, 0, 0),
+                new Basic_Work(Lang.Choreographer,300, 15, 45, 0),
             };
         }
 
