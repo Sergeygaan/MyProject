@@ -24,6 +24,8 @@ namespace Module_UserControl
             GameCharacter.PropertyChangedPhysicalDevelopment += new PropertyChangedEventHandler(GetValue_PhysicalDevelopment);
             GameCharacter.PropertyChangedCharm += new PropertyChangedEventHandler(GetValue_Charm);
             GameCharacter.PropertyChangedIntelligence += new PropertyChangedEventHandler(GetValue_Intelligence);
+
+            ToolTipIntelligence(GameCharacter.Restrictions_Intelligence);
         }
 
         #region Подписка на свойства
@@ -86,6 +88,8 @@ namespace Module_UserControl
         private void GetValue_Intelligence(object sender, PropertyChangedEventArgs even)
         {
             TextOutput(labelIntelligence, "Интеллект: " + even.PropertyName);
+
+            ToolTipIntelligence(GameCharacter.Restrictions_Intelligence);
         }
 
         #endregion
@@ -104,6 +108,47 @@ namespace Module_UserControl
             else
             {
                 currentLabel.Text = text;
+            }
+        }
+
+        /// <summary>
+        /// Метод подсказки для текущего ограничения интеллекта
+        /// </summary>
+        private void ToolTipIntelligence(int text)
+        {
+            string currentText = "Ограничение интеллекта: " + text;
+
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() =>
+                {
+                    if (toolTipIntel != null)
+                    {
+                        toolTipIntel.RemoveAll();
+                        toolTipIntel.Dispose();
+                        toolTipIntel = null;
+                    }
+                }));
+            }
+            else
+            {
+                if (toolTipIntel != null)
+                {
+                    toolTipIntel.RemoveAll();
+                    toolTipIntel.Dispose();
+                    toolTipIntel = null;
+                }
+            }
+
+            toolTipIntel = new ToolTip();
+
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => toolTipIntel.SetToolTip(labelIntelligence, currentText)));
+            }
+            else
+            {
+                toolTipIntel.SetToolTip(labelIntelligence, currentText);
             }
         }
 

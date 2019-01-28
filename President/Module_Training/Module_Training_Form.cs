@@ -66,6 +66,17 @@ namespace Module_Training
         /// </summary>
         private Education_Form _education_Form;
 
+        /// <summary>
+        /// Ограниччение интеллекта с прошлого уровня обучения
+        /// </summary>
+        private int _intelligenceLimitation;
+
+        /// <summary>
+        /// Флаг обучения True если успешно закончил
+        /// </summary>
+        private bool _flagStudy = false;
+
+
         public Module_Training_Form()
         {
             InitializeComponent();
@@ -125,8 +136,9 @@ namespace Module_Training
             {
                 //GameCharacter.Set("Money", _currentJob.Salary * 2);
                 GameCharacter.Study = _currentStudy.NameStudy;
+                _flagStudy = true;
 
-                TopMostMessageBox.Show("Вы выполнили план. В качестве премии вам начислили ", "Событие");
+                TopMostMessageBox.Show("Вы успешно закончили обучение", "Событие");
             }
             else
             {
@@ -178,7 +190,7 @@ namespace Module_Training
         public delegate void MyDelegateStudy(CurrentStudy _currentStudy);
 
         /// <summary>
-        /// Устроиться на работу
+        /// Начать обучение
         /// </summary>
         /// <param name="finalJob">Работа</param>
         public void MyStudyFunc(CurrentStudy finalStudy)
@@ -190,7 +202,10 @@ namespace Module_Training
 
             CurrentWork();
 
+            _intelligenceLimitation = GameCharacter.Restrictions_Intelligence;
             GameCharacter.Restrictions_Intelligence = _currentStudy.RestrictionsIntellect;
+
+            _flagStudy = false;
         }
 
         /// <summary>
@@ -252,6 +267,13 @@ namespace Module_Training
                 EnableButtom(buttonDeduct, false);
                 EnableButtom(buttonEducation, true);
 
+                //false если не выполнил план или отчислился
+                if(!_flagStudy)
+                {
+                    //Вернуть уровень интеллекта на прошлый уровень
+                    GameCharacter.Restrictions_Intelligence = _intelligenceLimitation;
+                }
+
                 CurrentWork();
             }
         }
@@ -282,9 +304,5 @@ namespace Module_Training
 
         }
 
-        private void buttonSelfDevelopment_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.groupBoxCharacteristics = new System.Windows.Forms.GroupBox();
             this.groupBoxNeeds = new System.Windows.Forms.GroupBox();
+            this.health_UserControl1 = new Module_UserControl.Health_UserControl();
+            this.mood_UserControl1 = new Module_UserControl.Mood_UserControl();
+            this.food_UserControl1 = new Module_UserControl.Food_UserControl();
             this.groupBoxQualities = new System.Windows.Forms.GroupBox();
             this.labelPhysicalDevelopment = new System.Windows.Forms.Label();
             this.labelCharm = new System.Windows.Forms.Label();
@@ -42,9 +45,7 @@
             this.toolTipFood = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipMood = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipHealth = new System.Windows.Forms.ToolTip(this.components);
-            this.health_UserControl1 = new Module_UserControl.Health_UserControl();
-            this.mood_UserControl1 = new Module_UserControl.Mood_UserControl();
-            this.food_UserControl1 = new Module_UserControl.Food_UserControl();
+            this.toolTipIntel = new System.Windows.Forms.ToolTip(this.components);
             this.groupBoxCharacteristics.SuspendLayout();
             this.groupBoxNeeds.SuspendLayout();
             this.groupBoxQualities.SuspendLayout();
@@ -74,6 +75,27 @@
             this.groupBoxNeeds.TabIndex = 18;
             this.groupBoxNeeds.TabStop = false;
             this.groupBoxNeeds.Text = "Потребности";
+            // 
+            // health_UserControl1
+            // 
+            this.health_UserControl1.Location = new System.Drawing.Point(6, 115);
+            this.health_UserControl1.Name = "health_UserControl1";
+            this.health_UserControl1.Size = new System.Drawing.Size(245, 55);
+            this.health_UserControl1.TabIndex = 19;
+            // 
+            // mood_UserControl1
+            // 
+            this.mood_UserControl1.Location = new System.Drawing.Point(6, 66);
+            this.mood_UserControl1.Name = "mood_UserControl1";
+            this.mood_UserControl1.Size = new System.Drawing.Size(243, 55);
+            this.mood_UserControl1.TabIndex = 19;
+            // 
+            // food_UserControl1
+            // 
+            this.food_UserControl1.Location = new System.Drawing.Point(6, 15);
+            this.food_UserControl1.Name = "food_UserControl1";
+            this.food_UserControl1.Size = new System.Drawing.Size(245, 55);
+            this.food_UserControl1.TabIndex = 0;
             // 
             // groupBoxQualities
             // 
@@ -153,27 +175,6 @@
             this.labelMoney.TabIndex = 8;
             this.labelMoney.Text = "Деньги: 100 $";
             // 
-            // health_UserControl1
-            // 
-            this.health_UserControl1.Location = new System.Drawing.Point(6, 115);
-            this.health_UserControl1.Name = "health_UserControl1";
-            this.health_UserControl1.Size = new System.Drawing.Size(245, 55);
-            this.health_UserControl1.TabIndex = 19;
-            // 
-            // mood_UserControl1
-            // 
-            this.mood_UserControl1.Location = new System.Drawing.Point(6, 66);
-            this.mood_UserControl1.Name = "mood_UserControl1";
-            this.mood_UserControl1.Size = new System.Drawing.Size(243, 55);
-            this.mood_UserControl1.TabIndex = 19;
-            // 
-            // food_UserControl1
-            // 
-            this.food_UserControl1.Location = new System.Drawing.Point(6, 15);
-            this.food_UserControl1.Name = "food_UserControl1";
-            this.food_UserControl1.Size = new System.Drawing.Size(245, 55);
-            this.food_UserControl1.TabIndex = 0;
-            // 
             // Characte_Characteristics_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,5 +211,6 @@
         private Food_UserControl food_UserControl1;
         private Mood_UserControl mood_UserControl1;
         private Health_UserControl health_UserControl1;
+        private System.Windows.Forms.ToolTip toolTipIntel;
     }
 }

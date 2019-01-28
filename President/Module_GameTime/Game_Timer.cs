@@ -27,8 +27,8 @@ namespace ThePresident
             {
                 while (true)
                 {
-                    try
-                    {
+                    //try
+                    //{
                         Game_Time.AddTime(60);
 
                         if (_reductionParameters >= 3)
@@ -47,11 +47,11 @@ namespace ThePresident
                         Decrease_Intelligence();
                         Decrease_Charm();
                         Decrease_PhysicalDevelopment();
-                    }
-                    catch (Exception error)
-                    {
-                        MessageBox.Show(error.Message);
-                    }
+                    //}
+                    //catch (Exception error)
+                    //{
+                    //    MessageBox.Show(error.Message);
+                    //}
 
                     _reductionParameters += 1;
 
