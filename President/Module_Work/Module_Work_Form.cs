@@ -159,37 +159,6 @@ namespace Module_Work
             find_Job.ShowDialog();
         }
 
-        #region Конец месяца
-
-        /// <summary>
-        /// Начисление зарплаты
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="even"></param>
-        private void GetValue_Everyday(object sender, PropertyChangedEventArgs even)
-        {
-            if (_currentJob != null)
-            {
-                Event_Work();
-
-                _currentJob.WorkPlan += Effort_Work.ReturnValue();
-                TextOutput(labelWorkPlan, "Выполнение плана: " + _currentJob.WorkPlan + " %");
-
-                GameCharacter.Set("Money", _currentJob.Salary_End);
-
-                _numberMonthsWorked += 1;
-
-                if (_numberMonthsWorked == 6)
-                {
-                    _numberMonthsWorked = 0;
-
-                    ImplementationPlan();
-                }
-            }
-        }
-
-        #endregion
-
         #region Перерасчет зарплаты
 
         /// <summary>
@@ -240,14 +209,41 @@ namespace Module_Work
 
         #endregion
 
+        #region Конец месяца
+
+        /// <summary>
+        /// Начисление зарплаты
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="even"></param>
+        private void GetValue_Everyday(object sender, PropertyChangedEventArgs even)
+        {
+            if (_currentJob != null)
+            {
+                Event_Work();
+
+                _currentJob.WorkPlan += Effort_Work.ReturnValue();
+                TextOutput(labelWorkPlan, "Выполнение плана: " + _currentJob.WorkPlan + " %");
+
+                GameCharacter.Set("Money", _currentJob.Salary_End);
+
+                _numberMonthsWorked += 1;
+
+                if (_numberMonthsWorked == 6)
+                {
+                    _numberMonthsWorked = 0;
+
+                    ImplementationPlan();
+                }
+            }
+        }
+
         /// <summary>
         /// Количество отработанных месяцев. 
         /// Нужно для начисления премии.
         /// Сбрасываетс при увольнении
         /// </summary>
         private int _numberMonthsWorked = 0;
-
-        #region События происходящие раз в пол года "Получение премии"
 
         /// <summary>
         /// Событие происходящее раз в пол года
@@ -263,9 +259,6 @@ namespace Module_Work
             }
             else
             {
-                _currentJob.WorkPlan = 0;
-                TextOutput(labelWorkPlan, "Выполнение плана: 0%");
-
                 var randomValue = random.Next(0, 4);
 
                 if (randomValue == 0)
@@ -278,6 +271,9 @@ namespace Module_Work
                     TopMostMessageBox.Show("Вы не выполнили план", "Событие");
                 }
             }
+
+            _currentJob.WorkPlan = 0;
+            TextOutput(labelWorkPlan, "Выполнение плана: 0%");
         }
 
         #endregion
