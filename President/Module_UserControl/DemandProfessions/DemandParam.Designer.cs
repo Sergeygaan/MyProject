@@ -1,16 +1,16 @@
 ﻿namespace Module_UserControl
 {
-    partial class DemandProfessions
+    partial class DemandParam
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Освободить все используемые ресурсы.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Код, автоматически созданный конструктором компонентов
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
@@ -39,14 +39,13 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listDemand.FullRowSelect = true;
-            this.listDemand.Location = new System.Drawing.Point(12, 12);
+            this.listDemand.Location = new System.Drawing.Point(3, 0);
             this.listDemand.Name = "listDemand";
             this.listDemand.ShowItemToolTips = true;
             this.listDemand.Size = new System.Drawing.Size(243, 285);
-            this.listDemand.TabIndex = 10;
+            this.listDemand.TabIndex = 11;
             this.listDemand.UseCompatibleStateImageBehavior = false;
             this.listDemand.View = System.Windows.Forms.View.Details;
-            this.listDemand.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listDemand_ColumnWidthChanging);
             // 
             // columnHeader1
             // 
@@ -59,18 +58,13 @@
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 113;
             // 
-            // DemandProfessions
+            // DemandParam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 306);
             this.Controls.Add(this.listDemand);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "DemandProfessions";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Востребованность отраслей";
+            this.Name = "DemandParam";
+            this.Size = new System.Drawing.Size(252, 291);
             this.ResumeLayout(false);
 
         }

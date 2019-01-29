@@ -90,11 +90,11 @@
     <Compile Include="Character\Parameters\Food_UserControl.Designer.cs">
       <DependentUpon>Food_UserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="DemandProfessions\DemandProfessions.cs">
-      <SubType>Form</SubType>
+    <Compile Include="DemandProfessions\DemandParam.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DemandProfessions\DemandProfessions.Designer.cs">
-      <DependentUpon>DemandProfessions.cs</DependentUpon>
+    <Compile Include="DemandProfessions\DemandParam.Designer.cs">
+      <DependentUpon>DemandParam.cs</DependentUpon>
     </Compile>
     <Compile Include="GameTime\GameTimer_UserControl.cs">
       <SubType>UserControl</SubType>
@@ -132,8 +132,8 @@
     <EmbeddedResource Include="Common\Effort_UserControl.resx">
       <DependentUpon>Effort_UserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DemandProfessions\DemandProfessions.resx">
-      <DependentUpon>DemandProfessions.cs</DependentUpon>
+    <EmbeddedResource Include="DemandProfessions\DemandParam.resx">
+      <DependentUpon>DemandParam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameTime\GameTimer_UserControl.resx">
       <DependentUpon>GameTimer_UserControl.cs</DependentUpon>

@@ -49,6 +49,28 @@ namespace Module_Work
         /// </summary>
         private void ToolTipAdvice(string text)
         {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() =>
+                {
+                    if (toolTipAdvice != null)
+                    {
+                        toolTipAdvice.RemoveAll();
+                        toolTipAdvice.Dispose();
+                        toolTipAdvice = null;
+                    }
+                }));
+            }
+            else
+            {
+                if (toolTipAdvice != null)
+                {
+                    toolTipAdvice.RemoveAll();
+                    toolTipAdvice.Dispose();
+                    toolTipAdvice = null;
+                }
+            }
+
             if (_currentJob != null)
             {
                 toolTipAdvice = new ToolTip();
@@ -61,12 +83,6 @@ namespace Module_Work
                 {
                     toolTipAdvice.SetToolTip(labelSalary, text);
                 }
-            }
-            else
-            {
-                toolTipAdvice.RemoveAll();
-                toolTipAdvice.Dispose();
-                toolTipAdvice = null;
             }
         }
 

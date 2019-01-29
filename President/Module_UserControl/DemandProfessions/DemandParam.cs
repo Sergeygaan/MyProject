@@ -1,57 +1,68 @@
-﻿using Module_GameTime;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Module_GameTime;
 
 namespace Module_UserControl
 {
-    public partial class DemandProfessions : Form
+    public partial class DemandParam : UserControl
     {
-        public DemandProfessions(string mode)
+        public DemandParam()
         {
             InitializeComponent();
+        }
 
-            switch(mode)
+        /// <summary>
+        /// Инициализация параметров для отображения
+        /// </summary>
+        /// <param name="mode"></param>
+        public void StartParam(Form form, string mode)
+        {
+            switch (mode)
             {
                 case "work":
 
-                    Text = "Работа";
+                    form.Text = "Работа";
                     LoadListDemand(Demand.ListProfessions());
 
                     break;
 
                 case "small":
 
-                    Text = "Малый бизнес";
+                    form.Text = "Малый бизнес";
                     LoadListDemand(Demand.ListSmallBusiness());
 
                     break;
 
                 case "medium":
 
-                    Text = "Средний бизнес";
+                    form.Text = "Средний бизнес";
                     LoadListDemand(Demand.ListMediumBusiness());
 
                     break;
 
                 case "big":
 
-                    Text = "Крупный бизнес";
+                    form.Text = "Крупный бизнес";
                     LoadListDemand(Demand.ListBigBusiness());
 
                     break;
             }
         }
 
+        /// <summary>
+        /// Вывод необходимого списка
+        /// </summary>
+        /// <param name="list">Список параметров</param>
         private void LoadListDemand(List<DemandProfessionsClass> list)
         {
-            foreach(var currentDemandProfessions in list)
+            foreach (var currentDemandProfessions in list)
             {
                 ListViewItem item = new ListViewItem();
 
@@ -59,14 +70,17 @@ namespace Module_UserControl
                 item.Text = currentDemandProfessions.IndustryName;
                 item.SubItems.Add(currentDemandProfessions.PercentageDemand.ToString() + " %");
 
-                //item.BackColor = Color.AliceBlue;
-
                 ColorItem(item, currentDemandProfessions.PercentageDemand);
 
                 listDemand.Items.Add(item);
             }
         }
 
+        /// <summary>
+        /// Определение цвета текста
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="value"></param>
         private void ColorItem(ListViewItem item, int value)
         {
             if (Enumerable.Range(-100, 50).Contains(value))
@@ -103,9 +117,13 @@ namespace Module_UserControl
 
                 return;
             }
-
         }
 
+        /// <summary>
+        /// Запрет изменения размера стобцов
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listDemand_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
             e.Cancel = true;

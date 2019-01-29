@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demand_Work.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demand_Work.Designer.cs">
+      <DependentUpon>Demand_Work.cs</DependentUpon>
+    </Compile>
     <Compile Include="FinalJob\FinalJob.cs" />
     <Compile Include="Find_Job.cs">
       <SubType>Form</SubType>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Demand_Work.resx">
+      <DependentUpon>Demand_Work.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Find_Job.resx">
       <DependentUpon>Find_Job.cs</DependentUpon>
     </EmbeddedResource>

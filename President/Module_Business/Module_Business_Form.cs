@@ -49,7 +49,8 @@ namespace Module_Business
             }
             else
             {
-
+                var demandProfessionsForm = new Demand_Business("small");
+                demandProfessionsForm.ShowDialog();
             }
         }
 
@@ -76,8 +77,8 @@ namespace Module_Business
         /// <param name="e"></param>
         private void demandSmall_Click(object sender, EventArgs e)
         {
-            var demandProfessionsForm = new DemandProfessions("small");
-            demandProfessionsForm.ShowDialog();
+            //var demandProfessionsForm = new DemandProfessions("small");
+            //demandProfessionsForm.ShowDialog();
         }
 
         /// <summary>
@@ -96,7 +97,8 @@ namespace Module_Business
             }
             else
             {
-
+                var demandProfessionsForm = new Demand_Business("medium");
+                demandProfessionsForm.ShowDialog();
             }
         }
 
@@ -123,8 +125,8 @@ namespace Module_Business
         /// <param name="e"></param>
         private void demandMedium_Click(object sender, EventArgs e)
         {
-            var demandProfessionsForm = new DemandProfessions("medium");
-            demandProfessionsForm.ShowDialog();
+            //var demandProfessionsForm = new DemandProfessions("medium");
+            //demandProfessionsForm.ShowDialog();
         }
 
         /// <summary>
@@ -143,7 +145,8 @@ namespace Module_Business
             }
             else
             {
-
+                var demandProfessionsForm = new Demand_Business("big");
+                demandProfessionsForm.ShowDialog();
             }
         }
 
@@ -170,8 +173,8 @@ namespace Module_Business
         /// <param name="e"></param>
         private void demandBig_Click(object sender, EventArgs e)
         {
-            var demandProfessionsForm = new DemandProfessions("big");
-            demandProfessionsForm.ShowDialog();
+            //var demandProfessionsForm = new DemandProfessions("big");
+            //demandProfessionsForm.ShowDialog();
         }
 
         #region Работа с кнопками

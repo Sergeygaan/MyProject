@@ -317,7 +317,7 @@ namespace Module_Work
         /// <param name="e"></param>
         private void buttonDemand_Click(object sender, EventArgs e)
         {
-            DemandProfessions demandProfessionsForm = new DemandProfessions("work");
+            var demandProfessionsForm = new Demand_Work("work");
             demandProfessionsForm.ShowDialog();
         }
     }
