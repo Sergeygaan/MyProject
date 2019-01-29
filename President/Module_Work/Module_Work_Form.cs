@@ -212,7 +212,7 @@ namespace Module_Work
                 int Salary_Old = _currentJob.Salary_End;
 
                 //Востребованность
-                _currentJob.Salary_Demand = (int)(_currentJob.Salary_Start * Demand.ReturnQualifications(_currentJob.IndustryName) / 100.0);
+                _currentJob.Salary_Demand = (int)(_currentJob.Salary_Start * Demand.Professions(_currentJob.IndustryName) / 100.0);
 
                 _currentJob.Salary_End = _currentJob.Salary_Start + _currentJob.Salary_Coefficient + _currentJob.Salary_Demand;
 

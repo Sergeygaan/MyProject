@@ -175,7 +175,7 @@ namespace Module_Work
             int salary_Coefficient = (int)(salary_Start * coefficient / 100.0);
 
             //Восстребовательность
-            int salary_Demand = (int)(salary_Start * Demand.ReturnQualifications(industryName) / 100.0);
+            int salary_Demand = (int)(salary_Start * Demand.Professions(industryName) / 100.0);
 
             //Расчет финальной зарплаты
             int salary_End = salary_Start + salary_Coefficient + salary_Demand;
@@ -317,7 +317,7 @@ namespace Module_Work
         /// <param name="e"></param>
         private void buttonDemand_Click(object sender, EventArgs e)
         {
-            DemandProfessions demandProfessionsForm = new DemandProfessions();
+            DemandProfessions demandProfessionsForm = new DemandProfessions("work");
             demandProfessionsForm.ShowDialog();
         }
     }

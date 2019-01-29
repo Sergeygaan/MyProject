@@ -41,6 +41,7 @@
             this.buttonHealth = new System.Windows.Forms.Button();
             this.gameTimer_UserControl1 = new Module_UserControl.GameTimer_UserControl();
             this.buttonSelfDevelopment = new System.Windows.Forms.Button();
+            this.buttonBusiness = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -144,11 +145,22 @@
             this.buttonSelfDevelopment.UseVisualStyleBackColor = true;
             this.buttonSelfDevelopment.Click += new System.EventHandler(this.buttonSelfDevelopment_Click);
             // 
+            // buttonBusiness
+            // 
+            this.buttonBusiness.Location = new System.Drawing.Point(125, 41);
+            this.buttonBusiness.Name = "buttonBusiness";
+            this.buttonBusiness.Size = new System.Drawing.Size(107, 23);
+            this.buttonBusiness.TabIndex = 23;
+            this.buttonBusiness.Text = "Бизнес";
+            this.buttonBusiness.UseVisualStyleBackColor = true;
+            this.buttonBusiness.Click += new System.EventHandler(this.buttonBusiness_Click);
+            // 
             // ThePresident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonBusiness);
             this.Controls.Add(this.buttonSelfDevelopment);
             this.Controls.Add(this.gameTimer_UserControl1);
             this.Controls.Add(this.buttonHealth);
@@ -187,6 +199,7 @@
         private System.Windows.Forms.Button buttonHealth;
         private Module_UserControl.GameTimer_UserControl gameTimer_UserControl1;
         private System.Windows.Forms.Button buttonSelfDevelopment;
+        private System.Windows.Forms.Button buttonBusiness;
     }
 }
 

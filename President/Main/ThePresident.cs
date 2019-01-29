@@ -1,4 +1,5 @@
-﻿using Module_Character;
+﻿using Module_Business;
+using Module_Character;
 using Module_Event;
 using Module_GameTime;
 using Module_Needs;
@@ -22,6 +23,11 @@ namespace ThePresident
         /// Модуль "Работа"
         /// </summary>
         private Module_Work_Form _module_Work_Form;
+
+        /// <summary>
+        /// Модуль "Здоровье"
+        /// </summary>
+        private Module_Business_Form _module_Business_Form;
 
         /// <summary>
         /// Модуль "Обучение"
@@ -61,7 +67,7 @@ namespace ThePresident
             _gameTimer = new Game_Timer();
 
             //Создание списка востребованности профессий
-            var demandProfessions = Demand.ReturnDemandProfessions();
+            var demandProfessions = Demand.ListProfessions();
         }
 
      
@@ -256,6 +262,16 @@ namespace ThePresident
             }
 
             _module_Health_Form.ShowDialog();
+        }
+
+        private void buttonBusiness_Click(object sender, EventArgs e)
+        {
+            if (_module_Business_Form == null)
+            {
+                _module_Business_Form = new Module_Business_Form();
+            }
+
+            _module_Business_Form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

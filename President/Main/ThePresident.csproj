@@ -108,6 +108,10 @@
       <Project>{8c44d849-c96f-4a72-ba40-2d67727488f4}</Project>
       <Name>Module_Event</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Module_Business\Module_Business.csproj">
+      <Project>{27226DEF-4A3C-45F9-9050-9B9A98C03DA7}</Project>
+      <Name>Module_Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Module_GameTime\Module_GameTime.csproj">
       <Project>{C5943D90-05DB-4FF3-A484-34D0F3C6985F}</Project>
       <Name>Module_GameTime</Name>
